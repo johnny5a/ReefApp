@@ -1,0 +1,46 @@
+name: Update REEF data
+
+# Refreshes California sites, species lists and per-site species frequencies from reef.org,
+# rebuilds index.html and publishes it. Runs on the 1st of each month, and on demand
+# (Actions tab → "Update REEF data" → Run workflow).
+on:
+  schedule:
+    - cron: "17 11 1 * *"   # 1st of the month, 11:17 UTC (3–4 AM in California)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/update_reef_data.py, .github/workflows/update-reef-data.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-reef-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download latest REEF data
+        run: python3 scripts/update_reef_data.py
+      - name: Build app
+        run: python3 build.py
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- src index.html; then
+            echo "REEF data unchanged."
+            exit 0
+          fi
+          # New cache version so phones pick up the refreshed data
+          sed -i -E "s/const VERSION = \"[^\"]*\"/const VERSION = \"reef-survey-data-$(date -u +%Y%m%d%H%M)\"/" sw.js
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src index.html sw.js
+          git commit -m "Update REEF data ($(cat src/data_date.txt))"
+          git push

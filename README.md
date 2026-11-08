@@ -17,6 +17,15 @@ A phone app for logging [REEF](https://www.reef.org) Volunteer Fish Survey dives
 - Survey fields: [REEF VFSP metadata descriptions](https://www.reef.org/vfsp-metadata-descriptions)
 - Species: [REEF PAC names report](https://www.reef.org/db/reports/species?region_code=PAC) and [California invertebrate and algae list](https://www.reef.org/california-invertebrate-and-algae-monitoring-program)
 
+## REEF data (updated automatically)
+`.github/workflows/update-reef-data.yml` runs `scripts/update_reef_data.py` on the 1st of every month (and on demand from the Actions tab). It downloads from reef.org:
+- California dive sites and zone codes (`src/sites_ca.txt`)
+- the Pacific Coast species list with REEF codes (`src/species_pac.txt`)
+- species from REEF's other regions, offered as Unlisted species (`src/species_unlisted.txt`)
+- how often each species is seen at each California site and area (`src/site_freq_ca.txt`), from REEF's Geographic Zone Reports
+
+It then rebuilds `index.html` and commits only if something changed.
+
 ## Updating
 - App code: `src/index.src.html`. Species list: `src/species_pac.txt`. California dive sites and zone codes: `src/sites_ca.txt` (from [REEF's zone code list](https://www.reef.org/db/zonecodes/list/?region_code=PAC)).
 - Run `python3 build.py` to rebuild `index.html`, bump `VERSION` in `sw.js`, then commit and push. Phones pick up the new version the next time the app opens with signal.
