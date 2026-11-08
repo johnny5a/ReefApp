@@ -200,7 +200,7 @@ function blank(){
   return {id:"s"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),
     createdAt:Date.now(), updatedAt:Date.now(), status:"draft",
     info:{siteName:"",zone:"",date:`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`,startTime:"",bottomTime:"",
-      tempBottom:"",tempSurface:"",tempUnit:state?.settings?.tempUnit||"F",vis:"",avgDepth:"",maxDepth:"",snorkel:false,current:"",habitat:"",notes:""},
+      tempBottom:"",tempSurface:"",tempUnit:state?.settings?.tempUnit||"F",depthUnit:state?.settings?.depthUnit||"ft",vis:"",avgDepth:"",maxDepth:"",snorkel:false,current:"",habitat:"",notes:""},
     counts:{}, unlisted:[]};
 }
 function load(){
@@ -275,6 +275,13 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function toast(m){ const t=$("#toast"); t.textContent=m; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),1800); }
 function depthRange(ft){ if(ft===""||ft==null||isNaN(+ft)) return ""; const lo=Math.floor(+ft/10)*10; return `${lo}–${lo+9} ft`; }
+/* Depth can be entered in feet or meters; REEF takes 10-ft ranges, so meters are converted to feet first. */
+const FT_PER_M = 3.28084;
+const dUnit = i => i.depthUnit==="m" ? "m" : "ft";
+function depthFt(i,key){ const v=i[key]; if(v===""||v==null||isNaN(+v)) return null; return dUnit(i)==="m" ? +v*FT_PER_M : +v; }
+function dRange(i,key){ const ft=depthFt(i,key); return ft==null ? "" : depthRange(ft); }
+function dShow(i,key){ const ft=depthFt(i,key); if(ft==null) return ""; return dUnit(i)==="m" ? `${i[key]} m (${Math.round(ft)} ft) → ${depthRange(ft)}` : `${i[key]} ft → ${depthRange(ft)}`; }
+function dLabel(i,key){ const ft=depthFt(i,key); if(ft==null) return ""; return dUnit(i)==="m" ? `→ ${Math.round(ft)} ft · ${depthRange(ft)}` : `→ ${depthRange(ft)}`; }
 function roundHour(t){ if(!t) return ""; let [h,m]=t.split(":").map(Number); if(m>=30) h=(h+1)%24; const ap=h<12?"AM":"PM"; const h12=h%12||12; return `${h12}:00 ${ap}`; }
 function fmtDate(d){ if(!d) return ""; const [y,m,dd]=d.split("-"); return `${m}/${dd}/${y}`; }
 function seenCount(sv){ return Object.keys(sv.counts).length + (sv.unlisted||[]).length; }
@@ -389,8 +396,9 @@ function renderDive(main, sv){
       <label class="f"><span>Temperature unit</span>${seg("tempUnit",["F","C"], i.tempUnit)}</label>
       <label class="${cls("temp")}" data-k="temp"><span>Bottom water temp °${i.tempUnit}</span><input type="number" inputmode="decimal" id="tempBottom" value="${esc(i.tempBottom)}"></label>
       <label class="f"><span>Surface water temp °${i.tempUnit}</span><input type="number" inputmode="decimal" id="tempSurface" value="${esc(i.tempSurface)}"></label>
-      <label class="${cls("avgDepth")}" data-k="avgDepth"><span id="lbl-avgDepth">Average depth (ft) ${i.snorkel?"→ Snorkel":i.avgDepth!==""?"→ "+depthRange(i.avgDepth):""}</span><input type="number" inputmode="numeric" id="avgDepth" value="${esc(i.avgDepth)}" ${i.snorkel?"disabled":""}></label>
-      <label class="${cls("maxDepth")}" data-k="maxDepth"><span id="lbl-maxDepth">Max depth (ft) ${i.maxDepth!==""?"→ "+depthRange(i.maxDepth):""}</span><input type="number" inputmode="numeric" id="maxDepth" value="${esc(i.maxDepth)}"></label>
+      <label class="f" style="grid-column:1/-1"><span>Depth unit</span>${seg("depthUnit",[["ft","Feet"],["m","Meters · converted to feet for REEF"]], dUnit(i))}</label>
+      <label class="${cls("avgDepth")}" data-k="avgDepth"><span id="lbl-avgDepth">Average depth (${dUnit(i)}) ${i.snorkel?"→ Snorkel":dLabel(i,"avgDepth")}</span><input type="number" inputmode="decimal" step="any" id="avgDepth" value="${esc(i.avgDepth)}" ${i.snorkel?"disabled":""}></label>
+      <label class="${cls("maxDepth")}" data-k="maxDepth"><span id="lbl-maxDepth">Max depth (${dUnit(i)}) ${dLabel(i,"maxDepth")}</span><input type="number" inputmode="decimal" step="any" id="maxDepth" value="${esc(i.maxDepth)}"></label>
     </div>
     <label class="${cls("vis")}"><span>Horizontal visibility</span></label>${seg("vis",VIS,i.vis)}
     <label class="${cls("current")}"><span>Current</span></label>${seg("current",CURRENT,i.current)}
@@ -498,8 +506,8 @@ function summaryText(sv){
   L.push(`Water temp: bottom ${i.tempBottom||"—"} / surface ${i.tempSurface||"—"} °${i.tempUnit}`);
   L.push(`Bottom time: ${i.bottomTime||"—"} min`);
   L.push(`Visibility: ${i.vis||"—"}`);
-  L.push(`Average depth: ${i.snorkel?"Snorkel":depthRange(i.avgDepth)||"—"}`);
-  L.push(`Max depth: ${depthRange(i.maxDepth)||"—"}`);
+  L.push(`Average depth: ${i.snorkel?"Snorkel":dShow(i,"avgDepth")||"—"}`);
+  L.push(`Max depth: ${dShow(i,"maxDepth")||"—"}`);
   L.push(`Current: ${i.current||"—"}`);
   L.push(`Habitat: ${i.habitat||"—"}`);
   for(const {g,rows} of summaryRows(sv)){
@@ -514,7 +522,7 @@ function autofillJSON(sv){
   return JSON.stringify({app:"REEF Dive Survey",region:"PAC",memberNo:state.settings.memberNo,lastName:state.settings.lastName,
     surveyType:i.snorkel?"Snorkel":"Scuba",date:i.date,startTime:i.startTime,startHourRounded:roundHour(i.startTime),
     zoneCode:i.zone,siteName:i.siteName,bottomTimeMin:+i.bottomTime||null,tempBottom:i.tempBottom,tempSurface:i.tempSurface,tempUnit:i.tempUnit,
-    visibility:i.vis,avgDepthFt:i.snorkel?"Snorkel":i.avgDepth,avgDepthRange:i.snorkel?"Snorkel":depthRange(i.avgDepth),maxDepthFt:i.maxDepth,maxDepthRange:depthRange(i.maxDepth),
+    visibility:i.vis,depthUnitEntered:dUnit(i),avgDepthEntered:i.snorkel?"Snorkel":i.avgDepth,maxDepthEntered:i.maxDepth,avgDepthFt:i.snorkel?"Snorkel":(depthFt(i,"avgDepth")==null?"":Math.round(depthFt(i,"avgDepth"))),avgDepthRange:i.snorkel?"Snorkel":dRange(i,"avgDepth"),maxDepthFt:depthFt(i,"maxDepth")==null?"":Math.round(depthFt(i,"maxDepth")),maxDepthRange:dRange(i,"maxDepth"),
     current:i.current,habitat:i.habitat,
     species:Object.entries(sv.counts).map(([k,v])=>({code:BYKEY[k]?.code||"",name:BYKEY[k]?.name||k,scientific:BYKEY[k]?.sci||"",abundance:v})),
     unlisted:sv.unlisted||[]},null,1);
@@ -548,8 +556,8 @@ function renderReview(main, sv){
       <dt>Water temp</dt>${dd("temp",(i.tempBottom||i.tempSurface)?`${i.tempBottom||"–"} bottom / ${i.tempSurface||"–"} surface °${i.tempUnit}`:"")}
       <dt>Bottom time</dt>${dd("bottomTime",i.bottomTime?i.bottomTime+" min":"")}
       <dt>Visibility</dt>${dd("vis",i.vis)}
-      <dt>Avg depth</dt>${dd("avgDepth",i.snorkel?"Snorkel":depthRange(i.avgDepth))}
-      <dt>Max depth</dt>${dd("maxDepth",depthRange(i.maxDepth))}
+      <dt>Avg depth</dt>${dd("avgDepth",i.snorkel?"Snorkel":dShow(i,"avgDepth"))}
+      <dt>Max depth</dt>${dd("maxDepth",dShow(i,"maxDepth"))}
       <dt>Current</dt>${dd("current",i.current)}
       <dt>Habitat</dt>${dd("habitat",i.habitat)}
     </dl>
@@ -594,6 +602,10 @@ document.addEventListener("click", async e=>{
     const k=t.dataset.seg, v=t.dataset.v, i=sv.info;
     if(k==="snorkel") i.snorkel = v==="Snorkel";
     else if(k==="tempUnit"){ i.tempUnit=v; state.settings.tempUnit=v; }
+    else if(k==="depthUnit"){
+      if(dUnit(i)!==v) for(const key of ["avgDepth","maxDepth"]){ const x=i[key]; if(x!==""&&x!=null&&!isNaN(+x)) i[key]=String(v==="m" ? Math.round(+x/FT_PER_M*10)/10 : Math.round(+x*FT_PER_M)); }
+      i.depthUnit=v; state.settings.depthUnit=v;
+    }
     else i[k] = i[k]===v ? "" : v;
     touch(sv); render(); return;
   }
@@ -661,14 +673,14 @@ function refreshDiveLabels(sv){
   document.querySelectorAll("label[data-k]").forEach(l=>l.classList.toggle("missing", m.has(l.dataset.k)));
   const set=(id,t)=>{const el=document.getElementById(id); if(el) el.textContent=t;};
   set("lbl-startTime","Start time "+(i.startTime?"→ "+roundHour(i.startTime):""));
-  set("lbl-avgDepth","Average depth (ft) "+(i.snorkel?"→ Snorkel":i.avgDepth!==""?"→ "+depthRange(i.avgDepth):""));
-  set("lbl-maxDepth","Max depth (ft) "+(i.maxDepth!==""?"→ "+depthRange(i.maxDepth):""));
+  set("lbl-avgDepth",`Average depth (${dUnit(i)}) `+(i.snorkel?"→ Snorkel":dLabel(i,"avgDepth")));
+  set("lbl-maxDepth",`Max depth (${dUnit(i)}) `+dLabel(i,"maxDepth"));
 }
 
 function toCSV(sv){
   const i=sv.info, q=v=>`"${String(v??"").replace(/"/g,'""')}"`;
   const head=["member_no","date","start_time","zone_code","site","survey_type","bottom_time_min","temp_bottom","temp_surface","temp_unit","visibility","avg_depth","max_depth","current","habitat","species_code","common_name","scientific_name","abundance"];
-  const base=[state.settings.memberNo,i.date,i.startTime,i.zone,i.siteName,i.snorkel?"Snorkel":"Scuba",i.bottomTime,i.tempBottom,i.tempSurface,i.tempUnit,i.vis,i.snorkel?"Snorkel":depthRange(i.avgDepth),depthRange(i.maxDepth),i.current,i.habitat];
+  const base=[state.settings.memberNo,i.date,i.startTime,i.zone,i.siteName,i.snorkel?"Snorkel":"Scuba",i.bottomTime,i.tempBottom,i.tempSurface,i.tempUnit,i.vis,i.snorkel?"Snorkel":dRange(i,"avgDepth"),dRange(i,"maxDepth"),i.current,i.habitat];
   const rows=Object.entries(sv.counts).map(([k,v])=>[...base,BYKEY[k]?.code,BYKEY[k]?.name,BYKEY[k]?.sci,v]).concat((sv.unlisted||[]).map(u=>[...base,"",u.name,"",u.v]));
   return [head,...rows].map(r=>r.map(q).join(",")).join("\n");
 }
