@@ -18,4 +18,5 @@ A phone app for logging [REEF](https://www.reef.org) Volunteer Fish Survey dives
 - Species: [REEF PAC names report](https://www.reef.org/db/reports/species?region_code=PAC) and [California invertebrate and algae list](https://www.reef.org/california-invertebrate-and-algae-monitoring-program)
 
 ## Updating
-Edit `index.html`, bump `VERSION` in `sw.js`, and push. The phone picks up the new version the next time the app opens with signal.
+- App code: `src/index.src.html`. Species list: `src/species_pac.txt`. California dive sites and zone codes: `src/sites_ca.txt` (from [REEF's zone code list](https://www.reef.org/db/zonecodes/list/?region_code=PAC)).
+- Run `python3 build.py` to rebuild `index.html`, bump `VERSION` in `sw.js`, then commit and push. Phones pick up the new version the next time the app opens with signal.

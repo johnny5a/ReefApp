@@ -1,0 +1,815 @@
+4|California
+41|NORTHERN CALIFORNIA
+4101|S Cape Ferrelo - Point St. George
+41010001|St George Reef Lighthouse
+4102|Crescent City - Patricks Point
+4103|Trinidad Head - N Cape Mendicino
+4104|S Cape Mendicino - N Punta Gorda
+41040001|South Cape Mendeicino Fort Bragg
+4105|S Punta Gorda - N Point Belgada
+4106|S Point Delgada - N Point Cabrillo
+4107|S Point Cabrillo - N Point Arena
+41070001|Mendicino Headlands
+41070002|Russian Gulch State Park
+41070003|Van Damme Reef
+41070004|Arena Rock
+4108|S Point Arena - Salmon Creek
+410801|Salt Point State Park
+41080101|Salt Point
+41080102|Gerstle Cove
+41080103|Still Water Cove
+41080104|Casper Cove (between Salt Point and Gualala)
+41080105|Vantage Road (north of sea ranch)
+41080106|Windemere Point (Sonoma County)
+41080107|Ocean Cove (Sonoma County)
+41080108|Fort Ross (Sonoma County)
+41080109|Timber Cove
+4109|Bodega Bay - N Point Reyes
+4110|S Point Reyes - N San Francisco Bay
+41100001|Drake's Estero (Schooner Bay)
+4111|Farallon Islands
+41110001|Ruby Tuesday - Fanny Shoal
+41110002|Noonday Rock - Fanny Shoal
+41110003|Alan's High Spot - Fanny Shoal
+41110004|Fair to Middling - Middle Farallon
+4112|San Francisco Bay
+41120001|Blackie's Pasture
+4113|S San Francisco Bay - N Davenport
+4114|S Davenport - Point Lobos Reserve
+411401|Del Monte Beach area
+41140101|Cable Grid (Tankers Reef Kelp Project)
+41140112|Sailboat & APC Amtrack Wrecks
+41140113|Wharf 2 (incl wharf wall and pilings)
+41140114|Marina
+41140115|Monterey Beach Hotel/Hole in the Wall
+41140116|Shale Beds
+41140117|Del Monte Beach at Casa Verde/Beach Way (shore dive)
+41140118|Tioga Avenue
+41140119|K Dock Monterey Harbor
+411402|Breakwater - Pt Pinos
+4114021|San Carlos Beach area
+41140211|Monterey Breakwater (San Carlos Beach)
+41140212|Sewer/Cannery Pipe (west end)
+41140213|Metridium Fields
+41140214|Mid San Carlos Beach/Shallow Reefs
+41140215|Barge Wreck at San Carlos
+41140216|Anchor Farm at San Carlos
+41140217|New Anchor Farm (after cruise ship)
+41140218|Mating Amtracks
+4114022|Cannery Row Street area
+41140221|Hidden Beach/Monterey Plaza Hotel
+41140222|Cannery Pipes
+41140223|McAbee Beach shore dive
+41140224|Outer McAbee/Sammet Spire/Margaritaville (boat dive)
+4114023|Monterey Bay Aquarium
+41140231|Aquarium Pipe
+41140232|Aquarium Reef
+41140233|Mile Buoy
+4114024|Hopkins Marine Station
+41140241|Inside Hopkins Reserve
+41140242|Hopkins Deep Reef
+41140243|Sand Near Hopkins Deep Reef
+4114025|Lover's Point area
+41140251|Lover's Cove Main Beach
+41140252|Lover's Point Rocks/Lovers 2
+41140253|Outer Lovers/White Wall (boat dive)
+41140254|Bat Ray Reef
+41140255|Third Beach at Lovers
+41140256|Lover's Loop - 3rd Beach to/fr Lovers Main Beach
+4114026|Otter Cove/Pacific Grove Area
+41140261|Eric's Pinnacle
+41140262|Siren Street
+41140264|Otter Cove offshore (boat dive)
+41140265|Otter Cove Beach (shore dive)
+41140266|5th Street
+41140267|Ballbuster
+41140268|Three Kings - Pacific Grove
+41140269|Stairs at Beach Street
+4114027|Coral Street area
+41140271|Coral Street Cove
+41140272|Inner Chase Reef
+41140273|Outer Chase Reef
+41140274|Aumentos
+4114028|Pt. Pinos area
+41140281|Pt. Pinos
+41140282|Sewers - East Side of Pt. Pinos
+41140283|West Side of Pt. Pinos
+41140284|Mola Mountain
+411403|S. of Pt. Pinos - N Cypress Pt.
+4114031|Moss Cove area
+41140311|Coast Guard Wreck
+4114032|Point Joe area
+41140321|Celia Wreck
+41140322|St Paul Wreck
+41140323|Point Joe
+4114033|Cypress Point area
+41140331|Fanshell Pinnacle (off Cypress Pt.)
+41140332|Ship Wrecks
+41140333|Cypress Point Rocks
+41140334|North Cypress
+41140335|West Cypress Point
+41140336|Local's Ledge
+4114034|Spanish Bay area
+411404|S Cypress Point - Pescadero Point
+4114041|S Cypress Point
+41140411|Lone Cypress Tree
+41140412|Inner Ocean Pinnacles (Off Castle House)
+41140413|Outer Ocean Pinnacles (Off Castle House)
+41140414|Castle House (along Lingcod Reef)
+41140415|Black Dog Ridge
+41140416|East Pinnacle
+41140417|Forgotten Pinnacle
+41140418|Pink House (Lingcod Reef b/t Lone Cypress & Castle House)
+41140419|Lunaticos Annex
+411405|Pescadero Point - Carmel River State Beach
+4114051|Pescadero Point area
+41140511|N. Pescadero Reef / Brice's Bump / Stillwater Cove
+41140512|Pescadero Reef / Dali's Wall
+41140513|Please use 41140523 - Ocean Ave (Carmel Beach City Park)
+41140514|Copper Roof House (Carmel Beach City Park)
+41140515|Butterfly House shore dive
+41140516|Outer Butterfly House (boat dive)
+41140517|Pescadero Wash Rocks / Pinnacles / Fire Rock
+41140518|Outer Copper Roof House (boat dive)
+4114052|Carmel River State Beach
+41140521|Stewart's Point
+41140522|Carmel Meadows
+41140523|Carmel City Beach Shale Bed / CRABS/ Carmel Reef and Beds of Shale
+41140524|Northern Reef off Ribera Road
+41140525|Southern Reef off Ribera Road
+41140526|Red School House (N and outside of Pt. Lobos MR)
+4114053|Monastery Beach
+41140531|North Monastery
+41140532|South Monastery
+41140533|Mono Lobo Wall
+411406|Pt Lobos State Reserve
+4114061|Whaler's Cove
+41140611|Pt. Lobos Cannery Point
+41140612|Outer Whaler's Cove (Middle Reef)
+41140613|Coal Chute Point
+41140614|Granite Point Wall
+41140615|Bird Rocks
+41140616|Thumbs Up
+41140617|Whalers Cove (Inner Cove)
+4114062|Bluefish Cove
+41140621|Inner Bluefish Cove
+41140622|Guillemont Rock
+41140623|Bluefish Cove Pinnacles
+4114063|Outer Pinnacle
+41140631|Outer Bluefish Pinnacles (Great Pinnacle)
+41140632|Marco's Pinnacle
+4114064|Sea Lion Rocks to China Cove
+41140641|Weston (restricted area)
+4114065|Outer Pinnacle to Sea Lion Rocks
+41140651|Deep E3
+41140652|E3
+41140653|Beto's Reef
+41140654|The Road to Twin Peaks
+41140655|Dave's Ridge
+41140656|Montana
+41140700|Moss Landing area (Monterey Canyon Head)
+41140701|Moss Landing
+4115|S Point Lobos Reserve - N Point Sur
+411501|Yankee Point
+41150101|Yankee Point Pinnacles
+41150102|Que Paso Pinnacle
+41150103|Honeymoon
+41150104|Flintstones
+41150105|Malcontent
+41150106|PTP (Pinnacle of Tremendous Proportion)
+41150107|Machu Picchu
+411502|Garapata State Beach Park
+41150201|Mile Marker 67
+41150202|Moby Ling Cove
+41150203|Four Point
+41150204|Sobranes Point
+41150205|Malpasos Creek MLPA
+41150206|Malpasos Creek South (outside of MLPA)
+411503|Sobranes Pt - N Pt Sur
+41150301|Lobos Rocks
+41150302|Granite Canyon
+41150303|Little River Sur
+41150305|Diablo Pinnacles
+41150306|Las Piedras Pinnacle
+411504|N Pt Sur
+41150401|Ventura Wreck/Rocks
+41150501|Orca Pinnacle
+4116|S Point Sur - N Point Estero
+41160001|Kawika's Kone
+41160002|Sur 19
+41160003|Big Creek Cove
+4117|S Point Estero - N Point Buchon
+41170001|Spooner's Cove at Montana de Oro (boat dive)
+41170002|Cayucos Reef (boat)
+41170003|Morro Bay
+41170004|Morro Bay North T-Dock
+41170005|Target Rock / Morro Rock (Morro Bay)
+41170006|Spooner Cove Shore Dive
+4118|S Point Buchon - N Point Sal
+41180001|Pt. Buchon (about 1. mile south of)
+4119|S Point Sal - N Point Conception
+411901|San Louis Obisbo County
+411902|Santa Barbara County
+4119021|Point Arguello
+41190211|Arguello Boat House
+4119022|Jalama Beach County Park
+411903|Boat House Vandenburg AF Base
+42|SOUTHERN CALIFORNIA
+4201|S Point Conception - N Point Heuneme
+4201023|Point Conception
+42010231|SM-1 Wreck
+4201024|s. Pt. Conception - Santa Barbara
+42010241|Refugio State Beach
+42010242|St. Augustine Reef/Augies
+42010243|Tajiguas
+42010244|Campus Point
+42010245|Gaviota State Park Beach
+42010246|Haskell's Beach
+42010247|Hammond's Beach (w side of Fernald Point)
+42010248|Sands Beach - Coal Oil Point (west side)
+42010249|Coal Oil Point (East Side)
+4201025|Santa Barbara
+42010251|Arroyo Burro Beach / Hendry's Beach
+42010252|Mesa Lane
+42010253|Santa Cruz Street (Thousand Steps)
+42010254|Leadbetter Beach
+42010255|Biltmore Steps
+42010256|Naples Reef
+42010257|Goleta Sewer Pipeline
+42010258|Rincon Point
+42010259|Yucca's Del Playa Steps (W of Isla Vista)
+4201026|Carpenteria
+42010261|Platform Holly (3 miles offshore)
+420103|Ventura County.
+42010301|Deer Creek Rd.
+42010302|La Jenelle
+42010303|Bird Island
+4202|Northern Channel Islands
+420201|San Miguel
+42020101|Crook Point
+42020102|Rain Barrel
+42020103|Miracle
+42020104|Inside Wycoff Ledge
+42020105|Hare Rock
+42020106|Lovers / Little Lovers
+42020107|Can Rock
+42020108|Kidd Rock
+42020109|Cravey
+42020110|Lurker's
+42020111|Otter Harbor
+42020112|Cuba Shipwreck
+42020113|Prince Island
+42020114|Bat Rock
+42020115|Pt. Bennett
+42020116|Adam's Cove
+42020117|Tyleer Bight
+42020118|Oil Spring
+42020119|Westcott Shoals
+42020120|Judith Rock South
+42020121|Nifty Rock
+42020122|Crab City
+42020123|Abalone Alley
+420202|Santa Rosa
+42020201|East End Pinnacles
+42020202|Scallop Reef
+42020203|East Point
+42020204|Rancho Viejo
+42020205|Rodes Reef
+42020206|Johnsons Lee (south)
+42020207|Johnsons Lee (north)
+42020208|Aggi Wreck
+42020210|Eagle Rock
+42020211|South Point/Chickasaw Wreck
+42020212|Crown of England Anchor
+42020213|Aggi Shipwreck
+42020214|South Point West
+42020215|Carrington Point Central
+420203|Santa Cruz Island
+42020301|Alberts Anchorage
+42020302|Yellow Banks
+42020303|Sailboat
+42020304|Potato Rock
+42020305|Pelican Bay
+42020306|Three Sisters
+42020307|White Ribbon
+42020308|Peacock Wreck
+42020309|Willows Cove
+42020310|Bowens Point
+42020312|Black Bay
+42020313|Gull Island
+42020314|Drop-Off Reef
+42020315|Forney's Cove
+42020316|Scorpion Anchorage -East Scorpion
+42020317|Cuevo Valdez / Echo Point
+42020318|Big Rock
+42020319|Little Scorpion
+42020320|Green Grotto
+42020321|Quail Rock
+42020322|Cavern Point
+42020323|Prisoner's Harbor
+42020324|Fry's Harbor
+42020325|Travis Rock
+42020326|Lobster Spot / Scorpion Wall
+42020327|The Towers
+42020328|Yellow Banks
+42020329|Sandstone Point
+42020330|Middle Anchorage
+42020331|Coches Prietos Anchorage
+42020332|Painted Cave Annex
+42020333|Diablo Pinnacle
+42020334|West Cove
+42020335|Spelunkers / Adams Cave
+42020336|Potato Harbor
+42020337|Cobra Head
+42020338|Punta Arena
+42020339|Grummen Guardian Airplane
+42020340|Lady's Anchorage Santa Cruz Island
+42020341|Platt's (Santa Cruz Island)
+42020342|Hazzards / Hazzard Wall
+42020343|Scorpion Anchorage / West Scorpion / Big Scorpion
+42020344|West Posa Point
+42020345|Kinton Point
+42020346|Fraser Point
+42020347|Pedro Reef
+42020348|Flame Reef
+42020349|East of Golfball (southside Santa Cruz Is)
+42020350|Hungry Man Cove (nr E end, close to Smugglers Cove)
+42020351|Fern Grotto
+42020352|Blue Banks
+42020353|Inside Painted Cave Marine Preserve
+42020354|Palm Park
+42020355|Near Eagle Rock
+42020356|Near Profile Point (Painted Cave Marine Preserve)
+42020357|Diablo Point
+42020358|Fence Line
+42020359|Wizard's Sleeve
+42020360|Donna's Wall
+42020361|Whale Rock
+42020362|Coches Prietos
+42020363|Cobble Cave
+42020364|Ten Fathoms / 10 Fathoms
+42020365|Echo Wall
+42020366|Tiny's Landing
+42020367|Seal Rocks (Santa Cruz)
+42020368|Bump Rock
+42020369|Coche Cove
+42020370|Five Stones
+42020371|The Antfarm
+42020372|Calico Reef
+42020373|Morse Point
+42020374|Yellow Bank Site 1
+42020375|Yellow Bank Site 2
+42020376|Yellow Bank Site 3
+42020377|Wrench Rock
+42020378|Tiny's
+42020379|Shades
+42020380|Emerald Gardens and Caves
+42020381|Pedro Point Caves
+42020382|Athens
+42020384|Painted Cave
+42020385|Sea Lion Pinnacle
+42020386|Diablo Bay
+42020387|Arch Rock
+42020388|Nemesis
+42020389|Double Arch
+420204|Anacapa Island
+42020401|Cat Rock
+42020402|Rat Rock
+42020403|Coral Reef (Anacapa Sea Cove - West)
+42020404|Happy Dog Rock
+42020405|Surveyor's Rock
+42020406|Lighthouse / Landing Cove Point
+42020407|Landing Cove / Landing Cove Arch
+42020408|East Fish Camp
+42020409|West End Anacapa -south side
+42020410|West End Anacapa - north side
+42020411|Underwater Island
+42020412|Arch Rock (Anacapa Island)
+42020413|Goldfish Bowl
+42020414|Portuguese Rock (Sailboat Cove)
+42020415|Cathedral Cove
+42020416|Admiral's Cove
+42020417|Winfield Scott
+42020418|Frenchy's Cove
+42020419|Middle reef - Backside Anacapa
+42020420|Garden Spot
+42020421|Gunsight Reef
+42020422|Channels
+42020423|Seabass Reef (Anacapa Island)
+42020424|Underwater Arch at Sea Lion Haulout (southside of island)
+42020425|The Caverns (Anacapa)
+42020426|Landing Cove (Anacapa)
+42020427|Parallel Reefs
+42020428|Bat Cave
+42020429|Far West
+42020430|Landslide (West Anacapa)
+42020431|Upper Aquarium
+42020432|Lower Aquarium
+42020433|Winfield Scott Outside
+42020434|Canyons
+42020435|Trash Dump / Garbage Cove
+42020436|Coral Pinnacle
+42020437|Randy's New Site
+42020438|Fish Bowl
+42020439|Twin Bay Point
+42020440|Pelican Preserve - Anacapa Island
+42020441|Amphitheater (Anacapa)
+42020442|Sea Lion Beach (Anacapa)
+4203|Southern Channel Islands
+420301|Santa Barbara
+42030102|Landing Cove North Buoy
+42030103|Landing Cove South Buoy
+42030104|South East Side SBI
+42030105|Sutil Island
+42030106|Elephant Seal Cove / East Elephant Seal
+42030107|Sea Lion Rookery
+42030108|Cat Canyon
+42030109|Hidden Reef
+42030110|Arch Reef / Santa Barbara Arch
+42030111|Shearwater Point
+42030112|Ray Ridge
+42030113|Cat Plateau, SE SBI
+42030114|Maytag Point SE Sutil Island
+42030115|Graveyard Caynon
+42030116|Deckers
+42030117|Southeast Reef
+42030118|Arch Point
+42030119|Shag Rock
+42030120|Reserve Reef
+42030121|Webster Point (Santa Barbara)
+42030122|Kelp Skyline
+42030123|Brittle Star Reef
+420302|Catalina Island
+42030200|Catalina Island General Area - no site specified
+42030201|Casino Point
+42030202|Lover's Cove (UW Snorkel Park Avalon)
+42030203|Toyon Bay
+42030204|Farnsworth Banks
+42030205|Hen Rock
+42030206|Pirates Cove
+42030207|Torqua Springs
+42030208|Long Point Catalina
+42030209|Guano Rock / Bird Rock
+42030210|Big Fishermans Cove
+42030211|Hamilton Cove
+42030212|Two Harbors (Isthmus Cove)
+42030213|Land's End
+42030214|Parson's Landing
+42030215|Middle Quarry
+42030216|Lion's Head
+42030217|Campus by the Sea
+42030218|Ship Rock
+42030219|Gallagher's Cove
+42030220|Italian Gardens
+42030221|Yellowtail Point
+42030222|Eagle Reef
+42030223|Blue Caverns
+42030224|Black Point
+42030225|Indian Rocks
+42030226|Red Bluffs
+42030227|Doctor's Cove
+42030228|USC Preserve -Cataline Island
+42030229|Sea Fan Grotto
+42030230|Eel Rock / Eel Cove
+42030231|Little Geiger
+42030232|Little Gibraltar Point
+42030233|Twin Rocks
+42030234|Please use 42030235 (was West Quarry)
+42030235|West Quarry
+42030236|Howlands Landing (near two harbors)
+42030237|Goat Harbor
+42030238|Rippers Cove
+42030239|Empire Landing (Catalina Island)
+42030240|Blue Car
+42030241|Africa West
+42030242|Big Geiger Reef
+42030243|Arrow Point
+42030244|Cape Cortes / Cape of Cortez
+42030245|Iron Bound Cove
+42030246|Johnson's Rocks
+42030247|Old Rock Quarry
+42030248|Can Dump
+42030249|Old Crane / Crane Point
+42030250|Empire Beach
+42030251|Black Rock
+42030252|Deadmans (Catalina) / Schaefer's
+42030253|Rusty Pipes
+42030254|Fraggle Rock
+42030255|Krolls
+42030256|Nooks and Crannies
+42030257|Little Farnsworth
+42030258|Garibaldi Reef
+42030259|Cactus Cove
+42030260|West Point / West End
+42030261|Lulu Reef
+42030262|Stony Point
+42030263|Foul Point
+42030264|Starlight
+42030265|Reflector Cove
+42030266|Valiant Shipwreck
+42030267|Intake Pipes
+42030268|Chalk Cliff Cove
+42030269|Pedestal Rock
+42030270|Descanso Beach
+42030271|Whale Rock
+42030272|Seal Rocks (Catalina Island)
+42030273|Pumpernickel
+42030274|Miracle Pinnacle
+42030275|East of Stuart Cove
+42030276|Emerald Point
+42030277|Tasty Rock
+42030278|Lure Reef / Gibraltar Reef
+42030279|Isthmus Cove NW Side
+42030280|Bleu Grotto
+42030281|Red Lava Wall
+42030282|China Point
+42030283|Salta Verde Kelp
+420303|San Nicholas
+420304|San Clemente Island
+42030401|Pyramid Head
+42030402|Pyramid Point
+42030403|Pyramid Cove
+42030404|Window Pane
+42030405|Blockhouse
+42030406|Little Window
+42030407|Castle Rock
+42030408|East of Middle Light
+42030409|Little Flower
+42030410|Fish Hook
+42030411|Disneyland
+42030412|Half Boilers
+42030413|Inside LCI
+42030414|Froggy Rocks
+42030415|China Point Plateau
+42030416|Calico Cove
+42030417|Arrowhead
+42030418|Bat Ray City
+42030419|Proud Bird
+42030420|Northwest Harbor
+42030421|Wilson Cove
+42030422|West Cove
+42030423|Wilson Cove Pier
+42030424|Wilson Cove Pier South
+42030425|South Wilson Cove
+42030426|Dune Point San Clemente Island
+42030427|Nosc Pier South
+42030428|Nosc Pier North
+42030429|Bill's Big Hairy Crack
+42030430|East Wall #2
+42030431|East Wall #1 / East End Wall / East of Bliss
+42030432|Sunpoint
+42030433|Petter's Rock
+42030434|The Garage
+42030435|Twin Peaks (East Side)
+42030436|Twin Peaks (West Side)
+42030437|Neptune's Wall
+42030438|Octopus Garden
+42030439|Little Arch / Pyramid Arch
+42030440|Arch Pinnacle
+42030441|Cliffs of Insanity
+42030442|Danny's Dive Inn / Sun Point Amphitheater / Caverns
+42030443|Mosquito Wall
+42030444|Perry's Cave
+42030445|Black Caverns
+42030446|Two Caves
+42030447|Scream Wall
+42030448|Little Finger Wall
+42030449|China Hat
+42030450|Inside Boiler
+42030451|Inside Boiler 2
+42030452|West Disneyland
+42030453|Bat Ray Cove
+42030454|Soupfin Reef
+42030455|Runway Point
+42030456|Runway South
+42030457|Bliss
+420305|Sutil Island
+42030501|The Notch
+4204|S Port Hueneme - N Point Fermin (LA County)
+420401|Leo Carillo State Beach
+42040101|Leo Carillo South
+42040102|Leo Carillo North
+420402|Point Dume
+42040201|Point Dume Submarine Canyon
+420403|Coral Beach
+42040301|Broad Beach
+420404|Malibu Beach
+42040401|Las Flores (Dukes)
+42040402|Amarillo Beach (North Pepperdine)
+42040403|Puerco Beach
+42040404|Malibu Cove
+42040405|Escondido Beach (South)
+42040406|Escondido Beach (Middle)
+42040407|Escondido Beach (North)
+42040408|Escondido B4 (Paradise Cove Pier)/(Wooden House)
+42040409|Paradise Cove (South)
+42040410|Paradise Cove (Middle)
+42040411|Las Tunas State Beach
+42040412|120 Reef / Terranea Resort Beach
+420405|Santa Monica Bay (Topanga Beach - Manhattan State Park)
+42040501|Star of Scotland Wreck
+420406|South Santa Monica Bay (Manhattan Beach - Pt. Vincente)
+42040601|RAT Beach (Redondo and Torrance Beach)
+42040602|Malaga Cove
+42040603|Haggerty's
+42040604|Flat Rock
+42040605|Rocky Point
+42040606|Lunada Bay
+42040607|Redondo Beach Submarine Canyon
+42040608|Christmas Tree Cove
+42040609|Palawan wreck
+420407|Rancho Palos Verde (Pt. Vincente - White Point)
+42040701|Abalone Cove
+42040702|Long Point (old Marineland)
+42040703|Royal Palms Pipeline
+42040704|Inspiration Point
+42040705|Pt. Vincente Fishing Access
+42040706|Point Vincente
+42040707|Palos Verde Peninsula
+420408|West San Pedro (White Point - N. Point Fermin)
+42040801|White Point
+4205|S Point Fermin - N Dana Point
+420501|Long Beach
+42050101|Long Beach Navy Base Mole
+42050102|Olympic Wreck
+42050103|Cabrillo Beach
+420502|Huntington Beach
+42050201|Eureka Oil Platform
+42050202|Ellen / Elly Oil Platform
+420503|Newport Beach
+42050301|Newport Harbor
+420504|Laguna Beach
+42050400|Laguna Beach General Area - no site specified
+42050401|Fisherman's Cove
+42050402|Crescent Bay
+42050403|Diver's Cove
+42050404|Shaws Cove
+42050405|Cress Street
+42050406|Crystal Cove State Park - Reef Point
+42050407|Woods Cove
+42050408|Montage / Treasure Island / Goff Island
+42050409|Crystal Cove State Park - Historic District
+42050410|Crystal Cove State Park – Crystal Heights
+42050411|Heisler Park
+42050412|Bluebird Canyon Road
+42050413|Salt Creek
+42050414|Picnic Point Reef
+42050415|Mussel Cove
+42050416|Corona del Mar
+42050417|Mountain Road / Mountain Street (Laguna)
+4206|S Dana Point - N La Jolla
+420601|Encinitas Area
+42060101|Pipes - Cardiff Campground, San Elijo State Beach
+42060102|Swami's Beach, Encinitas
+42060103|Agua Hedionda West Basin
+42060104|North Bird Rock (La Jolla)
+42060105|Cardiff Outflow Pipes
+42060106|South Ponto Beach
+42060107|Grandview
+42060108|Beacons
+42060109|Stone Steps
+42060110|Moonlight Beach
+42060111|D Street Beach
+42060112|Boneyards
+42060113|South Cardiff Campgrounds
+42060114|Cardiff Reef
+42060115|Tabletops (Encinitas area)
+42060116|Fletcher's Cove
+420602|Del Mar area
+42060200|Del Mar General Area - no site specified
+42060201|Torrey Pines Reef #2
+42060202|Corona Breakwater
+42060203|Little Corona
+42060204|Del Mar Boat Basin - Camp Pendleton
+420603|La Jolla
+42060300|Please use 42060309 (was La Jolla General Area - no site specified)
+42060301|La Jolla Canyon
+42060302|Marine Room
+42060303|Wipeout Beach
+42060304|Shell Beach
+42060305|Boomers Beach
+42060306|La Jolla Shores
+42060307|Hospital Point
+42060308|Scripps Canyon (La Jolla Canyon Sumner Branch East)
+42060309|La Jolla Cove - general area
+42060310|Quast Rock
+42060311|God's Rock
+42060312|Caves at La Jolla Cove
+42060313|Scripps Pier
+42060314|Goldfish Pt. (b/t La Jolla Caves & Emerald Cove)
+42060315|La Jolla Cove Yellow Buoy
+42060316|Mia's Reef
+42060318|Children's Pool Beach / Casa Main
+42060319|South Casa
+42060320|Ghost Forest / Point La Jolla
+42060321|Wind n Sea Beach (Westbourne to Nautilus)
+42060322|Westbourne to Belvedere St.
+42060323|Marine Street
+42060324|Dike Rock - Scripps State Marine Conservation Area
+42060325|West of Bird Rock, 1 mile
+42060326|Coast Blvd. Park
+42060327|Big Rock Reef (south La Jolla State Marine Reserve)
+42060328|Sunglass Rock (submerged rocks 1/4 mile N of Scripp's Pier)
+42060329|Boundary Wall / South Wall
+42060330|Murray Head (La Jolla Canyon)
+42060331|La Jolla Tide Pools
+42060332|Nautilus Forest
+420604|San Clemente
+42060401|Seal Rock
+42060402|State beach Campground entry
+4207|S La Jolla - Tijuana
+420701|Mission Beach
+42070100|Mission Beach General Area - no site specified
+42070101|Ruby E
+42070102|HMCS Yukon
+42070103|Hospitality Point (Mission Bay)
+42070104|El Ray
+42070105|NOSC Tower
+42070106|Old Ingraham Street Bridge
+42070107|Bonita Cove (Mission Bay Park)
+42070108|Mission Beach Artificial Reef (b/t Ingraham St. Bridge & NOSC)
+42070109|Mariners Basin (Mission Bay)
+42070110|Mission Point from beach
+42070111|Mission Point Southside of jetty
+42070112|SDOF White Seabass Pens - Mission Bay
+42070113|Mission Point off Bayside Lane
+42070114|Mission Bay Inlet (along parking lot)
+42070115|South Mission Beach (North side of Jetty)
+42070116|Ventura Cove (Mission Bay)
+420702|Point Loma
+42070200|Pt. Loma General Area - no site specified
+42070201|Pt. Loma Kelp Beds
+42070204|2000 Times
+42070205|New Hope Reef
+42070206|Kelp Cabo Reef (Point Loma)
+42070207|Ancient Sea Cliffs
+42070208|Three Fingers Reef
+42070209|Train Wheels / The Crack
+42070210|Sunset Cliffs Pt. Loma
+42070211|Pt. Loma - general rocky reefs
+42070212|Dragon Head Wall
+42070213|Lazy Days Wreck
+42070214|3 Hole (SW of Point Loma)
+42070215|Broomtail Reef
+42070216|Kinane Pass
+42070217|Main Channel Point Loma Kelp Beds
+42070218|Horsehead
+42070219|Green Tank
+42070220|Point Loma Main Wall
+42070221|Point Loma Dino Head
+42070222|NRAD West
+42070223|New Hope Rock (Pt. Loma Kelp Beds)
+42070224|Seven Fathoms - 7 Fathoms (Point Loma)
+42070225|Table Tops - Point Loma
+42070226|Goat Point - Point Loma
+42070227|Flagpole
+42070228|N-ROD (not N-RAD)
+42070229|Brian's Boulder
+42070230|Conner's Canyon
+42070231|Sea Bass City
+42070232|Lost City
+42070233|Callie's Windows
+42070234|Point Loma Sewage Outfall Pipe
+42070235|Chelsea Lee Reef
+42070236|Rod's Ridge
+42070237|High Point (Point Loma)
+42070238|Dark Forest (Point Loma)
+42070239|High Spot (Point Loma)
+42070240|Chris's Rock
+42070241|Six Fathoms
+42070242|Rock Rol (Pt. Loma Kelp Beds)
+42070243|Lucky Strike
+42070244|Goal Post
+42070245|Puzzle Piece Reef / Jigsaw Wall
+42070246|Old Encrusted Anchor - Point Loma
+42070247|The Cave - Point Loma
+42070248|Strawberry Fields Ledges
+42070249|Deer Head Canyon
+42070250|One Stop Rock
+42070251|The Ledges
+42070252|Sub Sea
+42070253|Tic Tac Toe Plateau
+42070254|Tetons Ridge
+42070255|10 Fathoms Kelp
+42070256|Wet Rocks
+42070257|Captain's Mast (Point Loma)
+42070258|Scout's Out (Point Loma)
+42070259|Nerd Rock
+42070260|Donut Hole
+42070261|Phantom Ship
+42070262|Avatar
+42070263|Treefish Terrace
+42070264|Submarine Seamount
+42070265|Divers Disneyland
+42070266|Clam Shoals
+42070267|Sorcerer's Magic
+420703|S. of Pt. Loma - US Border (incl. San Diego Bay and Imperial Beach)
+42070301|SDOF White Seabass Pens - San Diego Bay
+42070302|High Seas Wreck
+42070303|Wreck of the Hogan (1919 Navy Destroyer)
+42070304|Nine Mile Bank / 9 Mile Bank
+42070305|Zuniga Point
+420704|Tanner and Cortes Banks
+42070401|Cortes Mid Bank
+42070402|Cortes Banks East Canyon
+42070403|Cortes Banks Canyon 5
