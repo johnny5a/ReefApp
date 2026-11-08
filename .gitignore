@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+reef_species_lists.json
+.DS_Store
