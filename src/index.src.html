@@ -75,7 +75,14 @@ textarea{min-height:70px}
 .row>.grow{flex:1}
 /* Species list */
 .sbar{position:sticky;top:-16px;z-index:3;background:var(--bg);padding:8px 0;display:flex;flex-direction:column;gap:8px;margin-top:-8px}
-.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.ctl{display:grid;grid-template-columns:3.2em 1fr;align-items:center;gap:8px}
+.ctl-l{font:600 13px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;min-width:0}
+/* Sort: one joined switch, visibly different from the round "Show" pills */
+.sortseg{display:inline-flex;justify-self:start;border:1px solid var(--accent);border-radius:8px;overflow:hidden}
+.sortseg button{min-height:36px;padding:6px 12px;border:0;border-left:1px solid var(--accent);background:var(--surface);color:var(--accent);font-size:14px;font-weight:700}
+.sortseg button:first-child{border-left:0}
+.sortseg button[aria-checked="true"]{background:var(--accent);color:var(--accent-ink)}
 .chips button{flex:none;min-height:36px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:14px}
 .chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .splist{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -239,8 +246,8 @@ const ABUND = {S:"Single (1)",F:"Few (2–10)",M:"Many (11–100)",A:"Abundant (
 /* ---------- State ---------- */
 const LS = "reef-pac-v1";
 let state = load();
-let ui = {tab:"log", filter:null, q:"", sort:"az"};
-try{ ui.sort = JSON.parse(localStorage.getItem("reef-pac-v1")||"{}")?.settings?.spSort || "az"; }catch(_){}
+let ui = {tab:"log", filter:null, q:"", sort:"freq"};
+try{ ui.sort = JSON.parse(localStorage.getItem("reef-pac-v1")||"{}")?.settings?.spSort || "freq"; }catch(_){ ui.sort="freq"; }
 function blank(){
   const now=new Date();
   const pad=n=>String(n).padStart(2,"0");
@@ -576,26 +583,28 @@ function renderSpecies(main, sv, keepFocus){
   if(ui.filter==="site" && !freq) ui.filter="quick";
   const list=filtered(sv);
   const pctOf=s=>freq?.pct.get(s.code);
+  // Sort is separate from which species are shown. "Most seen here" needs the site's REEF history.
+  const sortBy = (ui.sort==="freq" && !freq) ? "az" : ui.sort;
   let body="";
   const unlHits = ui.q.trim() ? unlSearch(ui.q,40) : [];
   if(ui.filter==="unlisted" && !ui.q.trim()){ body = (sv.unlisted||[]).length ? (sv.unlisted||[]).map(u=>unlRow(UNL_BY[u.sci]||{name:u.name,sci:u.sci||"",fam:"",regs:[]},sv)).join("") : `<div class="empty">No unlisted species yet. Search above: species from REEF's other regions appear under “Other REEF species”.</div>`; }
   else if(!list.length && !unlHits.length) body=`<div class="empty">No species match “${esc(ui.q)}”.</div>`;
   else if(!list.length) body="";
-  else if(ui.sort==="fam"){
-    const bySite = ui.filter==="site" && !ui.q.trim();
-    const sorted=[...list].sort((a,b)=>famCompare(a,b) || (bySite?((pctOf(b)??-1)-(pctOf(a)??-1)):0) || a.name.localeCompare(b.name));
+  else if(sortBy==="fam"){
+    const sorted=[...list].sort((a,b)=>famCompare(a,b) || (freq?((pctOf(b)??-1)-(pctOf(a)??-1)):0) || a.name.localeCompare(b.name));
     let cur=null; body=sorted.map(s=>{ const h=s.fam!==cur?(cur=s.fam,`<div class="fam">${esc(famLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined); }).join("");
-  } else if(ui.filter==="site" && !ui.q.trim()) body=list.sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
-  else body=list.sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
+  } else if(sortBy==="freq") body=[...list].sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
+  else body=[...list].sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
   if(unlHits.length) body+=`<div class="fam">Other REEF species · enter as Unlisted on REEF</div>`+unlHits.map(u=>unlRow(u,sv)).join("");
   const siteName=freq?(freq.own?(sv.info.siteName||"this site"):tidy(ZONES.get(freq.code)||"this area")):"";
-  const chips=[...(freq?[["site","At this site"]]:[]),["quick",`Common in ${R.name}`],["seen",`Seen (${Object.keys(sv.counts).length})`],["fish","Fish"],["invert","Inverts"],["algae","Algae"],["unlisted",`Unlisted (${(sv.unlisted||[]).length})`],["all","All PAC"]];
+  const chips=[...(freq?[["site","At this site"]]:[]),["quick",`Common in ${R.name}`],["seen",`Seen (${Object.keys(sv.counts).length})`],["fish","Fish"],["invert","Inverts"],["algae","Algae"],["unlisted",`Unlisted (${(sv.unlisted||[]).length})`],["all",`All ${esc(R.name)}`]];
+  const sorts=[...(freq?[["freq","Most seen here"]]:[]),["az","A–Z"],["fam","Family"]];
   const html=`
   <div class="sbar">
     <input type="search" id="q" placeholder="Search name, scientific name, family or code" value="${esc(ui.q)}" aria-label="Search species">
-    <div class="chips" role="group" aria-label="Filter">${chips.map(([k,t])=>`<button type="button" data-filter="${k}" aria-pressed="${!ui.q&&ui.filter===k}">${t}</button>`).join("")}
-      <button type="button" data-sort aria-pressed="${ui.sort==="fam"}">By family</button></div>
-    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Sorted by how often REEF divers record each species at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`. ${esc(sv.info.siteName||"This site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}. Switch to “Common in ${esc(R.name)}” for the standard list.</p>`:""}
+    <div class="ctl"><span class="ctl-l">Show</span><div class="chips" role="group" aria-label="Which species to show">${chips.map(([k,t])=>`<button type="button" data-filter="${k}" aria-pressed="${!ui.q&&ui.filter===k}">${t}</button>`).join("")}</div></div>
+    <div class="ctl"><span class="ctl-l">Sort</span><div class="sortseg" role="radiogroup" aria-label="Sort order">${sorts.map(([k,t])=>`<button type="button" role="radio" data-sortby="${k}" aria-checked="${sortBy===k}">${t}</button>`).join("")}</div></div>
+    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Species REEF divers have recorded at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`; ${esc(sv.info.siteName||"this site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}.</p>`:""}
     ${!freq&&sv.info.zone&&FREQ.size?`<p class="hint">No REEF survey history for this site yet, so showing the standard list.</p>`:""}
     ${!sv.info.zone&&FREQ.size?`<p class="hint">Choose your dive site on the Dive tab to see the species usually found there.</p>`:""}
     <div class="legend"><span><b>S</b> 1</span><span><b>F</b> 2–10</span><span><b>M</b> 11–100</span><span><b>A</b> 101+</span><span>Tap again to clear</span></div>
@@ -750,7 +759,7 @@ document.addEventListener("click", async e=>{
   if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
   if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; if(t.dataset.filter==="site"||t.dataset.filter==="quick"){ state.settings.spList=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
-  if("sort" in t.dataset){ ui.sort=ui.sort==="fam"?"az":"fam"; state.settings.spSort=ui.sort; persist(); renderSpecies($("#main"),sv); return; }
+  if(t.dataset.sortby){ ui.sort=t.dataset.sortby; state.settings.spSort=ui.sort; persist(); renderSpecies($("#main"),sv); return; }
   if(t.dataset.unl){
     const sci=t.dataset.unl, v=t.dataset.v, u=UNL_BY[sci]||{name:sci,sci,fam:""};
     sv.unlisted=sv.unlisted||[]; const ix=sv.unlisted.findIndex(x=>x.sci===sci);
