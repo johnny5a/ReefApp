@@ -1,12 +1,17 @@
 name: Update REEF data
 
 # Refreshes California sites, species lists and per-site species frequencies from reef.org,
-# rebuilds index.html and publishes it. Runs on the 1st of each month, and on demand
-# (Actions tab → "Update REEF data" → Run workflow).
+# rebuilds the app and publishes it. Runs on the 1st of each month, and on demand
+# (Actions tab → "Update REEF data" → Run workflow; tick "full" to re-download every site).
 on:
   schedule:
     - cron: "17 11 1 * *"   # 1st of the month, 11:17 UTC (3–4 AM in California)
   workflow_dispatch:
+    inputs:
+      full:
+        description: "Re-download every site, not just ones with new surveys"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: [scripts/update_reef_data.py, .github/workflows/update-reef-data.yml]
@@ -24,11 +29,19 @@ jobs:
     timeout-minutes: 300
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: main   # latest data, even if this run was queued behind another
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Download latest REEF data
-        run: python3 scripts/update_reef_data.py
+        # Normally only sites with new surveys are re-fetched; a full refresh runs each January or on request.
+        run: |
+          if [ "${{ inputs.full }}" = "true" ] || [ "$(date -u +%m)" = "01" -a "${{ github.event_name }}" = "schedule" ]; then
+            python3 scripts/update_reef_data.py --full
+          else
+            python3 scripts/update_reef_data.py
+          fi
       - name: Build app
         run: python3 build.py
       - name: Commit if anything changed

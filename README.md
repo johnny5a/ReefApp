@@ -24,6 +24,8 @@ A phone app for logging [REEF](https://www.reef.org) Volunteer Fish Survey dives
 - species from REEF's other regions, offered as Unlisted species (`unlisted.txt`)
 - how often each species is seen at each site and area with 5+ surveys (`freq.txt`), from REEF's Geographic Zone Reports
 
+Monthly runs only re-download sites whose REEF survey count changed (typically 10–20 minutes); every January, or when you tick "full" under Actions → Update REEF data → Run workflow, it re-downloads everything (1–2 hours).
+
 `build.py` turns these into `data/<REGION>.json`, which the app loads for the region you pick; the service worker keeps every region offline. The job commits only if something changed.
 
 ## Updating

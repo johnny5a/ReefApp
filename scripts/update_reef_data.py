@@ -8,7 +8,11 @@ For each region in REGIONS it writes src/<REGION>/:
                  or area (Geographic Zone Report, total SF%), for zones with enough surveys
 and src/data_date.txt.
 
-Run:  python3 scripts/update_reef_data.py [PAC TWA ...]   then  python3 build.py
+Run:  python3 scripts/update_reef_data.py [--full] [PAC TWA ...]   then  python3 build.py
+
+Incremental by default: the big area reports give every zone's survey count, and only zones
+whose count changed since the last run (or that are new) get their species report re-fetched.
+--full re-fetches every zone (the workflow does this each January, or on request).
 Standard library only. Requests are sequential with a pause, to be gentle on reef.org.
 """
 import datetime, html.parser, sys, time, urllib.parse, urllib.request
@@ -129,7 +133,18 @@ def freq_line(zone, n, sp):
     return f"{zone}|{n}|" + ",".join(f"{c}:{p}" for c, p in sp) if sp else None
 
 
-def update_region(region, cfg, all_species, today):
+def read_old_freq(path):
+    """zone -> (surveys, line) from the previous run, if any."""
+    old = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            parts = line.split("|")
+            if len(parts) == 3 and parts[1].isdigit():
+                old[parts[0]] = (int(parts[1]), line)
+    return old
+
+
+def update_region(region, cfg, all_species, today, full=False):
     out = SRC / region
     out.mkdir(parents=True, exist_ok=True)
     print(f"== {region} ==", flush=True)
@@ -165,8 +180,17 @@ def update_region(region, cfg, all_species, today):
         counts.update(c)
         if top in c and top_sp:
             lines[top] = freq_line(top, c[top], top_sp)
-    wanted = [z for z, _ in zones if counts.get(z, 0) >= MIN_SURVEYS and z not in lines]
-    print(f"  {len(wanted)} zones with {MIN_SURVEYS}+ surveys to fetch", flush=True)
+    old = {} if full else read_old_freq(out / "freq.txt")
+    eligible = [z for z, _ in zones if counts.get(z, 0) >= MIN_SURVEYS and z not in lines]
+    wanted, kept = [], 0
+    for z in eligible:
+        if z in old and old[z][0] == counts[z]:
+            lines[z] = old[z][1]          # no new surveys since last time: keep it
+            kept += 1
+        else:
+            wanted.append(z)
+    print(f"  {len(eligible)} zones with {MIN_SURVEYS}+ surveys: {kept} unchanged, {len(wanted)} to fetch"
+          + (" (full refresh)" if full else ""), flush=True)
     failed = 0
     for i, z in enumerate(wanted, 1):
         try:
@@ -175,6 +199,8 @@ def update_region(region, cfg, all_species, today):
                 lines[z] = freq_line(z, counts[z], zsp)
         except Exception as e:
             failed += 1
+            if z in old:
+                lines[z] = old[z][1]      # keep last month's data rather than losing the site
             print(f"  {z} failed: {e}", file=sys.stderr, flush=True)
         if i % 100 == 0:
             print(f"  {i}/{len(wanted)}", flush=True)
@@ -193,11 +219,13 @@ def update_region(region, cfg, all_species, today):
 
 def main():
     today = datetime.date.today().isoformat()
-    wanted = [r for r in sys.argv[1:] if r in REGIONS] or list(REGIONS)
+    args = sys.argv[1:]
+    full = "--full" in args
+    wanted = [r for r in args if r in REGIONS] or list(REGIONS)
     print("Species lists for all regions…", flush=True)
     all_species = {r: species(r) for r in ALL_REGIONS}
     for region in wanted:
-        update_region(region, REGIONS[region], all_species, today)
+        update_region(region, REGIONS[region], all_species, today, full=full)
     (SRC / "data_date.txt").write_text(today + "\n")
     print("Done.", flush=True)
 
