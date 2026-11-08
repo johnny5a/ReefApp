@@ -1,0 +1,70 @@
+Garibaldi
+Blacksmith
+Kelp Bass
+Barred Sand Bass
+Spotted Sand Bass
+Giant Sea Bass
+California Sheephead
+Senorita
+Rock Wrasse
+Opaleye
+Halfmoon
+Black Perch
+Striped Seaperch
+Rainbow Seaperch
+Pile Perch
+Rubberlip Seaperch
+Kelp Perch
+Shiner Perch
+Blackeye Goby
+Bluebanded Goby
+Zebra Goby
+Island Kelpfish
+Giant Kelpfish
+Painted Greenling
+Kelp Greenling
+Lingcod
+Cabezon
+California Scorpionfish
+Kelp Rockfish
+Gopher Rockfish
+Black-and-Yellow Rockfish
+Blue Rockfish - generic ID
+Olive Rockfish
+Treefish
+Copper Rockfish
+Vermilion Rockfish
+Grass Rockfish
+California Moray
+Horn Shark
+Swell Shark
+Bat Ray
+Round Stingray
+Shovelnose Guitarfish
+Salema
+Sargo
+Jack Mackerel
+Topsmelt
+Jacksmelt
+Ocean Whitefish
+Sarcastic Fringehead
+Bat Star
+Giant Spined Star
+Purple Urchin
+Red Sea Urchin
+Spiny Lobster
+Giant Keyhole Limpet
+Kellet's Whelk
+Wavy Turban Snail
+Spanish Shawl
+Strawberry Anemone
+Orange Cup Coral
+California Golden Gorgonian
+Brown Gorgonian
+Red Gorgonian
+Warty Sea Cucumber
+Two-spot Octopus / Californian Two-spot Octopus
+Giant Kelp
+Southern Sea Palm
+Northern Sea Palm
+Bull Kelp

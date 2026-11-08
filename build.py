@@ -1,19 +1,63 @@
-"""Build index.html from src/: python3 build.py
-Inlines the PAC species list, other-region (unlisted) species and California zone codes into the app page.
+"""Build the app: python3 build.py
+
+- index.html  ← src/index.src.html
+- data/<REGION>.json  ← src/<REGION>/{sites,species,unlisted,freq}.txt (+ quick.txt)
+  The app loads one region's file at a time; the service worker keeps them all offline.
 After building, bump VERSION in sw.js so phones pick up the change."""
+import json
 from pathlib import Path
-src = Path(__file__).parent / "src"
-page = (src / "index.src.html").read_text()
-species = (src / "species_pac.txt").read_text().strip()
-sites = (src / "sites_ca.txt").read_text().strip()
-unl_file = src / "species_unlisted.txt"
-unlisted = unl_file.read_text().strip() if unl_file.exists() else ""
-date_file = src / "data_date.txt"
-data_date = date_file.read_text().strip() if date_file.exists() else ""
-freq_file = src / "site_freq_ca.txt"
-sitefreq = freq_file.read_text().strip() if freq_file.exists() else ""
-for name, text in (("species", species), ("sites", sites), ("unlisted", unlisted), ("site frequencies", sitefreq)):
-    assert "`" not in text and "${" not in text, f"{name} list has characters that break the page"
-out = page.replace("/*SPECIES*/", species).replace("/*SITES*/", sites).replace("/*UNLISTED*/", unlisted).replace("/*SITEFREQ*/", sitefreq).replace("/*DATADATE*/", data_date)
-(Path(__file__).parent / "index.html").write_text(out)
-print("index.html built")
+
+root = Path(__file__).parent
+src = root / "src"
+REGION_INFO = {
+    # root: zone code the site browser starts from; near: regions whose species are likeliest strays
+    "PAC": {"name": "California", "long": "California (Pacific Coast)", "root": "4", "near": ["TEP"],
+            "habitats": ["Kelp Forest", "Rock Boulder/Shale Reef", "Artificial", "Open Ocean", "Eel Grass Bed", "Surf Grass Bed",
+                         "Pinnacle", "Bull Kelp", "Sandy Bottom/Mud/Silt", "Cobblestone/Boulder Field", "Wall"]},
+    "TWA": {"name": "Caribbean", "long": "Caribbean, Florida & Bahamas (TWA)", "root": "", "near": ["SAS", "NE"],
+            "habitats": ["High Profile Reef", "Low Profile Reef", "Sloping Dropoff", "Wall", "Ledge", "Grass",
+                         "Sandy Bottom/Mud/Silt/Mangrove", "Rubble", "Artificial", "Open Ocean", "Cobblestone/Boulder Fields/Escarpment"]},
+}
+QUICK_SIZE = 70
+
+
+def read(p):
+    return p.read_text().strip() if p.exists() else ""
+
+
+def quick_codes(region, species, freq):
+    """Common-species list: hand-picked names if given, else the most-seen species across the region's top areas."""
+    by_name = {l.split("|")[1]: l.split("|")[0] for l in species.splitlines()}
+    names = read(src / region / "quick.txt")
+    if names:
+        return [by_name[n] for n in names.splitlines() if n in by_name]
+    total, score = 0, {}
+    for line in freq.splitlines():
+        zone, n, lst = line.split("|")
+        if len(zone) != (len(REGION_INFO[region]["root"]) + 1):
+            continue  # only the region's top-level areas
+        n = int(n); total += n
+        for item in lst.split(","):
+            c, p = item.split(":")
+            score[c] = score.get(c, 0) + int(p) * n
+    return [c for c, _ in sorted(score.items(), key=lambda x: -x[1])[:QUICK_SIZE]] if total else []
+
+
+(root / "data").mkdir(exist_ok=True)
+date = read(src / "data_date.txt")
+built = []
+for region, info in REGION_INFO.items():
+    d = src / region
+    sites, species = read(d / "sites.txt"), read(d / "species.txt")
+    if not (sites and species):
+        continue
+    freq, unlisted = read(d / "freq.txt"), read(d / "unlisted.txt")
+    data = {"region": region, **info, "date": date, "sites": sites, "species": species,
+            "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq)}
+    (root / "data" / f"{region}.json").write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
+    built.append(region)
+
+regions = [{"code": r, "name": REGION_INFO[r]["name"], "long": REGION_INFO[r]["long"]} for r in built]
+page = (src / "index.src.html").read_text().replace("/*REGIONS*/", json.dumps(regions))
+(root / "index.html").write_text(page)
+print("index.html built; data for", ", ".join(built) or "no regions")

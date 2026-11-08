@@ -144,7 +144,7 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
   <header class="top">
     <div style="flex:1">
       <h1>REEF Dive Survey</h1>
-      <div class="sub" id="hdrSub">Pacific Coast · California</div>
+      <div class="sub" id="hdrSub">&nbsp;</div>
     </div>
     <span class="pill" id="syncPill" title="Where your surveys are saved"><span class="dot"></span><span id="syncTxt">Offline ready</span></span>
   </header>
@@ -161,61 +161,71 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 
 <script>
 "use strict";
-/* ---------- Species data (REEF PAC names report + CA invert/algae list) ---------- */
-const RAW = `/*SPECIES*/`;
-const INVERT_PHYLA = new Set(["Echinodermata","Cnidaria","Arthropoda","Mollusca","Porifera","Urochordata","Annelida","Bryozoa"]);
+/* ---------- Region data: data/<REGION>.json, built from REEF reports by build.py and loaded on demand ---------- */
+const REGIONS = /*REGIONS*/;
+const REGION_NAMES = {PAC:"California",TWA:"Caribbean",HAW:"Hawaii",TEP:"Trop. E. Pacific",SOP:"South Pacific",NE:"NE US/Canada",SAS:"SE US",CIP:"Indo-Pacific",EAM:"E. Atlantic/Med",IORS:"Indian Ocean/Red Sea"};
+const INVERT_PHYLA = new Set(["Echinodermata","Cnidaria","Arthropoda","Mollusca","Porifera","Urochordata","Annelida","Bryozoa","Ctenophora","Platyhelminthes"]);
 const TURTLES = new Set(["Cheloniidae","Dermochelyidae"]);
 const PRESENCE_ONLY = new Set(["Strawberry Anemone","Cobalt Sponge"]);
-const QUICK = ["Garibaldi","Blacksmith","Kelp Bass","Barred Sand Bass","Spotted Sand Bass","Giant Sea Bass","California Sheephead","Senorita","Rock Wrasse","Opaleye","Halfmoon","Black Perch","Striped Seaperch","Rainbow Seaperch","Pile Perch","Rubberlip Seaperch","Kelp Perch","Shiner Perch","Blackeye Goby","Bluebanded Goby","Zebra Goby","Island Kelpfish","Giant Kelpfish","Painted Greenling","Kelp Greenling","Lingcod","Cabezon","California Scorpionfish","Kelp Rockfish","Gopher Rockfish","Black-and-Yellow Rockfish","Blue Rockfish - generic ID","Olive Rockfish","Treefish","Copper Rockfish","Vermilion Rockfish","Grass Rockfish","California Moray","Horn Shark","Swell Shark","Bat Ray","Round Stingray","Shovelnose Guitarfish","Salema","Sargo","Jack Mackerel","Topsmelt","Jacksmelt","Ocean Whitefish","Sarcastic Fringehead","Bat Star","Giant Spined Star","Purple Urchin","Red Sea Urchin","Spiny Lobster","Giant Keyhole Limpet","Kellet's Whelk","Wavy Turban Snail","Spanish Shawl","Strawberry Anemone","Orange Cup Coral","California Golden Gorgonian","Brown Gorgonian","Red Gorgonian","Warty Sea Cucumber","Two-spot Octopus / Californian Two-spot Octopus","Giant Kelp","Southern Sea Palm","Northern Sea Palm","Bull Kelp"];
-
-const SPECIES = RAW.trim().split("\n").map(l=>{
-  const [code,name,sci,fam]=l.split("|");
-  const kind = fam==="Algae"?"algae":INVERT_PHYLA.has(fam)?"invert":TURTLES.has(fam)?"turtle":"fish";
-  return {key: code||("x-"+name.toLowerCase().replace(/[^a-z0-9]+/g,"-")), code, name, sci, fam, kind, pa: PRESENCE_ONLY.has(name)};
-});
-const BYKEY = Object.fromEntries(SPECIES.map(s=>[s.key,s]));
-const QUICKSET = new Set(QUICK);
-
-/* ---------- How often each species is seen at each California site (REEF Geographic Zone Reports, %SF) ---------- */
-const FREQ_RAW = `/*SITEFREQ*/`;
-const FREQ = new Map(FREQ_RAW.trim() ? FREQ_RAW.trim().split("\n").map(l=>{ const [code,n,list]=l.split("|"); return [code,{n:+n, sp:(list||"").split(",").filter(Boolean).map(x=>{const [c,p]=x.split(":"); return [c,+p];})}]; }) : []);
 const FREQ_MIN_SURVEYS = 5;
-const DATA_DATE = "/*DATADATE*/";
+const tidy = n => n.replace(/\s+/g," ").trim();
+
+// Filled by useRegion(); every list below belongs to the region currently loaded.
+let R = null;                                   // {region,name,long,root,near,habitats,date}
+let SPECIES=[], BYKEY={}, QUICKSET=new Set(), FREQ=new Map(), UNL=[], UNL_BY={}, ZONES=new Map(), SITE_LIST=[], SITE_BY_CODE={}, HABITATS=[], DATA_DATE="";
+const regionCache = {};
+
+function zoneParents(code){ const out=[]; for(let k=code.length-1;k>=1;k--){ const p=code.slice(0,k); if(ZONES.has(p)) out.unshift(p); } return out; }
+function parentOf(code){ return zoneParents(code).slice(-1)[0] || ""; }
+function areaLabel(code){ const ps=zoneParents(code).filter(p=>p.length>=Math.max(2,(R?.root||"").length+2)); return ps.slice(-2).map(p=>tidy(ZONES.get(p))).join(" › "); }
+
+function parseRegion(d){
+  const species = d.species.split("\n").map(l=>{
+    const [code,name,sci,fam]=l.split("|");
+    const kind = fam==="Algae"?"algae":INVERT_PHYLA.has(fam)?"invert":TURTLES.has(fam)?"turtle":"fish";
+    return {key: code, code, name, sci, fam, kind, pa: PRESENCE_ONLY.has(name)};
+  });
+  const names = new Set(species.map(s=>s.name.toLowerCase()));
+  const unl = (d.unlisted||"").split("\n").filter(Boolean).filter(l=>!names.has(l.split("|")[0].toLowerCase())).map(l=>{ const [name,sci,fam,regs]=l.split("|"); return {name,sci,fam,regs:(regs||"").split(",").filter(Boolean),hay:(name+" "+sci+" "+fam).toLowerCase().replace(/['’]/g,"")}; });
+  const zones = new Map(d.sites.split("\n").map(l=>{const i=l.indexOf("|");return [l.slice(0,i), l.slice(i+1)];}));
+  const freq = new Map((d.freq||"").split("\n").filter(Boolean).map(l=>{ const [code,n,list]=l.split("|"); return [code,{n:+n, sp:(list||"").split(",").filter(Boolean).map(x=>{const [c,p]=x.split(":"); return [c,+p];})}]; }));
+  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||""}, species, unl, zones, freq, quick:new Set(d.quick||[])};
+}
+function useRegion(x){
+  R=x.meta; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick;
+  UNL=x.unl; UNL_BY=Object.fromEntries(UNL.map(u=>[u.sci,u])); FREQ=x.freq; ZONES=x.zones; HABITATS=R.habitats; DATA_DATE=R.date;
+  SITE_LIST=[...ZONES.entries()].filter(([c,n])=>c.length===8 && !/^Please use/i.test(n)).map(([code,name])=>({code,name:tidy(name),area:areaLabel(code),hay:(name+" "+zoneParents(code).map(p=>ZONES.get(p)).join(" ")).toLowerCase().replace(/['’.]/g,"")}));
+  SITE_BY_CODE=Object.fromEntries(SITE_LIST.map(s=>[s.code,s]));
+}
+async function loadRegion(code){
+  code = REGIONS.some(r=>r.code===code) ? code : (REGIONS[0]?.code||"PAC");
+  if(R?.region===code) return true;
+  try{
+    if(!regionCache[code]){ const res=await fetch(`data/${code}.json`); if(!res.ok) throw new Error(res.status); regionCache[code]=parseRegion(await res.json()); }
+    useRegion(regionCache[code]); return true;
+  }catch(e){ toast("Couldn't load "+(REGION_NAMES[code]||code)+" data. Open the app once with signal."); return false; }
+}
+const regionOf = sv => sv?.info?.region || "PAC";
+
 /* Use the site's own surveys when it has enough; otherwise the nearest larger REEF area that does. */
 function siteFreq(zone){
   if(!zone) return null;
   for(const c of [zone, ...zoneParents(zone).reverse()]){ const f=FREQ.get(c); if(f && f.n>=FREQ_MIN_SURVEYS) return {code:c, n:f.n, pct:new Map(f.sp), own:c===zone}; }
   return null;
 }
-
-/* ---------- Other REEF species (all other regions' names reports, minus PAC) = REEF "Unlisted Species" ---------- */
-const UNL_RAW = `/*UNLISTED*/`;
-const REGION_NAMES = {TWA:"Caribbean",HAW:"Hawaii",TEP:"Trop. E. Pacific",SOP:"South Pacific",NE:"NE US/Canada",SAS:"SE US",CIP:"Indo-Pacific",EAM:"E. Atlantic/Med",IORS:"Indian Ocean/Red Sea"};
-const PAC_NAMES = new Set(SPECIES.map(s=>s.name.toLowerCase()));
-const UNL = UNL_RAW.trim() ? UNL_RAW.trim().split("\n").filter(l=>!PAC_NAMES.has(l.split("|")[0].toLowerCase())).map(l=>{ const [name,sci,fam,regs]=l.split("|"); return {name,sci,fam,regs:(regs||"").split(",").filter(Boolean),hay:(name+" "+sci+" "+fam).toLowerCase().replace(/['’]/g,"")}; }) : [];
-const UNL_BY = Object.fromEntries(UNL.map(u=>[u.sci,u]));
 function unlSearch(q,limit){
   const words=q.toLowerCase().replace(/['’]/g,"").split(/\s+/).filter(Boolean); if(!words.length) return [];
   const hits=UNL.filter(u=>words.every(w=>u.hay.includes(w)));
-  // Tropical Eastern Pacific first (strays into California), then names starting with the query
-  const rank=u=>(u.regs.includes("TEP")?0:2)+(u.name.toLowerCase().startsWith(words[0])?0:1);
+  // Neighbouring regions first (likeliest strays), then names starting with the query
+  const near=R?.near||[];
+  const rank=u=>(u.regs.some(r=>near.includes(r))?0:2)+(u.name.toLowerCase().startsWith(words[0])?0:1);
   hits.sort((a,b)=>rank(a)-rank(b)||a.name.localeCompare(b.name));
   return limit?hits.slice(0,limit):hits;
 }
 
-/* ---------- REEF Geographic Zone Codes, California (reef.org/db/zonecodes/list/?region_code=PAC) ---------- */
-const SITES_RAW = `/*SITES*/`;
-const ZONES = new Map(SITES_RAW.trim().split("\n").map(l=>{const i=l.indexOf("|");return [l.slice(0,i), l.slice(i+1)];}));
-const tidy = n => n.replace(/\s+/g," ").trim();
-function zoneParents(code){ const out=[]; for(let k=code.length-1;k>=1;k--){ const p=code.slice(0,k); if(ZONES.has(p)) out.unshift(p); } return out; }
-function areaLabel(code){ const ps=zoneParents(code).filter(p=>p.length>=4); return ps.slice(-2).map(p=>tidy(ZONES.get(p))).join(" › "); }
-const SITE_LIST = [...ZONES.entries()].filter(([c,n])=>c.length===8 && !/^Please use/i.test(n)).map(([code,name])=>{const area=areaLabel(code); return {code,name:tidy(name),area,hay:(name+" "+zoneParents(code).map(p=>ZONES.get(p)).join(" ")).toLowerCase().replace(/['’.]/g,"")};});
-const SITE_BY_CODE = Object.fromEntries(SITE_LIST.map(s=>[s.code,s]));
-
 /* ---------- REEF field options (REEF VFSP metadata descriptions) ---------- */
 const VIS = ["under 10'","10'-24'","25'-49'","50'-74'","75'-99'","100'-149'","over 149'"];
 const CURRENT = [["Strong","hard to swim against"],["Mild","present, did not seriously affect the dive"],["None",""]];
-const HABITATS = ["Kelp Forest","Rock Boulder/Shale Reef","Artificial","Open Ocean","Eel Grass Bed","Surf Grass Bed","Pinnacle","Bull Kelp","Sandy Bottom/Mud/Silt","Cobblestone/Boulder Field","Wall"];
 const ABUND = {S:"Single (1)",F:"Few (2–10)",M:"Many (11–100)",A:"Abundant (101+)",P:"Present"};
 
 /* ---------- State ---------- */
@@ -231,6 +241,7 @@ function blank(){
       tempBottom:"",tempSurface:"",tempUnit:state?.settings?.tempUnit||"F",depthUnit:state?.settings?.depthUnit||"ft",vis:"",avgDepth:"",maxDepth:"",snorkel:false,current:"",habitat:"",notes:""},
     counts:{}, unlisted:[]};
 }
+function blankIn(region){ const s=blank(); s.info.region=region||state.settings.region||"PAC"; return s; }
 function load(){
   let s=null;
   try{ s=JSON.parse(localStorage.getItem(LS)||"null"); }catch(e){}
@@ -334,12 +345,14 @@ const LABELS={memberNo:"REEF member #",zone:"Zone code (8 digits)",siteName:"Sit
 
 /* ---------- Render ---------- */
 function render(){
+  const want = cur() ? regionOf(cur()) : (state.settings.region||"PAC");
+  if(R?.region!==want){ loadRegion(want).then(ok=>{ if(ok) render(); }); if(!R){ $("#main").innerHTML=`<div class="empty">Loading REEF data…</div>`; return; } }
   document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-current", b.dataset.tab===(ui.tab==="site"?"dive":ui.tab)?"page":"false"));
   const sv=cur();
   const n=Object.values(state.surveys).length;
   $("#nLog").textContent = n+" survey"+(n===1?"":"s");
   $("#nSp").textContent = sv? seenCount(sv)+" seen" : "—";
-  $("#hdrSub").textContent = sv ? (sv.info.siteName||"New survey")+" · "+fmtDate(sv.info.date) : "Pacific Coast · California";
+  $("#hdrSub").textContent = sv ? (sv.info.siteName||"New survey")+" · "+fmtDate(sv.info.date) : (R?.long||"");
   const main=$("#main");
   if(ui.tab!=="log" && !sv){ ui.tab="log"; }
   ({log:renderLog, dive:renderDive, species:renderSpecies, review:renderReview, site:renderSitePicker})[ui.tab](main, sv);
@@ -376,7 +389,7 @@ function carryOver(to, from, {overwrite=false}={}){
   return filled;
 }
 function nextDiveFrom(prev){
-  const s=blank(); s.info.siteName=prev.info.siteName; s.info.zone=prev.info.zone;
+  const s=blankIn(regionOf(prev)); s.info.siteName=prev.info.siteName; s.info.zone=prev.info.zone;
   carryOver(s, prev); return s;
 }
 
@@ -406,6 +419,8 @@ function renderLog(main){
   ${diverCard()}
   <div class="card">
     <div class="row"><h2 class="grow">Your surveys</h2></div>
+    ${REGIONS.length>1?`<div class="seg" role="group" aria-label="Region for new surveys">${REGIONS.map(r=>`<button type="button" data-region="${r.code}" aria-pressed="${(state.settings.region||"PAC")===r.code}" title="${esc(r.long)}">${esc(r.name)}</button>`).join("")}</div>
+    <p class="hint">New surveys use the ${esc(REGIONS.find(r=>r.code===(state.settings.region||"PAC"))?.long||"")} species and sites.</p>`:""}
     <p class="hint">${counts.ready} ready for REEF · ${counts.draft} in progress · ${counts.entered} entered. One survey per diver, per dive.</p>
     <div class="row">
       <button class="btn grow" data-act="new">Start a new survey</button>
@@ -419,7 +434,7 @@ function renderLog(main){
       <div class="m">${fmtDate(s.info.date)}${s.info.startTime?" · "+roundHour(s.info.startTime):""} · ${seenCount(s)} species${s.info.zone?" · zone "+esc(s.info.zone):""}</div>
     </div>
     <div class="row" style="justify-content:flex-end">
-      ${s.example?`<span class="badge ex">Example</span>`:""}
+      ${s.example?`<span class="badge ex">Example</span>`:""}${REGIONS.length>1&&regionOf(s)!=="PAC"?`<span class="badge draft">${esc(REGION_NAMES[regionOf(s)]||regionOf(s))}</span>`:""}
       <span class="badge ${s.status}">${s.status==="draft"?"In progress":s.status==="ready"?"Ready":"Entered"}</span>
     </div>
   </div>`).join("")}
@@ -449,7 +464,7 @@ function renderDive(main, sv){
     ${sv.prefill?.fields?.length?`<p class="hint" style="background:var(--soft);padding:8px 10px;border-radius:8px">Filled in from your dive here on ${fmtDate(sv.prefill.from)}: ${sv.prefill.fields.map(k=>FIELD_NAMES[k]).join(", ")}. Change anything that's different.</p>`:""}
     <label class="${cls("zone")}" data-k="zone"><span>Dive site &amp; zone code</span></label>
     <button type="button" class="sitebtn" data-act="pick-site">
-      <span class="grow">${i.zone||i.siteName?`<span class="nm">${esc(i.siteName||"Unnamed site")}</span><br><span class="ar">${esc(SITE_BY_CODE[i.zone]?.area||(i.zone?"Code not in REEF's California list":"No zone code yet"))}</span>`:`<span class="nm">Choose your dive site</span><br><span class="ar">Search 715 California sites by name or area</span>`}</span>
+      <span class="grow">${i.zone||i.siteName?`<span class="nm">${esc(i.siteName||"Unnamed site")}</span><br><span class="ar">${esc(SITE_BY_CODE[i.zone]?.area||(i.zone?"Code not in REEF's California list":"No zone code yet"))}</span>`:`<span class="nm">Choose your dive site</span><br><span class="ar">Search ${SITE_LIST.length.toLocaleString()} ${esc(R.name)} sites by name or area</span>`}</span>
       <span class="cd">${esc(i.zone||"")}</span>
     </button>
     <details ${i.zone&&!SITE_BY_CODE[i.zone]?"open":""}><summary class="hint" style="cursor:pointer">Site not listed? Type it in</summary>
@@ -494,27 +509,28 @@ function renderSitePicker(main, sv){
     const hits=SITE_LIST.filter(s=>s.code.startsWith(q)||words.every(w=>s.hay.includes(w)));
     hits.sort((a,b)=>(b.name.toLowerCase().startsWith(q)-a.name.toLowerCase().startsWith(q))||a.name.localeCompare(b.name));
     body = hits.length? `<p class="hint">${hits.length} site${hits.length===1?"":"s"}${hits.length>80?" · showing the first 80, keep typing to narrow":""}</p><div class="sres">${hits.slice(0,80).map(row).join("")}</div>`
-      : `<div class="empty">No California site matches “${esc(ui.siteQ)}”. Try another word, or browse by area below.</div>`;
+      : `<div class="empty">No ${esc(R.name)} site matches “${esc(ui.siteQ)}”. Try another word, or browse by area below.</div>`;
   }
   if(!q){
-    const recent=(state.settings.sites||[]).map(s=>SITE_BY_CODE[s.zone]||{code:s.zone,name:s.name,area:"Saved site"}).filter(s=>s.code).slice(-8).reverse();
+    const recent=(state.settings.sites||[]).map(s=>SITE_BY_CODE[s.zone]).filter(Boolean).slice(-8).reverse();
     if(recent.length && !area) body+=`<h3>Your sites</h3><div class="sres">${recent.map(row).join("")}</div>`;
     // browse
-    const kids=[...ZONES.keys()].filter(c=>c.length<8 && c.startsWith(area||"4") && c!==area && zoneParents(c).slice(-1)[0]===(area||"4"));
+    const base=area||R.root;
+    const kids=[...ZONES.keys()].filter(c=>c.length<8 && c.startsWith(base) && c!==base && parentOf(c)===base);
     const sitesHere=SITE_LIST.filter(s=>area && zoneParents(s.code).slice(-1)[0]===area);
     const count=c=>SITE_LIST.filter(s=>s.code.startsWith(c)).length;
-    const trail=area?zoneParents(area).filter(p=>p.length>1).concat(area):[];
+    const trail=area?zoneParents(area).filter(p=>p!==R.root).concat(area):[];
     body+=`<h3>Browse by area</h3>
-      <div class="crumbs"><button type="button" data-area="">California</button>${trail.map(p=>` › <button type="button" data-area="${p}">${esc(tidy(ZONES.get(p)))}</button>`).join("")}</div>
+      <div class="crumbs"><button type="button" data-area="">${esc(R.name)}</button>${trail.map(p=>` › <button type="button" data-area="${p}">${esc(tidy(ZONES.get(p)))}</button>`).join("")}</div>
       <div class="sres">${kids.filter(c=>count(c)).map(c=>`<button type="button" class="area" data-area="${c}"><span class="nm">${esc(tidy(ZONES.get(c)))}</span><span class="cd">${count(c)} ›</span></button>`).join("")}${sitesHere.map(row).join("")}</div>`;
   }
   main.innerHTML=`
   <div class="sbar">
     <div class="row"><button class="btn ghost" data-act="site-back">Back</button><h2 class="grow">Dive site</h2></div>
-    <input type="search" id="siteQ" placeholder="Site name, area, or code (e.g. Casino, Whaler, 4203)" value="${esc(ui.siteQ||"")}" aria-label="Search dive sites" autocomplete="off">
+    <input type="search" id="siteQ" placeholder="${R.region==="TWA"?"Site name, area, or code (e.g. Molasses, Bonaire, 34)":"Site name, area, or code (e.g. Casino, Whaler, 4203)"}" value="${esc(ui.siteQ||"")}" aria-label="Search dive sites" autocomplete="off">
   </div>
   ${body}
-  <p class="hint">From REEF's Geographic Zone Code list for California. Codes REEF has retired (“Please use …”) are left out.</p>`;
+  <p class="hint">From REEF's Geographic Zone Code list for ${esc(R.long)}. Codes REEF has retired (“Please use …”) are left out.</p>`;
 }
 
 function filtered(sv){
@@ -523,7 +539,7 @@ function filtered(sv){
   return SPECIES.filter(s=>{
     if(q) return s.name.toLowerCase().includes(q)||(s.sci||"").toLowerCase().includes(q)||s.fam.toLowerCase().includes(q)||s.code===q;
     switch(ui.filter){
-      case "quick": return QUICKSET.has(s.name)||!!sv.counts[s.key];
+      case "quick": return QUICKSET.has(s.code)||!!sv.counts[s.key];
       case "seen": return !!sv.counts[s.key];
       case "fish": return s.kind==="fish"||s.kind==="turtle";
       case "invert": return s.kind==="invert";
@@ -563,20 +579,20 @@ function renderSpecies(main, sv, keepFocus){
   else body=list.sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
   if(unlHits.length) body+=`<div class="fam">Other REEF species · enter as Unlisted on REEF</div>`+unlHits.map(u=>unlRow(u,sv)).join("");
   const siteName=freq?(freq.own?(sv.info.siteName||"this site"):tidy(ZONES.get(freq.code)||"this area")):"";
-  const chips=[...(freq?[["site","At this site"]]:[]),["quick","Common in CA"],["seen",`Seen (${Object.keys(sv.counts).length})`],["fish","Fish"],["invert","Inverts"],["algae","Algae"],["unlisted",`Unlisted (${(sv.unlisted||[]).length})`],["all","All PAC"]];
+  const chips=[...(freq?[["site","At this site"]]:[]),["quick",`Common in ${R.name}`],["seen",`Seen (${Object.keys(sv.counts).length})`],["fish","Fish"],["invert","Inverts"],["algae","Algae"],["unlisted",`Unlisted (${(sv.unlisted||[]).length})`],["all","All PAC"]];
   const html=`
   <div class="sbar">
     <input type="search" id="q" placeholder="Search name, scientific name, family or code" value="${esc(ui.q)}" aria-label="Search species">
     <div class="chips" role="group" aria-label="Filter">${chips.map(([k,t])=>`<button type="button" data-filter="${k}" aria-pressed="${!ui.q&&ui.filter===k}">${t}</button>`).join("")}
       <button type="button" data-sort aria-pressed="${ui.sort==="fam"}">By family</button></div>
-    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Sorted by how often REEF divers record each species at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`. ${esc(sv.info.siteName||"This site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}. Switch to “Common in CA” for the standard list.</p>`:""}
+    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Sorted by how often REEF divers record each species at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`. ${esc(sv.info.siteName||"This site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}. Switch to “Common in ${esc(R.name)}” for the standard list.</p>`:""}
     ${!freq&&sv.info.zone&&FREQ.size?`<p class="hint">No REEF survey history for this site yet, so showing the standard list.</p>`:""}
     ${!sv.info.zone&&FREQ.size?`<p class="hint">Choose your dive site on the Dive tab to see the species usually found there.</p>`:""}
     <div class="legend"><span><b>S</b> 1</span><span><b>F</b> 2–10</span><span><b>M</b> 11–100</span><span><b>A</b> 101+</span><span>Tap again to clear</span></div>
   </div>
   <div class="splist" id="splist">${body}</div>
   <div class="card">
-    <h3>Not on the California list?</h3>
+    <h3>Not on the ${esc(R.name)} list?</h3>
     <p class="hint">Search above. ${UNL.length.toLocaleString()} species from REEF's other regions show up under “Other REEF species”; tap S/F/M/A to add one. They go into REEF's “Unlisted Species” step. When in doubt, leave it out.</p>
     <details><summary class="hint" style="cursor:pointer">Still can't find it? Type the name</summary>
     <input type="text" id="unlName" placeholder="Common or scientific name" aria-label="Unlisted species name" style="margin-top:8px"><div class="row" style="margin-top:8px"><select id="unlV" class="grow" style="flex:1" aria-label="Abundance">${["S","F","M","A"].map(a=>`<option value="${a}">${a} · ${ABUND[a]}</option>`).join("")}</select><button class="btn ghost" data-act="unl-add">Add</button></div>
@@ -595,7 +611,7 @@ function summaryRows(sv){
 }
 function summaryText(sv){
   const i=sv.info, L=[];
-  L.push(`REEF SURVEY · Pacific Coast (PAC)`);
+  L.push(`REEF SURVEY · ${R.long}`);
   L.push(`Member #: ${state.settings.memberNo||"—"}`);
   L.push(``,`STEP 1 · SURVEY INFO`);
   L.push(`Survey type: ${i.snorkel?"Snorkel":"Scuba"}`);
@@ -619,7 +635,7 @@ function summaryText(sv){
 }
 function autofillJSON(sv){
   const i=sv.info;
-  return JSON.stringify({app:"REEF Dive Survey",region:"PAC",memberNo:state.settings.memberNo,lastName:state.settings.lastName,
+  return JSON.stringify({app:"REEF Dive Survey",region:R.region,memberNo:state.settings.memberNo,lastName:state.settings.lastName,
     surveyType:i.snorkel?"Snorkel":"Scuba",date:i.date,startTime:i.startTime,startHourRounded:roundHour(i.startTime),
     zoneCode:i.zone,siteName:i.siteName,bottomTimeMin:+i.bottomTime||null,tempBottom:i.tempBottom,tempSurface:i.tempSurface,tempUnit:i.tempUnit,
     visibility:i.vis,depthUnitEntered:dUnit(i),avgDepthEntered:i.snorkel?"Snorkel":i.avgDepth,maxDepthEntered:i.maxDepth,avgDepthFt:i.snorkel?"Snorkel":(depthFt(i,"avgDepth")==null?"":Math.round(depthFt(i,"avgDepth"))),avgDepthRange:i.snorkel?"Snorkel":dRange(i,"avgDepth"),maxDepthFt:depthFt(i,"maxDepth")==null?"":Math.round(depthFt(i,"maxDepth")),maxDepthRange:dRange(i,"maxDepth"),
@@ -684,7 +700,7 @@ function renderReview(main, sv){
 }
 
 /* ---------- Events ---------- */
-function openSurvey(id, tab){ ui.filter=null; state.currentId=id; persist(); ui.tab=tab||"dive"; render(); $("#main").scrollTop=0; }
+function openSurvey(id, tab){ ui.filter=null; ui.q=""; state.currentId=id; persist(); ui.tab=tab||"dive"; render(); $("#main").scrollTop=0; }
 function rememberSite(sv){
   const {siteName,zone}=sv.info; if(!siteName||!/^\d{8}$/.test(zone)) return;
   const s=state.settings.sites=state.settings.sites||[];
@@ -720,6 +736,7 @@ document.addEventListener("click", async e=>{
     if(navigator.vibrate) try{navigator.vibrate(10)}catch(_){}
     return;
   }
+  if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
   if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
   if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; if(t.dataset.filter==="site"||t.dataset.filter==="quick"){ state.settings.spList=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
@@ -742,7 +759,7 @@ document.addEventListener("click", async e=>{
   if(act==="edit-diver"){ ui.editDiver=true; render(); $("#memberNo")?.focus(); return; }
   if(act==="done-diver"){ ["memberNo","lastName"].forEach(id=>{const el=$("#"+id); if(el) saveDiverField(el);}); ui.editDiver=false; render(); toast("Saved"); return; }
   if(act==="now-time"){ const d=new Date(); sv.info.startTime=String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); touch(sv); render(); return; }
-  if(act==="new"){ const s=blank(); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); return; }
+  if(act==="new"){ const s=blankIn(); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); return; }
   if(act==="repeat"){
     const last=Object.values(state.surveys).filter(x=>!x.example&&x.info.siteName).sort((a,b)=>b.createdAt-a.createdAt)[0]; if(!last) return;
     const s=nextDiveFrom(last); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("Next dive · "+last.info.siteName); return;
