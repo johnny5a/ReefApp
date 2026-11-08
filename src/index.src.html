@@ -344,10 +344,30 @@ function render(){
   ({log:renderLog, dive:renderDive, species:renderSpecies, review:renderReview, site:renderSitePicker})[ui.tab](main, sv);
 }
 
+/* Diver (REEF login): asked once, then shown as one line. Saved on this phone with the surveys. */
+function diverCard(){
+  const st=state.settings, done=!!(st.memberNo&&st.lastName);
+  if(done && !ui.editDiver) return `<div class="card"><div class="row"><span class="grow"><b>Diver</b> · REEF #${esc(st.memberNo)} · ${esc(st.lastName)}</span><button class="btn ghost" data-act="edit-diver">Edit</button></div></div>`;
+  return `<div class="card">
+    <h3>Your REEF login</h3>
+    <div class="grid2">
+      <label class="f ${st.memberNo?"":"missing"}"><span>REEF member #</span><input type="text" inputmode="numeric" id="memberNo" value="${esc(st.memberNo)}" autocomplete="off" enterkeyhint="next"></label>
+      <label class="f ${st.lastName?"":"missing"}"><span>Last name</span><input type="text" id="lastName" value="${esc(st.lastName)}" autocomplete="family-name" autocapitalize="words" enterkeyhint="done"></label>
+    </div>
+    <div class="row"><p class="hint grow">Entered once and remembered on this phone. REEF's data entry login uses these two. No number yet? Join free at <a href="https://www.reef.org/join">reef.org/join</a>.</p>${done?`<button class="btn" data-act="done-diver">Done</button>`:""}</div>
+  </div>`;
+}
+function saveDiverField(el){
+  const v=el.value.trim(); if(state.settings[el.id]===v) return;
+  state.settings[el.id]=v; state.settings.updatedAt=Date.now(); persist("__settings");
+  el.closest("label")?.classList.toggle("missing",!v);
+}
+
 function renderLog(main){
   const list=Object.values(state.surveys).sort((a,b)=>(b.info.date||"").localeCompare(a.info.date||"")||b.createdAt-a.createdAt);
   const counts={draft:0,ready:0,entered:0}; list.forEach(s=>counts[s.status]++);
   main.innerHTML=`
+  ${diverCard()}
   <div class="card">
     <div class="row"><h2 class="grow">Your surveys</h2></div>
     <p class="hint">${counts.ready} ready for REEF · ${counts.draft} in progress · ${counts.entered} entered. One survey per diver, per dive.</p>
@@ -367,14 +387,6 @@ function renderLog(main){
       <span class="badge ${s.status}">${s.status==="draft"?"In progress":s.status==="ready"?"Ready":"Entered"}</span>
     </div>
   </div>`).join("")}
-  <div class="card">
-    <h3>Diver</h3>
-    <div class="grid2">
-      <label class="f ${state.settings.memberNo?"":"missing"}"><span>REEF member #</span><input type="text" inputmode="numeric" id="memberNo" value="${esc(state.settings.memberNo)}" autocomplete="off"></label>
-      <label class="f"><span>Last name (REEF login)</span><input type="text" id="lastName" value="${esc(state.settings.lastName)}" autocomplete="family-name"></label>
-    </div>
-    <p class="hint">REEF's data entry login uses your member number and last name. Don't have a number? Join free at <a href="https://www.reef.org/join">reef.org/join</a>.</p>
-  </div>
   <div class="card">
     <h3>Send &amp; back up</h3>
     <p class="hint">REEF species lists, sites and site histories ${/^\d{4}-/.test(DATA_DATE)?"updated "+new Date(DATA_DATE+"T12:00:00").toLocaleDateString():"not downloaded yet"}. They refresh from reef.org each month.</p>
@@ -412,7 +424,7 @@ function renderDive(main, sv){
     </details>
     <div class="grid2">
       <label class="${cls("date")}" data-k="date"><span>Date</span><input type="date" id="date" value="${esc(i.date)}"></label>
-      <label class="${cls("startTime")}" data-k="startTime"><span id="lbl-startTime">Start time ${i.startTime?"→ "+roundHour(i.startTime):""}</span><input type="time" id="startTime" value="${esc(i.startTime)}"></label>
+      <label class="${cls("startTime")}" data-k="startTime"><span id="lbl-startTime">Start time ${i.startTime?"→ "+roundHour(i.startTime):""}</span><span class="row"><input type="time" id="startTime" value="${esc(i.startTime)}" style="flex:1;width:auto"><button type="button" class="btn ghost" data-act="now-time">Now</button></span></label>
     </div>
     <label class="f"><span>Survey type</span></label>
     ${seg("snorkel",["Scuba","Snorkel"], i.snorkel?"Snorkel":"Scuba")}
@@ -595,7 +607,7 @@ function renderReview(main, sv){
   <div class="card">
     <span class="step">Step 1 · Survey info</span>
     <dl class="rv">
-      <dt>Member #</dt>${dd("memberNo",state.settings.memberNo)}
+      <dt>Member #</dt>${state.settings.memberNo?dd("memberNo",state.settings.memberNo):`<dd class="miss"><button type="button" class="btn ghost" data-tab-go="log" style="min-height:36px;padding:4px 10px">Add on Log tab</button></dd>`}
       <dt>Survey type</dt><dd>${i.snorkel?"Snorkel":"Scuba"}</dd>
       <dt>Date</dt>${dd("date",fmtDate(i.date))}
       <dt>Start time</dt>${dd("startTime",roundHour(i.startTime))}
@@ -690,6 +702,9 @@ document.addEventListener("click", async e=>{
   }
   if(t.dataset.unlDel){ sv.unlisted.splice(+t.dataset.unlDel,1); touch(sv); render(); return; }
   const act=t.dataset.act; if(!act) return;
+  if(act==="edit-diver"){ ui.editDiver=true; render(); $("#memberNo")?.focus(); return; }
+  if(act==="done-diver"){ ["memberNo","lastName"].forEach(id=>{const el=$("#"+id); if(el) saveDiverField(el);}); ui.editDiver=false; render(); toast("Saved"); return; }
+  if(act==="now-time"){ const d=new Date(); sv.info.startTime=String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); touch(sv); render(); return; }
   if(act==="new"){ const s=blank(); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); return; }
   if(act==="repeat"){
     const last=Object.values(state.surveys).filter(s=>!s.example).sort((a,b)=>b.createdAt-a.createdAt)[0]||Object.values(state.surveys)[0];
@@ -715,12 +730,13 @@ document.addEventListener("click", async e=>{
   if(act==="dup"){ const s=blank(); s.info={...sv.info, startTime:"", bottomTime:"", notes:""}; state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("New survey, same site"); return; }
   if(act==="del"){ confirmBox(`Delete the survey at ${sv.info.siteName||"this site"}? This can't be undone.`, ()=>{ const id=sv.id; delete state.surveys[id]; state.deleted[id]=Date.now(); state.currentId=null; persist(id); ui.tab="log"; render(); toast("Deleted"); }); return; }
 });
+for(const ev of ["change","focusout"]) document.addEventListener(ev, e=>{ if(e.target.id==="memberNo"||e.target.id==="lastName") saveDiverField(e.target); });
 document.addEventListener("keydown",e=>{ if((e.key==="Enter"||e.key===" ")&&e.target.dataset?.open){ e.preventDefault(); e.target.click(); }});
 document.addEventListener("input", e=>{
   const el=e.target, sv=cur();
   if(el.id==="siteQ"){ ui.siteQ=el.value; renderSitePicker($("#main"),sv); const q=$("#siteQ"); q.focus(); q.setSelectionRange(q.value.length,q.value.length); return; }
   if(el.id==="q"){ ui.q=el.value; renderSpecies($("#main"),sv,true); return; }
-  if(el.id==="memberNo"||el.id==="lastName"){ state.settings[el.id]=el.value.trim(); state.settings.updatedAt=Date.now(); persist("__settings"); return; }
+  if(el.id==="memberNo"||el.id==="lastName"){ saveDiverField(el); return; }
   if(!sv) return;
   const fields=["siteName","zone","date","startTime","bottomTime","tempBottom","tempSurface","avgDepth","maxDepth","notes"];
   if(fields.includes(el.id)){
