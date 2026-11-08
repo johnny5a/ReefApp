@@ -1,5 +1,5 @@
 // Offline cache for REEF Dive Survey. Bump VERSION when you change any file.
-const VERSION = "reef-survey-v6";
+const VERSION = "reef-survey-data-202611082200";
 const CORE = ["./", "index.html", "manifest.json", "icon-180.png", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {
