@@ -344,6 +344,41 @@ function render(){
   ({log:renderLog, dive:renderDive, species:renderSpecies, review:renderReview, site:renderSitePicker})[ui.tab](main, sv);
 }
 
+/* ---------- Reuse what you entered before ----------
+   Site traits (habitat, depths, scuba/snorkel, units) carry over from your last dive at the same site.
+   Conditions (visibility, current, temperatures) carry over only from a dive in the last few days. */
+const SITE_FIELDS=["habitat","snorkel","tempUnit","depthUnit","avgDepth","maxDepth"];
+const COND_FIELDS=["vis","current","tempBottom","tempSurface"];
+const RECENT_DAYS=3;
+const FIELD_NAMES={habitat:"habitat",snorkel:"scuba/snorkel",avgDepth:"average depth",maxDepth:"max depth",vis:"visibility",current:"current",tempBottom:"bottom temp",tempSurface:"surface temp"};
+function daysApart(a,b){ return Math.abs((new Date(a+"T12:00:00")-new Date(b+"T12:00:00"))/864e5); }
+function lastSurveyAt(zone, exceptId){
+  return Object.values(state.surveys).filter(x=>!x.example && x.id!==exceptId && zone && x.info.zone===zone)
+    .sort((a,b)=>(b.info.date||"").localeCompare(a.info.date||"")||(b.info.startTime||"").localeCompare(a.info.startTime||"")||b.createdAt-a.createdAt)[0];
+}
+/* Fill only empty fields of `to` from `from`; returns the names of the fields it filled. */
+function carryOver(to, from, {overwrite=false}={}){
+  if(!from) return [];
+  const recent = from.info.date && to.info.date && daysApart(from.info.date, to.info.date) <= RECENT_DAYS;
+  const filled=[];
+  for(const k of [...SITE_FIELDS, ...(recent?COND_FIELDS:[])]){
+    let v=from.info[k]; if(v===""||v==null) continue;
+    if(k==="tempUnit"||k==="depthUnit") continue; // keep this survey's units; values are converted below
+    if((k==="avgDepth"||k==="maxDepth") && !isNaN(+v) && dUnit(from.info)!==dUnit(to.info))
+      v=String(dUnit(to.info)==="m" ? Math.round(+v/FT_PER_M*10)/10 : Math.round(+v*FT_PER_M));
+    if((k==="tempBottom"||k==="tempSurface") && !isNaN(+v) && (from.info.tempUnit||"F")!==(to.info.tempUnit||"F"))
+      v=String((to.info.tempUnit||"F")==="C" ? Math.round((+v-32)*5/9*10)/10 : Math.round(+v*9/5+32));
+    const empty = to.info[k]===""||to.info[k]==null||(k==="snorkel"&&to.info[k]===false);
+    if(overwrite||empty){ if(to.info[k]!==v){ to.info[k]=v; if(FIELD_NAMES[k]) filled.push(k); } }
+  }
+  if(filled.length) to.prefill={from:from.info.date, fields:filled};
+  return filled;
+}
+function nextDiveFrom(prev){
+  const s=blank(); s.info.siteName=prev.info.siteName; s.info.zone=prev.info.zone;
+  carryOver(s, prev); return s;
+}
+
 /* Diver (REEF login): asked once, then shown as one line. Saved on this phone with the surveys. */
 function diverCard(){
   const st=state.settings, done=!!(st.memberNo&&st.lastName);
@@ -373,7 +408,7 @@ function renderLog(main){
     <p class="hint">${counts.ready} ready for REEF · ${counts.draft} in progress · ${counts.entered} entered. One survey per diver, per dive.</p>
     <div class="row">
       <button class="btn grow" data-act="new">Start a new survey</button>
-      ${list.length?`<button class="btn ghost" data-act="repeat" title="Same site and member info, empty species list">Repeat last site</button>`:""}
+      ${(()=>{const last=Object.values(state.surveys).filter(x=>!x.example&&x.info.siteName).sort((a,b)=>b.createdAt-a.createdAt)[0]; return last?`<button class="btn ghost" data-act="repeat" title="New survey with the same site and conditions, empty species list">Next dive at ${esc(last.info.siteName.length>22?last.info.siteName.slice(0,21)+"…":last.info.siteName)}</button>`:"";})()}
     </div>
   </div>
   ${list.map(s=>`
@@ -410,6 +445,7 @@ function renderDive(main, sv){
   main.innerHTML=`
   <div class="card">
     <span class="step">REEF step 1 · Survey info</span>
+    ${sv.prefill?.fields?.length?`<p class="hint" style="background:var(--soft);padding:8px 10px;border-radius:8px">Filled in from your dive here on ${fmtDate(sv.prefill.from)}: ${sv.prefill.fields.map(k=>FIELD_NAMES[k]).join(", ")}. Change anything that's different.</p>`:""}
     <label class="${cls("zone")}" data-k="zone"><span>Dive site &amp; zone code</span></label>
     <button type="button" class="sitebtn" data-act="pick-site">
       <span class="grow">${i.zone||i.siteName?`<span class="nm">${esc(i.siteName||"Unnamed site")}</span><br><span class="ar">${esc(SITE_BY_CODE[i.zone]?.area||(i.zone?"Code not in REEF's California list":"No zone code yet"))}</span>`:`<span class="nm">Choose your dive site</span><br><span class="ar">Search 715 California sites by name or area</span>`}</span>
@@ -641,7 +677,7 @@ function renderReview(main, sv){
     </div>
   </div>
   <div class="row">
-    <button class="btn ghost grow" data-act="dup">Duplicate for next dive</button>
+    <button class="btn ghost grow" data-act="dup">Next dive at this site</button>
     <button class="btn danger" data-act="del">Delete survey</button>
   </div>`;
 }
@@ -683,7 +719,7 @@ document.addEventListener("click", async e=>{
     if(navigator.vibrate) try{navigator.vibrate(10)}catch(_){}
     return;
   }
-  if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
+  if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
   if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; if(t.dataset.filter==="site"||t.dataset.filter==="quick"){ state.settings.spList=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
   if("sort" in t.dataset){ ui.sort=ui.sort==="fam"?"az":"fam"; renderSpecies($("#main"),sv); return; }
@@ -707,9 +743,8 @@ document.addEventListener("click", async e=>{
   if(act==="now-time"){ const d=new Date(); sv.info.startTime=String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); touch(sv); render(); return; }
   if(act==="new"){ const s=blank(); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); return; }
   if(act==="repeat"){
-    const last=Object.values(state.surveys).filter(s=>!s.example).sort((a,b)=>b.createdAt-a.createdAt)[0]||Object.values(state.surveys)[0];
-    const s=blank(); Object.assign(s.info,{siteName:last.info.siteName,zone:last.info.zone,tempUnit:last.info.tempUnit,habitat:last.info.habitat,snorkel:last.info.snorkel});
-    state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); return;
+    const last=Object.values(state.surveys).filter(x=>!x.example&&x.info.siteName).sort((a,b)=>b.createdAt-a.createdAt)[0]; if(!last) return;
+    const s=nextDiveFrom(last); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("Next dive · "+last.info.siteName); return;
   }
   if(act==="pick-site"){ ui.tab="site"; ui.siteQ=""; ui.siteArea=sv.info.zone&&SITE_BY_CODE[sv.info.zone]?zoneParents(sv.info.zone).slice(-1)[0]:""; render(); $("#main").scrollTop=0; return; }
   if(act==="site-back"){ ui.tab="dive"; render(); return; }
@@ -727,7 +762,7 @@ document.addEventListener("click", async e=>{
   if(act==="backup"){ const d=new Date().toISOString().slice(0,10); saveFile(`reef-surveys-backup-${d}.json`, JSON.stringify({app:"REEF Dive Survey",exported:new Date().toISOString(),...state},null,1), "application/json"); state.settings.lastBackup=Date.now(); persist(); render(); return; }
   if(act==="restore"){ $("#restoreFile").click(); return; }
   if(act==="copy-ready"){ const ready=Object.values(state.surveys).filter(s=>s.status==="ready"); if(!ready.length){toast("No surveys are marked ready");return;} const txt="["+ready.map(s=>{const keep=state.currentId; state.currentId=s.id; const j=autofillJSON(s); state.currentId=keep; return j;}).join(",\n")+"]"; try{ await navigator.clipboard.writeText(txt); toast(`Copied ${ready.length} survey${ready.length>1?"s":""}`);}catch(_){ showText("Ready surveys",txt);} return; }
-  if(act==="dup"){ const s=blank(); s.info={...sv.info, startTime:"", bottomTime:"", notes:""}; state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("New survey, same site"); return; }
+  if(act==="dup"){ const s=nextDiveFrom(sv); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("Next dive · "+(sv.info.siteName||"same site")); return; }
   if(act==="del"){ confirmBox(`Delete the survey at ${sv.info.siteName||"this site"}? This can't be undone.`, ()=>{ const id=sv.id; delete state.surveys[id]; state.deleted[id]=Date.now(); state.currentId=null; persist(id); ui.tab="log"; render(); toast("Deleted"); }); return; }
 });
 for(const ev of ["change","focusout"]) document.addEventListener(ev, e=>{ if(e.target.id==="memberNo"||e.target.id==="lastName") saveDiverField(e.target); });

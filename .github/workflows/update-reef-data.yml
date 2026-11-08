@@ -45,7 +45,13 @@ jobs:
           git commit -m "Update REEF data ($(cat src/data_date.txt))"
           # Someone may have pushed while the download ran; replay on top of it
           for i in 1 2 3; do
-            git pull --rebase -X theirs origin main && git push && exit 0
+            if git pull --rebase -X theirs origin main; then
+              # Rebuild on top of whatever app changes landed meanwhile, so they are never undone
+              python3 build.py
+              git add index.html
+              git diff --cached --quiet || git commit --amend --no-edit
+              git push && exit 0
+            fi
             sleep 10
           done
           exit 1
