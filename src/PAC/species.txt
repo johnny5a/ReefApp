@@ -1,550 +1,550 @@
-0513|Alaskan Ronquil|Bathymaster caeruleofasciatus|Bathymasteridae
-0201|Albacore|Thunnus alalunga|Scombridae
-0202|Almaco Jack|Seriola rivoliana|Carangidae
-0088|Angel Shark|Squatina californica|Squatinidae
-0486|Argus Moray|Muraena argus|Muraenidae
-0355|Arrow Goby|Clevelandia ios|Gobiidae
-0441|Asian Kelp Wakame (exotic)|Undaria pinnatifida|Algae
-0203|Bald Sculpin|Clinocottus recalvus|Psychrolutidae
-0204|Balloonfish|Diodon holocanthus|Diodontidae
-0205|Banded Guitarfish|Zapteryx exasperata|Rhinobatidae
-0206|Barcheek Pipefish|Syngnathus exilis|Syngnathidae
-0207|Barred Pipefish|Syngnathus auliscus|Syngnathidae
-0001|Barred Sand Bass|Paralabrax nebulifer|Serranidae
-0113|Barred Surfperch|Amphistichus argenteus|Embiotocidae
-0574|Barspot Cardinalfish|Apogon retrosella|Apogonidae
-0525|Basket Star|Gorgonocephalus eucnemis|Echinodermata
-0559|Basketweave Cusk-eel|Ophidion scrippsae|Ophidiidae
-0208|Basking Shark|Cetorhinus maximus|Cetorhinidae
-0082|Bat Ray|Myliobatis californica|Myliobatidae
-0412|Bat Star|Patiria miniata|Echinodermata
-0209|Bay Blenny|Hypsoblennius gentilis|Blenniidae
-0210|Bay Goby|Lepidogobius lepidus|Gobiidae
-0211|Bay Pipefish|Syngnathus leptorhynchus|Syngnathidae
-0212|Big Skate|Raja binoculata|Rajidae
-0505|Bigeye Poacher|Bathyagonus pentacanthus|Agonidae
-0213|Bigeye Tuna|Thunnus obesus|Scombridae
-0020|Bigmouth Sole|Hippoglossina stomata|Paralichthyidae
-0582|Bigscale Goatfish|Pseudupeneus grandisquamis|Mullidae
-0034|Black Croaker|Cheilotrema saturnum|Sciaenidae
-0214|Black Eelpout|Lycodes diapterus|Zoarcidae
-0114|Black Perch|Embiotoca jacksoni|Embiotocidae
-0215|Black Prickleback|Xiphister atropurpureus|Stichaeidae
-0045|Black Rockfish|Sebastes melanops|Scorpaenidae
-0481|Black Rockfish YOY|Sebastes melanops (YOY)|Scorpaenidae
-0046|Black-and-Yellow Rockfish|Sebastes chrysomelas|Scorpaenidae
-0578|Black-and-Yellow Rockfish YOY|Sebastes chrysomelas (YOY)|Scorpaenidae
-0216|Blackbelly Eelpout|Lycodes pacificus|Zoarcidae
-0107|Blackeye Goby|Rhinogobiops nicholsii|Gobiidae
-0495|Blackfin Sculpin|Malacocottus kincaidi|Psychrolutidae
-0005|Blacksmith|Chromis punctipinnis|Pomacentridae
-0217|Blacktip Poacher|Xeneretmus latifrons|Agonidae
-0218|Blotchwing Flyingfish|Cypselurus californicus|Exocoetidae
-0482|Blue / Deacon Rockfish YOY|Sebastes mystinus / diaconus (YOY)|Scorpaenidae
-0219|Blue Marlin|Makaira nigricans|Istiophoridae
-0487|Blue Rockfish (was Blue-blotched species)|Sebastes mystinus|Scorpaenidae
-0044|Blue Rockfish - generic ID|Sebastes mystinus / diaconus|Scorpaenidae
-0083|Blue Shark|Prionace glauca|Carcharhinidae
-0220|Blue-bronze Chub|Kyphosus vaigiensis|Kyphosidae
-0108|Bluebanded Goby|Lythrypnus dalli|Gobiidae
-0379|Bluebanded Ronquil (R. hypoplecta)|Rathbunella hypoplecta|Bathymasteridae
-0476|Bluebarred Prickleback|Plectobranchus evides|Stichaeidae
-0221|Bluefin Tuna|Thunnus thynnus|Scombridae
-0313|Bluntnose Sixgill Shark|Hexanchus griseus|Hexanchidae
-0047|Bocaccio|Sebastes paucispinis|Scorpaenidae
-0490|Bocaccio Rockfish YOY|Sebastes paucispinus (YOY)|Scorpaenidae
-0222|Bonefish|Albula vulpes|Albulidae
-0223|Broomtail Grouper|Mycteroperca xenarcha|Serranidae
-0224|Brown Cat Shark|Apristurus brunneus|Scyliorhinidae
-0407|Brown Gorgonian|Muricea fruticosa|Cnidaria
-0067|Brown Irish Lord|Hemilepidotus spinosus|Psychrolutidae
-0400|Brown Rock Crab|Romaleon antennarium|Arthropoda
-0048|Brown Rockfish|Sebastes auriculatus|Scorpaenidae
-0484|Brown Rockfish YOY|Sebastes auriculatus (YOY)|Scorpaenidae
-0084|Brown Smoothhound|Mustelus henlei|Carcharhinidae
-0068|Buffalo Sculpin|Enophrys bison|Psychrolutidae
-0442|Bull Kelp|Nereocystis luetkeana|Algae
-0377|Bull Sculpin|Enophrys taurina|Psychrolutidae
-0225|Bullseye Puffer|Sphoeroides annulatus|Tetraodontidae
-0500|Butter Sole|Isopsetta isolepis|Pleuronectidae
-0022|C-O Sole|Pleuronichthys coenosus|Pleuronectidae
-0069|Cabezon|Scorpaenichthys marmoratus|Jordaniidae
-0576|Calico Lizardfish|Synodus lacertinus|Synodontidae
-0050|Calico Rockfish|Sebastes dalli|Scorpaenidae
-0555|Calico Rockfish YOY|Sebastes dalli (YOY)|Scorpaenidae
-0471|Calico Surfperch|Amphistichus koelzi|Embiotocidae
-0344|California Butterfly Ray|Gymnura marmorata|Gymnuridae
-0131|California Clingfish|Gobiesox rhessodon|Gobiesocidae
-0348|California Corbina|Menticirrhus undulatus|Sciaenidae
-0095|California Flyingfish|Cypselurus californicus|Exocoetidae
-0408|California Golden Gorgonian|Muricea californica|Cnidaria
-0473|California Grunion|Leuresthes tenuis|Atherinopsidae
-0226|California Halfbeak|Hyporhamphus rosae|Hemiramphidae
-0021|California Halibut|Paralichthys californicus|Paralichthyidae
-0227|California Lizardfish|Synodus lucioceps|Synodontidae
-0007|California Moray|Gymnothorax mordax|Muraenidae
-0070|California Scorpionfish|Scorpaena guttata|Scorpaenidae
-0169|California Sea Cucumber|Parastichopus californicus|Echinodermata
-0127|California Sheephead|Bodianus pulcher|Labridae
-0228|California Skate|Raja inornata|Rajidae
-0374|California Tonguefish|Symphurus atricaudus|Cynoglossidae
-0049|Canary Rockfish|Sebastes pinniger|Scorpaenidae
-0470|Canary Rockfish YOY|Sebastes pinniger (YOY)|Scorpaenidae
-0150|Candy Stripe Shrimp|Lebbeus grandimanus|Arthropoda
-0515|Canyon Sculpin|Icelinus limbaughi|Psychrolutidae
-0229|Catalina Conger|Gnathophis catalinensis|Congridae
-0545|Cheekspot Goby|Ilypnus gilberti|Gobiidae
-0424|Chestnut Cowry|Cypraea spadicea|Mollusca
-0383|Chillipepper|Sebastes goodei|Scorpaenidae
-0188|Chimney Sponge|Rhabdocalyptus dawsoni/Staurocalyptus dowlingi|Porifera
-0051|China Rockfish|Sebastes nebulosus|Scorpaenidae
-0493|China Rockfish YOY|Sebastes nebulosus (YOY)|Scorpaenidae
-0354|Chinook Salmon|Oncorhynchus tshawytscha|Salmonidae
-0479|Chinook Salmon Juvenile|Oncorhynchus tshawytscha|Salmonidae
-0230|Chocolate Pipefish|Syngnathus euchrous|Syngnathidae
-0438|Christmas Tree Worm|Spirobranchus spinosus|Annelida
-0104|Chub Mackerel|Scomber japonicus|Scombridae
-0368|Chum Salmon|Oncorhynchus keta|Salmonidae
-0189|Cloud/Goblet Sponge|Aphrocallistes vastus / Heterochone calyx|Porifera
-0528|Clown Dorid|Triopha modesta / Triopha catalinae|Mollusca
-0194|Club Tunicate (exotic)|Styela clava|Urochordata
-0433|Cobalt Sponge|Hymenamphiastra cyanocrypta|Porifera
-0468|Cod Sp. (Unidentified Juvenile)|Gadidae|Gadidae
-0477|Coho Salmon|Oncorhynchus kisutch|Salmonidae
-0439|Colonial Sand-tube Worm|Phragmatopoma californica|Annelida
-0151|Coonstripe Shrimp|Pandalus danae / gurneyi|Arthropoda
-0052|Copper Rockfish|Sebastes caurinus|Scorpaenidae
-0474|Copper Rockfish YOY|Sebastes caurinus (YOY)|Scorpaenidae
-0584|Coral Hawkfish|Cirrhitichthys oxycephalus|Cirrhitidae
-0071|Coralline Sculpin|Artedius corallinus|Psychrolutidae
-0547|Cortez Angelfish|Pomacanthus zonipectus|Pomacanthidae
-0554|Cowcod|Sebastes levis|Scorpaenidae
-0562|Cowcod YOY|Sebastes levis|Scorpaenidae
-0231|Crescent Gunnel|Pholis laeta|Pholidae
-0232|Crevice Kelpfish|Gibbonsia montereyensis|Clinidae
-0415|Crowned Urchin|Centrostphanus coronatus|Echinodermata
-0233|Curlfin Sole|Pleuronichthys decurrens|Pleuronectidae
-0378|Cutthroat Trout|Oncorhynchus clarkii|Salmonidae
-0488|Deacon Rockfish (was Blue Sided species)|Sebastes diaconus|Scorpaenidae
-0009|Decorated Warbonnet|Chirolophis decoratus|Stichaeidae
-0234|Deepwater Blenny|Cryptotrema corallinum|Labrisomidae
-0235|Diamond Stingray|Dasyatis dipterura|Dasyatidae
-0345|Diamond Turbot|Hypsopsetta guttulata|Pleuronectidae
-0381|Dolly Varden|Salvelinus malma|Salmonidae
-0236|Dolphin|Coryphaena hippurus|Coryphaenidae
-0237|Dover Sole|Microstomus pacificus|Paralichthyidae
-0152|Dungeness Crab|Metacarcinus magister|Arthropoda
-0238|Dusky Rockfish|Sebastes ciliatus|Scorpaenidae
-0115|Dwarf Perch|Micrometrus minimus|Embiotocidae
-0174|Eccentric Sand Dollar|Dendraster excentricus|Echinodermata
-0517|Eelgrass|Zostera marina / japonica|Algae
-0239|English Sole|Parophrys vetulus|Pleuronectidae
-0363|Eulachon|Thaleichthys pacificus|Osmeridae
-0023|Fantail Sole|Xystreurys liolepis|Paralichthyidae
-0440|Feather Duster Worm (E. polymorpha)|Eudistylia polymorpha|Annelida
-0526|Feather Star|Florometra serratissima|Echinodermata
-0240|Finescale Triggerfish|Balistes polylepis|Balistidae
-0159|Fish-eating Anemone|Urticina piscivora|Cnidaria
-0586|Flag Cabrilla|Epinephelus labriformis|Serranidae
-0241|Flag Rockfish|Sebastes rubrivinctus|Scorpaenidae
-0541|Flathead Sole|Hippoglossoides elassodon|Pleuronectidae
-0356|Fluffy Sculpin|Oligocottus snyderi|Psychrolutidae
-0404|Fluted Bryozoan|Primavelans insculpta|Bryozoa
-0498|Fringed Sculpin|Icelinus fimbriatus|Psychrolutidae
-0193|Fringed Tube Worm|Dodecaceria pacifica|Annelida
-0006|Garibaldi|Hypsypops rubicundus|Pomacentridae
-0153|Giant Barnacle|Balanus nubilus|Arthropoda
-0443|Giant Kelp|Macrocystis integrifolia / pyrifera|Algae
-0010|Giant Kelpfish|Heterostichus rostratus|Clinidae
-0425|Giant Keyhole Limpet|Megathura crenulata|Mollusca
-0177|Giant Nudibranch|Dendronotus iris|Mollusca
-0181|Giant Pacific Octopus|Enteroctopus dofleini|Mollusca
-0002|Giant Sea Bass|Stereolepis gigas|Polyprionidae
-0413|Giant Spined Star|Pisaster giganteus|Echinodermata
-0242|Giant Wrymouth|Cryptacanthodes giganteus|Cryptacanthodidae
-0556|Glasseye (Pacific)|Priacanthus carolinus|Priacanthidae
-0532|Glassy Sea Squirt|Ascidia paratropa|Urochordata
-0563|Goldspotted Sand Bass|Paralabrax auroguttatus|Serranidae
-0053|Gopher Rockfish|Sebastes carnatus|Scorpaenidae
-0469|Gopher Rockfish YOY|Sebastes carnatus (YOY)|Scorpaenidae
-0520|Graceful Crab|Metacarcinus gracilis|Arthropoda
-0054|Grass Rockfish|Sebastes rastrelliger|Scorpaenidae
-0560|Grass Rockfish YOY|Sebastes rastrelliger (YOY)|Scorpaenidae
-0085|Gray Smoothhound|Mustelus californicus|Carcharhinidae
-0243|Great Hammerhead|Sphyrna mokarran|Sphyrnidae
-0072|Great Sculpin|Myoxocephalus polyacanthocephalus|Psychrolutidae
-0429|Green Abalone|Haliotis fulgens|Mollusca
-0154|Green Crab (Invasive)|Carcinus maenas|Arthropoda
-0244|Green Jack|Caranx caballus|Carangidae
-0461|Green Sea Turtle|Chelonia mydas|Cheloniidae
-0175|Green Sea Urchin|Strongylocentrotus droebachiensis|Echinodermata
-0504|Green Sturgeon|Acipenser medirostris|Acipenseridae
-0245|Greenstriped Rockfish|Sebastes elongatus|Scorpaenidae
-0246|Grunt Sculpin|Rhamphocottus richardsonii|Rhamphocottidae
-0247|Guadalupe Cardinalfish|Apogon guadalupensis|Apogonidae
-0248|Gulf Grouper|Mycteroperca jordani|Serranidae
-0185|Gumboot Chiton|Cryptochiton stelleri|Mollusca
-0382|Halfbanded Rockfish|Sebastes semicinctus|Scorpaenidae
-0393|Halfbanded Rockfish YOY|Sebastes semicinctus (YOY)|Scorpaenidae
-0035|Halfmoon|Medialuna californiensis|Kyphosidae
-0249|High Cockscomb|Anoplarchus purpurescens|Stichaeidae
-0250|Honeycomb Rockfish|Sebastes umbrosus|Scorpaenidae
-0570|Honeycomb Rockfish YOY|Sebastes umbrosus (YOY)|Scorpaenidae
-0086|Horn Shark|Heterodontus francisci|Heterodontidae
-0251|Hornyhead Turbot|Pleuronichthys verticalis|Pleuronectidae
-0540|Hundred-fathom Codling|Physiculus rastrelliger|Gadidae
-0564|Hybrid Copper x Quillback Rockfish|Sebastes caurinus x Sebastes maliger|Scorpaenidae
-0195|Invasive Didemnum Tunicate (exotic)|Didemnum vexillum|Urochordata
-0011|Island Kelpfish|Alloclinus holderi|Labrisomidae
-0096|Jack Mackerel|Trachurus symmetricus|Carangidae
-0097|Jacksmelt|Atherinopsis californiensis|Atherinidae
-0353|Juvenile (YOY) Rockfish - Unidentified|Sebastes sp. (YOY)|Scorpaenidae
-0359|Juvenile Salmonid|Salmonidae spp.|Salmonidae
-0426|Kellet's Whelk|Kelletia kelletii|Mollusca
-0003|Kelp Bass|Paralabrax clathratus|Serranidae
-0252|Kelp Clingfish|Rimicola muscarum|Gobiesocidae
-0029|Kelp Greenling|Hexagrammos decagrammus|Hexagrammidae
-0012|Kelp Gunnel|Ulvicola sanctaerosae|Pholidae
-0116|Kelp Perch|Brachyistius frenatus|Embiotocidae
-0253|Kelp Pipefish|Syngnathus californiensis|Syngnathidae
-0055|Kelp Rockfish|Sebastes atrovirens|Scorpaenidae
-0492|KGB Rockfish YOY (Kelp/Gopher/B&Y)|Sebastes spp. YOY|Scorpaenidae
-0158|Lacy Bryozoan|Phidolopora pacifica|Bryozoa
-0387|Largemouth Blenny|Labrisomus xanti|Labrisomidae
-0073|Lavender Sculpin|Leiocottus hirundo|Psychrolutidae
-0182|Leafy Hornmouth|Ceratostoma foliatum|Mollusca
-0171|Leather Star|Dermasterias imbricata|Echinodermata
-0458|Leatherback Sea Turtle|Dermochelys coriacea|Dermochelyidae
-0581|Leopard Grouper|Mycteroperca rosacea|Serranidae
-0087|Leopard Shark|Triakis semifasciata|Carcharhinidae
-0183|Lewis' Moonsnail|Neverita lewisii|Mollusca
-0436|Light-bulb Tunicate|Clavelina huntsmani|Urochordata
-0030|Lingcod|Ophiodon elongatus|Hexagrammidae
-0165|Lion's Mane Jelly|Cyanea capillata|Cnidaria
-0254|Lobefin Snailfish|Liparis greeni|Cyclopteridae
-0457|Loggerhead Sea Turtle|Caretta caretta|Cheloniidae
-0255|Longfin Gunnel|Pholis clemensi|Pholidae
-0256|Longfin Halfbeak|Hemiramphus saltator|Hemiramphidae
-0257|Longfin Sanddab|Citharichthys xanthostigma|Paralichthyidae
-0258|Longfin Sculpin|Jordania zonope|Jordaniidae
-0391|Longnose Puffer|Sphoeroides lobatus|Tetraodontidae
-0259|Longnose Skate|Raja rhina|Rajidae
-0260|Longspine Combfish|Zaniolepis latipinnis|Hexagrammidae
-0261|Machete|Elops affinis|Elopidae
-0262|Manacled Sculpin|Synchirus gilli|Psychrolutidae
-0263|Manta|Mobula birostris|Mobulidae
-0386|Marbled Snailfish|Liparis dennyi|Cyclopteridae
-0372|Masked Prickleback|Ernogrammus walkeri|Stichaeidae
-0401|Masking/Sheep Crab|Loxorhynchus crispatus (L. grandis)|Arthropoda
-0362|Medusa Fish|Icichthys lockingtoni|Centrolophidae
-0264|Mexican Goatfish|Mulloidichthys dentatus|Mullidae
-0265|Mexican Scad|Decapterus scombrinus|Carangidae
-0266|Monkeyface Prickleback|Cebidichthys violaceus|Stichaeidae
-0164|Moon Jelly|Aurelia labiata|Cnidaria
-0267|Mosshead Sculpin|Clinocottus globiceps|Psychrolutidae
-0013|Mosshead Warbonnet|Chirolophis nugator|Stichaeidae
-0268|Mussel Blenny|Hypsoblennius jenkinsi|Blenniidae
-0186|Northern Abalone|Haliotis kamtschatkana|Mollusca
-0098|Northern Anchovy|Engraulis mordax|Engraulidae
-0135|Northern Clingfish|Gobiesox maeandricus|Gobiesocidae
-0192|Northern Feather Duster Worm|Eudistylia vancouveri|Annelida
-0155|Northern Kelp Crab|Pugettia producta|Arthropoda
-0109|Northern Ronquil|Ronquilus jordani|Bathymasteridae
-0269|Northern Sculpin|Icelinus borealis|Psychrolutidae
-0444|Northern Sea Palm|Pterygophora californica|Algae
-0074|Northern Spearnose Poacher|Agonopsis vulsa|Agonidae
-0405|Northern Staghorn Bryozoan|Heteropora pacifica|Bryozoa
-0445|Oarweed|Laminaria farlowii|Algae
-0132|Ocean Sunfish|Mola mola|Molidae
-0099|Ocean Whitefish|Caulolatilus princeps|Malacanthidae
-0460|Olive Ridley Sea Turtle|Lepidochelys olivacea|Cheloniidae
-0056|Olive Rockfish|Sebastes serranoides|Scorpaenidae
-0491|Olive Rockfish YOY|Sebastes serranoides (YOY)|Scorpaenidae
-0014|Onespot Fringehead|Neoclinus uninotatus|Chaenopsidae
-0178|Opalescent Nudibranch|Hermissenda crassicornis / opalescens|Mollusca
-0036|Opaleye|Girella nigricans|Kyphosidae
-0166|Orange Cup Coral|Balanophyllia elegans|Cnidaria
-0434|Orange Puffball Sponge|Tethya aurantia|Porifera
-0170|Orange Sea Cucumber|Cucumaria miniata|Echinodermata
-0167|Orange Sea Pen|Ptilosarcus gurneyi|Cnidaria
-0190|Orange Social Ascidian|Metandrocarpa taylori|Urochordata
-0524|Orange Zoanthid|Epizoanthus scotinus|Cnidaria
-0110|Orangethroat Pikeblenny|Chaenopsis alepidota|Chaenopsidae
-0184|Oregon Triton|Fusitriton oregonensis|Mollusca
-0100|Pacific Barracuda|Sphyraena argentea|Sphyraenidae
-0101|Pacific Bonito|Sarda chiliensis|Scombridae
-0270|Pacific Burrfish|Chilomycterus affinis|Tetraodontidae
-0271|Pacific Cod|Gadus macrocephalus|Gadidae
-0573|Pacific Creolefish|Cephalopholis colonus|Serranidae
-0089|Pacific Electric Ray|Torpedo californica|Torpedinidae
-0272|Pacific Hagfish|Eptatretus stouti|Myxinidae
-0273|Pacific Hake|Merluccius productus|Gadidae
-0274|Pacific Halibut|Hippoglossus stenolepis|Pleuronectidae
-0102|Pacific Herring|Clupea pallasii|Clupeidae
-0544|Pacific Lamprey|Entosphenus tridentatus|Petromyzontidae
-0580|Pacific Mutton Hamlet|Alphestes immaculatus|Serranidae
-0466|Pacific Pompano|Peprilus simillimus|Stromateidae
-0347|Pacific Sand Lance|Ammodytes personatus|Ammodytidae
-0024|Pacific Sanddab|Citharichthys sordidus|Paralichthyidae
-0105|Pacific Sardine|Sardinops sagax|Clupeidae
-0275|Pacific Seahorse|Hippocampus ingens|Syngnathidae
-0276|Pacific Sierra|Scomberomorus sierra|Scombridae
-0133|Pacific Spiny Lumpsucker|Eumicrotremus orbis|Cyclopteridae
-0075|Pacific Staghorn Sculpin|Leptocottus armatus|Cottidae
-0277|Pacific Tomcod|Microgadus proximus|Gadidae
-0278|Padded Sculpin|Artedius fenestralis|Psychrolutidae
-0032|Painted Greenling|Oxylebius pictus|Hexagrammidae
-0543|Panamic Fanged Blenny|Ophioblennius steindachneri|Blenniidae
-0279|Pelagic Stingray|Dasyatis violacea|Dasyatidae
-0015|Penpoint Gunnel|Apodichthys flavidus|Pholidae
-0546|Petrale Sole|Eopsetta jordani|Pleuronectidae
-0117|Pile Perch|Rhacochilus vacca|Embiotocidae
-0280|Pilotfish|Naucrates ductor|Carangidae
-0430|Pink Abalone|Haliotis corrugata|Mollusca
-0392|Pink Cardinalfish|Apogon pacificus|Apogonidae
-0168|Pink Hydrocoral|Stylaster venustus|Cnidaria
-0380|Pink Salmon|Oncorhynchus gorbuscha|Salmonidae
-0557|Pink Seaperch|Zalembius rosaceus|Embiotocidae
-0549|Pit-head Sculpin|Icelinus cavifrons|Psychrolutidae
-0388|Plain Cardinalfish|Apogon atricaudus|Apogonidae
-0134|Plainfin Midshipman|Porichthys notatus|Batrachoididae
-0160|Plumose Anemone|Metridium farcimen / senile|Cnidaria
-0281|Popeye Catalufa|Pristigenys serrula|Priacanthidae
-0282|Porcupinefish|Diodon hystrix|Diodontidae
-0357|Prickly Sculpin|Cottus asper|Cottidae
-0514|Prowfish|Zaprora silenus|Zaproridae
-0521|Puget Sound King Crab|Echidnocerus cibarius|Arthropoda
-0057|Puget Sound Rockfish|Sebastes emphaeus|Scorpaenidae
-0506|Puget Sound Rockfish YOY|Sebastes emphaeus (YOY)|Scorpaenidae
-0390|Puget Sound Sculpin|Ruscarius meanyi|Psychrolutidae
-0283|Pugnose Pipefish|Bryx dunckeri|Syngnathidae
-0284|Purple Brotula|Oligopus diagrammus|Bythitidae
-0409|Purple Hydrocoral|Stylaster califrnicus|Cnidaria
-0416|Purple Urchin|Strongylocentrotus purpuratus|Echinodermata
-0285|Pygmy Poacher|Odontopyxis trispinosa|Agonidae
-0509|Pygmy Rockfish|Sebastes wilsoni|Scorpaenidae
-0510|Pygmy Rockfish YOY|Sebastes wilsoni (YOY)|Scorpaenidae
-0037|Queenfish|Seriphus politus|Sciaenidae
-0058|Quillback Rockfish|Sebastes maliger|Scorpaenidae
-0485|Quillback Rockfish YOY|Sebastes maliger (YOY)|Scorpaenidae
-0286|Quillfish|Ptilichthys goodei|Ptilichthyidae
-0287|Rainbow Scorpionfish|Scorpaenodes xyris|Scorpaenidae
-0118|Rainbow Seaperch|Hypsurus caryi|Embiotocidae
-0431|Red Abalone|Haliotis rufescens|Mollusca
-0288|Red Brotula|Brosmophycis marginata|Bythitidae
-0410|Red Gorgonian|Leptogorgia chilensis|Cnidaria
-0350|Red Gunnel|Pholis schultzi|Pholidae
-0076|Red Irish Lord|Hemilepidotus hemilepidotus|Psychrolutidae
-0422|Red Octopus|Octopus rubescens|Mollusca
-0156|Red Rock Crab|Cancer productus|Arthropoda
-0402|Red Rock Shrimp|Lysmata californica|Arthropoda
-0418|Red Sea Hare|Aplysia californica|Mollusca
-0176|Red Sea Urchin|Mesocentrotus franciscanus|Echinodermata
-0427|Red Turban Snail|Lithopoma gibberosum|Mollusca
-0435|Red Volcano Sponge|Acamus erithacus|Porifera
-0511|Redbanded Rockfish|Sebastes babcocki|Scorpaenidae
-0289|Redstripe Rockfish|Sebastes proriger|Scorpaenidae
-0290|Redtail Surfperch|Amphistichus rhodoterus|Embiotocidae
-0291|Redtail Triggerfish|Xanthichthys mento|Balistidae
-0579|Reef Cornetfish|Fistularia commersonii|Fistulariidae
-0119|Reef Perch|Micrometrus aurora|Embiotocidae
-0292|Rex Sole|Glyptocephalus zachirus|Pleuronectidae
-0385|Ribbed Sculpin|Triglops pingelii|Psychrolutidae
-0293|Ribbon Halfbeak|Euleptorhamphus viridis|Hemiramphidae
-0294|Ribbon Prickleback|Phytichthys chirus|Stichaeidae
-0031|Rock Greenling|Hexagrammos lagocephalus|Hexagrammidae
-0295|Rock Prickleback|Xiphister mucosus|Stichaeidae
-0187|Rock Scallop|Crassadoma gigantea|Mollusca
-0129|Rock Wrasse|Halichoeres semicinctus|Labridae
-0365|Rockhead|Bothragonus swanii|Agonidae
-0296|Rockpool Blenny|Hypsoblennius gilberti|Blenniidae
-0297|Rockweed Gunnel|Apodichthys fucorum|Pholidae
-0059|Rosy Rockfish|Sebastes rosaceus|Scorpaenidae
-0561|Rosy Rockfish YOY|Sebastes rosaceus (YOY)|Scorpaenidae
-0464|Rosylip Sculpin|Ascelichthys rhodorus|Psychrolutidae
-0298|Roughback Sculpin|Chitonotus pugetensis|Psychrolutidae
-0077|Roughcheek Sculpin|Ruscarius creaseri|Psychrolutidae
-0299|Roughjaw Frogfish|Antennarius avalonis|Antennariidae
-0300|Roughspine Sculpin|Triglops macellus|Psychrolutidae
-0090|Round Stingray|Urolophus halleri|Urolophidae
-0120|Rubberlip Seaperch|Rhacochilus toxotes|Embiotocidae
-0565|Sabertooth Blenny|Plagiotremus azaleus|Blenniidae
-0463|Sablefish|Anoplopoma fimbria|Anoplopomatidae
-0301|Saddleback Gunnel|Pholis ornata|Pholidae
-0366|Saddleback Sculpin|Oligocottus rimensis|Psychrolutidae
-0078|Sailfin Sculpin|Nautichthys oculofasciatus|Agonidae
-0038|Salema|Xenistius californiensis|Haemulidae
-0419|San Diego Dorid / Northern Leopard Dorid|Diaulula sandiegensis / odonoghuei|Mollusca
-0302|Sand Sole|Psettichthys melanostictus|Pleuronectidae
-0016|Sarcastic Fringehead|Neoclinus blanchardi|Chaenopsidae
-0519|Sargassum|Sargassum muticum|Algae
-0039|Sargo|Anisotremus davidsoni|Haemulidae
-0303|Scalloped Hammerhead|Sphyrna lewini|Sphyrnidae
-0304|Scalyhead Sculpin|Artedius harringtoni|Psychrolutidae
-0577|Scissortail Chromis|Azurina atrilobata|Pomacentridae
-0136|Scythe Butterflyfish|Chaetodon falcifer|Chaetodontidae
-0420|Sea Lemon|Peltodoris nobilis|Mollusca
-0455|Sea Turtle sp. (unidentified)||Cheloniidae
-0128|Senorita|Oxyjulis californica|Labridae
-0305|Sevengill Shark|Notorynchus cepedianus|Hexanchidae
-0375|Sharpchin Rockfish|Sebastes zacentrus|Scorpaenidae
-0384|Sharpnose Sculpin|Clinocottus acuticeps|Psychrolutidae
-0121|Sharpnose Seaperch|Phanerodon atripes|Embiotocidae
-0122|Shiner Perch|Cymatogaster aggregata|Embiotocidae
-0191|Shiny Orange Sea Squirt|Cnemidocarpa finmarkiensis|Urochordata
-0306|Shortfin Eelpout|Lycodes brevipes|Zoarcidae
-0307|Shortfin Mako|Isurus oxyrinchus|Lamnidae
-0308|Shortspine Thornyhead|Sebastolobus alascanus|Scorpaenidae
-0092|Shovelnose Guitarfish|Rhinobatos productus|Rhinobatidae
-0309|Showy Snailfish|Liparis pulchellus|Cyclopteridae
-0361|Silver Surfperch|Hyperprosopon ellipticum|Embiotocidae
-0310|Silvergray Rockfish|Sebastes brevispinis|Scorpaenidae
-0103|Silversides spp.|Atherinidae spp.|Atherinidae
-0311|Silverspotted Sculpin|Blepsias cirrhosus|Agonidae
-0585|Silverstripe Chromis|Chromis alta|Pomacentridae
-0312|Silverstripe Halfbeak|Hyporhamphus unifasciatus|Hemiramphidae
-0371|Six-spot Prickleback|Kasatkia seigeli|Stichaeidae
-0314|Slender Clingfish|Rimicola eigenmanni|Gobiesocidae
-0315|Slender Cockscomb|Anoplarchus insignis|Stichaeidae
-0316|Slender Sole|Lyopsetta exilis|Pleuronectidae
-0478|Slim Sculpin|Radulinus asprellus|Psychrolutidae
-0317|Slimy Snailfish|Liparis mucosus|Cyclopteridae
-0318|Slipskin Snailfish|Liparis fucensis|Cyclopteridae
-0319|Smooth Alligatorfish|Anoplagonus inermis|Agonidae
-0320|Smooth Hammerhead|Sphyrna zygaena|Sphyrnidae
-0321|Smoothhead Sculpin|Artedius lateralis|Psychrolutidae
-0322|Snake Prickleback|Lumpenus sagitta|Stichaeidae
-0079|Snubnose Sculpin|Orthonopias triacis|Psychrolutidae
-0502|Sockeye Salmon|Oncorhynchus nerka|Salmonidae
-0323|Soft Sculpin|Psychrolutes sigalutes|Psychrolutidae
-0324|Southern Clingfish|Rimicola dimorpha|Gobiesocidae
-0025|Southern Rock Sole|Lepidopsetta bilineata|Pleuronectidae
-0446|Southern Sea Palm|Eisenia arborea|Algae
-0373|Southern Spearnose Poacher|Agonopsis sterletus|Agonidae
-0406|Southern Staghorn Bryozoan|Diaperoforma californica|Bryozoa
-0421|Spanish Shawl|Flabellina iodinea|Mollusca
-0553|Speckled Rockfish|Sebastes ovalis|Scorpaenidae
-0552|Speckled Rockfish YOY|Sebastes ovalis (YOY)|Scorpaenidae
-0026|Speckled Sanddab|Citharichthys stigmaeus|Paralichthyidae
-0325|Specklefin Midshipman|Porichthys myriaster|Batrachoididae
-0414|Spiny Brittlestar|Ophiothrix spiculata|Echinodermata
-0091|Spiny Dogfish|Squalus suckleyi|Squalidae
-0403|Spiny Lobster|Panulirus interruptus|Arthropoda
-0172|Spiny Pink Star|Pisaster brevispinus|Echinodermata
-0568|Spinycheek Starsnout|Bathyagonus infraspinatus|Agonidae
-0326|Spinyhead Sculpin|Dasycottus setiger|Psychrolutidae
-0352|Spinynose Sculpin|Asemichthys taylori|Psychrolutidae
-0157|Spot Prawn|Pandalus platyceros|Arthropoda
-0040|Spotfin Croaker|Roncador stearnsii|Sciaenidae
-0327|Spotfin Sculpin|Icelinus tenuis|Psychrolutidae
-0462|Spotfin surfperch|Hyperprosopon anale|Embiotocidae
-0572|Spotted Cabrilla|Epinephelus analogus|Serranidae
-0017|Spotted Cusk-eel|Chilara taylori|Ophidiidae
-0328|Spotted Kelpfish|Gibbonsia elegans|Clinidae
-0137|Spotted Ratfish|Hydrolagus colliei|Chimaeridae
-0575|Spotted Rose Snapper|Lutjanus guttatus|Lutjanidae
-0004|Spotted Sand Bass|Paralabrax maculatofasciatus|Serranidae
-0329|Spotted Snailfish|Liparis callyodon|Cyclopteridae
-0027|Spotted Turbot|Pleuronichthys ritteri|Pleuronectidae
-0330|Squarespot Rockfish|Sebastes hopkinsi|Scorpaenidae
-0550|Squarespot Rockfish YOY|Sebastes hopkinsi (YOY)|Scorpaenidae
-0522|Squat Lobster|Munida quadrispina|Arthropoda
-0437|Stalked Tunicate|Styela montereyensis|Urochordata
-0139|Star Studded Grouper|Hyporthodus niphobles|Serranidae
-0028|Starry Flounder|Platichthys stellatus|Pleuronectidae
-0060|Starry Rockfish|Sebastes constellatus|Scorpaenidae
-0551|Starry Rockfish YOY|Sebastes constellatus (YOY)|Scorpaenidae
-0331|Starry Skate|Raja stellulata|Rajidae
-0501|Steelhead (Rainbow Trout)|Oncorhynchus mykiss|Salmonidae
-0332|Stone Scorpionfish|Scorpaena mystes|Scorpaenidae
-0161|Strawberry Anemone|Corynactis californica|Cnidaria
-0349|Striped Bass|Morone saxatilis|Moronidae
-0333|Striped Kelpfish|Gibbonsia metzi|Clinidae
-0334|Striped Marlin|Tetrapturus audax|Istiophoridae
-0360|Striped Mullet|Mugil cephalus|Mugilidae
-0123|Striped Seaperch|Embiotoca lateralis|Embiotocidae
-0111|Stripefin Ronquil (R. alleni)|Rathbunella alleni|Bathymasteridae
-0512|Stripetail Rockfish YOY|Sebastes saxicola (YOY)|Scorpaenidae
-0530|Stubby Squid|Rossia pacifica|Mollusca
-0080|Sturgeon Poacher|Podothecus accipenserinus|Agonidae
-0173|Sunflower Star|Pycnopodia helianthoides|Echinodermata
-0367|Surf Smelt|Hypomesus pretiosus|Osmeridae
-0093|Swell Shark|Cephaloscyllium ventriosum|Scyliorhinidae
-0364|Tadpole Sculpin|Psychrolutes paradoxus|Psychrolutidae
-0094|Thornback|Platyrhinoidis triseriata|Rhinobatidae
-0465|Thornback Sculpin|Paricelinus hopliticus|Jordaniidae
-0335|Threadfin Sculpin|Icelinus filamentosus|Psychrolutidae
-0571|Threebanded Butterflyfish|Chaetodon humeralis|Chaetodontidae
-0346|Threespine Stickleback|Gasterosteus aculeatus|Gasterosteidae
-0467|Thresher Shark spp|Alopias|Lamnidae
-0358|Tidepool Sculpin|Oligocottus maculosus|Psychrolutidae
-0336|Tidepool Snailfish|Liparis florae|Cyclopteridae
-0061|Tiger Rockfish|Sebastes nigrocinctus|Scorpaenidae
-0535|Tiger Rockfish YOY|Sebastes nigrocinctus (YOY)|Scorpaenidae
-0472|Tope Shark|Galeorhinus galeus|Triakidae
-0337|Topsmelt|Atherinops affinis|Atherinidae
-0196|Transparent Ciona Tunicate (exotic)|Ciona savignyi|Urochordata
-0062|Treefish|Sebastes serriceps|Scorpaenidae
-0494|Treefish YOY|Sebastes serriceps (YOY)|Scorpaenidae
-0162|Tube-dwelling Anemone|Pachycerianthus fimbriatus|Cnidaria
-0370|Tubenose Poacher|Pallasina barbata|Agonidae
-0138|Tubesnout|Aulorhynchus flavidus|Aulorhynchidae
-0548|Two-lined Prickleback|Esselenichthys laurae|Stichaeidae
-0423|Two-spot Octopus / Californian Two-spot Octopus|Octopus bimaculatus / bimaculoides|Mollusca
-0432|Unidentified Abalone|Haliotis sp.|Mollusca
-0538|Unidentified Black / Yellowtail YOY Rockfish|Sebastes spp. BY YOY|Scorpaenidae
-0508|Unidentified Bluebanded / Stripefin Ronquil|Rathbunella sp.|Bathymasteridae
-0539|Unidentified Copper / Quillback YOY Rockfish|Sebastes spp. CQ YOY|Scorpaenidae
-0389|Unidentified Crevice / Spotted Kelpfish|Gibbonsia spp.|Clinidae
-0369|Unidentified Flatfish|Flatfish sp.|Pleuronectidae
-0497|Unidentified Greenling|Hexigrammidae sp.|Hexagrammidae
-0496|Unidentified Gunnel|Pholidae sp.|Pholidae
-0019|Unidentified Kelpfish|Clinidae spp.|Clinidae
-0130|Unidentified Pipefish|Syngnathidae spp.|Syngnathidae
-0066|Unidentified Rockfish|Sebastes sp.|Scorpaenidae
-0536|Unidentified Salmon|Oncorhynchus sp.|Salmonidae
-0081|Unidentified Sculpin|Psychrolutidae spp.|Psychrolutidae
-0569|Unidentified Shark|Unidentified Elasmobranchii|Squalidae
-0499|Unidentified Silvery Baitfish|Atherinidae, Clupeidae, and Engraulidae|Atherinidae, Clupeidae, and Engraulidae
-0542|Unidentified Slender / High Cockscomb|Anoplarchus sp.|Stichaeidae
-0489|Unidentified Snailfish|Liparidae sp.|Cyclopteridae
-0537|Unidentified Sturgeon|Acipenser sp.|Acipenseridae
-0126|Unidentified Surfperch|Embiotocidae spp.|Embiotocidae
-0567|Unidentified Yellowtail / Olive Rockfish|Sebastes flavidus / Sebastes serranoides|Scorpaenidae
-0566|Unidentified YOY Yellowtail / Olive Rockfish|Sebastes flavidus / Sebastes serranoides YOY|Scorpaenidae
-0063|Vermilion Rockfish|Sebastes miniatus|Scorpaenidae
-0483|Vermilion Rockfish YOY|Sebastes miniatus (YOY)|Scorpaenidae
-0527|Vermilion Star|Mediaster aequalis|Echinodermata
-0338|Walleye Pollock|Theragra chalcogramma|Gadidae
-0124|Walleye Surfperch|Hyperprosopon argenteum|Embiotocidae
-0411|Warty Sea Cucumber|Parastichopus parvimensis|Echinodermata
-0428|Wavy Turban Snail|Lithopoma undosum|Mollusca
-0339|White Croaker|Genyonemus lineatus|Sciaenidae
-0041|White Seabass|Atractoscion nobilis|Sciaenidae
-0125|White Seaperch|Phanerodon furcatus|Embiotocidae
-0340|White Shark|Carcharodon carcharias|Lamnidae
-0503|White Sturgeon|Acipenser transmontanus|Acipenseridae
-0417|White Urchin|Lytechinus anamesus|Echinodermata
-0179|White-lined Dirona|Dirona albolineata|Mollusca
-0163|White-spotted Anemone|Urticina sp.|Cnidaria
-0033|Whitespotted Greenling|Hexagrammos stelleri|Hexagrammidae
-0533|Whitetail Damselfish|Stegastes leucorus|Pomacentridae
-0341|Widow Rockfish|Sebastes entomelas|Scorpaenidae
-0534|Widow Rockfish YOY|Sebastes entomelas (YOY)|Scorpaenidae
-0008|Wolf-eel|Anarrhichthys ocellatus|Anarhichadidae
-0342|Woolly Sculpin|Clinocottus analis|Psychrolutidae
-0507|Y-Prickleback|Lumpenopsis hypochroma|Stichaeidae
-0531|Yellow Boring Sponge|Cliona californiana|Porifera
-0180|Yellow Margin Dorid Complex|Cadlina luteomarginata/sylviaearleae/klasmalmbergi/jannanicholsae/Acanthodoris hudsoni|Mollusca
-0376|Yellowchin Sculpin|Icelinus quadriseriatus|Psychrolutidae
-0064|Yelloweye Rockfish|Sebastes ruberrimus|Scorpaenidae
-0480|Yelloweye Rockfish YOY|Sebastes ruberrimus (YOY)|Scorpaenidae
-0042|Yellowfin Croaker|Umbrina roncador|Sciaenidae
-0018|Yellowfin Fringehead|Neoclinus stephensae|Chaenopsidae
-0558|Yellowfin Goby|Acanthogobius flavimanus|Gobiidae
-0343|Yellowfin Tuna|Thunnus albacares|Scombridae
-0106|Yellowtail|Seriola lalandi|Carangidae
-0065|Yellowtail Rockfish|Sebastes flavidus|Scorpaenidae
-0475|Yellowtail Rockfish YOY|Sebastes flavidus (YOY)|Scorpaenidae
-0112|Zebra Goby|Lythrypnus zebra|Gobiidae
-0043|Zebraperch|Hermosilla azurea|Kyphosidae
+0513|Alaskan Ronquil|Bathymaster caeruleofasciatus|Bathymasteridae|Ronquil
+0201|Albacore|Thunnus alalunga|Scombridae|Mackerel
+0202|Almaco Jack|Seriola rivoliana|Carangidae|Jack
+0088|Angel Shark|Squatina californica|Squatinidae|Angel Shark
+0486|Argus Moray|Muraena argus|Muraenidae|Moray
+0355|Arrow Goby|Clevelandia ios|Gobiidae|Goby
+0441|Asian Kelp Wakame (exotic)|Undaria pinnatifida|Algae|Algae
+0203|Bald Sculpin|Clinocottus recalvus|Psychrolutidae|Marine Sculpins
+0204|Balloonfish|Diodon holocanthus|Diodontidae|Porcupinefish
+0205|Banded Guitarfish|Zapteryx exasperata|Rhinobatidae|Guitarfish
+0206|Barcheek Pipefish|Syngnathus exilis|Syngnathidae|Pipefish & Seahorse
+0207|Barred Pipefish|Syngnathus auliscus|Syngnathidae|Pipefish & Seahorse
+0001|Barred Sand Bass|Paralabrax nebulifer|Serranidae|Sea Bass
+0113|Barred Surfperch|Amphistichus argenteus|Embiotocidae|Surfperch
+0574|Barspot Cardinalfish|Apogon retrosella|Apogonidae|Cardinalfish
+0525|Basket Star|Gorgonocephalus eucnemis|Echinodermata|Echinoderms
+0559|Basketweave Cusk-eel|Ophidion scrippsae|Ophidiidae|Cusk-Eel
+0208|Basking Shark|Cetorhinus maximus|Cetorhinidae|Basking Shark
+0082|Bat Ray|Myliobatis californica|Myliobatidae|Eagle Ray
+0412|Bat Star|Patiria miniata|Echinodermata|Echinoderms
+0209|Bay Blenny|Hypsoblennius gentilis|Blenniidae|Combtooth Blenny
+0210|Bay Goby|Lepidogobius lepidus|Gobiidae|Goby
+0211|Bay Pipefish|Syngnathus leptorhynchus|Syngnathidae|Pipefish & Seahorse
+0212|Big Skate|Raja binoculata|Rajidae|Skate
+0505|Bigeye Poacher|Bathyagonus pentacanthus|Agonidae|Poacher
+0213|Bigeye Tuna|Thunnus obesus|Scombridae|Mackerel
+0020|Bigmouth Sole|Hippoglossina stomata|Paralichthyidae|Sand Flounder
+0582|Bigscale Goatfish|Pseudupeneus grandisquamis|Mullidae|Goatfish
+0034|Black Croaker|Cheilotrema saturnum|Sciaenidae|Drum
+0214|Black Eelpout|Lycodes diapterus|Zoarcidae|Eelpout
+0114|Black Perch|Embiotoca jacksoni|Embiotocidae|Surfperch
+0215|Black Prickleback|Xiphister atropurpureus|Stichaeidae|Prickleback
+0045|Black Rockfish|Sebastes melanops|Scorpaenidae|Scorpionfish
+0481|Black Rockfish YOY|Sebastes melanops (YOY)|Scorpaenidae|Scorpionfish
+0046|Black-and-Yellow Rockfish|Sebastes chrysomelas|Scorpaenidae|Scorpionfish
+0578|Black-and-Yellow Rockfish YOY|Sebastes chrysomelas (YOY)|Scorpaenidae|Scorpionfish
+0216|Blackbelly Eelpout|Lycodes pacificus|Zoarcidae|Eelpout
+0107|Blackeye Goby|Rhinogobiops nicholsii|Gobiidae|Goby
+0495|Blackfin Sculpin|Malacocottus kincaidi|Psychrolutidae|Marine Sculpins
+0005|Blacksmith|Chromis punctipinnis|Pomacentridae|Damselfish
+0217|Blacktip Poacher|Xeneretmus latifrons|Agonidae|Poacher
+0218|Blotchwing Flyingfish|Cypselurus californicus|Exocoetidae|Flyingfish
+0482|Blue / Deacon Rockfish YOY|Sebastes mystinus / diaconus (YOY)|Scorpaenidae|Scorpionfish
+0219|Blue Marlin|Makaira nigricans|Istiophoridae|Billfish
+0487|Blue Rockfish (was Blue-blotched species)|Sebastes mystinus|Scorpaenidae|Scorpionfish
+0044|Blue Rockfish - generic ID|Sebastes mystinus / diaconus|Scorpaenidae|Scorpionfish
+0083|Blue Shark|Prionace glauca|Carcharhinidae|Requiem Shark
+0220|Blue-bronze Chub|Kyphosus vaigiensis|Kyphosidae|Sea Chub
+0108|Bluebanded Goby|Lythrypnus dalli|Gobiidae|Goby
+0379|Bluebanded Ronquil (R. hypoplecta)|Rathbunella hypoplecta|Bathymasteridae|Ronquil
+0476|Bluebarred Prickleback|Plectobranchus evides|Stichaeidae|Prickleback
+0221|Bluefin Tuna|Thunnus thynnus|Scombridae|Mackerel
+0313|Bluntnose Sixgill Shark|Hexanchus griseus|Hexanchidae|Cow Shark
+0047|Bocaccio|Sebastes paucispinis|Scorpaenidae|Scorpionfish
+0490|Bocaccio Rockfish YOY|Sebastes paucispinus (YOY)|Scorpaenidae|Scorpionfish
+0222|Bonefish|Albula vulpes|Albulidae|Bonefish
+0223|Broomtail Grouper|Mycteroperca xenarcha|Serranidae|Sea Bass
+0224|Brown Cat Shark|Apristurus brunneus|Scyliorhinidae|Cat Shark
+0407|Brown Gorgonian|Muricea fruticosa|Cnidaria|Cnidarians
+0067|Brown Irish Lord|Hemilepidotus spinosus|Psychrolutidae|Marine Sculpins
+0400|Brown Rock Crab|Romaleon antennarium|Arthropoda|Arthropods
+0048|Brown Rockfish|Sebastes auriculatus|Scorpaenidae|Scorpionfish
+0484|Brown Rockfish YOY|Sebastes auriculatus (YOY)|Scorpaenidae|Scorpionfish
+0084|Brown Smoothhound|Mustelus henlei|Carcharhinidae|Requiem Shark
+0068|Buffalo Sculpin|Enophrys bison|Psychrolutidae|Marine Sculpins
+0442|Bull Kelp|Nereocystis luetkeana|Algae|Algae
+0377|Bull Sculpin|Enophrys taurina|Psychrolutidae|Marine Sculpins
+0225|Bullseye Puffer|Sphoeroides annulatus|Tetraodontidae|Puffer
+0500|Butter Sole|Isopsetta isolepis|Pleuronectidae|Righteye Flounder
+0022|C-O Sole|Pleuronichthys coenosus|Pleuronectidae|Righteye Flounder
+0069|Cabezon|Scorpaenichthys marmoratus|Jordaniidae|Longfin Sculpins
+0576|Calico Lizardfish|Synodus lacertinus|Synodontidae|Lizardfish
+0050|Calico Rockfish|Sebastes dalli|Scorpaenidae|Scorpionfish
+0555|Calico Rockfish YOY|Sebastes dalli (YOY)|Scorpaenidae|Scorpionfish
+0471|Calico Surfperch|Amphistichus koelzi|Embiotocidae|Surfperch
+0344|California Butterfly Ray|Gymnura marmorata|Gymnuridae|Butterfly Ray
+0131|California Clingfish|Gobiesox rhessodon|Gobiesocidae|Clingfish
+0348|California Corbina|Menticirrhus undulatus|Sciaenidae|Drum
+0095|California Flyingfish|Cypselurus californicus|Exocoetidae|Flyingfish
+0408|California Golden Gorgonian|Muricea californica|Cnidaria|Cnidarians
+0473|California Grunion|Leuresthes tenuis|Atherinopsidae|Neotropical Silversides
+0226|California Halfbeak|Hyporhamphus rosae|Hemiramphidae|Halfbeak
+0021|California Halibut|Paralichthys californicus|Paralichthyidae|Sand Flounder
+0227|California Lizardfish|Synodus lucioceps|Synodontidae|Lizardfish
+0007|California Moray|Gymnothorax mordax|Muraenidae|Moray
+0070|California Scorpionfish|Scorpaena guttata|Scorpaenidae|Scorpionfish
+0169|California Sea Cucumber|Parastichopus californicus|Echinodermata|Echinoderms
+0127|California Sheephead|Bodianus pulcher|Labridae|Wrasse
+0228|California Skate|Raja inornata|Rajidae|Skate
+0374|California Tonguefish|Symphurus atricaudus|Cynoglossidae|Tonguefishes
+0049|Canary Rockfish|Sebastes pinniger|Scorpaenidae|Scorpionfish
+0470|Canary Rockfish YOY|Sebastes pinniger (YOY)|Scorpaenidae|Scorpionfish
+0150|Candy Stripe Shrimp|Lebbeus grandimanus|Arthropoda|Arthropods
+0515|Canyon Sculpin|Icelinus limbaughi|Psychrolutidae|Marine Sculpins
+0229|Catalina Conger|Gnathophis catalinensis|Congridae|Conger Eel
+0545|Cheekspot Goby|Ilypnus gilberti|Gobiidae|Goby
+0424|Chestnut Cowry|Cypraea spadicea|Mollusca|Mollusks
+0383|Chillipepper|Sebastes goodei|Scorpaenidae|Scorpionfish
+0188|Chimney Sponge|Rhabdocalyptus dawsoni/Staurocalyptus dowlingi|Porifera|Poriferans
+0051|China Rockfish|Sebastes nebulosus|Scorpaenidae|Scorpionfish
+0493|China Rockfish YOY|Sebastes nebulosus (YOY)|Scorpaenidae|Scorpionfish
+0354|Chinook Salmon|Oncorhynchus tshawytscha|Salmonidae|Trout
+0479|Chinook Salmon Juvenile|Oncorhynchus tshawytscha|Salmonidae|Trout
+0230|Chocolate Pipefish|Syngnathus euchrous|Syngnathidae|Pipefish & Seahorse
+0438|Christmas Tree Worm|Spirobranchus spinosus|Annelida|Annelids
+0104|Chub Mackerel|Scomber japonicus|Scombridae|Mackerel
+0368|Chum Salmon|Oncorhynchus keta|Salmonidae|Trout
+0189|Cloud/Goblet Sponge|Aphrocallistes vastus / Heterochone calyx|Porifera|Poriferans
+0528|Clown Dorid|Triopha modesta / Triopha catalinae|Mollusca|Mollusks
+0194|Club Tunicate (exotic)|Styela clava|Urochordata|Urochordates
+0433|Cobalt Sponge|Hymenamphiastra cyanocrypta|Porifera|Poriferans
+0468|Cod Sp. (Unidentified Juvenile)|Gadidae|Gadidae|Cod
+0477|Coho Salmon|Oncorhynchus kisutch|Salmonidae|Trout
+0439|Colonial Sand-tube Worm|Phragmatopoma californica|Annelida|Annelids
+0151|Coonstripe Shrimp|Pandalus danae / gurneyi|Arthropoda|Arthropods
+0052|Copper Rockfish|Sebastes caurinus|Scorpaenidae|Scorpionfish
+0474|Copper Rockfish YOY|Sebastes caurinus (YOY)|Scorpaenidae|Scorpionfish
+0584|Coral Hawkfish|Cirrhitichthys oxycephalus|Cirrhitidae|Hawkfish
+0071|Coralline Sculpin|Artedius corallinus|Psychrolutidae|Marine Sculpins
+0547|Cortez Angelfish|Pomacanthus zonipectus|Pomacanthidae|Angelfish
+0554|Cowcod|Sebastes levis|Scorpaenidae|Scorpionfish
+0562|Cowcod YOY|Sebastes levis|Scorpaenidae|Scorpionfish
+0231|Crescent Gunnel|Pholis laeta|Pholidae|Gunnel
+0232|Crevice Kelpfish|Gibbonsia montereyensis|Clinidae|Clinid
+0415|Crowned Urchin|Centrostphanus coronatus|Echinodermata|Echinoderms
+0233|Curlfin Sole|Pleuronichthys decurrens|Pleuronectidae|Righteye Flounder
+0378|Cutthroat Trout|Oncorhynchus clarkii|Salmonidae|Trout
+0488|Deacon Rockfish (was Blue Sided species)|Sebastes diaconus|Scorpaenidae|Scorpionfish
+0009|Decorated Warbonnet|Chirolophis decoratus|Stichaeidae|Prickleback
+0234|Deepwater Blenny|Cryptotrema corallinum|Labrisomidae|Labrisomids
+0235|Diamond Stingray|Dasyatis dipterura|Dasyatidae|Stingray
+0345|Diamond Turbot|Hypsopsetta guttulata|Pleuronectidae|Righteye Flounder
+0381|Dolly Varden|Salvelinus malma|Salmonidae|Trout
+0236|Dolphin|Coryphaena hippurus|Coryphaenidae|Dolphin
+0237|Dover Sole|Microstomus pacificus|Paralichthyidae|Sand Flounder
+0152|Dungeness Crab|Metacarcinus magister|Arthropoda|Arthropods
+0238|Dusky Rockfish|Sebastes ciliatus|Scorpaenidae|Scorpionfish
+0115|Dwarf Perch|Micrometrus minimus|Embiotocidae|Surfperch
+0174|Eccentric Sand Dollar|Dendraster excentricus|Echinodermata|Echinoderms
+0517|Eelgrass|Zostera marina / japonica|Algae|Algae
+0239|English Sole|Parophrys vetulus|Pleuronectidae|Righteye Flounder
+0363|Eulachon|Thaleichthys pacificus|Osmeridae|Smelts
+0023|Fantail Sole|Xystreurys liolepis|Paralichthyidae|Sand Flounder
+0440|Feather Duster Worm (E. polymorpha)|Eudistylia polymorpha|Annelida|Annelids
+0526|Feather Star|Florometra serratissima|Echinodermata|Echinoderms
+0240|Finescale Triggerfish|Balistes polylepis|Balistidae|Leatherjacket
+0159|Fish-eating Anemone|Urticina piscivora|Cnidaria|Cnidarians
+0586|Flag Cabrilla|Epinephelus labriformis|Serranidae|Sea Bass
+0241|Flag Rockfish|Sebastes rubrivinctus|Scorpaenidae|Scorpionfish
+0541|Flathead Sole|Hippoglossoides elassodon|Pleuronectidae|Righteye Flounder
+0356|Fluffy Sculpin|Oligocottus snyderi|Psychrolutidae|Marine Sculpins
+0404|Fluted Bryozoan|Primavelans insculpta|Bryozoa|Bryozoans
+0498|Fringed Sculpin|Icelinus fimbriatus|Psychrolutidae|Marine Sculpins
+0193|Fringed Tube Worm|Dodecaceria pacifica|Annelida|Annelids
+0006|Garibaldi|Hypsypops rubicundus|Pomacentridae|Damselfish
+0153|Giant Barnacle|Balanus nubilus|Arthropoda|Arthropods
+0443|Giant Kelp|Macrocystis integrifolia / pyrifera|Algae|Algae
+0010|Giant Kelpfish|Heterostichus rostratus|Clinidae|Clinid
+0425|Giant Keyhole Limpet|Megathura crenulata|Mollusca|Mollusks
+0177|Giant Nudibranch|Dendronotus iris|Mollusca|Mollusks
+0181|Giant Pacific Octopus|Enteroctopus dofleini|Mollusca|Mollusks
+0002|Giant Sea Bass|Stereolepis gigas|Polyprionidae|Wreckfish
+0413|Giant Spined Star|Pisaster giganteus|Echinodermata|Echinoderms
+0242|Giant Wrymouth|Cryptacanthodes giganteus|Cryptacanthodidae|Wrymouth
+0556|Glasseye (Pacific)|Priacanthus carolinus|Priacanthidae|Bigeye
+0532|Glassy Sea Squirt|Ascidia paratropa|Urochordata|Urochordates
+0563|Goldspotted Sand Bass|Paralabrax auroguttatus|Serranidae|Sea Bass
+0053|Gopher Rockfish|Sebastes carnatus|Scorpaenidae|Scorpionfish
+0469|Gopher Rockfish YOY|Sebastes carnatus (YOY)|Scorpaenidae|Scorpionfish
+0520|Graceful Crab|Metacarcinus gracilis|Arthropoda|Arthropods
+0054|Grass Rockfish|Sebastes rastrelliger|Scorpaenidae|Scorpionfish
+0560|Grass Rockfish YOY|Sebastes rastrelliger (YOY)|Scorpaenidae|Scorpionfish
+0085|Gray Smoothhound|Mustelus californicus|Carcharhinidae|Requiem Shark
+0243|Great Hammerhead|Sphyrna mokarran|Sphyrnidae|Hammerhead
+0072|Great Sculpin|Myoxocephalus polyacanthocephalus|Psychrolutidae|Marine Sculpins
+0429|Green Abalone|Haliotis fulgens|Mollusca|Mollusks
+0154|Green Crab (Invasive)|Carcinus maenas|Arthropoda|Arthropods
+0244|Green Jack|Caranx caballus|Carangidae|Jack
+0461|Green Sea Turtle|Chelonia mydas|Cheloniidae|Sea Turtles
+0175|Green Sea Urchin|Strongylocentrotus droebachiensis|Echinodermata|Echinoderms
+0504|Green Sturgeon|Acipenser medirostris|Acipenseridae|Sturgeon
+0245|Greenstriped Rockfish|Sebastes elongatus|Scorpaenidae|Scorpionfish
+0246|Grunt Sculpin|Rhamphocottus richardsonii|Rhamphocottidae|Grunt Sculpins
+0247|Guadalupe Cardinalfish|Apogon guadalupensis|Apogonidae|Cardinalfish
+0248|Gulf Grouper|Mycteroperca jordani|Serranidae|Sea Bass
+0185|Gumboot Chiton|Cryptochiton stelleri|Mollusca|Mollusks
+0382|Halfbanded Rockfish|Sebastes semicinctus|Scorpaenidae|Scorpionfish
+0393|Halfbanded Rockfish YOY|Sebastes semicinctus (YOY)|Scorpaenidae|Scorpionfish
+0035|Halfmoon|Medialuna californiensis|Kyphosidae|Sea Chub
+0249|High Cockscomb|Anoplarchus purpurescens|Stichaeidae|Prickleback
+0250|Honeycomb Rockfish|Sebastes umbrosus|Scorpaenidae|Scorpionfish
+0570|Honeycomb Rockfish YOY|Sebastes umbrosus (YOY)|Scorpaenidae|Scorpionfish
+0086|Horn Shark|Heterodontus francisci|Heterodontidae|Bullhead Shark
+0251|Hornyhead Turbot|Pleuronichthys verticalis|Pleuronectidae|Righteye Flounder
+0540|Hundred-fathom Codling|Physiculus rastrelliger|Gadidae|Cod
+0564|Hybrid Copper x Quillback Rockfish|Sebastes caurinus x Sebastes maliger|Scorpaenidae|Scorpionfish
+0195|Invasive Didemnum Tunicate (exotic)|Didemnum vexillum|Urochordata|Urochordates
+0011|Island Kelpfish|Alloclinus holderi|Labrisomidae|Labrisomids
+0096|Jack Mackerel|Trachurus symmetricus|Carangidae|Jack
+0097|Jacksmelt|Atherinopsis californiensis|Atherinidae|Silverside
+0353|Juvenile (YOY) Rockfish - Unidentified|Sebastes sp. (YOY)|Scorpaenidae|Scorpionfish
+0359|Juvenile Salmonid|Salmonidae spp.|Salmonidae|Trout
+0426|Kellet's Whelk|Kelletia kelletii|Mollusca|Mollusks
+0003|Kelp Bass|Paralabrax clathratus|Serranidae|Sea Bass
+0252|Kelp Clingfish|Rimicola muscarum|Gobiesocidae|Clingfish
+0029|Kelp Greenling|Hexagrammos decagrammus|Hexagrammidae|Greenling
+0012|Kelp Gunnel|Ulvicola sanctaerosae|Pholidae|Gunnel
+0116|Kelp Perch|Brachyistius frenatus|Embiotocidae|Surfperch
+0253|Kelp Pipefish|Syngnathus californiensis|Syngnathidae|Pipefish & Seahorse
+0055|Kelp Rockfish|Sebastes atrovirens|Scorpaenidae|Scorpionfish
+0492|KGB Rockfish YOY (Kelp/Gopher/B&Y)|Sebastes spp. YOY|Scorpaenidae|Scorpionfish
+0158|Lacy Bryozoan|Phidolopora pacifica|Bryozoa|Bryozoans
+0387|Largemouth Blenny|Labrisomus xanti|Labrisomidae|Labrisomids
+0073|Lavender Sculpin|Leiocottus hirundo|Psychrolutidae|Marine Sculpins
+0182|Leafy Hornmouth|Ceratostoma foliatum|Mollusca|Mollusks
+0171|Leather Star|Dermasterias imbricata|Echinodermata|Echinoderms
+0458|Leatherback Sea Turtle|Dermochelys coriacea|Dermochelyidae|Leatherback Sea Turtle
+0581|Leopard Grouper|Mycteroperca rosacea|Serranidae|Sea Bass
+0087|Leopard Shark|Triakis semifasciata|Carcharhinidae|Requiem Shark
+0183|Lewis' Moonsnail|Neverita lewisii|Mollusca|Mollusks
+0436|Light-bulb Tunicate|Clavelina huntsmani|Urochordata|Urochordates
+0030|Lingcod|Ophiodon elongatus|Hexagrammidae|Greenling
+0165|Lion's Mane Jelly|Cyanea capillata|Cnidaria|Cnidarians
+0254|Lobefin Snailfish|Liparis greeni|Cyclopteridae|Snailfish
+0457|Loggerhead Sea Turtle|Caretta caretta|Cheloniidae|Sea Turtles
+0255|Longfin Gunnel|Pholis clemensi|Pholidae|Gunnel
+0256|Longfin Halfbeak|Hemiramphus saltator|Hemiramphidae|Halfbeak
+0257|Longfin Sanddab|Citharichthys xanthostigma|Paralichthyidae|Sand Flounder
+0258|Longfin Sculpin|Jordania zonope|Jordaniidae|Longfin Sculpins
+0391|Longnose Puffer|Sphoeroides lobatus|Tetraodontidae|Puffer
+0259|Longnose Skate|Raja rhina|Rajidae|Skate
+0260|Longspine Combfish|Zaniolepis latipinnis|Hexagrammidae|Greenling
+0261|Machete|Elops affinis|Elopidae|Tarpon
+0262|Manacled Sculpin|Synchirus gilli|Psychrolutidae|Marine Sculpins
+0263|Manta|Mobula birostris|Mobulidae|Manta
+0386|Marbled Snailfish|Liparis dennyi|Cyclopteridae|Snailfish
+0372|Masked Prickleback|Ernogrammus walkeri|Stichaeidae|Prickleback
+0401|Masking/Sheep Crab|Loxorhynchus crispatus (L. grandis)|Arthropoda|Arthropods
+0362|Medusa Fish|Icichthys lockingtoni|Centrolophidae|Medusa fish
+0264|Mexican Goatfish|Mulloidichthys dentatus|Mullidae|Goatfish
+0265|Mexican Scad|Decapterus scombrinus|Carangidae|Jack
+0266|Monkeyface Prickleback|Cebidichthys violaceus|Stichaeidae|Prickleback
+0164|Moon Jelly|Aurelia labiata|Cnidaria|Cnidarians
+0267|Mosshead Sculpin|Clinocottus globiceps|Psychrolutidae|Marine Sculpins
+0013|Mosshead Warbonnet|Chirolophis nugator|Stichaeidae|Prickleback
+0268|Mussel Blenny|Hypsoblennius jenkinsi|Blenniidae|Combtooth Blenny
+0186|Northern Abalone|Haliotis kamtschatkana|Mollusca|Mollusks
+0098|Northern Anchovy|Engraulis mordax|Engraulidae|Anchovy
+0135|Northern Clingfish|Gobiesox maeandricus|Gobiesocidae|Clingfish
+0192|Northern Feather Duster Worm|Eudistylia vancouveri|Annelida|Annelids
+0155|Northern Kelp Crab|Pugettia producta|Arthropoda|Arthropods
+0109|Northern Ronquil|Ronquilus jordani|Bathymasteridae|Ronquil
+0269|Northern Sculpin|Icelinus borealis|Psychrolutidae|Marine Sculpins
+0444|Northern Sea Palm|Pterygophora californica|Algae|Algae
+0074|Northern Spearnose Poacher|Agonopsis vulsa|Agonidae|Poacher
+0405|Northern Staghorn Bryozoan|Heteropora pacifica|Bryozoa|Bryozoans
+0445|Oarweed|Laminaria farlowii|Algae|Algae
+0132|Ocean Sunfish|Mola mola|Molidae|Mola
+0099|Ocean Whitefish|Caulolatilus princeps|Malacanthidae|Tilefish
+0460|Olive Ridley Sea Turtle|Lepidochelys olivacea|Cheloniidae|Sea Turtles
+0056|Olive Rockfish|Sebastes serranoides|Scorpaenidae|Scorpionfish
+0491|Olive Rockfish YOY|Sebastes serranoides (YOY)|Scorpaenidae|Scorpionfish
+0014|Onespot Fringehead|Neoclinus uninotatus|Chaenopsidae|Blenny (pike, tube and flag)
+0178|Opalescent Nudibranch|Hermissenda crassicornis / opalescens|Mollusca|Mollusks
+0036|Opaleye|Girella nigricans|Kyphosidae|Sea Chub
+0166|Orange Cup Coral|Balanophyllia elegans|Cnidaria|Cnidarians
+0434|Orange Puffball Sponge|Tethya aurantia|Porifera|Poriferans
+0170|Orange Sea Cucumber|Cucumaria miniata|Echinodermata|Echinoderms
+0167|Orange Sea Pen|Ptilosarcus gurneyi|Cnidaria|Cnidarians
+0190|Orange Social Ascidian|Metandrocarpa taylori|Urochordata|Urochordates
+0524|Orange Zoanthid|Epizoanthus scotinus|Cnidaria|Cnidarians
+0110|Orangethroat Pikeblenny|Chaenopsis alepidota|Chaenopsidae|Blenny (pike, tube and flag)
+0184|Oregon Triton|Fusitriton oregonensis|Mollusca|Mollusks
+0100|Pacific Barracuda|Sphyraena argentea|Sphyraenidae|Barracuda
+0101|Pacific Bonito|Sarda chiliensis|Scombridae|Mackerel
+0270|Pacific Burrfish|Chilomycterus affinis|Tetraodontidae|Puffer
+0271|Pacific Cod|Gadus macrocephalus|Gadidae|Cod
+0573|Pacific Creolefish|Cephalopholis colonus|Serranidae|Sea Bass
+0089|Pacific Electric Ray|Torpedo californica|Torpedinidae|Electric Ray
+0272|Pacific Hagfish|Eptatretus stouti|Myxinidae|Hagfish
+0273|Pacific Hake|Merluccius productus|Gadidae|Cod
+0274|Pacific Halibut|Hippoglossus stenolepis|Pleuronectidae|Righteye Flounder
+0102|Pacific Herring|Clupea pallasii|Clupeidae|Herring
+0544|Pacific Lamprey|Entosphenus tridentatus|Petromyzontidae|Lamprey
+0580|Pacific Mutton Hamlet|Alphestes immaculatus|Serranidae|Sea Bass
+0466|Pacific Pompano|Peprilus simillimus|Stromateidae|Butterfishes
+0347|Pacific Sand Lance|Ammodytes personatus|Ammodytidae|Sand Lance
+0024|Pacific Sanddab|Citharichthys sordidus|Paralichthyidae|Sand Flounder
+0105|Pacific Sardine|Sardinops sagax|Clupeidae|Herring
+0275|Pacific Seahorse|Hippocampus ingens|Syngnathidae|Pipefish & Seahorse
+0276|Pacific Sierra|Scomberomorus sierra|Scombridae|Mackerel
+0133|Pacific Spiny Lumpsucker|Eumicrotremus orbis|Cyclopteridae|Snailfish
+0075|Pacific Staghorn Sculpin|Leptocottus armatus|Cottidae|Sculpin
+0277|Pacific Tomcod|Microgadus proximus|Gadidae|Cod
+0278|Padded Sculpin|Artedius fenestralis|Psychrolutidae|Marine Sculpins
+0032|Painted Greenling|Oxylebius pictus|Hexagrammidae|Greenling
+0543|Panamic Fanged Blenny|Ophioblennius steindachneri|Blenniidae|Combtooth Blenny
+0279|Pelagic Stingray|Dasyatis violacea|Dasyatidae|Stingray
+0015|Penpoint Gunnel|Apodichthys flavidus|Pholidae|Gunnel
+0546|Petrale Sole|Eopsetta jordani|Pleuronectidae|Righteye Flounder
+0117|Pile Perch|Rhacochilus vacca|Embiotocidae|Surfperch
+0280|Pilotfish|Naucrates ductor|Carangidae|Jack
+0430|Pink Abalone|Haliotis corrugata|Mollusca|Mollusks
+0392|Pink Cardinalfish|Apogon pacificus|Apogonidae|Cardinalfish
+0168|Pink Hydrocoral|Stylaster venustus|Cnidaria|Cnidarians
+0380|Pink Salmon|Oncorhynchus gorbuscha|Salmonidae|Trout
+0557|Pink Seaperch|Zalembius rosaceus|Embiotocidae|Surfperch
+0549|Pit-head Sculpin|Icelinus cavifrons|Psychrolutidae|Marine Sculpins
+0388|Plain Cardinalfish|Apogon atricaudus|Apogonidae|Cardinalfish
+0134|Plainfin Midshipman|Porichthys notatus|Batrachoididae|Toadfish
+0160|Plumose Anemone|Metridium farcimen / senile|Cnidaria|Cnidarians
+0281|Popeye Catalufa|Pristigenys serrula|Priacanthidae|Bigeye
+0282|Porcupinefish|Diodon hystrix|Diodontidae|Porcupinefish
+0357|Prickly Sculpin|Cottus asper|Cottidae|Sculpin
+0514|Prowfish|Zaprora silenus|Zaproridae|Prowfish
+0521|Puget Sound King Crab|Echidnocerus cibarius|Arthropoda|Arthropods
+0057|Puget Sound Rockfish|Sebastes emphaeus|Scorpaenidae|Scorpionfish
+0506|Puget Sound Rockfish YOY|Sebastes emphaeus (YOY)|Scorpaenidae|Scorpionfish
+0390|Puget Sound Sculpin|Ruscarius meanyi|Psychrolutidae|Marine Sculpins
+0283|Pugnose Pipefish|Bryx dunckeri|Syngnathidae|Pipefish & Seahorse
+0284|Purple Brotula|Oligopus diagrammus|Bythitidae|Viviparous Brotula
+0409|Purple Hydrocoral|Stylaster califrnicus|Cnidaria|Cnidarians
+0416|Purple Urchin|Strongylocentrotus purpuratus|Echinodermata|Echinoderms
+0285|Pygmy Poacher|Odontopyxis trispinosa|Agonidae|Poacher
+0509|Pygmy Rockfish|Sebastes wilsoni|Scorpaenidae|Scorpionfish
+0510|Pygmy Rockfish YOY|Sebastes wilsoni (YOY)|Scorpaenidae|Scorpionfish
+0037|Queenfish|Seriphus politus|Sciaenidae|Drum
+0058|Quillback Rockfish|Sebastes maliger|Scorpaenidae|Scorpionfish
+0485|Quillback Rockfish YOY|Sebastes maliger (YOY)|Scorpaenidae|Scorpionfish
+0286|Quillfish|Ptilichthys goodei|Ptilichthyidae|Quillfish
+0287|Rainbow Scorpionfish|Scorpaenodes xyris|Scorpaenidae|Scorpionfish
+0118|Rainbow Seaperch|Hypsurus caryi|Embiotocidae|Surfperch
+0431|Red Abalone|Haliotis rufescens|Mollusca|Mollusks
+0288|Red Brotula|Brosmophycis marginata|Bythitidae|Viviparous Brotula
+0410|Red Gorgonian|Leptogorgia chilensis|Cnidaria|Cnidarians
+0350|Red Gunnel|Pholis schultzi|Pholidae|Gunnel
+0076|Red Irish Lord|Hemilepidotus hemilepidotus|Psychrolutidae|Marine Sculpins
+0422|Red Octopus|Octopus rubescens|Mollusca|Mollusks
+0156|Red Rock Crab|Cancer productus|Arthropoda|Arthropods
+0402|Red Rock Shrimp|Lysmata californica|Arthropoda|Arthropods
+0418|Red Sea Hare|Aplysia californica|Mollusca|Mollusks
+0176|Red Sea Urchin|Mesocentrotus franciscanus|Echinodermata|Echinoderms
+0427|Red Turban Snail|Lithopoma gibberosum|Mollusca|Mollusks
+0435|Red Volcano Sponge|Acamus erithacus|Porifera|Poriferans
+0511|Redbanded Rockfish|Sebastes babcocki|Scorpaenidae|Scorpionfish
+0289|Redstripe Rockfish|Sebastes proriger|Scorpaenidae|Scorpionfish
+0290|Redtail Surfperch|Amphistichus rhodoterus|Embiotocidae|Surfperch
+0291|Redtail Triggerfish|Xanthichthys mento|Balistidae|Leatherjacket
+0579|Reef Cornetfish|Fistularia commersonii|Fistulariidae|Cornetfish
+0119|Reef Perch|Micrometrus aurora|Embiotocidae|Surfperch
+0292|Rex Sole|Glyptocephalus zachirus|Pleuronectidae|Righteye Flounder
+0385|Ribbed Sculpin|Triglops pingelii|Psychrolutidae|Marine Sculpins
+0293|Ribbon Halfbeak|Euleptorhamphus viridis|Hemiramphidae|Halfbeak
+0294|Ribbon Prickleback|Phytichthys chirus|Stichaeidae|Prickleback
+0031|Rock Greenling|Hexagrammos lagocephalus|Hexagrammidae|Greenling
+0295|Rock Prickleback|Xiphister mucosus|Stichaeidae|Prickleback
+0187|Rock Scallop|Crassadoma gigantea|Mollusca|Mollusks
+0129|Rock Wrasse|Halichoeres semicinctus|Labridae|Wrasse
+0365|Rockhead|Bothragonus swanii|Agonidae|Poacher
+0296|Rockpool Blenny|Hypsoblennius gilberti|Blenniidae|Combtooth Blenny
+0297|Rockweed Gunnel|Apodichthys fucorum|Pholidae|Gunnel
+0059|Rosy Rockfish|Sebastes rosaceus|Scorpaenidae|Scorpionfish
+0561|Rosy Rockfish YOY|Sebastes rosaceus (YOY)|Scorpaenidae|Scorpionfish
+0464|Rosylip Sculpin|Ascelichthys rhodorus|Psychrolutidae|Marine Sculpins
+0298|Roughback Sculpin|Chitonotus pugetensis|Psychrolutidae|Marine Sculpins
+0077|Roughcheek Sculpin|Ruscarius creaseri|Psychrolutidae|Marine Sculpins
+0299|Roughjaw Frogfish|Antennarius avalonis|Antennariidae|Frogfish
+0300|Roughspine Sculpin|Triglops macellus|Psychrolutidae|Marine Sculpins
+0090|Round Stingray|Urolophus halleri|Urolophidae|Round Stingray
+0120|Rubberlip Seaperch|Rhacochilus toxotes|Embiotocidae|Surfperch
+0565|Sabertooth Blenny|Plagiotremus azaleus|Blenniidae|Combtooth Blenny
+0463|Sablefish|Anoplopoma fimbria|Anoplopomatidae|Sablefish
+0301|Saddleback Gunnel|Pholis ornata|Pholidae|Gunnel
+0366|Saddleback Sculpin|Oligocottus rimensis|Psychrolutidae|Marine Sculpins
+0078|Sailfin Sculpin|Nautichthys oculofasciatus|Agonidae|Poacher
+0038|Salema|Xenistius californiensis|Haemulidae|Grunt
+0419|San Diego Dorid / Northern Leopard Dorid|Diaulula sandiegensis / odonoghuei|Mollusca|Mollusks
+0302|Sand Sole|Psettichthys melanostictus|Pleuronectidae|Righteye Flounder
+0016|Sarcastic Fringehead|Neoclinus blanchardi|Chaenopsidae|Blenny (pike, tube and flag)
+0519|Sargassum|Sargassum muticum|Algae|Algae
+0039|Sargo|Anisotremus davidsoni|Haemulidae|Grunt
+0303|Scalloped Hammerhead|Sphyrna lewini|Sphyrnidae|Hammerhead
+0304|Scalyhead Sculpin|Artedius harringtoni|Psychrolutidae|Marine Sculpins
+0577|Scissortail Chromis|Azurina atrilobata|Pomacentridae|Damselfish
+0136|Scythe Butterflyfish|Chaetodon falcifer|Chaetodontidae|Butterflyfish
+0420|Sea Lemon|Peltodoris nobilis|Mollusca|Mollusks
+0455|Sea Turtle sp. (unidentified)||Cheloniidae|Sea Turtles
+0128|Senorita|Oxyjulis californica|Labridae|Wrasse
+0305|Sevengill Shark|Notorynchus cepedianus|Hexanchidae|Cow Shark
+0375|Sharpchin Rockfish|Sebastes zacentrus|Scorpaenidae|Scorpionfish
+0384|Sharpnose Sculpin|Clinocottus acuticeps|Psychrolutidae|Marine Sculpins
+0121|Sharpnose Seaperch|Phanerodon atripes|Embiotocidae|Surfperch
+0122|Shiner Perch|Cymatogaster aggregata|Embiotocidae|Surfperch
+0191|Shiny Orange Sea Squirt|Cnemidocarpa finmarkiensis|Urochordata|Urochordates
+0306|Shortfin Eelpout|Lycodes brevipes|Zoarcidae|Eelpout
+0307|Shortfin Mako|Isurus oxyrinchus|Lamnidae|Mackerel Shark
+0308|Shortspine Thornyhead|Sebastolobus alascanus|Scorpaenidae|Scorpionfish
+0092|Shovelnose Guitarfish|Rhinobatos productus|Rhinobatidae|Guitarfish
+0309|Showy Snailfish|Liparis pulchellus|Cyclopteridae|Snailfish
+0361|Silver Surfperch|Hyperprosopon ellipticum|Embiotocidae|Surfperch
+0310|Silvergray Rockfish|Sebastes brevispinis|Scorpaenidae|Scorpionfish
+0103|Silversides spp.|Atherinidae spp.|Atherinidae|Silverside
+0311|Silverspotted Sculpin|Blepsias cirrhosus|Agonidae|Poacher
+0585|Silverstripe Chromis|Chromis alta|Pomacentridae|Damselfish
+0312|Silverstripe Halfbeak|Hyporhamphus unifasciatus|Hemiramphidae|Halfbeak
+0371|Six-spot Prickleback|Kasatkia seigeli|Stichaeidae|Prickleback
+0314|Slender Clingfish|Rimicola eigenmanni|Gobiesocidae|Clingfish
+0315|Slender Cockscomb|Anoplarchus insignis|Stichaeidae|Prickleback
+0316|Slender Sole|Lyopsetta exilis|Pleuronectidae|Righteye Flounder
+0478|Slim Sculpin|Radulinus asprellus|Psychrolutidae|Marine Sculpins
+0317|Slimy Snailfish|Liparis mucosus|Cyclopteridae|Snailfish
+0318|Slipskin Snailfish|Liparis fucensis|Cyclopteridae|Snailfish
+0319|Smooth Alligatorfish|Anoplagonus inermis|Agonidae|Poacher
+0320|Smooth Hammerhead|Sphyrna zygaena|Sphyrnidae|Hammerhead
+0321|Smoothhead Sculpin|Artedius lateralis|Psychrolutidae|Marine Sculpins
+0322|Snake Prickleback|Lumpenus sagitta|Stichaeidae|Prickleback
+0079|Snubnose Sculpin|Orthonopias triacis|Psychrolutidae|Marine Sculpins
+0502|Sockeye Salmon|Oncorhynchus nerka|Salmonidae|Trout
+0323|Soft Sculpin|Psychrolutes sigalutes|Psychrolutidae|Marine Sculpins
+0324|Southern Clingfish|Rimicola dimorpha|Gobiesocidae|Clingfish
+0025|Southern Rock Sole|Lepidopsetta bilineata|Pleuronectidae|Righteye Flounder
+0446|Southern Sea Palm|Eisenia arborea|Algae|Algae
+0373|Southern Spearnose Poacher|Agonopsis sterletus|Agonidae|Poacher
+0406|Southern Staghorn Bryozoan|Diaperoforma californica|Bryozoa|Bryozoans
+0421|Spanish Shawl|Flabellina iodinea|Mollusca|Mollusks
+0553|Speckled Rockfish|Sebastes ovalis|Scorpaenidae|Scorpionfish
+0552|Speckled Rockfish YOY|Sebastes ovalis (YOY)|Scorpaenidae|Scorpionfish
+0026|Speckled Sanddab|Citharichthys stigmaeus|Paralichthyidae|Sand Flounder
+0325|Specklefin Midshipman|Porichthys myriaster|Batrachoididae|Toadfish
+0414|Spiny Brittlestar|Ophiothrix spiculata|Echinodermata|Echinoderms
+0091|Spiny Dogfish|Squalus suckleyi|Squalidae|Dogfish Shark
+0403|Spiny Lobster|Panulirus interruptus|Arthropoda|Arthropods
+0172|Spiny Pink Star|Pisaster brevispinus|Echinodermata|Echinoderms
+0568|Spinycheek Starsnout|Bathyagonus infraspinatus|Agonidae|Poacher
+0326|Spinyhead Sculpin|Dasycottus setiger|Psychrolutidae|Marine Sculpins
+0352|Spinynose Sculpin|Asemichthys taylori|Psychrolutidae|Marine Sculpins
+0157|Spot Prawn|Pandalus platyceros|Arthropoda|Arthropods
+0040|Spotfin Croaker|Roncador stearnsii|Sciaenidae|Drum
+0327|Spotfin Sculpin|Icelinus tenuis|Psychrolutidae|Marine Sculpins
+0462|Spotfin surfperch|Hyperprosopon anale|Embiotocidae|Surfperch
+0572|Spotted Cabrilla|Epinephelus analogus|Serranidae|Sea Bass
+0017|Spotted Cusk-eel|Chilara taylori|Ophidiidae|Cusk-Eel
+0328|Spotted Kelpfish|Gibbonsia elegans|Clinidae|Clinid
+0137|Spotted Ratfish|Hydrolagus colliei|Chimaeridae|Chimaera
+0575|Spotted Rose Snapper|Lutjanus guttatus|Lutjanidae|Snappers
+0004|Spotted Sand Bass|Paralabrax maculatofasciatus|Serranidae|Sea Bass
+0329|Spotted Snailfish|Liparis callyodon|Cyclopteridae|Snailfish
+0027|Spotted Turbot|Pleuronichthys ritteri|Pleuronectidae|Righteye Flounder
+0330|Squarespot Rockfish|Sebastes hopkinsi|Scorpaenidae|Scorpionfish
+0550|Squarespot Rockfish YOY|Sebastes hopkinsi (YOY)|Scorpaenidae|Scorpionfish
+0522|Squat Lobster|Munida quadrispina|Arthropoda|Arthropods
+0437|Stalked Tunicate|Styela montereyensis|Urochordata|Urochordates
+0139|Star Studded Grouper|Hyporthodus niphobles|Serranidae|Sea Bass
+0028|Starry Flounder|Platichthys stellatus|Pleuronectidae|Righteye Flounder
+0060|Starry Rockfish|Sebastes constellatus|Scorpaenidae|Scorpionfish
+0551|Starry Rockfish YOY|Sebastes constellatus (YOY)|Scorpaenidae|Scorpionfish
+0331|Starry Skate|Raja stellulata|Rajidae|Skate
+0501|Steelhead (Rainbow Trout)|Oncorhynchus mykiss|Salmonidae|Trout
+0332|Stone Scorpionfish|Scorpaena mystes|Scorpaenidae|Scorpionfish
+0161|Strawberry Anemone|Corynactis californica|Cnidaria|Cnidarians
+0349|Striped Bass|Morone saxatilis|Moronidae|Temperate Bass
+0333|Striped Kelpfish|Gibbonsia metzi|Clinidae|Clinid
+0334|Striped Marlin|Tetrapturus audax|Istiophoridae|Billfish
+0360|Striped Mullet|Mugil cephalus|Mugilidae|Mullet
+0123|Striped Seaperch|Embiotoca lateralis|Embiotocidae|Surfperch
+0111|Stripefin Ronquil (R. alleni)|Rathbunella alleni|Bathymasteridae|Ronquil
+0512|Stripetail Rockfish YOY|Sebastes saxicola (YOY)|Scorpaenidae|Scorpionfish
+0530|Stubby Squid|Rossia pacifica|Mollusca|Mollusks
+0080|Sturgeon Poacher|Podothecus accipenserinus|Agonidae|Poacher
+0173|Sunflower Star|Pycnopodia helianthoides|Echinodermata|Echinoderms
+0367|Surf Smelt|Hypomesus pretiosus|Osmeridae|Smelts
+0093|Swell Shark|Cephaloscyllium ventriosum|Scyliorhinidae|Cat Shark
+0364|Tadpole Sculpin|Psychrolutes paradoxus|Psychrolutidae|Marine Sculpins
+0094|Thornback|Platyrhinoidis triseriata|Rhinobatidae|Guitarfish
+0465|Thornback Sculpin|Paricelinus hopliticus|Jordaniidae|Longfin Sculpins
+0335|Threadfin Sculpin|Icelinus filamentosus|Psychrolutidae|Marine Sculpins
+0571|Threebanded Butterflyfish|Chaetodon humeralis|Chaetodontidae|Butterflyfish
+0346|Threespine Stickleback|Gasterosteus aculeatus|Gasterosteidae|Stickleback
+0467|Thresher Shark spp|Alopias|Lamnidae|Mackerel Shark
+0358|Tidepool Sculpin|Oligocottus maculosus|Psychrolutidae|Marine Sculpins
+0336|Tidepool Snailfish|Liparis florae|Cyclopteridae|Snailfish
+0061|Tiger Rockfish|Sebastes nigrocinctus|Scorpaenidae|Scorpionfish
+0535|Tiger Rockfish YOY|Sebastes nigrocinctus (YOY)|Scorpaenidae|Scorpionfish
+0472|Tope Shark|Galeorhinus galeus|Triakidae|Houndsharks
+0337|Topsmelt|Atherinops affinis|Atherinidae|Silverside
+0196|Transparent Ciona Tunicate (exotic)|Ciona savignyi|Urochordata|Urochordates
+0062|Treefish|Sebastes serriceps|Scorpaenidae|Scorpionfish
+0494|Treefish YOY|Sebastes serriceps (YOY)|Scorpaenidae|Scorpionfish
+0162|Tube-dwelling Anemone|Pachycerianthus fimbriatus|Cnidaria|Cnidarians
+0370|Tubenose Poacher|Pallasina barbata|Agonidae|Poacher
+0138|Tubesnout|Aulorhynchus flavidus|Aulorhynchidae|Tubesnout
+0548|Two-lined Prickleback|Esselenichthys laurae|Stichaeidae|Prickleback
+0423|Two-spot Octopus / Californian Two-spot Octopus|Octopus bimaculatus / bimaculoides|Mollusca|Mollusks
+0432|Unidentified Abalone|Haliotis sp.|Mollusca|Mollusks
+0538|Unidentified Black / Yellowtail YOY Rockfish|Sebastes spp. BY YOY|Scorpaenidae|Scorpionfish
+0508|Unidentified Bluebanded / Stripefin Ronquil|Rathbunella sp.|Bathymasteridae|Ronquil
+0539|Unidentified Copper / Quillback YOY Rockfish|Sebastes spp. CQ YOY|Scorpaenidae|Scorpionfish
+0389|Unidentified Crevice / Spotted Kelpfish|Gibbonsia spp.|Clinidae|Clinid
+0369|Unidentified Flatfish|Flatfish sp.|Pleuronectidae|Righteye Flounder
+0497|Unidentified Greenling|Hexigrammidae sp.|Hexagrammidae|Greenling
+0496|Unidentified Gunnel|Pholidae sp.|Pholidae|Gunnel
+0019|Unidentified Kelpfish|Clinidae spp.|Clinidae|Clinid
+0130|Unidentified Pipefish|Syngnathidae spp.|Syngnathidae|Pipefish & Seahorse
+0066|Unidentified Rockfish|Sebastes sp.|Scorpaenidae|Scorpionfish
+0536|Unidentified Salmon|Oncorhynchus sp.|Salmonidae|Trout
+0081|Unidentified Sculpin|Psychrolutidae spp.|Psychrolutidae|Marine Sculpins
+0569|Unidentified Shark|Unidentified Elasmobranchii|Squalidae|Dogfish Shark
+0499|Unidentified Silvery Baitfish|Atherinidae, Clupeidae, and Engraulidae|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+0542|Unidentified Slender / High Cockscomb|Anoplarchus sp.|Stichaeidae|Prickleback
+0489|Unidentified Snailfish|Liparidae sp.|Cyclopteridae|Snailfish
+0537|Unidentified Sturgeon|Acipenser sp.|Acipenseridae|Sturgeon
+0126|Unidentified Surfperch|Embiotocidae spp.|Embiotocidae|Surfperch
+0567|Unidentified Yellowtail / Olive Rockfish|Sebastes flavidus / Sebastes serranoides|Scorpaenidae|Scorpionfish
+0566|Unidentified YOY Yellowtail / Olive Rockfish|Sebastes flavidus / Sebastes serranoides YOY|Scorpaenidae|Scorpionfish
+0063|Vermilion Rockfish|Sebastes miniatus|Scorpaenidae|Scorpionfish
+0483|Vermilion Rockfish YOY|Sebastes miniatus (YOY)|Scorpaenidae|Scorpionfish
+0527|Vermilion Star|Mediaster aequalis|Echinodermata|Echinoderms
+0338|Walleye Pollock|Theragra chalcogramma|Gadidae|Cod
+0124|Walleye Surfperch|Hyperprosopon argenteum|Embiotocidae|Surfperch
+0411|Warty Sea Cucumber|Parastichopus parvimensis|Echinodermata|Echinoderms
+0428|Wavy Turban Snail|Lithopoma undosum|Mollusca|Mollusks
+0339|White Croaker|Genyonemus lineatus|Sciaenidae|Drum
+0041|White Seabass|Atractoscion nobilis|Sciaenidae|Drum
+0125|White Seaperch|Phanerodon furcatus|Embiotocidae|Surfperch
+0340|White Shark|Carcharodon carcharias|Lamnidae|Mackerel Shark
+0503|White Sturgeon|Acipenser transmontanus|Acipenseridae|Sturgeon
+0417|White Urchin|Lytechinus anamesus|Echinodermata|Echinoderms
+0179|White-lined Dirona|Dirona albolineata|Mollusca|Mollusks
+0163|White-spotted Anemone|Urticina sp.|Cnidaria|Cnidarians
+0033|Whitespotted Greenling|Hexagrammos stelleri|Hexagrammidae|Greenling
+0533|Whitetail Damselfish|Stegastes leucorus|Pomacentridae|Damselfish
+0341|Widow Rockfish|Sebastes entomelas|Scorpaenidae|Scorpionfish
+0534|Widow Rockfish YOY|Sebastes entomelas (YOY)|Scorpaenidae|Scorpionfish
+0008|Wolf-eel|Anarrhichthys ocellatus|Anarhichadidae|Wolffish
+0342|Woolly Sculpin|Clinocottus analis|Psychrolutidae|Marine Sculpins
+0507|Y-Prickleback|Lumpenopsis hypochroma|Stichaeidae|Prickleback
+0531|Yellow Boring Sponge|Cliona californiana|Porifera|Poriferans
+0180|Yellow Margin Dorid Complex|Cadlina luteomarginata/sylviaearleae/klasmalmbergi/jannanicholsae/Acanthodoris hudsoni|Mollusca|Mollusks
+0376|Yellowchin Sculpin|Icelinus quadriseriatus|Psychrolutidae|Marine Sculpins
+0064|Yelloweye Rockfish|Sebastes ruberrimus|Scorpaenidae|Scorpionfish
+0480|Yelloweye Rockfish YOY|Sebastes ruberrimus (YOY)|Scorpaenidae|Scorpionfish
+0042|Yellowfin Croaker|Umbrina roncador|Sciaenidae|Drum
+0018|Yellowfin Fringehead|Neoclinus stephensae|Chaenopsidae|Blenny (pike, tube and flag)
+0558|Yellowfin Goby|Acanthogobius flavimanus|Gobiidae|Goby
+0343|Yellowfin Tuna|Thunnus albacares|Scombridae|Mackerel
+0106|Yellowtail|Seriola lalandi|Carangidae|Jack
+0065|Yellowtail Rockfish|Sebastes flavidus|Scorpaenidae|Scorpionfish
+0475|Yellowtail Rockfish YOY|Sebastes flavidus (YOY)|Scorpaenidae|Scorpionfish
+0112|Zebra Goby|Lythrypnus zebra|Gobiidae|Goby
+0043|Zebraperch|Hermosilla azurea|Kyphosidae|Sea Chub

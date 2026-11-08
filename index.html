@@ -181,15 +181,16 @@ function areaLabel(code){ const ps=zoneParents(code).filter(p=>p.length>=Math.ma
 
 function parseRegion(d){
   const species = d.species.split("\n").map(l=>{
-    const [code,name,sci,fam]=l.split("|");
+    const [code,name,sci,fam,famc]=l.split("|");
     const kind = fam==="Algae"?"algae":INVERT_PHYLA.has(fam)?"invert":TURTLES.has(fam)?"turtle":"fish";
-    return {key: code, code, name, sci, fam, kind, pa: PRESENCE_ONLY.has(name)};
+    return {key: code, code, name, sci, fam, famc: (famc||"").trim(), kind, pa: PRESENCE_ONLY.has(name)};
   });
   const names = new Set(species.map(s=>s.name.toLowerCase()));
   const unl = (d.unlisted||"").split("\n").filter(Boolean).filter(l=>!names.has(l.split("|")[0].toLowerCase())).map(l=>{ const [name,sci,fam,regs]=l.split("|"); return {name,sci,fam,regs:(regs||"").split(",").filter(Boolean),hay:(name+" "+sci+" "+fam).toLowerCase().replace(/['’]/g,"")}; });
   const zones = new Map(d.sites.split("\n").map(l=>{const i=l.indexOf("|");return [l.slice(0,i), l.slice(i+1)];}));
   const freq = new Map((d.freq||"").split("\n").filter(Boolean).map(l=>{ const [code,n,list]=l.split("|"); return [code,{n:+n, sp:(list||"").split(",").filter(Boolean).map(x=>{const [c,p]=x.split(":"); return [c,+p];})}]; }));
-  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||""}, species, unl, zones, freq, quick:new Set(d.quick||[])};
+  const famOrder = new Map((d.famOrder||[]).map((f,i)=>[f.toLowerCase(),i]));
+  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder}, species, unl, zones, freq, quick:new Set(d.quick||[])};
 }
 function useRegion(x){
   R=x.meta; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick;
@@ -206,6 +207,13 @@ async function loadRegion(code){
   }catch(e){ toast("Couldn't load "+(REGION_NAMES[code]||code)+" data. Open the app once with signal."); return false; }
 }
 const regionOf = sv => sv?.info?.region || "PAC";
+
+/* ---------- Families, labelled and ordered the way REEF's survey lists them ----------
+   famOrder (data/<REGION>.json) is REEF's data-entry family order when known; otherwise families sort by common name.
+   Within a family: by how often seen at the site when that list is shown, else A–Z. */
+function famLabel(s){ return s.famc && s.famc.toLowerCase()!==s.fam.toLowerCase() ? `${s.famc} · ${s.fam}` : s.fam; }
+function famRank(s){ const o=R?.famOrder; if(o?.size){ const i=o.get(s.fam.toLowerCase()) ?? o.get((s.famc||"").toLowerCase()); if(i!=null) return i; } return Infinity; }
+function famCompare(a,b){ return famRank(a)-famRank(b) || (a.famc||a.fam).localeCompare(b.famc||b.fam) || a.fam.localeCompare(b.fam); }
 
 /* Use the site's own surveys when it has enough; otherwise the nearest larger REEF area that does. */
 function siteFreq(zone){
@@ -232,6 +240,7 @@ const ABUND = {S:"Single (1)",F:"Few (2–10)",M:"Many (11–100)",A:"Abundant (
 const LS = "reef-pac-v1";
 let state = load();
 let ui = {tab:"log", filter:null, q:"", sort:"az"};
+try{ ui.sort = JSON.parse(localStorage.getItem("reef-pac-v1")||"{}")?.settings?.spSort || "az"; }catch(_){}
 function blank(){
   const now=new Date();
   const pad=n=>String(n).padStart(2,"0");
@@ -573,8 +582,9 @@ function renderSpecies(main, sv, keepFocus){
   else if(!list.length && !unlHits.length) body=`<div class="empty">No species match “${esc(ui.q)}”.</div>`;
   else if(!list.length) body="";
   else if(ui.sort==="fam"){
-    const groups={}; list.forEach(s=>(groups[s.fam]=groups[s.fam]||[]).push(s));
-    body=Object.keys(groups).sort().map(f=>`<div class="fam">${esc(f)}</div>`+groups[f].sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv)).join("")).join("");
+    const bySite = ui.filter==="site" && !ui.q.trim();
+    const sorted=[...list].sort((a,b)=>famCompare(a,b) || (bySite?((pctOf(b)??-1)-(pctOf(a)??-1)):0) || a.name.localeCompare(b.name));
+    let cur=null; body=sorted.map(s=>{ const h=s.fam!==cur?(cur=s.fam,`<div class="fam">${esc(famLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined); }).join("");
   } else if(ui.filter==="site" && !ui.q.trim()) body=list.sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
   else body=list.sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
   if(unlHits.length) body+=`<div class="fam">Other REEF species · enter as Unlisted on REEF</div>`+unlHits.map(u=>unlRow(u,sv)).join("");
@@ -607,7 +617,7 @@ function renderSpecies(main, sv, keepFocus){
 function summaryRows(sv){
   const seen=Object.entries(sv.counts).map(([k,v])=>({s:BYKEY[k],v})).filter(x=>x.s);
   const groups={}; seen.forEach(x=>{const g=x.s.kind==="fish"||x.s.kind==="turtle"?"Fish":x.s.kind==="algae"?"Algae":"Invertebrates"; (groups[g]=groups[g]||[]).push(x);});
-  return ["Fish","Invertebrates","Algae"].filter(g=>groups[g]).map(g=>({g, rows:groups[g].sort((a,b)=>a.s.fam.localeCompare(b.s.fam)||a.s.name.localeCompare(b.s.name))}));
+  return ["Fish","Invertebrates","Algae"].filter(g=>groups[g]).map(g=>({g, rows:groups[g].sort((a,b)=>famCompare(a.s,b.s)||a.s.name.localeCompare(b.s.name))}));
 }
 function summaryText(sv){
   const i=sv.info, L=[];
@@ -628,7 +638,7 @@ function summaryText(sv){
   L.push(`Habitat: ${i.habitat||"—"}`);
   for(const {g,rows} of summaryRows(sv)){
     L.push(``,`${g.toUpperCase()} (${rows.length})`);
-    let fam=""; for(const {s,v} of rows){ if(s.fam!==fam){fam=s.fam; L.push(`  ${fam}`);} L.push(`    ${v}  ${s.name}${s.code?" ["+s.code+"]":""}`); }
+    let fam=""; for(const {s,v} of rows){ if(s.fam!==fam){fam=s.fam; L.push(`  ${famLabel(s)}`);} L.push(`    ${v}  ${s.name}${s.code?" ["+s.code+"]":""}`); }
   }
   if(sv.unlisted?.length){ L.push(``,`UNLISTED (search in REEF's Unlisted Species)`); sv.unlisted.forEach(u=>L.push(`    ${u.v}  ${u.name}${u.sci?" ("+u.sci+")":""}`)); }
   return L.join("\n");
@@ -680,7 +690,7 @@ function renderReview(main, sv){
   </div>
   <div class="card">
     <span class="step">Steps 3–4 · Species (${seenCount(sv)})</span>
-    ${groups.length||sv.unlisted?.length?`<table class="sumtable">${groups.map(({g,rows})=>{let fam="";return `<tr class="fh"><td colspan="3">${g}</td></tr>`+rows.map(({s,v})=>{const fh=s.fam!==fam?(fam=s.fam,true):false;return `<tr><td class="c">${s.code||"—"}</td><td>${esc(s.name)}${fh?`<div class="hint">${esc(s.fam)}</div>`:""}</td><td class="v">${v}</td></tr>`}).join("")}).join("")}
+    ${groups.length||sv.unlisted?.length?`<table class="sumtable">${groups.map(({g,rows})=>{let fam="";return `<tr class="fh"><td colspan="3">${g}</td></tr>`+rows.map(({s,v})=>{const fh=s.fam!==fam?(fam=s.fam,true):false;return `<tr><td class="c">${s.code||"—"}</td><td>${esc(s.name)}${fh?`<div class="hint">${esc(famLabel(s))}</div>`:""}</td><td class="v">${v}</td></tr>`}).join("")}).join("")}
       ${sv.unlisted?.length?`<tr class="fh"><td colspan="3">Unlisted</td></tr>`+sv.unlisted.map(u=>`<tr><td class="c">—</td><td>${esc(u.name)}${u.sci?`<div class="hint"><i>${esc(u.sci)}</i></div>`:""}</td><td class="v">${u.v}</td></tr>`).join(""):""}</table>`:`<p class="hint" style="color:var(--warn)">No species recorded yet.</p>`}
   </div>
   <div class="card">
@@ -740,7 +750,7 @@ document.addEventListener("click", async e=>{
   if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
   if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; if(t.dataset.filter==="site"||t.dataset.filter==="quick"){ state.settings.spList=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
-  if("sort" in t.dataset){ ui.sort=ui.sort==="fam"?"az":"fam"; renderSpecies($("#main"),sv); return; }
+  if("sort" in t.dataset){ ui.sort=ui.sort==="fam"?"az":"fam"; state.settings.spSort=ui.sort; persist(); renderSpecies($("#main"),sv); return; }
   if(t.dataset.unl){
     const sci=t.dataset.unl, v=t.dataset.v, u=UNL_BY[sci]||{name:sci,sci,fam:""};
     sv.unlisted=sv.unlisted||[]; const ix=sv.unlisted.findIndex(x=>x.sci===sci);

@@ -2,7 +2,7 @@
 
 For each region in REGIONS it writes src/<REGION>/:
   sites.txt      Geographic Zone Codes                    code|name
-  species.txt    the region's species list (REEF codes)   code|common|scientific|family
+  species.txt    the region's species list (REEF codes)   code|common|scientific|family|family common name
   unlisted.txt   species from REEF's other regions        common|scientific|family|regions
   freq.txt       how often each species is seen per site  zone|surveys|code:pct,code:pct,...
                  or area (Geographic Zone Report, total SF%), for zones with enough surveys
@@ -101,7 +101,7 @@ def zone_list(region, prefix):
 def species(region):
     rows = [r for t in tables(f"/db/reports/species?region_code={region}") for r in t]
     # columns: Image | Species ID | Common | Scientific | Family common | Family scientific | ...
-    return [(r[1], clean(r[2]), clean(r[3]), clean(r[5])) for r in rows
+    return [(r[1], clean(r[2]), clean(r[3]), clean(r[5]), clean(r[4])) for r in rows
             if len(r) >= 6 and r[1].isdigit() and 3 <= len(r[1]) <= 5]
 
 
@@ -163,7 +163,7 @@ def update_region(region, cfg, all_species, today, full=False):
     for r in ALL_REGIONS:
         if r == region:
             continue
-        for code, name, sci, fam in all_species[r]:
+        for code, name, sci, fam, *_ in all_species[r]:
             k = sci.lower()
             if k in own_sci or name.lower() in own_names:
                 continue

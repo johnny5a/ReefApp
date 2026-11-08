@@ -1,7 +1,7 @@
 """Build the app: python3 build.py
 
 - index.html  ← src/index.src.html
-- data/<REGION>.json  ← src/<REGION>/{sites,species,unlisted,freq}.txt (+ quick.txt)
+- data/<REGION>.json  ← src/<REGION>/{sites,species,unlisted,freq}.txt (+ quick.txt, family_order.txt)
   The app loads one region's file at a time; the service worker keeps them all offline.
 After building, bump VERSION in sw.js so phones pick up the change."""
 import json
@@ -52,8 +52,10 @@ for region, info in REGION_INFO.items():
     if not (sites and species):
         continue
     freq, unlisted = read(d / "freq.txt"), read(d / "unlisted.txt")
+    # REEF's data-entry family order, one family (scientific or common name) per line, if known
+    fam_order = [l.strip() for l in read(d / "family_order.txt").splitlines() if l.strip()]
     data = {"region": region, **info, "date": date, "sites": sites, "species": species,
-            "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq)}
+            "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq), "famOrder": fam_order}
     (root / "data" / f"{region}.json").write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
     built.append(region)
 
