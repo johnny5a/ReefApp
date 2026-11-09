@@ -207,6 +207,19 @@ for region, (info, issues) in all_issues.items():
 (root / "docs").mkdir(exist_ok=True)
 (root / "docs" / "reef-location-issues.md").write_text("\n".join(rep))
 
+# The same list as a plain spreadsheet (CSV) to attach to an email to REEF.
+import csv
+with open(root / "docs" / "reef-location-issues.csv", "w", newline="") as fh:
+    w = csv.writer(fh)
+    w.writerow(["Region", "Zone Code", "Site Name", "REEF Latitude", "REEF Longitude", "Likely Problem",
+                "Suggested Latitude", "Suggested Longitude", "Suggestion Type"])
+    for region, (info, issues) in all_issues.items():
+        for c, n, p, why, note, q in sorted(issues):
+            kind = ("Approximate - middle of the site's REEF area" if note.startswith("approximate")
+                    else "Corrected value" if q else "Unknown - please check")
+            w.writerow([info["long"], c, n, p[0], p[1], why[0].upper() + why[1:],
+                        f"{q[0]:.4f}" if q else "", f"{q[1]:.4f}" if q else "", kind])
+
 # The service worker reads this to know which region files to keep offline from the start;
 # other regions are kept once you open them.
 (root / "data" / "regions.json").write_text(json.dumps(manifest))
