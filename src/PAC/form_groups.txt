@@ -1,0 +1,142 @@
+Bass|Barred Sand Bass|Paralabrax nebulifer
+Bass|Giant Sea Bass|Stereolepis gigas
+Bass|Kelp Bass|Paralabrax clathratus
+Bass|Spotted Sand Bass|Paralabrax maculatofasciatus
+Damselfish|Blacksmith|Chromis punctipinnis
+Damselfish|Garibaldi|Hypsypops rubicundus
+Eels|California Moray|Gymnothorax mordax
+Eels|Wolf Eel|Anarrhichthys ocellatus
+Cryptic Elongated Bottom Dwellers|Decorated Warbonnet|Chirolophis decoratus
+Cryptic Elongated Bottom Dwellers|Giant Kelpfish|Heterostichus rostratus
+Cryptic Elongated Bottom Dwellers|Island Kelpfish|Alloclinus holderi
+Cryptic Elongated Bottom Dwellers|Kelp Gunnel|Ulvicola sanctaerosae
+Cryptic Elongated Bottom Dwellers|Mosshead Warbonnet|Chirolophis nugator
+Cryptic Elongated Bottom Dwellers|Onespot Fringehead|Neoclinus uninotatus
+Cryptic Elongated Bottom Dwellers|Penpoint Gunnel|Apodichthys flavidus
+Cryptic Elongated Bottom Dwellers|Sarcastic Fringehead|Neoclinus blanchardi
+Cryptic Elongated Bottom Dwellers|Spotted Cusk-Eel|Chilara taylori
+Cryptic Elongated Bottom Dwellers|Yellowfin Fringehead|Neoclinus stephensae
+Cryptic Elongated Bottom Dwellers|Unidentified Kelpfish|[Clinidae]
+Flatfish|Bigmouth Sole|Hippoglossina stomata
+Flatfish|California Halibut|Paralichthys californicus
+Flatfish|C-O Sole|Pleuronichthys coenosus
+Flatfish|English Sole|Pleuronectes vetulus
+Flatfish|Fantail Sole|Xystreurys liolepis
+Flatfish|Pacific Sanddab|Citharicthys sordidus
+Flatfish|Rock Sole|Pleuronectes bilineatus
+Flatfish|Speckled Sanddab|Citharicthys stigmaeus
+Flatfish|Spotted Turbot|Pleuronichthys ritteri
+Flatfish|Starry Flounder|Platichthys stellatus
+Greenlings and Lingcod|Kelp Greenling|Hexagrammos decagrammus
+Greenlings and Lingcod|Lingcod|Ophiodon elongatus
+Greenlings and Lingcod|Rock Greenling|Hexagrammos lagocephalus
+Greenlings and Lingcod|Painted Greenling|Oxylebius pictus
+Greenlings and Lingcod|Whitespotted Greenling|Hexagrammos stelleri
+Grunt, Croaker, Drum, and Sea Chub|Black Croaker|Cheilotrema saturnum
+Grunt, Croaker, Drum, and Sea Chub|Halfmoon|Medialuna californiensis
+Grunt, Croaker, Drum, and Sea Chub|Opaleye|Girella nigricans
+Grunt, Croaker, Drum, and Sea Chub|Queenfish|Seriphus politus
+Grunt, Croaker, Drum, and Sea Chub|Salema|Xenistius californiensis
+Grunt, Croaker, Drum, and Sea Chub|Sargo|Anisotremus davidsoni
+Grunt, Croaker, Drum, and Sea Chub|Spotfin Croaker|Roncador stearnsii
+Grunt, Croaker, Drum, and Sea Chub|White Seabass|Atractoscion nobilis
+Grunt, Croaker, Drum, and Sea Chub|Yellowfin Croaker|Umbrina roncador
+Grunt, Croaker, Drum, and Sea Chub|Zebra Perch|Hermosilla azurea
+Rockfish|Blue Rockfish|Sebastes mystinus
+Rockfish|Black Rockfish|Sebastes melanops
+Rockfish|Black-And-Yellow Rockfish|Sebastes chrysomelas
+Rockfish|Bocaccio|Sebastes paucispinis
+Rockfish|Brown Rockfish|Sebastes auriculatus
+Rockfish|Canary Rockfish|Sebastes pinniger
+Rockfish|Calico Rockfish|Sebastes dalli
+Rockfish|China Rockfish|Sebastes neblosus
+Rockfish|Copper Rockfish|Sebastes caurinus
+Rockfish|Gopher Rockfish|Sebastes carnatus
+Rockfish|Grass Rockfish|Sebastes rastrelliger
+Rockfish|Kelp Rockfish|Sebastes atrovirens
+Rockfish|Olive Rockfish|Sebastes serranoides
+Rockfish|Puget Sound Rockfish|Sebastes emphaeus
+Rockfish|Quillback Rockfish|Sebastes maliger
+Rockfish|Rosy Rockfish|Sebastes rosaceus
+Rockfish|Starry Rockfish|Sebastes constellatus
+Rockfish|Tiger Rockfish|Sebastes nigrocinctus
+Rockfish|Treefish|Sebastes serriceps
+Rockfish|Vermilion Rockfish|Sebastes miniatus
+Rockfish|Yelloweye Rockfish|Sebastes ruberrimus
+Rockfish|Yellowtail Rockfish|Sebastes flavidus
+Rockfish|Unidentified Rockfish|Sebastes sp.
+Sculpin, Scorpionfish, and Poacher|Brown Irish Lord|Hemilepidotus spinosus
+Sculpin, Scorpionfish, and Poacher|Buffalo Sculpin|Enophrys bison
+Sculpin, Scorpionfish, and Poacher|Cabezon|Scorpaenichthys marmoratus
+Sculpin, Scorpionfish, and Poacher|California Scorpionfish|Scorpaena guttata
+Sculpin, Scorpionfish, and Poacher|Coralline Sculpin|Artedius corallinus
+Sculpin, Scorpionfish, and Poacher|Great Sculpin|Myoxocephalus polyacanthocephalus
+Sculpin, Scorpionfish, and Poacher|Grunt Sculpin|Rhamphocottus richardsoni
+Sculpin, Scorpionfish, and Poacher|Lavender Sculpin|Leiocottus hirundo
+Sculpin, Scorpionfish, and Poacher|Longfin Sculpin|Jordania zonope
+Sculpin, Scorpionfish, and Poacher|Northern Spearnose Poacher|Agonopsis vulsa
+Sculpin, Scorpionfish, and Poacher|Pacific Staghorn Sculpin|Leptocottus armatus
+Sculpin, Scorpionfish, and Poacher|Red Irish Lord|Hemilepidotus hemilepidotus
+Sculpin, Scorpionfish, and Poacher|Roughcheek Sculpin|Ruscarius creaseri
+Sculpin, Scorpionfish, and Poacher|Sailfin Sculpin|Nautichthys oculofasciatus
+Sculpin, Scorpionfish, and Poacher|Scalyhead Sculpin|Artedius harringtoni
+Sculpin, Scorpionfish, and Poacher|Snubnose Sculpin|Orthonopias triacis
+Sculpin, Scorpionfish, and Poacher|Sturgeon Poacher|Podothecus acipenserinus
+Sculpin, Scorpionfish, and Poacher|Unidentified Sculpin|[Cottidae]
+Sharks and Rays|Bat Ray|Myliobatis californica
+Sharks and Rays|Blue Shark|Prionace glauca
+Sharks and Rays|Brown Smoothhound|Mustelus henlei
+Sharks and Rays|Gray Smoothhound|Mustelus californicus
+Sharks and Rays|Horn Shark|Heterodontus francisci
+Sharks and Rays|Leopard Shark|Triakis semifasciata
+Sharks and Rays|Angel Shark|Squatina californica
+Sharks and Rays|Pacific Electric Ray|Topedo californica
+Sharks and Rays|Round Stingray|Urolophus halleri
+Sharks and Rays|Spiny Dogfish|Squalus acanthias
+Sharks and Rays|Shovelnose Guitarfish|Rhinobatos productus
+Sharks and Rays|Swell Shark|Cephaloscyllium ventriosum
+Sharks and Rays|Thornback|Platyrhinoidis triseriata
+Silvery Swimmers|California Flyingfish|Cypselurus californicus
+Silvery Swimmers|Jack Mackerel|Trachurus symmetricus
+Silvery Swimmers|Jacksmelt|Atherinops californiensis
+Silvery Swimmers|Northern Anchovy|Engraulis mordax
+Silvery Swimmers|Ocean Whitefish|Caulolatilus princeps
+Silvery Swimmers|Pacific Barracuda|Sphyraena argentea
+Silvery Swimmers|Pacific Bonito|Sarda chiliensis
+Silvery Swimmers|Pacific Herring|Clupea pallasi
+Silvery Swimmers|Silversides|[Atherinidae]
+Silvery Swimmers|Chub Mackerel|Scomber japonicus
+Silvery Swimmers|Pacific Sardine|Sardinops sagax
+Silvery Swimmers|Yellowtail|Seriola lalandi
+Small, Elongated Bottom Dwellers Goby, Blenny, Ronquil|Blackeye Goby|Coryphopterus nicholsi
+Small, Elongated Bottom Dwellers Goby, Blenny, Ronquil|Bluebanded Goby|Lythrypnus dalli
+Small, Elongated Bottom Dwellers Goby, Blenny, Ronquil|Northern Ronquil|Ronquilus jordani
+Small, Elongated Bottom Dwellers Goby, Blenny, Ronquil|Orangethroat Pikeblenny|Chaenopsis alepidota
+Small, Elongated Bottom Dwellers Goby, Blenny, Ronquil|Stripedfin Ronquil|Rathbunella hypoplecta
+Small, Elongated Bottom Dwellers Goby, Blenny, Ronquil|Zebra Goby|Lythrypnus zebra
+Surf Perch|Barred Surfperch|Amphistichus argenteus
+Surf Perch|Black Perch|Embiotoca jacksoni
+Surf Perch|Drawf Perch|Micrometrus miminus
+Surf Perch|Kelp Surfperch|Brachyistius frenatus
+Surf Perch|Pile Perch|Rhacochilus vacca
+Surf Perch|Rainbow Seaperch|Hypsurus caryi
+Surf Perch|Reef Perch|Micrometrus aurora
+Surf Perch|Rubberlip Seaperch|Rhacochilus toxotes
+Surf Perch|Sharpnose Seaperch|Phanerodon atripes
+Surf Perch|Shiner Surfperch|Cymatogaster aggregata
+Surf Perch|Striped Seaperch|Embiotoca lateralis
+Surf Perch|Walleye Surfperch|Hyperprosopon argenteum
+Surf Perch|White Surfperch|Phanerodon furcatus
+Surf Perch|Unidentified Surfperch|[Embiotocidae]
+Wrasse|California Sheephead|Semicossyphus pulcher
+Wrasse|Senorita|Oxyjulis californica
+Wrasse|Rock Wrasse|Halichoeres semicinctus
+Other|Unidentified Pipefish|[Syngnathidae]
+Other|California Clingfish|Gobiesox rhessodon
+Other|Ocean Sunfish|Mola mola
+Other|Pacific Spiny Lumpsucker|Eumicrotremus orbis
+Other|Plainfin Midshipman|Porichthys notatus
+Other|Northern Clingfish|Gobiesox maeandricus
+Other|Scythe Butterflyfish|Chaetodon falcifer
+Other|Spotted Ratfish|Hydrolagus colliei
+Other|Tube Snout|Aulorhynchus flavidus

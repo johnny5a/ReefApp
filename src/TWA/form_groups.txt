@@ -1,0 +1,238 @@
+Angelfish|Blue Angelfish|Holacanthus bermudensis
+Angelfish|Cherubfish|Centropyge argi
+Angelfish|French Angelfish|Pomacanthus paru
+Angelfish|Gray Angelfish|Pomacanthus arcuatus
+Angelfish|Queen Angelfish|Holacanthus ciliaris
+Angelfish|Rock Beauty|Holacanthus tricolor
+Barracuda|Great Barracuda|Sphyraena barracuda
+Barracuda|Southern Sennet|Sphyraena picudilla
+Basslet|Blackcap Basslet|Gramma melacara
+Basslet|Fairy Basslet|Gramma loreto
+Bigeye|Bigeye|Priacanthus arenatus
+Bigeye|Glasseye Snapper|Priacanthus cruentatus
+Blenny|Arrow Blenny|Lucayablennius zingaro
+Blenny|Diamond Blenny|Malacoctenus boehlkei
+Blenny|Hairy Blenny|Labrisomus nuchipinnis
+Blenny|Molly Miller|Scartella cristata
+Blenny|Redlip Blenny|Ophioblennius atlanticus
+Blenny|Rosy Blenny|Malacoctenus macropus
+Blenny|Saddled Blenny|Malacoctenus triangulatus
+Blenny|Sailfin Blenny|Emblemaria pandionis
+Blenny|Seaweed Blenny|Parablennius marmoreus
+Blenny|Spotcheek Blenny|Labrisomus nigricinctus
+Bonnetmouth|Boga|Inermia vittata
+Bonnetmouth|Bonnetmouth|Emmelichthyops atlanticus
+Boxfish|Honeycomb Cowfish|Lactophrys polygonia
+Boxfish|Scrawled Cowfish|Lactophrys quadricornis
+Boxfish|Smooth Trunkfish|Lactophrys triqueter
+Boxfish|Spotted Trunkfish|Lactophrys bicaudalis
+Boxfish|Trunkfish|Lactophrys trigonus
+Butterflyfish|Banded Butterflyfish|Chaetodon striatus
+Butterflyfish|Foureye Butterflyfish|Chaetodon capistratus
+Butterflyfish|Longsnout Butterflyfish|Chaetodon aculeatus
+Butterflyfish|Reef Butterflyfish|Chaetodon sedentarius
+Butterflyfish|Spotfin Butterflyfish|Chaetodon ocellatus
+Cardinalfish|Barred Cardinalfish|Apogon binotatus
+Cardinalfish|Belted Cardinalfish|Apogon townsendi
+Cardinalfish|Blackfin Cardinalfish|Astrapogon puncticulatus
+Cardinalfish|Dusky Cardinalfish|Phaeoptyx pigmentaria
+Cardinalfish|Flamefish|Apogon maculatus
+Cardinalfish|Twospot Cardinalfish|Apogon pseudomaculatus
+Cardinalfish|Whitestar Cardinalfish|Apogon lachneri
+Chromis (Damselfish)|Blue Chromis|Chromis cyanea
+Chromis (Damselfish)|Brown Chromis|Chromis multilineata
+Chromis (Damselfish)|Purple Reeffish|Chromis scotti
+Chromis (Damselfish)|Sunshinefish|Chromis insolata
+Chromis (Damselfish)|Yellowtail Reeffish|Chromis enchrysura
+Chromis (Damselfish)|Beaugregory|Stegastes leucostictus
+Chromis (Damselfish)|Bicolor Damselfish|Stegastes partitus
+Chromis (Damselfish)|Cocoa Damselfish|Stegastes variabilis
+Chromis (Damselfish)|Dusky Damselfish|Stegastes fuscus
+Chromis (Damselfish)|Longfin Damselfish|Stegastes diencaeus
+Chromis (Damselfish)|Sergeant Major|Abudefduf saxatilis
+Chromis (Damselfish)|Threespot Damselfish|Stegastes planifrons
+Chromis (Damselfish)|Yellowtail Damselfish|Microspathodon chrysurus
+Drum|Cubbyu|Equetus umbrosus
+Drum|Highhat|Equetus acuminatus
+Drum|Jackknife Fish|Equetus lanceolatus
+Drum|Reef Croaker|Odontoscion dentex
+Drum|Spotted Drum|Equetus punctatus
+Eel|Brown Garden Eel|Heteroconger halis
+Eel|Chain Moray|Echidna catenata
+Eel|Goldentail Moray|Gymnothorax miliaris
+Eel|Green Moray|Gymnothorax funebris
+Eel|Purplemouth Moray|Gymnothorax vicinus
+Eel|Sharptail Eel|Myrichthys breviceps
+Eel|Spotted Moray|Gymnothorax moringa
+Eel|Viper Moray|Enchelycore nigricans
+Filefish|Orange Filefish|Aluterus schoepfi
+Filefish|Orangespotted Filefish|Cantherhines pullus
+Filefish|Scrawled Filefish|Aluterus scriptus
+Filefish|Slender Filefish|Monacanthus tuckeri
+Filefish|Whitespotted Filefish|Cantherhines macrocerus
+Flounder|Eyed Flounder|Bothus ocellatus
+Flounder|Gulf Flounder|Paralichthys albigutta
+Flounder|Peacock Flounder|Bothus lunatus
+Goatfish|Spotted Goatfish|Pseudupeneus maculatus
+Goatfish|Yellow Goatfish|Mulloidichthys martinicus
+Goby|Blue Goby|Ioglossus calliuris
+Goby|Bridled Goby|Coryphopterus glaucofraenum
+Goby|Colon Goby|Coryphopterus dicrus
+Goby|Goldspot Goby|Gnatholepis thompsoni
+Goby|Hovering Goby|Ioglossus helenae
+Goby|Masked Goby/Glass Goby|Coryphopterus personatus/hyalinus
+Goby|Neon Goby|Gobiosoma oceanops
+Goby|Orangesided Goby|Gobiosoma dilepsis
+Goby|Pallid Goby|Coryphopterus eidolon
+Goby|Peppermint Goby|Coryphopterus lipernes
+Goby|Shortstripe Goby|Gobiosoma chancei
+Goby|Spotlight Goby|Gobiosoma louisae
+Goby|Yellowline Goby|Gobiosoma horsti
+Grouper (Seabass)|Black Grouper|Mycteroperca bonaci
+Grouper (Seabass)|Comb Grouper|Mycteroperca rubra
+Grouper (Seabass)|Coney|Epinephelus fulvus
+Grouper (Seabass)|Gag|Mycteroperca microlepis
+Grouper (Seabass)|Graysby|Epinephelus cruentatus
+Grouper (Seabass)|Jewfish|Epinephelus itajara
+Grouper (Seabass)|Nassau Grouper|Epinephelus striatus
+Grouper (Seabass)|Red Grouper|Epinephelus morio
+Grouper (Seabass)|Red Hind|Epinephelus guttatus
+Grouper (Seabass)|Rock Hind|Epinephelus adscensionis
+Grouper (Seabass)|Scamp|Mycteroperca phenax
+Grouper (Seabass)|Tiger Grouper|Mycteroperca tigris
+Grouper (Seabass)|Yellowfin Grouper|Mycteroperca venenosa
+Grouper (Seabass)|Yellowmouth Grouper|Mycteroperca interstitialis
+Grunt|Bluestriped Grunt|Haemulon sciurus
+Grunt|Caesar Grunt|Haemulon carbonarium
+Grunt|Cottonwick|Haemulon melanurum
+Grunt|French Grunt|Haemulon flavolineatum
+Grunt|Black Margate|Anisotremus surinamensis
+Grunt|White Margate|Haemulon album
+Grunt|Porkfish|Anisotremus virginicus
+Grunt|Sailors Choice|Haemulon parra
+Grunt|Smallmouth Grunt|Haemulon chrysargyreum
+Grunt|Spanish Grunt|Haemulon macrostomum
+Grunt|Striped Grunt|Haemulon striatum
+Grunt|Tomtate|Haemulon aurolineatum
+Grunt|White Grunt|Haemulon plumieri
+Hamlet (Seabass)|Barred Hamlet|Hypoplectrus puella
+Hamlet (Seabass)|Black Hamlet|Hypoplectrus nigricans
+Hamlet (Seabass)|Blue Hamlet|Hypoplectrus gemma
+Hamlet (Seabass)|Butter Hamlet|Hypoplectrus unicolor
+Hamlet (Seabass)|Golden Hamlet|Hypoplectrus gummigutta
+Hamlet (Seabass)|Indigo Hamlet|Hypoplectrus indigo
+Hamlet (Seabass)|Masked Hamlet|Hypoplectrus sp.
+Hamlet (Seabass)|Shy Hamlet|Hypoplectrus guttavarius
+Hamlet (Seabass)|Tan Hamlet|Hypoplectrus sp.
+Hamlet (Seabass)|Yellowbelly Hamlet|Hypoplectrus aberrans
+Hamlet (Seabass)|Yellowtail Hamlet|Hypoplectrus chlorurus
+Hamlet (Seabass)|Hybrid Hamlet|Hypoplectrus (Hybrid)
+Hogfish (Wrasse)|Hogfish|Lachnolaimus maximus
+Hogfish (Wrasse)|Spanish Hogfish|Bodianus rufus
+Hogfish (Wrasse)|Spotfin Hogfish|Bodianus pulchellus
+Jack|Bar Jack|Caranx ruber
+Jack|Blue Runner|Caranx crysos
+Jack|Crevalle Jack|Caranx hippos
+Jack|Greater Amberjack|Seriola dumerili
+Jack|Horse-Eye Jack|Caranx latus
+Jack|Palometa|Trachinotus goodei
+Jack|Permit|Trachinotus falcatus
+Jack|Rainbow Runner|Elagatis bipinnulata
+Jack|Yellow Jack|Caranx bartholomaei
+Mackerel|Cero|Scomberomorus regalis
+Mackerel|Spanish Mackerel|Scomberomorus maculatus
+Parrotfish|Blue Parrotfish|Scarus coeruleus
+Parrotfish|Bluelip Parrotfish|Cryptotomus roseus
+Parrotfish|Bucktooth Parrotfish|Sparisoma radians
+Parrotfish|Greenblotch Parrotfish|Sparisoma atomarium
+Parrotfish|Midnight Parrotfish|Scarus coelestinus
+Parrotfish|Princess Parrotfish|Scarus taeniopterus
+Parrotfish|Queen Parrotfish|Scarus vetula
+Parrotfish|Rainbow Parrotfish|Scarus guacamaia
+Parrotfish|Redband Parrotfish|Sparisoma aurofrenatum
+Parrotfish|Redfin Parrotfish|Sparisoma rubripinne
+Parrotfish|Redtail Parrotfish|Sparisoma chrysopterum
+Parrotfish|Stoplight Parrotfish|Sparisoma viride
+Parrotfish|Striped Parrotfish|Scarus croicensis
+Porgy|Jolthead Porgy|Calamus bajonado
+Porgy|Littlehead Porgy|Calamus proridens
+Porgy|Pluma|Calamus pennatula
+Porgy|Saucereye Porgy|Calamus calamus
+Porgy|Sheepshead|Archosargus probatocephalus
+Porgy|Sheepshead Porgy|Calamus penna
+Puffer|Balloonfish|Diodon holocanthus
+Puffer|Bandtail Puffer|Sphoeroides spengleri
+Puffer|Bridled Burrfish|Chilomycterus antennatus
+Puffer|Porcupinefish|Diodon hystrix
+Puffer|Sharpnose Puffer|Canthigaster rostrata
+Puffer|Web Burrfish|Chilomycterus antillarum
+Ray|Lesser Electric Ray|Narcine brasiliensis
+Ray|Southern Stingray|Dasyatis americana
+Ray|Spotted Eagle Ray|Aetobatus narinari
+Ray|Yellow Stingray|Urolophus jamaicensis
+Razorfish (Wrasse)|Green Razorfish|Hemipteronotus splendens
+Razorfish (Wrasse)|Pearly Razorfish|Hemipteronotus novacula
+Razorfish (Wrasse)|Rosy Razorfish|Hemipteronotus martinicensis
+Scorpionfish|Plumed Scorpionfish|Scorpaena grandicornis
+Scorpionfish|Reef Scorpionfish|Scorpaenodes caribbaeus
+Scorpionfish|Spotted Scorpionfish|Scorpaena plumieri
+Seabass|Chalk Bass|Serranus tortugarum
+Seabass|Creole-fish|Paranthias furcifer
+Seabass|Harlequin Bass|Serranus tigrinus
+Seabass|Lantern Bass|Serranus baldwini
+Seabass|Peppermint Bass|Liopropoma rubre
+Seabass|Sand Perch|Diplectrum formosum
+Seabass|Tobaccofish|Serranus tabacarius
+Shark|Blacktip Shark|Carcharhinus limbatus
+Shark|Nurse Shark|Ginglymostoma cirratum
+Shark|Reef Shark|Carcharhinus perezi
+Snapper|Blackfin Snapper|Lutjanus buccanella
+Snapper|Cubera Snapper|Lutjanus cyanopterus
+Snapper|Dog Snapper|Lutjanus jocu
+Snapper|Gray Snapper|Lutjanus griseus
+Snapper|Lane Snapper|Lutjanus synagris
+Snapper|Mahogany Snapper|Lutjanus mahogoni
+Snapper|Mutton Snapper|Lutjanus analis
+Snapper|Schoolmaster|Lutjanus apodus
+Snapper|Yellowtail Snapper|Ocyurus chrysurus
+Squirrelfish|Blackbar Soldierfish|Myripristis jacobus
+Squirrelfish|Dusky Squirrelfish|Holocentrus vexillarius
+Squirrelfish|Longjaw Squirrelfish|Holocentrus marianus
+Squirrelfish|Longspine Squirrelfish|Holocentrus rufus
+Squirrelfish|Reef Squirrelfish|Holocentrus coruscum
+Squirrelfish|Squirrelfish|Holocentrus adscensionis
+Surgeonfish|Blue Tang|Acanthurus coeruleus
+Surgeonfish|Doctorfish|Acanthurus chirurgus
+Surgeonfish|Ocean Surgeonfish|Acanthurus bahianus
+Triggerfish|Black Durgon|Melichthys niger
+Triggerfish|Gray Triggerfish|Balistes capriscus
+Triggerfish|Ocean Triggerfish|Canthidermis sufflamen
+Triggerfish|Queen Triggerfish|Balistes vetula
+Triggerfish|Sargassum Triggerfish|Xanthichthys ringens
+Wrasse|Blackear Wrasse|Halichoeres poeyi
+Wrasse|Bluehead|Thalassoma bifasciatum
+Wrasse|Clown Wrasse|Halichoeres maculipinna
+Wrasse|Creole Wrasse|Clepticus parrae
+Wrasse|Puddingwife|Halichoeres radiatus
+Wrasse|Rainbow Wrasse|Halichoeres pictus
+Wrasse|Slippery Dick|Halichoeres bivittatus
+Wrasse|Yellowcheek Wrasse|Halichoeres cyanocephalus
+Wrasse|Yellowhead Wrasse|Halichoeres garnoti
+Other|Bermuda Chub/Yellow Chub|Kyphosus sectatrix/incisor
+Other|Bluespotted Cornetfish|Fistularia tabacaria
+Other|Lancer Dragonet|Paradiplogrammus bairdi
+Other|Longlure Frogfish|Antennarius multiocellatus
+Other|Flying Gurnard|Dactylopterus volitans
+Other|Redspotted Hawkfish|Amblycirrhitus pinos
+Other|Houndfish|Tylosurus crocodilus
+Other|Yellowhead Jawfish|Opistognathus aurifrons
+Other|Yellowfin Mojarra|Gerres cinereus
+Other|Sand Diver|Synodus intermedius
+Other|Sharksucker|Echeneis naucrates
+Other|Common Snook|Centropomus undecimalis
+Other|Greater Soapfish|Rypticus saponaceus
+Other|Atlantic Spadefish|Chaetodipterus faber
+Other|Glassy Sweeper|Pempheris schomburgki
+Other|Tarpon|Megalops atlanticus
+Other|Sand Tilefish|Malacanthus plumieri
+Other|Trumpetfish|Aulostomus maculatus
