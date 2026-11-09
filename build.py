@@ -19,6 +19,19 @@ REGION_INFO = {
                          "Sandy Bottom/Mud/Silt/Mangrove", "Rubble", "Artificial", "Open Ocean", "Cobblestone/Boulder Fields/Escarpment"]},
 }
 QUICK_SIZE = 70
+# "At this site" lists: species seen on at least FREQ_MIN_PCT% of a site's surveys, up to FREQ_TOP per site.
+# Rarer species are still in search and "All". Keeps the Caribbean file small enough for phones.
+FREQ_MIN_PCT, FREQ_TOP = 3, 80
+
+
+def trim_freq(freq):
+    out = []
+    for line in freq.splitlines():
+        zone, n, lst = line.split("|")
+        items = [x for x in lst.split(",") if x and int(x.split(":")[1]) >= FREQ_MIN_PCT][:FREQ_TOP]
+        if items:
+            out.append(f"{zone}|{n}|{','.join(items)}")
+    return "\n".join(out)
 
 
 def read(p):
@@ -54,6 +67,7 @@ for region, info in REGION_INFO.items():
     freq, unlisted = read(d / "freq.txt"), read(d / "unlisted.txt")
     # REEF's data-entry family order, one family (scientific or common name) per line, if known
     fam_order = [l.strip() for l in read(d / "family_order.txt").splitlines() if l.strip()]
+    freq = trim_freq(freq)
     data = {"region": region, **info, "date": date, "sites": sites, "species": species,
             "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq), "famOrder": fam_order}
     (root / "data" / f"{region}.json").write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False))

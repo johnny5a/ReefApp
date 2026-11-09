@@ -1,5 +1,5 @@
 // Offline cache for REEF Dive Survey. Bump VERSION when you change any file.
-const VERSION = "reef-survey-data-202611090014";
+const VERSION = "reef-survey-v11";
 const CORE = ["./", "index.html", "manifest.json", "icon-180.png", "icon-192.png", "icon-512.png"];
 const DATA = ["data/PAC.json", "data/TWA.json"];  // region data; a missing file is skipped
 

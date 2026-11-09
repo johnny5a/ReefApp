@@ -604,7 +604,7 @@ function renderSpecies(main, sv, keepFocus){
     <input type="search" id="q" placeholder="Search name, scientific name, family or code" value="${esc(ui.q)}" aria-label="Search species">
     <div class="ctl"><span class="ctl-l">Show</span><div class="chips" role="group" aria-label="Which species to show">${chips.map(([k,t])=>`<button type="button" data-filter="${k}" aria-pressed="${!ui.q&&ui.filter===k}">${t}</button>`).join("")}</div></div>
     <div class="ctl"><span class="ctl-l">Sort</span><div class="sortseg" role="radiogroup" aria-label="Sort order">${sorts.map(([k,t])=>`<button type="button" role="radio" data-sortby="${k}" aria-checked="${sortBy===k}">${t}</button>`).join("")}</div></div>
-    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Species REEF divers have recorded at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`; ${esc(sv.info.siteName||"this site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}.</p>`:""}
+    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Species seen on at least 3% of REEF surveys at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`; ${esc(sv.info.siteName||"this site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}.</p>`:""}
     ${!freq&&sv.info.zone&&FREQ.size?`<p class="hint">No REEF survey history for this site yet, so showing the standard list.</p>`:""}
     ${!sv.info.zone&&FREQ.size?`<p class="hint">Choose your dive site on the Dive tab to see the species usually found there.</p>`:""}
     <div class="legend"><span><b>S</b> 1</span><span><b>F</b> 2–10</span><span><b>M</b> 11–100</span><span><b>A</b> 101+</span><span>Tap again to clear</span></div>
