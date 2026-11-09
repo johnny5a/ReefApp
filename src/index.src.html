@@ -126,6 +126,7 @@ textarea{min-height:70px}
 .svy{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:start}
 .svy .t{font-weight:700}
 .svy .m{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.iconbtn{min-height:32px;padding:4px 10px;border:1px solid var(--warn);border-radius:6px;background:transparent;color:var(--warn);font:600 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase}
 .badge{font:600 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:6px;border:1px solid currentColor;white-space:nowrap}
 .badge.draft{color:var(--muted)} .badge.ready{color:var(--accent)} .badge.entered{color:var(--ok)} .badge.ex{color:var(--P)}
 /* Review */
@@ -175,6 +176,7 @@ const INVERT_PHYLA = new Set(["Echinodermata","Cnidaria","Arthropoda","Mollusca"
 const TURTLES = new Set(["Cheloniidae","Dermochelyidae"]);
 const PRESENCE_ONLY = new Set(["Strawberry Anemone","Cobalt Sponge"]);
 const FREQ_MIN_SURVEYS = 5;
+const SITE_MIN_PCT = 25;   // "At this site" shows species seen on at least this % of REEF surveys there
 const tidy = n => n.replace(/\s+/g," ").trim();
 
 // Filled by useRegion(); every list below belongs to the region currently loaded.
@@ -368,7 +370,7 @@ function render(){
   const n=Object.values(state.surveys).length;
   $("#nLog").textContent = n+" survey"+(n===1?"":"s");
   $("#nSp").textContent = sv? seenCount(sv)+" seen" : "—";
-  $("#hdrSub").textContent = sv ? (sv.info.siteName||"New survey")+" · "+fmtDate(sv.info.date) : (R?.long||"");
+  $("#hdrSub").textContent = sv ? (sv.info.nickname||sv.info.siteName||"New survey")+" · "+fmtDate(sv.info.date) : (R?.long||"");
   const main=$("#main");
   if(ui.tab!=="log" && !sv){ ui.tab="log"; }
   ({log:renderLog, dive:renderDive, species:renderSpecies, review:renderReview, site:renderSitePicker})[ui.tab](main, sv);
@@ -444,14 +446,15 @@ function renderLog(main){
     </div>
   </div>
   ${list.map(s=>`
-  <div class="card svy" data-open="${s.id}" role="button" tabindex="0" aria-label="Open survey ${esc(s.info.siteName)}">
+  <div class="card svy" data-open="${s.id}" role="button" tabindex="0" aria-label="Open survey ${esc(s.info.nickname||s.info.siteName)}">
     <div>
-      <div class="t">${esc(s.info.siteName||"Untitled site")}</div>
-      <div class="m">${fmtDate(s.info.date)}${s.info.startTime?" · "+roundHour(s.info.startTime):""} · ${seenCount(s)} species${s.info.zone?" · zone "+esc(s.info.zone):""}</div>
+      <div class="t">${esc(s.info.nickname||s.info.siteName||"Untitled site")}</div>
+      <div class="m">${s.info.nickname&&s.info.siteName?esc(s.info.siteName)+" · ":""}${fmtDate(s.info.date)}${s.info.startTime?" · "+roundHour(s.info.startTime):""} · ${seenCount(s)} species${s.info.zone?" · zone "+esc(s.info.zone):""}</div>
     </div>
     <div class="row" style="justify-content:flex-end">
       ${s.example?`<span class="badge ex">Example</span>`:""}${REGIONS.length>1&&regionOf(s)!=="PAC"?`<span class="badge draft">${esc(REGION_NAMES[regionOf(s)]||regionOf(s))}</span>`:""}
       <span class="badge ${s.status}">${s.status==="draft"?"In progress":s.status==="ready"?"Ready":"Entered"}</span>
+      <button type="button" class="iconbtn" data-del="${s.id}" aria-label="Delete survey ${esc(s.info.nickname||s.info.siteName||"")}" title="Delete survey">Delete</button>
     </div>
   </div>`).join("")}
   <div class="card">
@@ -476,6 +479,7 @@ function renderDive(main, sv){
   const sites=state.settings.sites||[];
   main.innerHTML=`
   <div class="card">
+    <label class="f"><span>Nickname <span class="hint">(optional, just for you; not sent to REEF)</span></span><input type="text" id="nickname" value="${esc(i.nickname||"")}" placeholder="e.g. Night dive with Sam" autocomplete="off" enterkeyhint="done"></label>
     <span class="step">REEF step 1 · Survey info</span>
     ${sv.prefill?.fields?.length?`<p class="hint" style="background:var(--soft);padding:8px 10px;border-radius:8px">Filled in from your dive here on ${fmtDate(sv.prefill.from)}: ${sv.prefill.fields.map(k=>FIELD_NAMES[k]).join(", ")}. Change anything that's different.</p>`:""}
     <label class="${cls("zone")}" data-k="zone"><span>Dive site &amp; zone code</span></label>
@@ -550,7 +554,7 @@ function renderSitePicker(main, sv){
 }
 
 function filtered(sv){
-  if(ui.filter==="site" && !ui.q.trim()){ const f=siteFreq(sv.info.zone); if(f) return SPECIES.filter(s=>f.pct.has(s.code)||!!sv.counts[s.key]); }
+  if(ui.filter==="site" && !ui.q.trim()){ const f=siteFreq(sv.info.zone); if(f) return SPECIES.filter(s=>(f.pct.get(s.code)||0)>=SITE_MIN_PCT||!!sv.counts[s.key]); }
   const q=ui.q.trim().toLowerCase();
   return SPECIES.filter(s=>{
     if(q) return s.name.toLowerCase().includes(q)||(s.sci||"").toLowerCase().includes(q)||s.fam.toLowerCase().includes(q)||s.code===q;
@@ -604,7 +608,7 @@ function renderSpecies(main, sv, keepFocus){
     <input type="search" id="q" placeholder="Search name, scientific name, family or code" value="${esc(ui.q)}" aria-label="Search species">
     <div class="ctl"><span class="ctl-l">Show</span><div class="chips" role="group" aria-label="Which species to show">${chips.map(([k,t])=>`<button type="button" data-filter="${k}" aria-pressed="${!ui.q&&ui.filter===k}">${t}</button>`).join("")}</div></div>
     <div class="ctl"><span class="ctl-l">Sort</span><div class="sortseg" role="radiogroup" aria-label="Sort order">${sorts.map(([k,t])=>`<button type="button" role="radio" data-sortby="${k}" aria-checked="${sortBy===k}">${t}</button>`).join("")}</div></div>
-    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Species seen on at least 3% of REEF surveys at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`; ${esc(sv.info.siteName||"this site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}.</p>`:""}
+    ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Species seen on at least ${SITE_MIN_PCT}% of REEF surveys at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`; ${esc(sv.info.siteName||"this site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}.</p>`:""}
     ${!freq&&sv.info.zone&&FREQ.size?`<p class="hint">No REEF survey history for this site yet, so showing the standard list.</p>`:""}
     ${!sv.info.zone&&FREQ.size?`<p class="hint">Choose your dive site on the Dive tab to see the species usually found there.</p>`:""}
     <div class="legend"><span><b>S</b> 1</span><span><b>F</b> 2–10</span><span><b>M</b> 11–100</span><span><b>A</b> 101+</span><span>Tap again to clear</span></div>
@@ -755,6 +759,7 @@ document.addEventListener("click", async e=>{
     if(navigator.vibrate) try{navigator.vibrate(10)}catch(_){}
     return;
   }
+  if(t.dataset.del){ deleteSurvey(t.dataset.del); return; }
   if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
   if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
@@ -800,7 +805,7 @@ document.addEventListener("click", async e=>{
   if(act==="restore"){ $("#restoreFile").click(); return; }
   if(act==="copy-ready"){ const ready=Object.values(state.surveys).filter(s=>s.status==="ready"); if(!ready.length){toast("No surveys are marked ready");return;} const txt="["+ready.map(s=>{const keep=state.currentId; state.currentId=s.id; const j=autofillJSON(s); state.currentId=keep; return j;}).join(",\n")+"]"; try{ await navigator.clipboard.writeText(txt); toast(`Copied ${ready.length} survey${ready.length>1?"s":""}`);}catch(_){ showText("Ready surveys",txt);} return; }
   if(act==="dup"){ const s=nextDiveFrom(sv); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("Next dive · "+(sv.info.siteName||"same site")); return; }
-  if(act==="del"){ confirmBox(`Delete the survey at ${sv.info.siteName||"this site"}? This can't be undone.`, ()=>{ const id=sv.id; delete state.surveys[id]; state.deleted[id]=Date.now(); state.currentId=null; persist(id); ui.tab="log"; render(); toast("Deleted"); }); return; }
+  if(act==="del"){ deleteSurvey(sv.id); return; }
 });
 for(const ev of ["change","focusout"]) document.addEventListener(ev, e=>{ if(e.target.id==="memberNo"||e.target.id==="lastName") saveDiverField(e.target); });
 document.addEventListener("keydown",e=>{ if((e.key==="Enter"||e.key===" ")&&e.target.dataset?.open){ e.preventDefault(); e.target.click(); }});
@@ -810,13 +815,13 @@ document.addEventListener("input", e=>{
   if(el.id==="q"){ ui.q=el.value; renderSpecies($("#main"),sv,true); return; }
   if(el.id==="memberNo"||el.id==="lastName"){ saveDiverField(el); return; }
   if(!sv) return;
-  const fields=["siteName","zone","date","startTime","bottomTime","tempBottom","tempSurface","avgDepth","maxDepth","notes"];
+  const fields=["nickname","siteName","zone","date","startTime","bottomTime","tempBottom","tempSurface","avgDepth","maxDepth","notes"];
   if(fields.includes(el.id)){
     let v=el.value; if(el.id==="zone") v=v.replace(/\D/g,"").slice(0,8), el.value=v;
     sv.info[el.id]=v;
     if(el.id==="siteName"){ const hit=(state.settings.sites||[]).find(s=>s.name.toLowerCase()===v.toLowerCase()); if(hit&&!sv.info.zone){ sv.info.zone=hit.zone; $("#zone").value=hit.zone; } }
     touch(sv); refreshDiveLabels(sv);
-    $("#hdrSub").textContent=(sv.info.siteName||"New survey")+" · "+fmtDate(sv.info.date);
+    $("#hdrSub").textContent=(sv.info.nickname||sv.info.siteName||"New survey")+" · "+fmtDate(sv.info.date);
   }
 });
 function refreshDiveLabels(sv){
@@ -839,6 +844,13 @@ function toCSV(sv){
 function showText(title, txt){
   const f=$("#dlgForm"); f.innerHTML=`<h2>${esc(title)}</h2><p class="hint">Copying was blocked here. Select the text below and copy it.</p><pre class="out">${esc(txt)}</pre><div class="row" style="margin-top:12px"><button class="btn grow" value="ok">Done</button></div>`;
   $("#dlg").showModal();
+}
+function deleteSurvey(id){
+  const s=state.surveys[id]; if(!s) return;
+  const label=s.info.nickname||s.info.siteName||"this survey";
+  confirmBox(`Delete “${label}” from ${fmtDate(s.info.date)||"your log"}? This can't be undone${s.status!=="entered"?", and it hasn't been marked as entered on REEF":""}.`, ()=>{
+    delete state.surveys[id]; state.deleted[id]=Date.now(); if(state.currentId===id) state.currentId=null; persist(id); ui.tab="log"; render(); toast("Survey deleted");
+  });
 }
 function confirmBox(msg, onYes){
   const f=$("#dlgForm"); f.innerHTML=`<p>${esc(msg)}</p><div class="row"><button class="btn danger grow" value="yes" id="yesBtn">Delete</button><button class="btn ghost" value="no">Cancel</button></div>`;
