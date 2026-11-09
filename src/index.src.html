@@ -122,6 +122,9 @@ textarea{min-height:70px}
 .sres .area .nm{font-weight:400}
 .crumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
 .crumbs button{border:0;background:none;color:var(--accent);padding:4px 0;text-decoration:underline}
+.nearbar{display:flex;align-items:center;gap:8px;margin:4px 0 8px;flex-wrap:wrap}
+.nearbar>.btn{min-height:38px;padding:6px 12px;white-space:nowrap}
+.nearbar .sortseg button{padding:6px 9px}
 .sitemap{height:58vh;min-height:300px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--soft)}
 .leaflet-popup-content{margin:10px 12px;font:14px/1.35 var(--body)}
 .leaflet-container{font:inherit}
@@ -559,15 +562,25 @@ function renderSitePicker(main, sv){
       <div class="row"><button class="btn ghost" data-act="site-back">Back</button><h2 class="grow">Dive site</h2>${viewToggle}</div>
       ${searchBox}
     </div>
+    ${nearControls()}
     <div id="sitemap" class="sitemap" aria-label="Map of REEF dive sites"></div>
-    <div class="row"><button type="button" class="btn ghost" data-act="near-me">Sites near me</button><span class="hint grow" id="mapNote"></span></div>
-    <div id="nearList"></div>
+    <p class="hint" id="mapNote"></p>
+    <div id="nearList">${ui.near?nearListHtml():""}</div>
     <p class="hint">Dots are REEF sites with a location (${COORDS.size.toLocaleString()} of ${SITE_LIST.length.toLocaleString()}); darker dots have 5+ REEF surveys. Tap a dot to choose it. Map © OpenStreetMap contributors.</p>`;
     showSiteMap(sv);
     return;
   }
   const row=s=>`<button type="button" data-site="${s.code}"><span class="nm">${esc(s.name)}</span><span class="ar">${esc(s.area)}</span><span class="cd">${s.code}</span></button>`;
-  let body="";
+  let body=nearControls();
+  if(ui.near && !q){
+    main.innerHTML=`
+    <div class="sbar">
+      <div class="row"><button class="btn ghost" data-act="site-back">Back</button><h2 class="grow">Dive site</h2>${viewToggle}</div>
+      ${searchBox}
+    </div>
+    ${body}${nearListHtml()}`;
+    return;
+  }
   if(q){
     const hits=siteMatches(q);
     body = hits.length? `<p class="hint">${hits.length} site${hits.length===1?"":"s"}${hits.length>80?" · showing the first 80, keep typing to narrow":""}</p><div class="sres">${hits.slice(0,80).map(row).join("")}</div>`
@@ -618,9 +631,37 @@ function sitePopup(s){
   const f=FREQ.get(s.code);
   return `<div class="pop"><b>${esc(s.name)}</b><br><span class="hint">${esc(s.area)} · ${s.code}${f?` · ${f.n.toLocaleString()} REEF surveys`:""}</span><br><button type="button" class="btn" data-site="${s.code}" style="margin-top:6px;min-height:38px;padding:6px 12px">Use this site</button></div>`;
 }
+/* ---------- Near me: filter sites to a distance from where you are ----------
+   Miles by default, km if you log depths in meters. The radius is remembered. */
+const RADII = [2,5,10,25,50];
+const distUnit = () => state.settings.depthUnit==="m" ? "km" : "mi";
+const KM_PER = {km:1, mi:1.609344};
+const nearRadius = () => state.settings.nearRadius || 10;
+const fmtDist = km => { const d=km/KM_PER[distUnit()]; return (d<10?d.toFixed(1):Math.round(d))+" "+distUnit(); };
+function nearSites(list){
+  if(!ui.near) return null;
+  const maxKm=nearRadius()*KM_PER[distUnit()];
+  return (list||SITE_LIST).filter(s=>COORDS.has(s.code)).map(s=>({s,d:distKm(ui.near,COORDS.get(s.code))})).filter(x=>x.d<=maxKm).sort((a,b)=>a.d-b.d);
+}
+function nearControls(){
+  return `<div class="nearbar">
+    <button type="button" class="btn ${ui.near?"":"ghost"}" data-act="near-me" aria-pressed="${!!ui.near}">${ui.near?"Near me ✓":"Near me"}</button>
+    ${ui.near?`<div class="sortseg" role="radiogroup" aria-label="Distance">${RADII.map(r=>`<button type="button" role="radio" data-radius="${r}" aria-checked="${nearRadius()===r}">${r} ${distUnit()}</button>`).join("")}</div>`:`<span class="hint">Show only sites close to where you are now</span>`}
+  </div>`;
+}
+function nearListHtml(){
+  const near=nearSites();
+  if(!near) return "";
+  if(!near.length){
+    const closest=SITE_LIST.filter(s=>COORDS.has(s.code)).map(s=>({s,d:distKm(ui.near,COORDS.get(s.code))})).sort((a,b)=>a.d-b.d)[0];
+    return `<p class="hint">No ${esc(R.name)} REEF sites within ${nearRadius()} ${distUnit()}${closest?`. The closest is ${esc(closest.s.name)}, ${fmtDist(closest.d)} away`:""}. Try a larger distance.</p>`;
+  }
+  return `<h3>${near.length} site${near.length===1?"":"s"} within ${nearRadius()} ${distUnit()}</h3><div class="sres">${near.slice(0,60).map(({s,d})=>`<button type="button" data-site="${s.code}"><span class="nm">${esc(s.name)}</span><span class="ar">${fmtDist(d)} · ${esc(s.area)}</span><span class="cd">${s.code}</span></button>`).join("")}</div>${near.length>60?`<p class="hint">Showing the closest 60.</p>`:""}`;
+}
 function mapSites(){
   const q=(ui.siteQ||"").trim().toLowerCase().replace(/['’.]/g,"");
-  const list=q?siteMatches(q):(ui.siteArea?SITE_LIST.filter(s=>s.code.startsWith(ui.siteArea)):SITE_LIST);
+  let list=q?siteMatches(q):(ui.siteArea&&!ui.near?SITE_LIST.filter(s=>s.code.startsWith(ui.siteArea)):SITE_LIST);
+  if(ui.near) return nearSites(list).map(x=>x.s);
   return list.filter(s=>COORDS.has(s.code));
 }
 function drawSiteDots(fit){
@@ -634,7 +675,16 @@ function drawSiteDots(fit){
   }
   const note=document.getElementById("mapNote");
   if(note) note.textContent = (sites.length?`${sites.length.toLocaleString()} site${sites.length===1?"":"s"} shown`:"No mapped sites match")+(navigator.onLine?"":" · map background needs signal");
-  if(fit && sites.length){ const b=L.latLngBounds(sites.map(s=>COORDS.get(s.code))); siteMap.fitBounds(b.pad(0.15),{maxZoom:13}); }
+  if(siteMap._nearCircle){ siteMap._nearCircle.remove(); siteMap._nearCircle=null; }
+  if(meMarker){ meMarker.remove(); meMarker=null; }
+  if(ui.near){
+    const rM=nearRadius()*KM_PER[distUnit()]*1000;
+    if(!siteMap._loaded) siteMap.setView(ui.near, 11);   // a circle needs the map to have a view first
+    siteMap._nearCircle=L.circle(ui.near,{radius:rM,color:acc,weight:1.5,fillOpacity:.05,interactive:false}).addTo(siteMap);
+    meMarker=L.circleMarker(ui.near,{radius:8,color:"#fff",weight:2,fillColor:"#1e88e5",fillOpacity:1}).addTo(siteMap).bindTooltip("You");
+    if(fit) siteMap.fitBounds(siteMap._nearCircle.getBounds(),{padding:[10,10]});
+    if(note) note.textContent = sites.length?`${sites.length.toLocaleString()} site${sites.length===1?"":"s"} within ${nearRadius()} ${distUnit()}`:`No sites within ${nearRadius()} ${distUnit()}`;
+  } else if(fit && sites.length){ const b=L.latLngBounds(sites.map(s=>COORDS.get(s.code))); siteMap.fitBounds(b.pad(0.15),{maxZoom:13}); }
 }
 async function showSiteMap(sv){
   const el=document.getElementById("sitemap"); if(!el) return;
@@ -646,22 +696,19 @@ async function showSiteMap(sv){
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18, attribution:"© OpenStreetMap contributors"}).addTo(siteMap);
   siteLayer=L.layerGroup().addTo(siteMap);
   const here=sv?.info?.zone && COORDS.get(sv.info.zone);
-  if(here && !ui.siteQ){ drawSiteDots(false); siteMap.setView(here,13); }
+  if(here && !ui.siteQ && !ui.near){ drawSiteDots(false); siteMap.setView(here,13); }
   else drawSiteDots(true);
-  if(meMarker){ meMarker.addTo(siteMap); }
 }
 function nearMe(){
-  const note=document.getElementById("mapNote");
-  if(!navigator.geolocation){ if(note) note.textContent="Location isn't available on this device."; return; }
-  if(note) note.textContent="Finding you…";
+  if(ui.near){ ui.near=null; renderSitePicker($("#main"),cur()); return; }   // second tap turns the filter off
+  const msg=t=>{ const n=document.getElementById("mapNote"); if(n) n.textContent=t; else toast(t); };
+  if(!navigator.geolocation){ msg("Location isn't available on this device."); return; }
+  msg("Finding you…");
   navigator.geolocation.getCurrentPosition(pos=>{
-    const me=[pos.coords.latitude,pos.coords.longitude];
-    if(siteMap){ meMarker && meMarker.remove(); meMarker=L.circleMarker(me,{radius:8,color:"#fff",weight:2,fillColor:"#1e88e5",fillOpacity:1}).addTo(siteMap).bindTooltip("You"); siteMap.setView(me,12); }
-    const near=SITE_LIST.filter(s=>COORDS.has(s.code)).map(s=>({s,d:distKm(me,COORDS.get(s.code))})).sort((a,b)=>a.d-b.d).slice(0,8);
-    const box=document.getElementById("nearList");
-    if(box) box.innerHTML = near.length && near[0].d<200 ? `<h3>Nearest REEF sites</h3><div class="sres">${near.map(({s,d})=>`<button type="button" data-site="${s.code}"><span class="nm">${esc(s.name)}</span><span class="ar">${esc(s.area)} · ${d<10?d.toFixed(1):Math.round(d)} km</span><span class="cd">${s.code}</span></button>`).join("")}</div>` : `<p class="hint">No ${esc(R.name)} REEF sites within 200 km of you.</p>`;
-    if(note) note.textContent="";
-  }, err=>{ if(note) note.textContent = err.code===1 ? "Location permission was declined. You can allow it in Settings › Safari › Location." : "Couldn't get your location. Try again outdoors or with signal."; }, {enableHighAccuracy:true, timeout:15000, maximumAge:60000});
+    ui.near=[pos.coords.latitude,pos.coords.longitude];
+    renderSitePicker($("#main"),cur());
+  }, err=>msg(err.code===1 ? "Location permission was declined. Allow it in Settings › Privacy › Location Services › Safari Websites." : "Couldn't get your location. Try again outdoors or with signal."),
+  {enableHighAccuracy:true, timeout:15000, maximumAge:120000});
 }
 
 function filtered(sv){ return filteredAll(sv).filter(s=>typeAllows(sv,s)||!!sv.counts[s.key]); }
@@ -872,6 +919,7 @@ document.addEventListener("click", async e=>{
     if(navigator.vibrate) try{navigator.vibrate(10)}catch(_){}
     return;
   }
+  if(t.dataset.radius){ state.settings.nearRadius=+t.dataset.radius; persist(); renderSitePicker($("#main"),sv); return; }
   if(t.dataset.siteview){ ui.siteView=t.dataset.siteview; state.settings.siteView=ui.siteView; persist(); render(); return; }
   if(t.dataset.del){ deleteSurvey(t.dataset.del); return; }
   if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; loadRegion(t.dataset.region); state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
@@ -926,7 +974,7 @@ for(const ev of ["change","focusout"]) document.addEventListener(ev, e=>{ if(e.t
 document.addEventListener("keydown",e=>{ if((e.key==="Enter"||e.key===" ")&&e.target.dataset?.open){ e.preventDefault(); e.target.click(); }});
 document.addEventListener("input", e=>{
   const el=e.target, sv=cur();
-  if(el.id==="siteQ" && siteMap && document.getElementById("sitemap")){ ui.siteQ=el.value; clearTimeout(ui._mapT); ui._mapT=setTimeout(()=>drawSiteDots(true),250); return; }
+  if(el.id==="siteQ" && siteMap && document.getElementById("sitemap")){ ui.siteQ=el.value; clearTimeout(ui._mapT); ui._mapT=setTimeout(()=>{ drawSiteDots(true); const nl=document.getElementById("nearList"); if(nl&&ui.near) nl.innerHTML=nearListHtml(); },250); return; }
   if(el.id==="siteQ"){ ui.siteQ=el.value; renderSitePicker($("#main"),sv); const q=$("#siteQ"); q.focus(); q.setSelectionRange(q.value.length,q.value.length); return; }
   if(el.id==="q"){ ui.q=el.value; renderSpecies($("#main"),sv,true); return; }
   if(el.id==="memberNo"||el.id==="lastName"){ saveDiverField(el); return; }
