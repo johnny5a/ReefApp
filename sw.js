@@ -1,7 +1,8 @@
 // Offline cache for REEF Dive Survey. Bump VERSION when you change any file.
-const VERSION = "reef-survey-v12";
+const VERSION = "reef-survey-v13";
 const CORE = ["./", "index.html", "manifest.json", "icon-180.png", "icon-192.png", "icon-512.png"];
-const DATA = ["data/PAC.json", "data/TWA.json"];  // region data; a missing file is skipped
+const DATA = ["data/PAC.json", "data/TWA.json",   // region data; a missing file is skipped
+              "vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(async c => {
@@ -22,8 +23,9 @@ self.addEventListener("fetch", e => {
       .catch(() => caches.match("index.html")));
     return;
   }
-  // Data, icons, Google Fonts: cache first, then network (and keep a copy).
-  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)) {
+  // Data, icons, Google Fonts and map tiles you've viewed: cache first, then network (and keep a copy).
+  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)
+      || url.hostname === "tile.openstreetmap.org") {
     e.respondWith(caches.match(req, {ignoreSearch: true}).then(hit => hit || fetch(req).then(r => {
       if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(req, copy)); }
       return r;

@@ -23,6 +23,8 @@ A phone app for logging [REEF](https://www.reef.org) Volunteer Fish Survey dives
 - the region's species list with REEF codes (`species.txt`)
 - species from REEF's other regions, offered as Unlisted species (`unlisted.txt`)
 - how often each species is seen at each site and area with 5+ surveys (`freq.txt`), from REEF's Geographic Zone Reports
+- site locations (`coords.txt`) from REEF's public data-entry site search, for the site map
+- REEF's survey-form groups (`form_groups.txt`, e.g. Bass, Rockfish, Surf Perch) from REEF's species reference pages, for the Family sort
 
 Monthly runs only re-download sites whose REEF survey count changed (typically 10–20 minutes); every January, or when you tick "full" under Actions → Update REEF data → Run workflow, it re-downloads everything (1–2 hours).
 
@@ -31,3 +33,6 @@ Monthly runs only re-download sites whose REEF survey count changed (typically 1
 ## Updating
 - App code: `src/index.src.html`. Region data: `src/<REGION>/` (written by the updater; `src/PAC/quick.txt` is the hand-picked "Common in California" list).
 - Run `python3 build.py` to rebuild `index.html` and `data/`, bump `VERSION` in `sw.js`, then commit and push. Phones pick up the new version the next time the app opens with signal.
+
+## Third-party code
+- `vendor/leaflet/`: [Leaflet](https://leafletjs.com) 1.9.4 (BSD-2-Clause, see its LICENSE), bundled so the map works offline. Map tiles © OpenStreetMap contributors.

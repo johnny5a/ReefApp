@@ -6,6 +6,8 @@ For each region in REGIONS it writes src/<REGION>/:
   unlisted.txt   species from REEF's other regions        common|scientific|family|regions
   freq.txt       how often each species is seen per site  zone|surveys|code:pct,code:pct,...
                  or area (Geographic Zone Report, total SF%), for zones with enough surveys
+  coords.txt     site locations from REEF's data-entry site search   code|lat|lon
+  form_groups.txt  REEF's survey-form groups, in form order  group|common|scientific
 and src/data_date.txt.
 
 Run:  python3 scripts/update_reef_data.py [--full] [PAC TWA ...]   then  python3 build.py
@@ -15,7 +17,7 @@ whose count changed since the last run (or that are new) get their species repor
 --full re-fetches every zone (the workflow does this each January, or on request).
 Standard library only. Requests are sequential with a pause, to be gentle on reef.org.
 """
-import datetime, html.parser, sys, time, urllib.parse, urllib.request
+import datetime, html.parser, re, sys, time, urllib.parse, urllib.request
 from pathlib import Path
 
 BASE = "https://www.reef.org"
@@ -29,9 +31,13 @@ ALL_REGIONS = ["TWA", "PAC", "HAW", "TEP", "SOP", "NE", "SAS", "CIP", "EAM", "IO
 # Regions the app supports. `prefix` limits zones (PAC: California only);
 # `tops` are the area codes whose reports list survey counts for every zone inside them.
 REGIONS = {
-    "PAC": {"prefix": "4", "tops": ["4"], "min_zones": 500, "min_species": 400},
-    "TWA": {"prefix": "", "tops": list("12345678"), "min_zones": 8000, "min_species": 700},
+    "PAC": {"prefix": "4", "tops": ["4"], "min_zones": 500, "min_species": 400,
+            # data-entry site search: survey type id + its region dropdown values; species-form reference page
+            "survey_id": "8", "search_regions": ["4"], "form_page": "pac/fishsp.htm"},
+    "TWA": {"prefix": "", "tops": list("12345678"), "min_zones": 8000, "min_species": 700,
+            "survey_id": "1", "search_regions": list("12345678"), "form_page": "twa/fishsp.htm"},
 }
+DATA = "https://data.reef.org"
 
 
 class Tables(html.parser.HTMLParser):
@@ -144,6 +150,58 @@ def read_old_freq(path):
     return old
 
 
+def site_coords(cfg):
+    """REEF's data-entry site search lists each site with a map link carrying lat/lon. Public, no login needed."""
+    out = {}
+    for reg in cfg["search_regions"]:
+        h = get(f"{DATA}/cgi-bin/autocomplete.pl?q=&region={reg}&surveyid={cfg['survey_id']}&t=1")
+        for m in re.finditer(r"zonecode=(\d+)&(?:amp;)?name=[^&]*&(?:amp;)?lat=(-?[\d.]+)&(?:amp;)?lon=(-?[\d.]+)", h):
+            lat, lon = float(m.group(2)), float(m.group(3))
+            if -90 <= lat <= 90 and -180 <= lon <= 180 and (lat or lon):
+                out[m.group(1)] = (round(lat, 4), round(lon, 4))
+    return out
+
+
+class FormGroups(html.parser.HTMLParser):
+    """REEF species-form reference page: <b>Group</b> then 'Common name - <i>Scientific</i>' per species."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.rows, self.group, self._b, self._i, self._text = [], None, None, None, []
+    def handle_starttag(self, tag, attrs):
+        if tag in ("b", "strong"):
+            self._b = []
+        elif tag == "i" and self.group:
+            self._i = []
+    def handle_endtag(self, tag):
+        if tag in ("b", "strong") and self._b is not None:
+            name = " ".join("".join(self._b).split())
+            self._b = None
+            # skip page titles (all caps) and the link to the invertebrate list
+            if name and not name.isupper() and "species list" not in name.lower():
+                self.group, self._text = name, []
+        elif tag == "i" and self._i is not None:
+            sci = " ".join("".join(self._i).split()).strip(" -")
+            common = " ".join("".join(self._text).split()).strip(" -")
+            common = re.sub(r"\s*-\s*", "-", common)          # "Black - And - Yellow Rockfish" -> "Black-And-Yellow Rockfish"
+            common = re.sub(r"(?<=[a-z])-(?=[A-Z][a-z]+$)", " ", common) if common.count("-") == 1 and " " not in common else common
+            if sci and common:
+                self.rows.append((self.group, common, sci))
+            self._i, self._text = None, []
+    def handle_data(self, data):
+        if self._b is not None:
+            self._b.append(data)
+        elif self._i is not None:
+            self._i.append(data)
+        elif self.group:
+            self._text.append(data)
+
+
+def form_groups(cfg):
+    p = FormGroups()
+    p.feed(get(f"{DATA}/data/data/{cfg['form_page']}"))
+    return p.rows
+
+
 def update_region(region, cfg, all_species, today, full=False):
     out = SRC / region
     out.mkdir(parents=True, exist_ok=True)
@@ -206,6 +264,22 @@ def update_region(region, cfg, all_species, today, full=False):
             print(f"  {i}/{len(wanted)}", flush=True)
     if failed > max(10, len(wanted) * 0.1):
         sys.exit(f"{region}: {failed} site reports failed; not updating.")
+
+    # Site locations and REEF form groups (small; refreshed every run). Keep the old file if a fetch fails.
+    try:
+        coords = site_coords(cfg)
+        if len(coords) > len(zones) * 0.3:
+            (out / "coords.txt").write_text("\n".join(f"{z}|{la}|{lo}" for z, (la, lo) in sorted(coords.items())) + "\n")
+        print(f"  {len(coords)} sites with coordinates", flush=True)
+    except Exception as e:
+        print(f"  coordinates failed: {e}", file=sys.stderr, flush=True)
+    try:
+        groups = form_groups(cfg)
+        if len(groups) > 50:
+            (out / "form_groups.txt").write_text("\n".join("|".join(map(clean, g)) for g in groups) + "\n")
+        print(f"  {len(groups)} species in {len({g[0] for g in groups})} REEF form groups", flush=True)
+    except Exception as e:
+        print(f"  form groups failed: {e}", file=sys.stderr, flush=True)
 
     (out / "sites.txt").write_text("\n".join(f"{c}|{n}" for c, n in zones) + "\n")
     (out / "species.txt").write_text("\n".join("|".join(x) for x in sp) + "\n")

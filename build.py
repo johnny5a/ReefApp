@@ -5,6 +5,7 @@
   The app loads one region's file at a time; the service worker keeps them all offline.
 After building, bump VERSION in sw.js so phones pick up the change."""
 import json
+import re
 from pathlib import Path
 
 root = Path(__file__).parent
@@ -56,6 +57,34 @@ def quick_codes(region, species, freq):
     return [c for c, _ in sorted(score.items(), key=lambda x: -x[1])[:QUICK_SIZE]] if total else []
 
 
+def norm(name):
+    return re.sub(r"[^a-z]", "", name.lower())
+
+
+def form_order(region, species):
+    """Map species codes to REEF survey-form groups: {"names": [...], "codes": {code: [group index, position]}}.
+    Matched on scientific name, then on common name (REEF's form page uses some older names)."""
+    rows = [l.split("|") for l in read(src / region / "form_groups.txt").splitlines() if l.count("|") == 2]
+    if not rows:
+        return None
+    by_sci, by_name = {}, {}
+    for l in species.splitlines():
+        f = l.split("|")
+        by_sci.setdefault(re.sub(r"\s*\(.*?\)", "", f[2]).strip().lower(), f[0])
+        by_name.setdefault(norm(f[1]), f[0])
+    names, codes = [], {}
+    for group, common, sci in rows:
+        sci = sci.strip(" -")
+        if not (common or sci):
+            continue
+        if group not in names:
+            names.append(group)
+        code = by_sci.get(sci.strip().lower()) or by_name.get(norm(common))
+        if code and code not in codes:
+            codes[code] = [names.index(group), len(codes)]
+    return {"names": names, "codes": codes}
+
+
 (root / "data").mkdir(exist_ok=True)
 date = read(src / "data_date.txt")
 built = []
@@ -67,9 +96,11 @@ for region, info in REGION_INFO.items():
     freq, unlisted = read(d / "freq.txt"), read(d / "unlisted.txt")
     # REEF's data-entry family order, one family (scientific or common name) per line, if known
     fam_order = [l.strip() for l in read(d / "family_order.txt").splitlines() if l.strip()]
+    coords = read(d / "coords.txt")
     freq = trim_freq(freq)
     data = {"region": region, **info, "date": date, "sites": sites, "species": species,
-            "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq), "famOrder": fam_order}
+            "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq), "famOrder": fam_order,
+            "coords": coords, "formGroups": form_order(region, species)}
     (root / "data" / f"{region}.json").write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
     built.append(region)
 

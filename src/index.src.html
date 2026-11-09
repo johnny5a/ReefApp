@@ -122,6 +122,9 @@ textarea{min-height:70px}
 .sres .area .nm{font-weight:400}
 .crumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
 .crumbs button{border:0;background:none;color:var(--accent);padding:4px 0;text-decoration:underline}
+.sitemap{height:58vh;min-height:300px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--soft)}
+.leaflet-popup-content{margin:10px 12px;font:14px/1.35 var(--body)}
+.leaflet-container{font:inherit}
 /* Log */
 .svy{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:start}
 .svy .t{font-weight:700}
@@ -176,12 +179,16 @@ const INVERT_PHYLA = new Set(["Echinodermata","Cnidaria","Arthropoda","Mollusca"
 const TURTLES = new Set(["Cheloniidae","Dermochelyidae"]);
 const PRESENCE_ONLY = new Set(["Strawberry Anemone","Cobalt Sponge"]);
 const FREQ_MIN_SURVEYS = 5;
+/* REEF's survey types, as on its data-entry page */
+const SURVEY_TYPES = {PAC:["Fish and Invertebrates","Fish Only","Invertebrates Only"], TWA:["Species and Abundance","Species Only"]};
+const reefType = sv => sv?.info?.reefType || (SURVEY_TYPES[regionOf(sv)]||[""])[0];
+const speciesOnly = sv => reefType(sv)==="Species Only";
 const SITE_MIN_PCT = 25;   // "At this site" shows species seen on at least this % of REEF surveys there
 const tidy = n => n.replace(/\s+/g," ").trim();
 
 // Filled by useRegion(); every list below belongs to the region currently loaded.
 let R = null;                                   // {region,name,long,root,near,habitats,date}
-let SPECIES=[], BYKEY={}, QUICKSET=new Set(), FREQ=new Map(), UNL=[], UNL_BY={}, ZONES=new Map(), SITE_LIST=[], SITE_BY_CODE={}, HABITATS=[], DATA_DATE="";
+let COORDS=new Map(), SPECIES=[], BYKEY={}, QUICKSET=new Set(), FREQ=new Map(), UNL=[], UNL_BY={}, ZONES=new Map(), SITE_LIST=[], SITE_BY_CODE={}, HABITATS=[], DATA_DATE="";
 const regionCache = {};
 
 function zoneParents(code){ const out=[]; for(let k=code.length-1;k>=1;k--){ const p=code.slice(0,k); if(ZONES.has(p)) out.unshift(p); } return out; }
@@ -199,10 +206,13 @@ function parseRegion(d){
   const zones = new Map(d.sites.split("\n").map(l=>{const i=l.indexOf("|");return [l.slice(0,i), l.slice(i+1)];}));
   const freq = new Map((d.freq||"").split("\n").filter(Boolean).map(l=>{ const [code,n,list]=l.split("|"); return [code,{n:+n, sp:(list||"").split(",").filter(Boolean).map(x=>{const [c,p]=x.split(":"); return [c,+p];})}]; }));
   const famOrder = new Map((d.famOrder||[]).map((f,i)=>[f.toLowerCase(),i]));
-  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder}, species, unl, zones, freq, quick:new Set(d.quick||[])};
+  const fg = d.formGroups; const formNames = fg?.names||[];
+  if(fg) for(const sp of species){ const g=fg.codes[sp.code]; if(g){ sp.gi=g[0]; sp.gp=g[1]; } }
+  const coords = new Map((d.coords||"").split("\n").filter(Boolean).map(l=>{ const [c,la,lo]=l.split("|"); return [c,[+la,+lo]]; }));
+  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder,formNames}, species, coords, unl, zones, freq, quick:new Set(d.quick||[])};
 }
 function useRegion(x){
-  R=x.meta; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick;
+  R=x.meta; COORDS=x.coords; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick;
   UNL=x.unl; UNL_BY=Object.fromEntries(UNL.map(u=>[u.sci,u])); FREQ=x.freq; ZONES=x.zones; HABITATS=R.habitats; DATA_DATE=R.date;
   SITE_LIST=[...ZONES.entries()].filter(([c,n])=>c.length===8 && !/^Please use/i.test(n)).map(([code,name])=>({code,name:tidy(name),area:areaLabel(code),hay:(name+" "+zoneParents(code).map(p=>ZONES.get(p)).join(" ")).toLowerCase().replace(/['’.]/g,"")}));
   SITE_BY_CODE=Object.fromEntries(SITE_LIST.map(s=>[s.code,s]));
@@ -223,6 +233,16 @@ const regionOf = sv => sv?.info?.region || "PAC";
 function famLabel(s){ return s.famc && s.famc.toLowerCase()!==s.fam.toLowerCase() ? `${s.famc} · ${s.fam}` : s.fam; }
 function famRank(s){ const o=R?.famOrder; if(o?.size){ const i=o.get(s.fam.toLowerCase()) ?? o.get((s.famc||"").toLowerCase()); if(i!=null) return i; } return Infinity; }
 function famCompare(a,b){ return famRank(a)-famRank(b) || (a.famc||a.fam).localeCompare(b.famc||b.fam) || a.fam.localeCompare(b.fam); }
+/* Groups as on REEF's survey form (e.g. "Bass", "Rockfish", "Cryptic Elongated Bottom Dwellers"), in REEF's order.
+   Species not on the form follow, grouped by family. */
+function groupKey(s){ return s.gi!=null ? "g"+s.gi : "f"+s.fam; }
+function groupLabel(s){ return s.gi!=null ? (R.formNames[s.gi]||famLabel(s)) : famLabel(s); }
+function groupCompare(a,b){
+  if(a.gi!=null && b.gi!=null) return a.gi-b.gi;
+  if(a.gi!=null) return -1; if(b.gi!=null) return 1;
+  return famCompare(a,b);
+}
+function inGroupCompare(a,b,pct){ return (pct?((pct(b)??-1)-(pct(a)??-1)):0) || ((a.gp??1e9)-(b.gp??1e9)) || a.name.localeCompare(b.name); }
 
 /* Use the site's own surveys when it has enough; otherwise the nearest larger REEF area that does. */
 function siteFreq(zone){
@@ -259,7 +279,7 @@ function blank(){
       tempBottom:"",tempSurface:"",tempUnit:state?.settings?.tempUnit||"F",depthUnit:state?.settings?.depthUnit||"ft",vis:"",avgDepth:"",maxDepth:"",snorkel:false,current:"",habitat:"",notes:""},
     counts:{}, unlisted:[]};
 }
-function blankIn(region){ const s=blank(); s.info.region=region||state.settings.region||"PAC"; return s; }
+function blankIn(region){ const s=blank(); s.info.region=region||state.settings.region||"PAC"; s.info.reefType=state.settings["reefType_"+s.info.region]||(SURVEY_TYPES[s.info.region]||[""])[0]; return s; }
 function load(){
   let s=null;
   try{ s=JSON.parse(localStorage.getItem(LS)||"null"); }catch(e){}
@@ -379,7 +399,7 @@ function render(){
 /* ---------- Reuse what you entered before ----------
    Site traits (habitat, depths, scuba/snorkel, units) carry over from your last dive at the same site.
    Conditions (visibility, current, temperatures) carry over only from a dive in the last few days. */
-const SITE_FIELDS=["habitat","snorkel","tempUnit","depthUnit","avgDepth","maxDepth"];
+const SITE_FIELDS=["habitat","snorkel","tempUnit","depthUnit","avgDepth","maxDepth","reefType"];
 const COND_FIELDS=["vis","current","tempBottom","tempSurface"];
 const RECENT_DAYS=3;
 const FIELD_NAMES={habitat:"habitat",snorkel:"scuba/snorkel",avgDepth:"average depth",maxDepth:"max depth",vis:"visibility",current:"current",tempBottom:"bottom temp",tempSurface:"surface temp"};
@@ -498,7 +518,10 @@ function renderDive(main, sv){
       <label class="${cls("date")}" data-k="date"><span>Date</span><input type="date" id="date" value="${esc(i.date)}"></label>
       <label class="${cls("startTime")}" data-k="startTime"><span id="lbl-startTime">Start time ${i.startTime?"→ "+roundHour(i.startTime):""}</span><span class="row"><input type="time" id="startTime" value="${esc(i.startTime)}" style="flex:1;width:auto"><button type="button" class="btn ghost" data-act="now-time">Now</button></span></label>
     </div>
-    <label class="f"><span>Survey type</span></label>
+    <label class="f"><span>REEF survey type</span></label>
+    ${seg("reefType", SURVEY_TYPES[regionOf(sv)]||[], reefType(sv))}
+    ${speciesOnly(sv)?`<p class="hint">Species Only: one “Seen” button per species instead of S/F/M/A.</p>`:""}
+    <label class="f"><span>Scuba or snorkel</span></label>
     ${seg("snorkel",["Scuba","Snorkel"], i.snorkel?"Snorkel":"Scuba")}
   </div>
   <div class="card">
@@ -520,14 +543,33 @@ function renderDive(main, sv){
   <button class="btn" data-tab-go="species">Next: species</button>`;
 }
 
+function siteMatches(q){
+  const words=q.split(/\s+/).filter(Boolean);
+  const hits=SITE_LIST.filter(s=>s.code.startsWith(q)||words.every(w=>s.hay.includes(w)));
+  return hits.sort((a,b)=>(b.name.toLowerCase().startsWith(q)-a.name.toLowerCase().startsWith(q))||a.name.localeCompare(b.name));
+}
 function renderSitePicker(main, sv){
   const q=(ui.siteQ||"").trim().toLowerCase().replace(/['’.]/g,""), area=ui.siteArea||"";
+  const view = ui.siteView || state.settings.siteView || "list";
+  const viewToggle = `<div class="sortseg" role="radiogroup" aria-label="Site view">${[["list","List"],["map","Map"]].map(([k,t])=>`<button type="button" role="radio" data-siteview="${k}" aria-checked="${view===k}">${t}</button>`).join("")}</div>`;
+  const searchBox = `<input type="search" id="siteQ" placeholder="${R.region==="TWA"?"Site name, area, or code (e.g. Molasses, Bonaire, 34)":"Site name, area, or code (e.g. Casino, Whaler, 4203)"}" value="${esc(ui.siteQ||"")}" aria-label="Search dive sites" autocomplete="off">`;
+  if(view==="map"){
+    main.innerHTML=`
+    <div class="sbar">
+      <div class="row"><button class="btn ghost" data-act="site-back">Back</button><h2 class="grow">Dive site</h2>${viewToggle}</div>
+      ${searchBox}
+    </div>
+    <div id="sitemap" class="sitemap" aria-label="Map of REEF dive sites"></div>
+    <div class="row"><button type="button" class="btn ghost" data-act="near-me">Sites near me</button><span class="hint grow" id="mapNote"></span></div>
+    <div id="nearList"></div>
+    <p class="hint">Dots are REEF sites with a location (${COORDS.size.toLocaleString()} of ${SITE_LIST.length.toLocaleString()}); darker dots have 5+ REEF surveys. Tap a dot to choose it. Map © OpenStreetMap contributors.</p>`;
+    showSiteMap(sv);
+    return;
+  }
   const row=s=>`<button type="button" data-site="${s.code}"><span class="nm">${esc(s.name)}</span><span class="ar">${esc(s.area)}</span><span class="cd">${s.code}</span></button>`;
   let body="";
   if(q){
-    const words=q.split(/\s+/);
-    const hits=SITE_LIST.filter(s=>s.code.startsWith(q)||words.every(w=>s.hay.includes(w)));
-    hits.sort((a,b)=>(b.name.toLowerCase().startsWith(q)-a.name.toLowerCase().startsWith(q))||a.name.localeCompare(b.name));
+    const hits=siteMatches(q);
     body = hits.length? `<p class="hint">${hits.length} site${hits.length===1?"":"s"}${hits.length>80?" · showing the first 80, keep typing to narrow":""}</p><div class="sres">${hits.slice(0,80).map(row).join("")}</div>`
       : `<div class="empty">No ${esc(R.name)} site matches “${esc(ui.siteQ)}”. Try another word, or browse by area below.</div>`;
   }
@@ -546,14 +588,84 @@ function renderSitePicker(main, sv){
   }
   main.innerHTML=`
   <div class="sbar">
-    <div class="row"><button class="btn ghost" data-act="site-back">Back</button><h2 class="grow">Dive site</h2></div>
-    <input type="search" id="siteQ" placeholder="${R.region==="TWA"?"Site name, area, or code (e.g. Molasses, Bonaire, 34)":"Site name, area, or code (e.g. Casino, Whaler, 4203)"}" value="${esc(ui.siteQ||"")}" aria-label="Search dive sites" autocomplete="off">
+    <div class="row"><button class="btn ghost" data-act="site-back">Back</button><h2 class="grow">Dive site</h2>${viewToggle}</div>
+    ${searchBox}
   </div>
   ${body}
   <p class="hint">From REEF's Geographic Zone Code list for ${esc(R.long)}. Codes REEF has retired (“Please use …”) are left out.</p>`;
 }
 
-function filtered(sv){
+function typeAllows(sv,s){
+  const t=reefType(sv);
+  if(t==="Fish Only") return s.kind==="fish"||s.kind==="turtle";
+  if(t==="Invertebrates Only") return s.kind==="invert"||s.kind==="algae";
+  return true;
+}
+/* ---------- Site map (Leaflet + OpenStreetMap tiles; dots work offline, the background needs signal) ---------- */
+const LEAFLET = "vendor/leaflet/";   // Leaflet 1.9.4, bundled so the map works offline
+let leafletReady=null, siteMap=null, siteLayer=null, meMarker=null;
+function loadLeaflet(){
+  if(window.L) return Promise.resolve();
+  if(leafletReady) return leafletReady;
+  leafletReady=new Promise((res,rej)=>{
+    const css=document.createElement("link"); css.rel="stylesheet"; css.href=LEAFLET+"leaflet.css"; document.head.appendChild(css);
+    const js=document.createElement("script"); js.src=LEAFLET+"leaflet.js"; js.onload=()=>res(); js.onerror=()=>{ leafletReady=null; rej(); }; document.head.appendChild(js);
+  });
+  return leafletReady;
+}
+function distKm(a,b){ const r=Math.PI/180, x=(b[1]-a[1])*r*Math.cos((a[0]+b[0])/2*r), y=(b[0]-a[0])*r; return Math.sqrt(x*x+y*y)*6371; }
+function sitePopup(s){
+  const f=FREQ.get(s.code);
+  return `<div class="pop"><b>${esc(s.name)}</b><br><span class="hint">${esc(s.area)} · ${s.code}${f?` · ${f.n.toLocaleString()} REEF surveys`:""}</span><br><button type="button" class="btn" data-site="${s.code}" style="margin-top:6px;min-height:38px;padding:6px 12px">Use this site</button></div>`;
+}
+function mapSites(){
+  const q=(ui.siteQ||"").trim().toLowerCase().replace(/['’.]/g,"");
+  const list=q?siteMatches(q):(ui.siteArea?SITE_LIST.filter(s=>s.code.startsWith(ui.siteArea)):SITE_LIST);
+  return list.filter(s=>COORDS.has(s.code));
+}
+function drawSiteDots(fit){
+  if(!siteMap) return;
+  siteLayer.clearLayers();
+  const css=getComputedStyle(document.documentElement), acc=css.getPropertyValue("--accent").trim()||"#0b6b78";
+  const sites=mapSites();
+  for(const s of sites){
+    const ll=COORDS.get(s.code), busy=(FREQ.get(s.code)?.n||0)>=FREQ_MIN_SURVEYS;
+    L.circleMarker(ll,{renderer:siteMap._dotRenderer, radius:busy?7:5, weight:1, color:"#fff", fillColor:acc, fillOpacity:busy?.95:.45}).bindPopup(sitePopup(s)).addTo(siteLayer);
+  }
+  const note=document.getElementById("mapNote");
+  if(note) note.textContent = (sites.length?`${sites.length.toLocaleString()} site${sites.length===1?"":"s"} shown`:"No mapped sites match")+(navigator.onLine?"":" · map background needs signal");
+  if(fit && sites.length){ const b=L.latLngBounds(sites.map(s=>COORDS.get(s.code))); siteMap.fitBounds(b.pad(0.15),{maxZoom:13}); }
+}
+async function showSiteMap(sv){
+  const el=document.getElementById("sitemap"); if(!el) return;
+  try{ await loadLeaflet(); }catch(_){ el.innerHTML=`<div class="empty">The map needs signal the first time it opens. Switch to List to pick a site offline.</div>`; return; }
+  if(!document.body.contains(el)) return;
+  if(siteMap){ try{ siteMap.remove(); }catch(_){} }
+  siteMap=L.map(el,{zoomControl:true, preferCanvas:true});
+  siteMap._dotRenderer=L.canvas({padding:0.5});
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18, attribution:"© OpenStreetMap contributors"}).addTo(siteMap);
+  siteLayer=L.layerGroup().addTo(siteMap);
+  const here=sv?.info?.zone && COORDS.get(sv.info.zone);
+  if(here && !ui.siteQ){ drawSiteDots(false); siteMap.setView(here,13); }
+  else drawSiteDots(true);
+  if(meMarker){ meMarker.addTo(siteMap); }
+}
+function nearMe(){
+  const note=document.getElementById("mapNote");
+  if(!navigator.geolocation){ if(note) note.textContent="Location isn't available on this device."; return; }
+  if(note) note.textContent="Finding you…";
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const me=[pos.coords.latitude,pos.coords.longitude];
+    if(siteMap){ meMarker && meMarker.remove(); meMarker=L.circleMarker(me,{radius:8,color:"#fff",weight:2,fillColor:"#1e88e5",fillOpacity:1}).addTo(siteMap).bindTooltip("You"); siteMap.setView(me,12); }
+    const near=SITE_LIST.filter(s=>COORDS.has(s.code)).map(s=>({s,d:distKm(me,COORDS.get(s.code))})).sort((a,b)=>a.d-b.d).slice(0,8);
+    const box=document.getElementById("nearList");
+    if(box) box.innerHTML = near.length && near[0].d<200 ? `<h3>Nearest REEF sites</h3><div class="sres">${near.map(({s,d})=>`<button type="button" data-site="${s.code}"><span class="nm">${esc(s.name)}</span><span class="ar">${esc(s.area)} · ${d<10?d.toFixed(1):Math.round(d)} km</span><span class="cd">${s.code}</span></button>`).join("")}</div>` : `<p class="hint">No ${esc(R.name)} REEF sites within 200 km of you.</p>`;
+    if(note) note.textContent="";
+  }, err=>{ if(note) note.textContent = err.code===1 ? "Location permission was declined. You can allow it in Settings › Safari › Location." : "Couldn't get your location. Try again outdoors or with signal."; }, {enableHighAccuracy:true, timeout:15000, maximumAge:60000});
+}
+
+function filtered(sv){ return filteredAll(sv).filter(s=>typeAllows(sv,s)||!!sv.counts[s.key]); }
+function filteredAll(sv){
   if(ui.filter==="site" && !ui.q.trim()){ const f=siteFreq(sv.info.zone); if(f) return SPECIES.filter(s=>(f.pct.get(s.code)||0)>=SITE_MIN_PCT||!!sv.counts[s.key]); }
   const q=ui.q.trim().toLowerCase();
   return SPECIES.filter(s=>{
@@ -570,7 +682,7 @@ function filtered(sv){
 }
 function spRow(s, sv, pct){
   const v=sv.counts[s.key];
-  const btns = s.pa ? `<button type="button" data-sp="${s.key}" data-v="P" aria-pressed="${v==="P"}" aria-label="${esc(s.name)} present">Present</button>`
+  const btns = speciesOnly(sv) ? `<button type="button" data-sp="${s.key}" data-v="S" aria-pressed="${!!v}" aria-label="${esc(s.name)} seen" style="width:auto;padding:0 12px;font-size:15px">Seen</button>` : s.pa ? `<button type="button" data-sp="${s.key}" data-v="P" aria-pressed="${v==="P"}" aria-label="${esc(s.name)} present">Present</button>`
     : ["S","F","M","A"].map(a=>`<button type="button" data-sp="${s.key}" data-v="${a}" aria-pressed="${v===a}" aria-label="${esc(s.name)} ${ABUND[a]}">${a}</button>`).join("");
   return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(s.name)}</div><div class="sci">${pct!=null?`<span class="pct">${pct<1?"<1":pct}% of surveys here</span> · `:""}${esc(s.sci)}${s.code?` · <b>${s.code}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
 }
@@ -595,8 +707,8 @@ function renderSpecies(main, sv, keepFocus){
   else if(!list.length && !unlHits.length) body=`<div class="empty">No species match “${esc(ui.q)}”.</div>`;
   else if(!list.length) body="";
   else if(sortBy==="fam"){
-    const sorted=[...list].sort((a,b)=>famCompare(a,b) || (freq?((pctOf(b)??-1)-(pctOf(a)??-1)):0) || a.name.localeCompare(b.name));
-    let cur=null; body=sorted.map(s=>{ const h=s.fam!==cur?(cur=s.fam,`<div class="fam">${esc(famLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined); }).join("");
+    const sorted=[...list].sort((a,b)=>groupCompare(a,b) || inGroupCompare(a,b,freq?pctOf:null));
+    let cur=null; body=sorted.map(s=>{ const k=groupKey(s); const h=k!==cur?(cur=k,`<div class="fam">${esc(groupLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined); }).join("");
   } else if(sortBy==="freq") body=[...list].sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
   else body=[...list].sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
   if(unlHits.length) body+=`<div class="fam">Other REEF species · enter as Unlisted on REEF</div>`+unlHits.map(u=>unlRow(u,sv)).join("");
@@ -630,14 +742,14 @@ function renderSpecies(main, sv, keepFocus){
 function summaryRows(sv){
   const seen=Object.entries(sv.counts).map(([k,v])=>({s:BYKEY[k],v})).filter(x=>x.s);
   const groups={}; seen.forEach(x=>{const g=x.s.kind==="fish"||x.s.kind==="turtle"?"Fish":x.s.kind==="algae"?"Algae":"Invertebrates"; (groups[g]=groups[g]||[]).push(x);});
-  return ["Fish","Invertebrates","Algae"].filter(g=>groups[g]).map(g=>({g, rows:groups[g].sort((a,b)=>famCompare(a.s,b.s)||a.s.name.localeCompare(b.s.name))}));
+  return ["Fish","Invertebrates","Algae"].filter(g=>groups[g]).map(g=>({g, rows:groups[g].sort((a,b)=>groupCompare(a.s,b.s)||inGroupCompare(a.s,b.s,null))}));
 }
 function summaryText(sv){
   const i=sv.info, L=[];
   L.push(`REEF SURVEY · ${R.long}`);
   L.push(`Member #: ${state.settings.memberNo||"—"}`);
   L.push(``,`STEP 1 · SURVEY INFO`);
-  L.push(`Survey type: ${i.snorkel?"Snorkel":"Scuba"}`);
+  L.push(`Survey type: ${reefType(sv)} (${i.snorkel?"snorkel":"scuba"})`);
   L.push(`Date: ${fmtDate(i.date)}`);
   L.push(`Start time: ${roundHour(i.startTime)} (${i.startTime||"—"})`);
   L.push(`Zone code: ${i.zone||"—"}  Site: ${i.siteName||"—"}`);
@@ -651,7 +763,7 @@ function summaryText(sv){
   L.push(`Habitat: ${i.habitat||"—"}`);
   for(const {g,rows} of summaryRows(sv)){
     L.push(``,`${g.toUpperCase()} (${rows.length})`);
-    let fam=""; for(const {s,v} of rows){ if(s.fam!==fam){fam=s.fam; L.push(`  ${famLabel(s)}`);} L.push(`    ${v}  ${s.name}${s.code?" ["+s.code+"]":""}`); }
+    let fam=""; for(const {s,v} of rows){ if(groupKey(s)!==fam){fam=groupKey(s); L.push(`  ${groupLabel(s)}`);} L.push(`    ${v}  ${s.name}${s.code?" ["+s.code+"]":""}`); }
   }
   if(sv.unlisted?.length){ L.push(``,`UNLISTED (search in REEF's Unlisted Species)`); sv.unlisted.forEach(u=>L.push(`    ${u.v}  ${u.name}${u.sci?" ("+u.sci+")":""}`)); }
   return L.join("\n");
@@ -659,7 +771,7 @@ function summaryText(sv){
 function autofillJSON(sv){
   const i=sv.info;
   return JSON.stringify({app:"REEF Dive Survey",region:R.region,memberNo:state.settings.memberNo,lastName:state.settings.lastName,
-    surveyType:i.snorkel?"Snorkel":"Scuba",date:i.date,startTime:i.startTime,startHourRounded:roundHour(i.startTime),
+    surveyType:reefType(sv),scubaOrSnorkel:i.snorkel?"Snorkel":"Scuba",date:i.date,startTime:i.startTime,startHourRounded:roundHour(i.startTime),
     zoneCode:i.zone,siteName:i.siteName,bottomTimeMin:+i.bottomTime||null,tempBottom:i.tempBottom,tempSurface:i.tempSurface,tempUnit:i.tempUnit,
     visibility:i.vis,depthUnitEntered:dUnit(i),avgDepthEntered:i.snorkel?"Snorkel":i.avgDepth,maxDepthEntered:i.maxDepth,avgDepthFt:i.snorkel?"Snorkel":(depthFt(i,"avgDepth")==null?"":Math.round(depthFt(i,"avgDepth"))),avgDepthRange:i.snorkel?"Snorkel":dRange(i,"avgDepth"),maxDepthFt:depthFt(i,"maxDepth")==null?"":Math.round(depthFt(i,"maxDepth")),maxDepthRange:dRange(i,"maxDepth"),
     current:i.current,habitat:i.habitat,
@@ -684,7 +796,7 @@ function renderReview(main, sv){
     <span class="step">Step 1 · Survey info</span>
     <dl class="rv">
       <dt>Member #</dt>${state.settings.memberNo?dd("memberNo",state.settings.memberNo):`<dd class="miss"><button type="button" class="btn ghost" data-tab-go="log" style="min-height:36px;padding:4px 10px">Add on Log tab</button></dd>`}
-      <dt>Survey type</dt><dd>${i.snorkel?"Snorkel":"Scuba"}</dd>
+      <dt>Survey type</dt><dd>${esc(reefType(sv))} · ${i.snorkel?"Snorkel":"Scuba"}</dd>
       <dt>Date</dt>${dd("date",fmtDate(i.date))}
       <dt>Start time</dt>${dd("startTime",roundHour(i.startTime))}
       <dt>Zone code</dt>${dd("zone",i.zone)}
@@ -703,7 +815,7 @@ function renderReview(main, sv){
   </div>
   <div class="card">
     <span class="step">Steps 3–4 · Species (${seenCount(sv)})</span>
-    ${groups.length||sv.unlisted?.length?`<table class="sumtable">${groups.map(({g,rows})=>{let fam="";return `<tr class="fh"><td colspan="3">${g}</td></tr>`+rows.map(({s,v})=>{const fh=s.fam!==fam?(fam=s.fam,true):false;return `<tr><td class="c">${s.code||"—"}</td><td>${esc(s.name)}${fh?`<div class="hint">${esc(famLabel(s))}</div>`:""}</td><td class="v">${v}</td></tr>`}).join("")}).join("")}
+    ${groups.length||sv.unlisted?.length?`<table class="sumtable">${groups.map(({g,rows})=>{let fam="";return `<tr class="fh"><td colspan="3">${g}</td></tr>`+rows.map(({s,v})=>{const fh=groupKey(s)!==fam?(fam=groupKey(s),true):false;return `<tr><td class="c">${s.code||"—"}</td><td>${esc(s.name)}${fh?`<div class="hint">${esc(groupLabel(s))}</div>`:""}</td><td class="v">${v}</td></tr>`}).join("")}).join("")}
       ${sv.unlisted?.length?`<tr class="fh"><td colspan="3">Unlisted</td></tr>`+sv.unlisted.map(u=>`<tr><td class="c">—</td><td>${esc(u.name)}${u.sci?`<div class="hint"><i>${esc(u.sci)}</i></div>`:""}</td><td class="v">${u.v}</td></tr>`).join(""):""}</table>`:`<p class="hint" style="color:var(--warn)">No species recorded yet.</p>`}
   </div>
   <div class="card">
@@ -741,6 +853,7 @@ document.addEventListener("click", async e=>{
     const k=t.dataset.seg, v=t.dataset.v, i=sv.info;
     if(k==="snorkel") i.snorkel = v==="Snorkel";
     else if(k==="tempUnit"){ i.tempUnit=v; state.settings.tempUnit=v; }
+    else if(k==="reefType"){ i.reefType=v; state.settings["reefType_"+regionOf(sv)]=v; ui.filter=null; }
     else if(k==="depthUnit"){
       if(dUnit(i)!==v) for(const key of ["avgDepth","maxDepth"]){ const x=i[key]; if(x!==""&&x!=null&&!isNaN(+x)) i[key]=String(v==="m" ? Math.round(+x/FT_PER_M*10)/10 : Math.round(+x*FT_PER_M)); }
       i.depthUnit=v; state.settings.depthUnit=v;
@@ -759,6 +872,7 @@ document.addEventListener("click", async e=>{
     if(navigator.vibrate) try{navigator.vibrate(10)}catch(_){}
     return;
   }
+  if(t.dataset.siteview){ ui.siteView=t.dataset.siteview; state.settings.siteView=ui.siteView; persist(); render(); return; }
   if(t.dataset.del){ deleteSurvey(t.dataset.del); return; }
   if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
   if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
@@ -789,6 +903,7 @@ document.addEventListener("click", async e=>{
     const s=nextDiveFrom(last); state.surveys[s.id]=s; openSurvey(s.id,"dive"); touch(s); toast("Next dive · "+last.info.siteName); return;
   }
   if(act==="pick-site"){ ui.tab="site"; ui.siteQ=""; ui.siteArea=sv.info.zone&&SITE_BY_CODE[sv.info.zone]?zoneParents(sv.info.zone).slice(-1)[0]:""; render(); $("#main").scrollTop=0; return; }
+  if(act==="near-me"){ nearMe(); return; }
   if(act==="site-back"){ ui.tab="dive"; render(); return; }
   if(act==="unl-add"){ const n=$("#unlName").value.trim(); if(!n) return; (sv.unlisted=sv.unlisted||[]).push({name:n,v:$("#unlV").value}); touch(sv); render(); return; }
   if(act==="ready"){ sv.status="ready"; rememberSite(sv); touch(sv); render(); toast("Ready for REEF"); return; }
@@ -811,6 +926,7 @@ for(const ev of ["change","focusout"]) document.addEventListener(ev, e=>{ if(e.t
 document.addEventListener("keydown",e=>{ if((e.key==="Enter"||e.key===" ")&&e.target.dataset?.open){ e.preventDefault(); e.target.click(); }});
 document.addEventListener("input", e=>{
   const el=e.target, sv=cur();
+  if(el.id==="siteQ" && siteMap && document.getElementById("sitemap")){ ui.siteQ=el.value; clearTimeout(ui._mapT); ui._mapT=setTimeout(()=>drawSiteDots(true),250); return; }
   if(el.id==="siteQ"){ ui.siteQ=el.value; renderSitePicker($("#main"),sv); const q=$("#siteQ"); q.focus(); q.setSelectionRange(q.value.length,q.value.length); return; }
   if(el.id==="q"){ ui.q=el.value; renderSpecies($("#main"),sv,true); return; }
   if(el.id==="memberNo"||el.id==="lastName"){ saveDiverField(el); return; }
@@ -837,7 +953,7 @@ function refreshDiveLabels(sv){
 function toCSV(sv){
   const i=sv.info, q=v=>`"${String(v??"").replace(/"/g,'""')}"`;
   const head=["member_no","date","start_time","zone_code","site","survey_type","bottom_time_min","temp_bottom","temp_surface","temp_unit","visibility","avg_depth","max_depth","current","habitat","species_code","common_name","scientific_name","abundance"];
-  const base=[state.settings.memberNo,i.date,i.startTime,i.zone,i.siteName,i.snorkel?"Snorkel":"Scuba",i.bottomTime,i.tempBottom,i.tempSurface,i.tempUnit,i.vis,i.snorkel?"Snorkel":dRange(i,"avgDepth"),dRange(i,"maxDepth"),i.current,i.habitat];
+  const base=[state.settings.memberNo,i.date,i.startTime,i.zone,i.siteName,reefType(sv)+(i.snorkel?" (snorkel)":""),i.bottomTime,i.tempBottom,i.tempSurface,i.tempUnit,i.vis,i.snorkel?"Snorkel":dRange(i,"avgDepth"),dRange(i,"maxDepth"),i.current,i.habitat];
   const rows=Object.entries(sv.counts).map(([k,v])=>[...base,BYKEY[k]?.code,BYKEY[k]?.name,BYKEY[k]?.sci,v]).concat((sv.unlisted||[]).map(u=>[...base,"unlisted",u.name,u.sci||"",u.v]));
   return [head,...rows].map(r=>r.map(q).join(",")).join("\n");
 }
