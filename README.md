@@ -53,5 +53,10 @@ A region that is only part of a REEF region (like California, which is zones sta
 - App code: `src/index.src.html`. Region data: `src/<REGION>/` (written by the updater; `src/PAC/quick.txt` is the hand-picked "Common in California" list).
 - Run `python3 build.py` to rebuild `index.html` and `data/`, bump `VERSION` in `sw.js`, then commit and push. Phones pick up the new version the next time the app opens with signal.
 
+## REEF location problems
+Some of REEF's own site locations contain typing mistakes (for example degrees typed into the minutes field, which puts Florida Keys sites off West Africa).
+`build.py` checks every location against its region (`bounds` in `regions.json`) and the other sites in its REEF area, fixes the obvious mistakes for the app
+(approximate ones are marked on the map), and lists them in [`docs/reef-location-issues.md`](docs/reef-location-issues.md) so they can be sent to zonecode@REEF.org.
+
 ## Third-party code
 - `vendor/leaflet/`: [Leaflet](https://leafletjs.com) 1.9.4 (BSD-2-Clause, see its LICENSE), bundled so the map works offline. Map tiles © OpenStreetMap contributors.

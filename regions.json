@@ -1,71 +1,341 @@
 {
-  "_help": "One entry per app region. To add a region: set \"enabled\": true (or add an entry), push, and the 'Update REEF data' workflow downloads it. See README > Adding a REEF region.",
+  "_help": "One entry per app region. bounds = [[min lat, min lon], [max lat, max lon]] used to catch impossible site locations (SOP/CIP may cross the date line: lon max < min means it wraps). To add a region: set \"enabled\": true (or add an entry), push, and the 'Update REEF data' workflow downloads it. See README > Adding a REEF region.",
   "regions": [
     {
-      "id": "PAC", "enabled": true, "precache": true,
-      "reef": "PAC", "prefixes": ["4"],
-      "name": "California", "long": "California (Pacific Coast)",
-      "survey_id": "8", "survey_types": ["Fish and Invertebrates", "Fish Only", "Invertebrates Only"],
-      "form_page": "pac/fishsp.htm", "near": ["TEP"],
+      "id": "PAC",
+      "enabled": true,
+      "precache": true,
+      "reef": "PAC",
+      "prefixes": [
+        "4"
+      ],
+      "name": "California",
+      "long": "California (Pacific Coast)",
+      "survey_id": "8",
+      "survey_types": [
+        "Fish and Invertebrates",
+        "Fish Only",
+        "Invertebrates Only"
+      ],
+      "form_page": "pac/fishsp.htm",
+      "near": [
+        "TEP"
+      ],
       "example": "Site name, area, or code (e.g. Casino, Whaler, 4203)",
-      "habitats": ["Kelp Forest", "Rock Boulder/Shale Reef", "Artificial", "Open Ocean", "Eel Grass Bed", "Surf Grass Bed",
-                   "Pinnacle", "Bull Kelp", "Sandy Bottom/Mud/Silt", "Cobblestone/Boulder Field", "Wall"]
+      "habitats": [
+        "Kelp Forest",
+        "Rock Boulder/Shale Reef",
+        "Artificial",
+        "Open Ocean",
+        "Eel Grass Bed",
+        "Surf Grass Bed",
+        "Pinnacle",
+        "Bull Kelp",
+        "Sandy Bottom/Mud/Silt",
+        "Cobblestone/Boulder Field",
+        "Wall"
+      ],
+      "bounds": [
+        [
+          30,
+          -127
+        ],
+        [
+          43,
+          -114
+        ]
+      ]
     },
     {
-      "id": "TWA", "enabled": true, "precache": true,
-      "reef": "TWA", "prefixes": [],
-      "name": "Caribbean", "long": "Caribbean, Florida & Bahamas (TWA)",
-      "survey_id": "1", "survey_types": ["Species and Abundance", "Species Only"],
-      "form_page": "twa/fishsp.htm", "near": ["SAS", "NE"],
+      "id": "TWA",
+      "enabled": true,
+      "precache": true,
+      "reef": "TWA",
+      "prefixes": [],
+      "name": "Caribbean",
+      "long": "Caribbean, Florida & Bahamas (TWA)",
+      "survey_id": "1",
+      "survey_types": [
+        "Species and Abundance",
+        "Species Only"
+      ],
+      "form_page": "twa/fishsp.htm",
+      "near": [
+        "SAS",
+        "NE"
+      ],
       "example": "Site name, area, or code (e.g. Molasses, Bonaire, 34)",
-      "habitats": ["High Profile Reef", "Low Profile Reef", "Sloping Dropoff", "Wall", "Ledge", "Grass",
-                   "Sandy Bottom/Mud/Silt/Mangrove", "Rubble", "Artificial", "Open Ocean", "Cobblestone/Boulder Fields/Escarpment"]
+      "habitats": [
+        "High Profile Reef",
+        "Low Profile Reef",
+        "Sloping Dropoff",
+        "Wall",
+        "Ledge",
+        "Grass",
+        "Sandy Bottom/Mud/Silt/Mangrove",
+        "Rubble",
+        "Artificial",
+        "Open Ocean",
+        "Cobblestone/Boulder Fields/Escarpment"
+      ],
+      "bounds": [
+        [
+          -35,
+          -100
+        ],
+        [
+          36,
+          -25
+        ]
+      ]
     },
     {
-      "id": "PNW", "enabled": false, "reef": "PAC", "prefixes": ["1", "2", "3", "5"],
-      "name": "Pacific Northwest", "long": "Pacific Northwest & Alaska (PAC)",
-      "survey_id": "5", "survey_types": ["Fish and Invertebrates", "Fish Only", "Invertebrates Only"],
-      "form_page": "pac/fishsp.htm", "near": ["PAC"]
+      "id": "PNW",
+      "enabled": false,
+      "reef": "PAC",
+      "prefixes": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "name": "Pacific Northwest",
+      "long": "Pacific Northwest & Alaska (PAC)",
+      "survey_id": "5",
+      "survey_types": [
+        "Fish and Invertebrates",
+        "Fish Only",
+        "Invertebrates Only"
+      ],
+      "form_page": "pac/fishsp.htm",
+      "near": [
+        "PAC"
+      ],
+      "bounds": [
+        [
+          42,
+          -180
+        ],
+        [
+          72,
+          -120
+        ]
+      ]
     },
     {
-      "id": "TEP", "enabled": false, "reef": "TEP", "prefixes": [],
-      "name": "Tropical Eastern Pacific", "long": "Tropical Eastern Pacific (TEP)",
-      "survey_id": "11", "survey_types": ["Species and Abundance", "Species Only"], "near": ["PAC"]
+      "id": "TEP",
+      "enabled": false,
+      "reef": "TEP",
+      "prefixes": [],
+      "name": "Tropical Eastern Pacific",
+      "long": "Tropical Eastern Pacific (TEP)",
+      "survey_id": "11",
+      "survey_types": [
+        "Species and Abundance",
+        "Species Only"
+      ],
+      "near": [
+        "PAC"
+      ],
+      "bounds": [
+        [
+          -20,
+          -120
+        ],
+        [
+          33,
+          -75
+        ]
+      ]
     },
     {
-      "id": "HAW", "enabled": false, "reef": "HAW", "prefixes": [],
-      "name": "Hawaii", "long": "Hawaii (HAW)",
-      "survey_id": "9", "survey_types": ["Species and Abundance", "Species Only"], "near": ["SOP", "CIP"]
+      "id": "HAW",
+      "enabled": false,
+      "reef": "HAW",
+      "prefixes": [],
+      "name": "Hawaii",
+      "long": "Hawaii (HAW)",
+      "survey_id": "9",
+      "survey_types": [
+        "Species and Abundance",
+        "Species Only"
+      ],
+      "near": [
+        "SOP",
+        "CIP"
+      ],
+      "bounds": [
+        [
+          15,
+          -180
+        ],
+        [
+          32,
+          -150
+        ]
+      ]
     },
     {
-      "id": "SOP", "enabled": false, "reef": "SOP", "prefixes": [],
-      "name": "South Pacific", "long": "South Pacific (SOP)",
-      "survey_id": "15", "survey_types": ["Species and Abundance", "Species Only"], "near": ["CIP", "HAW"]
+      "id": "SOP",
+      "enabled": false,
+      "reef": "SOP",
+      "prefixes": [],
+      "name": "South Pacific",
+      "long": "South Pacific (SOP)",
+      "survey_id": "15",
+      "survey_types": [
+        "Species and Abundance",
+        "Species Only"
+      ],
+      "near": [
+        "CIP",
+        "HAW"
+      ],
+      "bounds": [
+        [
+          -35,
+          150
+        ],
+        [
+          15,
+          -120
+        ]
+      ]
     },
     {
-      "id": "CIP", "enabled": false, "reef": "CIP", "prefixes": [],
-      "name": "Indo-Pacific", "long": "Central Indo-Pacific (CIP)",
-      "survey_id": "20", "survey_types": ["Species and Abundance", "Species Only"], "near": ["SOP", "IORS"]
+      "id": "CIP",
+      "enabled": false,
+      "reef": "CIP",
+      "prefixes": [],
+      "name": "Indo-Pacific",
+      "long": "Central Indo-Pacific (CIP)",
+      "survey_id": "20",
+      "survey_types": [
+        "Species and Abundance",
+        "Species Only"
+      ],
+      "near": [
+        "SOP",
+        "IORS"
+      ],
+      "bounds": [
+        [
+          -35,
+          90
+        ],
+        [
+          45,
+          180
+        ]
+      ]
     },
     {
-      "id": "IORS", "enabled": false, "reef": "IORS", "prefixes": [],
-      "name": "Indian Ocean & Red Sea", "long": "Indian Ocean and Red Sea (IORS)",
-      "survey_id": "33", "survey_types": ["Species and Abundance", "Species Only"], "near": ["CIP"]
+      "id": "IORS",
+      "enabled": false,
+      "reef": "IORS",
+      "prefixes": [],
+      "name": "Indian Ocean & Red Sea",
+      "long": "Indian Ocean and Red Sea (IORS)",
+      "survey_id": "33",
+      "survey_types": [
+        "Species and Abundance",
+        "Species Only"
+      ],
+      "near": [
+        "CIP"
+      ],
+      "bounds": [
+        [
+          -40,
+          20
+        ],
+        [
+          32,
+          100
+        ]
+      ]
     },
     {
-      "id": "SAS", "enabled": false, "reef": "SAS", "prefixes": [],
-      "name": "South Atlantic States", "long": "South Atlantic States (SAS)",
-      "survey_id": "17", "survey_types": ["Fish and Invertebrates", "Fish Only", "Invertebrates Only"], "near": ["TWA", "NE"]
+      "id": "SAS",
+      "enabled": false,
+      "reef": "SAS",
+      "prefixes": [],
+      "name": "South Atlantic States",
+      "long": "South Atlantic States (SAS)",
+      "survey_id": "17",
+      "survey_types": [
+        "Fish and Invertebrates",
+        "Fish Only",
+        "Invertebrates Only"
+      ],
+      "near": [
+        "TWA",
+        "NE"
+      ],
+      "bounds": [
+        [
+          24,
+          -90
+        ],
+        [
+          37,
+          -70
+        ]
+      ]
     },
     {
-      "id": "NE", "enabled": false, "reef": "NE", "prefixes": [],
-      "name": "Northeast US & Canada", "long": "Northeast US and Eastern Canada (NE)",
-      "survey_id": "23", "survey_types": ["Fish and Invertebrates", "Fish Only", "Invertebrates Only"], "near": ["SAS"]
+      "id": "NE",
+      "enabled": false,
+      "reef": "NE",
+      "prefixes": [],
+      "name": "Northeast US & Canada",
+      "long": "Northeast US and Eastern Canada (NE)",
+      "survey_id": "23",
+      "survey_types": [
+        "Fish and Invertebrates",
+        "Fish Only",
+        "Invertebrates Only"
+      ],
+      "near": [
+        "SAS"
+      ],
+      "bounds": [
+        [
+          34,
+          -80
+        ],
+        [
+          52,
+          -50
+        ]
+      ]
     },
     {
-      "id": "EAM", "enabled": false, "reef": "EAM", "prefixes": [],
-      "name": "Eastern Atlantic & Med", "long": "Eastern Atlantic and Mediterranean (EAM)",
-      "survey_id": "32", "survey_types": ["Fish and Invertebrates", "Fish Only", "Invertebrates Only"], "near": ["NE"]
+      "id": "EAM",
+      "enabled": false,
+      "reef": "EAM",
+      "prefixes": [],
+      "name": "Eastern Atlantic & Med",
+      "long": "Eastern Atlantic and Mediterranean (EAM)",
+      "survey_id": "32",
+      "survey_types": [
+        "Fish and Invertebrates",
+        "Fish Only",
+        "Invertebrates Only"
+      ],
+      "near": [
+        "NE"
+      ],
+      "bounds": [
+        [
+          -5,
+          -35
+        ],
+        [
+          70,
+          40
+        ]
+      ]
     }
   ]
 }

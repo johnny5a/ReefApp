@@ -211,7 +211,7 @@ function parseRegion(d){
   const famOrder = new Map((d.famOrder||[]).map((f,i)=>[f.toLowerCase(),i]));
   const fg = d.formGroups; const formNames = fg?.names||[];
   if(fg) for(const sp of species){ const g=fg.codes[sp.code]; if(g){ sp.gi=g[0]; sp.gp=g[1]; } }
-  const coords = new Map((d.coords||"").split("\n").filter(Boolean).map(l=>{ const [c,la,lo]=l.split("|"); return [c,[+la,+lo]]; }));
+  const coords = new Map((d.coords||"").split("\n").filter(Boolean).map(l=>{ const [c,la,lo,fl]=l.split("|"); return [c,[+la,+lo,fl==="a"]]; }));
   return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder,formNames,example:d.example||"Site name, area, or zone code"}, species, coords, unl, zones, freq, quick:new Set(d.quick||[])};
 }
 function useRegion(x){
@@ -629,7 +629,7 @@ function loadLeaflet(){
 function distKm(a,b){ const r=Math.PI/180, x=(b[1]-a[1])*r*Math.cos((a[0]+b[0])/2*r), y=(b[0]-a[0])*r; return Math.sqrt(x*x+y*y)*6371; }
 function sitePopup(s){
   const f=FREQ.get(s.code);
-  return `<div class="pop"><b>${esc(s.name)}</b><br><span class="hint">${esc(s.area)} · ${s.code}${f?` · ${f.n.toLocaleString()} REEF surveys`:""}</span><br><button type="button" class="btn" data-site="${s.code}" style="margin-top:6px;min-height:38px;padding:6px 12px">Use this site</button></div>`;
+  return `<div class="pop"><b>${esc(s.name)}</b><br><span class="hint">${esc(s.area)} · ${s.code}${f?` · ${f.n.toLocaleString()} REEF surveys`:""}</span>${COORDS.get(s.code)?.[2]?`<br><span class="hint" style="color:var(--warn)">Approximate spot: REEF's location for this site has an error</span>`:""}<br><button type="button" class="btn" data-site="${s.code}" style="margin-top:6px;min-height:38px;padding:6px 12px">Use this site</button></div>`;
 }
 /* ---------- Near me: filter sites to a distance from where you are ----------
    Miles by default, km if you log depths in meters. The radius is remembered. */
@@ -671,7 +671,8 @@ function drawSiteDots(fit){
   const sites=mapSites();
   for(const s of sites){
     const ll=COORDS.get(s.code), busy=(FREQ.get(s.code)?.n||0)>=FREQ_MIN_SURVEYS;
-    L.circleMarker(ll,{renderer:siteMap._dotRenderer, radius:busy?7:5, weight:1, color:"#fff", fillColor:acc, fillOpacity:busy?.95:.45}).bindPopup(sitePopup(s)).addTo(siteLayer);
+    const approx=ll[2];
+    L.circleMarker([ll[0],ll[1]],{renderer:siteMap._dotRenderer, radius:busy?7:5, weight:approx?2:1, color:approx?acc:"#fff", fillColor:acc, fillOpacity:approx?.1:(busy?.95:.45)}).bindPopup(sitePopup(s)).addTo(siteLayer);
   }
   const note=document.getElementById("mapNote");
   if(note) note.textContent = (sites.length?`${sites.length.toLocaleString()} site${sites.length===1?"":"s"} shown`:"No mapped sites match")+(navigator.onLine?"":" · map background needs signal");
@@ -684,7 +685,7 @@ function drawSiteDots(fit){
     meMarker=L.circleMarker(ui.near,{radius:8,color:"#fff",weight:2,fillColor:"#1e88e5",fillOpacity:1}).addTo(siteMap).bindTooltip("You");
     if(fit) siteMap.fitBounds(siteMap._nearCircle.getBounds(),{padding:[10,10]});
     if(note) note.textContent = sites.length?`${sites.length.toLocaleString()} site${sites.length===1?"":"s"} within ${nearRadius()} ${distUnit()}`:`No sites within ${nearRadius()} ${distUnit()}`;
-  } else if(fit && sites.length){ const b=L.latLngBounds(sites.map(s=>COORDS.get(s.code))); siteMap.fitBounds(b.pad(0.15),{maxZoom:13}); }
+  } else if(fit && sites.length){ const b=L.latLngBounds(sites.map(s=>COORDS.get(s.code).slice(0,2))); siteMap.fitBounds(b.pad(0.15),{maxZoom:13}); }
 }
 async function showSiteMap(sv){
   const el=document.getElementById("sitemap"); if(!el) return;
@@ -695,7 +696,7 @@ async function showSiteMap(sv){
   siteMap._dotRenderer=L.canvas({padding:0.5});
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18, attribution:"© OpenStreetMap contributors"}).addTo(siteMap);
   siteLayer=L.layerGroup().addTo(siteMap);
-  const here=sv?.info?.zone && COORDS.get(sv.info.zone);
+  const here=sv?.info?.zone && COORDS.get(sv.info.zone)?.slice(0,2);
   if(here && !ui.siteQ && !ui.near){ drawSiteDots(false); siteMap.setView(here,13); }
   else drawSiteDots(true);
 }

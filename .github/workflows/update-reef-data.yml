@@ -55,14 +55,14 @@ jobs:
           sed -i -E "s/const VERSION = \"[^\"]*\"/const VERSION = \"reef-survey-data-$(date -u +%Y%m%d%H%M)\"/" sw.js
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src index.html data sw.js
+          git add src index.html data docs sw.js
           git commit -m "Update REEF data ($(cat src/data_date.txt))"
           # Someone may have pushed while the download ran; replay on top of it
           for i in 1 2 3; do
             if git pull --rebase -X theirs origin main; then
               # Rebuild on top of whatever app changes landed meanwhile, so they are never undone
               python3 build.py
-              git add index.html data
+              git add index.html data docs
               git diff --cached --quiet || git commit --amend --no-edit
               git push && exit 0
             fi
