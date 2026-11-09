@@ -1,1047 +1,1047 @@
-0884|Acadian Redfish|Sebastes fasciatus|Scorpaenidae
-1154|Accidental Clingfish|Tomicodon reitzae|Gobiesocidae
-1130|African Oyster Blenny|Hypleurochilus aequipinnis|Blenniidae
-0448|African Pompano|Alectis ciliaris|Carangidae
-1135|Agujon Needlefish|Tylosurus acus|Belonidae
-0731|Alewife Herring|Alosa pseudoharengus|Clupeidae
-0449|Almaco Jack|Seriola rivoliana|Carangidae
-0712|American Eel|Anguilla rostrata|Anguillidae
-0723|American Plaice|Hippoglossoides platessoides|Pleuronectidae
-0732|American Shad|Alosa sapidissima|Clupeidae
-0997|Anemone Starksia sp (undescribed spB Cuba2016)|Starksia sp A|Labrisomidae
-0528|Aquavina|Diplectrum radiale|Serranidae
-0714|Arctic Shanny|Stichaeus punctatus punctatus|Stichaeidae
-1100|Argentine Seabass|Acanthistius brasilianus|Serranidae
-0013|Arrow Blenny|Lucayablennius zingaro|Chaenopsidae
-1076|Arrow Stargazer|Gillellus greyae|Dactyloscopidae
-0616|Atlantic Bonito|Sarda sarda|Scombridae
-0450|Atlantic Bumper|Chloroscombrus chrysurus|Carangidae
-0702|Atlantic Cod|Gadus morhua|Gadidae
-0710|Atlantic Croaker|Micropogonias undulatus|Sciaenidae
-1116|Atlantic Cutlassfish|Trichiurus lepturus|Trichiuridae
-0349|Atlantic Flashlight|Kryptophanaron alfredi|Anomalopidae
-0512|Atlantic Guitarfish|Rhinobatos lentiginosus|Rhinobatidae
-0763|Atlantic Hagfish|Myxine glutinosa|Myxinidae
-0733|Atlantic Herring|Clupea harengus|Clupeidae
-0451|Atlantic Leatherjack|Oligoplites saurus|Carangidae
-0736|Atlantic Mackerel|Scomber scombrus|Scombridae
-1099|Atlantic Mangrove Blenny|Lupinoblennius vinctus|Chaenopsidae
-0950|Atlantic Manta Ray|Mobula yarae|Mobulidae
-0734|Atlantic Menhaden|Brevoortia tyrannus|Clupeidae
-0844|Atlantic Midshipman|Porichthys plectrodon|Batrachoididae
-0923|Atlantic Moonfish|Selene setapinnis|Carangidae
-0483|Atlantic Needlefish|Strongylura marina|Belonidae
-0993|Atlantic Oyster Blenny|Hypleurochilus pseudoaequipinnis|Blenniidae
-0744|Atlantic Salmon|Salmo salar|Salmonidae
-0768|Atlantic Seasnail|Liparis atlanticus|Cyclopteridae
-0557|Atlantic Sharpnose Shark|Rhizoprionodon terraenovae|Carcharhinidae
-0769|Atlantic Silverside|Menidia menidia|Atherinopsidae
-0235|Atlantic Spadefish|Chaetodipterus faber|Ephippidae
-0765|Atlantic Spiny Lumpsucker|Eumicrotremus spinosus|Cyclopteridae
-0841|Atlantic Stingray|Dasyatis sabina|Dasyatidae
-0633|Atlantic Thread Herring|Opisthonema oglinum|Clupeidae
-0878|Atlantic Tomcod|Microgadus tomcod|Gadidae
-0510|Atlantic Torpedo Ray|Torpedo nobiliana|Torpedinidae
-0713|Atlantic Wolffish|Anarhichas lupus|Anarhichadidae
-0847|Bahamas (Red Banner) Blenny (pka Redspine Glass Blenny)|Emblemariopsis occidentalis|Chaenopsidae
-0403|Balao|Hemiramphus balao|Hemiramphidae
-1106|Bald Blenny|Paraclinus infrons|Labrisomidae
-0163|Balloonfish|Diodon holocanthus|Diodontidae
-0404|Ballyhoo|Hemiramphus brasiliensis|Hemiramphidae
-0316|Banded Blenny|Paraclinus fasciatus|Labrisomidae
-0030|Banded Butterflyfish|Chaetodon striatus|Chaetodontidae
-0715|Banded Gunnel|Pholis fasciata|Pholidae
-0462|Banded Jawfish|Opistognathus macrognathus|Opistognathidae
-0738|Banded Killifish|Fundulus diaphanus|Cyprinodontidae
-0890|Banded Puffer|Colomesus psittacus|Tetraodontidae
-0614|Banded Rudderfish|Seriola zonata|Carangidae
-0164|Bandtail Puffer|Sphoeroides spengleri|Tetraodontidae
-0545|Bandtail Searobin|Prionotus ophryas|Triglidae
-0652|Bandtooth Conger|Ariosoma balearicum|Congridae
-0594|Bank Butterflyfish|Chaetodon aya|Chaetodontidae
-0529|Bank Sea Bass|Centropristis ocyurus|Serranidae
-0883|Banner Blenny|Emblemaria atlantica|Chaenopsidae
-0415|Banner Goby|Microgobius microlepis|Gobiidae
-0777|Bantam Bass|Parasphyraenops incisus|Serranidae
-0133|Bar Jack|Caranx ruber|Carangidae
-0820|Barber Goby (aka Widestripe Goby)|Gobiosoma figaro|Gobiidae
-0524|Barbfish|Scorpaena brasiliensis|Scorpaenidae
-0632|Barbu|Polydactylus virginicus|Polynemidae
-0317|Barfin Blenny|Malacoctenus versicolor|Labrisomidae
-0952|Barfin Goby|Coryphopterus alloides|Gobiidae
-0311|Barred Blenny|Hypleurochilus bermudensis|Blenniidae
-0035|Barred Cardinalfish|Apogon binotatus|Apogonidae
-0362|Barred Clingfish|Tomicodon fasciatus|Gobiesocidae
-0118|Barred Hamlet (Caribbean)|Hypoplectrus puella|Serranidae
-0862|Barred Searobin|Prionotus martis|Triglidae
-0466|Barsnout Goby|Elacatinus illecebrosum|Gobiidae
-0417|Bartail Goby|Coryphopterus thrix|Gobiidae
-0752|Basking Shark|Cetorhinus maximus|Lamnidae
-0760|Bay Anchovy|Anchoa mitchilli|Engraulidae
-0963|Bearded Brotula|Brotula barbata|Ophidiidae
-0806|Bearded Goby|Barbulifer ceuthoecus|Gobiidae
-0579|Bearded Toadfish|Sanopus barbatus|Batrachoididae
-0047|Beaugregory|Stegastes leucostictus|Pomacentridae
-1060|Belize Blackcheek Blenny|Starksia weigti|Labrisomidae
-0036|Belted Cardinalfish|Apogon townsendi|Apogonidae
-0577|Belted Sandfish|Serranus subligarius|Serranidae
-0635|Bermuda Bream|Diplodus bermudensis|Sparidae
-0221|Bermuda Chub/Gray Chub|Kyphosus sectatrix / K. bigibbus|Kyphosidae
-0991|Bermuda Creole Wrasse|Clepticus sp. A|Labridae
-0636|Bermuda Halfbeak|Hemiramphus bermudensis|Hemiramphidae
-0992|Bermuda Hog-mouth Fry (aka Bermuda Anchovy)|Anchoa choerostoma|Engraulidae
-0678|Bermuda killifish|Fundulus bermudae|Cyprinodontidae
-0811|Bicolor Blenny|Malacoctenus sp.|Labrisomidae
-0048|Bicolor Damselfish|Stegastes partitus|Pomacentridae
-0835|Bicolored Sand Eel|Bascanichthys paulensis|Ophichthidae
-1111|Big-eyed Frogfish|Antennarius radiosus|Antennariidae
-0011|Bigeye|Priacanthus arenatus|Priacanthidae
-0955|Bigeye Anchovy|Anchoa lamprotaenia|Engraulidae
-0475|Bigeye Mojarra|Eucinostomus havana|Gerreidae
-0452|Bigeye Scad|Selar crumenophthalmus|Carangidae
-0874|Bighead Searobin|Prionotus tribulus|Triglidae
-0350|Bigtooth Cardinalfish|Apogon affinis|Apogonidae
-0588|Black Brotula|Stygnobrotula latebricola|Bythitidae
-0376|Black Drum|Pogonias cromis|Sciaenidae
-0207|Black Durgon|Melichthys niger|Balistidae
-0091|Black Grouper|Mycteroperca bonaci|Serranidae
-0443|Black Grunt|Haemulon bonariense|Haemulidae
-0119|Black Hamlet|Hypoplectrus nigricans|Serranidae
-0453|Black Jack|Caranx lugubris|Carangidae
-0109|Black Margate|Anisotremus surinamensis|Haemulidae
-0531|Black Sea Bass|Centropristis striata|Serranidae
-0600|Black Snapper|Apsilus dentatus|Lutjanidae
-1151|Black-tailed Dascyllus (Non-native)|Dascyllus melanurus|Pomacentridae
-0695|Blackbar Drum|Equetus iwamotoi|Sciaenidae
-1095|Blackbar Shy Blenny|Starksia fasciata|Labrisomidae
-0198|Blackbar Soldierfish|Myripristis jacobus|Holocentridae
-1059|Blackbelly Blenny|Stathmonotus hemphillii|Chaenopsidae
-0009|Blackcap Basslet|Gramma melacara|Grammatidae
-0849|Blackcheek Shy Blenny Complex|Starksia lepicoelia complex|Labrisomidae
-0724|Blackcheek Tonguefish|Symphurus plagiusa|Cynoglossidae
-0826|Blackear Bass|Serranus atrobranchus|Serranidae
-0212|Blackear Wrasse|Halichoeres poeyi|Labridae
-0381|Blackedge Moray|Gymnothorax nigromarginatus|Muraenidae
-0342|Blackedge Triplefin|Enneanectes atrorus|Tripterygiidae
-0318|Blackfin Blenny|Paraclinus nigripinnis|Labrisomidae
-0037|Blackfin Cardinalfish|Astrapogon puncticulatus|Apogonidae
-1058|Blackfin Glass Blenny (pka Fine-cirrus Blenny)|Emblemariopsis leptocirris|Chaenopsidae
-0189|Blackfin Snapper|Lutjanus buccanella|Lutjanidae
-1153|Blackfin Tuna|Thunnus atlanticus|Scombridae
-1072|Blackfinned Clingfish|Gobiesox nigripinnis|Gobiesocidae
-0842|Blacknose Shark|Carcharhinus acronotus|Carcharhinidae
-1014|Blackpored Eel|Ophichthus melanoporus|Ophichthidae
-0670|Blackringed Goby|Tigrigobius zebrellus|Gobiidae
-0387|Blackspotted Snake Eel|Quassiremus ascensionis|Ophichthidae
-0186|Blacktip Shark|Carcharhinus limbatus|Carcharhinidae
-0798|Blackwing Searobin|Prionotus rubio|Triglidae
-0001|Blue Angelfish|Holacanthus bermudensis|Pomacanthidae
-0042|Blue Chromis|Azurina cyanea|Pomacentridae
-0896|Blue Croaker|Bairdiella batabana|Sciaenidae
-0078|Blue Dartfish (Blue Goby)|Ptereleotris calliurus|Ptereleotridae
-0120|Blue Hamlet|Hypoplectrus gemma|Serranidae
-0602|Blue Marlin|Makaira nigricans|Istiophoridae
-0144|Blue Parrotfish|Scarus coeruleus|Scaridae
-0134|Blue Runner|Caranx crysos|Carangidae
-0753|Blue Shark|Prionace glauca|Carcharhinidae
-0204|Blue Tang|Acanthurus coeruleus|Acanthuridae
-0735|Blueback Herring|Alosa aestivalis|Clupeidae
-0637|Bluebar Jawfish (no longer a valid spp; Yellowhead Jawfish)|Opistognathus sp.|Opistognathidae
-0775|Bluefin Tuna|Thunnus thynnus|Scombridae
-0737|Bluefish|Pomatomus saltatrix|Pomatomidae
-1085|Bluegold Glass Blenny|Emblemariopsis ruetzleri|Chaenopsidae
-0776|Bluegold Goby|Lythrypnus spilus|Gobiidae
-0213|Bluehead|Thalassoma bifasciatum|Labridae
-0931|Bluelip Hamlet|Hypoplectrus affinis|Serranidae
-0145|Bluelip Parrotfish|Cryptotomus roseus|Scaridae
-0920|Bluespotted Blenny|Acanthemblemaria cf. rivasi|Chaenopsidae
-0222|Bluespotted Cornetfish|Fistularia tabacaria|Fistulariidae
-0801|Bluespotted Damselfish|Stegastes fuscus|Pomacentridae
-0789|Bluespotted Searobin|Prionotus roseus|Triglidae
-0653|Bluestriped Dartfish|Ptereleotris randalli|Ptereleotridae
-0105|Bluestriped Grunt|Haemulon sciurus|Haemulidae
-0469|Bluestriped Lizardfish|Synodus saurus|Synodontidae
-0340|Bluethroat Pikeblenny|Chaenopsis ocellata|Chaenopsidae
-0850|Bluewing Searobin|Prionotus punctatus|Triglidae
-1065|Blunt-snout Goby|Psilotris amblyrhynchus|Gobiidae
-1117|Bluntnose Jack|Hemicaranx amblyrhynchus|Carangidae
-0754|Bluntnose Stingray|Hypanus say|Dasyatidae
-0023|Boga|Haemulon vittatum|Haemulidae
-0347|Bonefish|Albula vulpes|Albulidae
-0547|Bonnethead|Sphyrna tiburo|Sphyrnidae
-0024|Bonnetmouth|Emmelichthyops atlanticus|Haemulidae
-0943|Brassy Chub|Kyphosus vaigiensis|Kyphosidae
-1147|Brazil Clingfish|Tomicodon australis|Gobiesocidae
-1075|Brazil Ocean Surgeonfish|Acanthurus bahianus|Acanthuridae
-0975|Brazilian Basslet|Gramma brasiliensis|Grammatidae
-0819|Brazilian Cardinal|Apogon americanus|Apogonidae
-0980|Brazilian Chromis (aka Jubauna Reeffish)|Chromis jubauna|Pomacentridae
-1013|Brazilian Clown Wrasse|Halichoeres penrosei|Labridae
-1015|Brazilian Cocoa Damselfish|Stegastes variabilis|Pomacentridae
-1084|Brazilian Glass Blenny|Emblemariopsis signifer|Chaenopsidae
-0809|Brazilian Razorfish|Xyrichtys incandescens|Labridae
-0977|Brazilian Reef Stingray|Hypanus marianae|Dasyatidae
-1141|Brazilian Saddled Blenny|Malacoctenus zaluari|Labrisomidae
-0967|Brazilian Wrasse|Halichoeres brasiliensis|Labridae
-0982|Brazilian Yellowcheek Wrasse|Halichoeres dimidiatus|Labridae
-0351|Bridle Cardinalfish|Apogon aurolineatus|Apogonidae
-0165|Bridled Burrfish|Chilomycterus antennatus|Diodontidae
-0935|Bridled Goby (true species; not complex)|Coryphopterus glaucofraenum|Gobiidae
-0079|Bridled Goby Complex (Bridled/Sand-Canyon/Patch-Reef)|C. glaucofraenum/C. venezuelae/C. tortugae|Gobiidae
-0382|Broadbanded Moray|Channomuraena vittata|Muraenidae
-0352|Broadsaddle Cardinalfish|Apogon pillionatus|Apogonidae
-0418|Broadstripe Goby|Elacatinus prochilos|Gobiidae
-1006|Broadstripe/Sharknose Goby Group Windward Lesser Antilles|Elacatinus prochilos / Elacatinus evelynae group|Gobiidae
-0353|Bronze Cardinalfish|Astrapogon alutus|Apogonidae
-0444|Bronzestriped Grunt|Haemulon boschmae|Haemulidae
-0865|Brown Burrfish|Chilomycterus spinosus spinosus|Diodontidae
-0043|Brown Chromis|Azurina multilineata|Pomacentridae
-0060|Brown Garden Eel|Heteroconger longissimus|Congridae
-0817|Brownbar Goby|Priolepis dawsoni|Gobiidae
-0808|Brownstripe Grunt|Anisotremus moricandi|Haemulidae
-0892|Brushtail Tang (exotic)|Zebrasoma scopas|Acanthuridae
-0146|Bucktooth Parrotfish|Sparisoma radians|Scaridae
-0915|Bulb-Snout Snake Eels (incl. Whip Eel)|Bascanichthys spp. (incl. B. scuticaris)|Ophichthidae
-0900|Bull Pipefish|Syngnathus springeri|Syngnathidae
-0552|Bull Shark|Carcharhinus leucas|Carcharhinidae
-1136|Bullnose Ray|Myliobatis freminvillei|Myliobatidae
-1109|Burro Grunt|Rhonciscus crocro|Haemulidae
-0121|Butter Hamlet|Hypoplectrus unicolor|Serranidae
-0761|Butterfish|Peprilus triacanthus|Stromateidae
-0106|Caesar Grunt|Haemulon carbonarium|Haemulidae
-0532|Candy Basslet|Liopropoma carmabi|Liopropomatinae
-0568|Cardinal Soldierfish|Plectrypops retrospinis|Holocentridae
-1080|Caribbean Blenny|Emblemaria caldwelli|Chaenopsidae
-0901|Caribbean Neon Goby|Elacatinus lobeli|Gobiidae
-0907|Caribbean ocellated moray|Gymnothorax ocellatus|Muraenidae
-0685|Caribbean Pipefish|Syngnathus caribbaeus|Syngnathidae
-0504|Caribbean Puffer|Sphoeroides greeleyi|Tetraodontidae
-0561|Caribbean Red Snapper|Lutjanus purpureus|Lutjanidae
-0627|Caribbean Tonguefish|Symphurus arawak|Cynoglossidae
-0511|Caribbean Torpedo|Torpedo sp.|Torpedinidae
-0519|Caribbean Whiptail Stingray|Himantura schmardae|Dasyatidae
-0368|Carolina Hake|Urophycis earllii|Gadidae
-0533|Cave Basslet|Liopropoma mowbrayi|Liopropomatinae
-0929|Cayman Bluespotted Variant Yellow Jawfish (aka Dottie’s Jawfish)|Opistognathus cf. gilberti|Opistognathidae
-0946|Cayman Cleaning Goby|Elacatinus cayman|Gobiidae
-1068|Cayman Greenbanded Goby|Tigrigobius harveyi|Gobiidae
-1003|Cayman Sponge Goby|Elacatinus centralis|Gobiidae
-0142|Cero|Scomberomorus regalis|Scombridae
-0061|Chain Moray|Echidna catenata|Muraenidae
-0879|Chain Pipefish|Syngnathus louisianae|Syngnathidae
-0179|Chalk Bass|Serranus tortugarum|Serranidae
-0666|Chameleon Blenny|Protemblemaria punctata|Chaenopsidae
-0396|Channel Flounder|Syacium micrurum|Bothidae
-1069|Checkerboard Frillfin|Bathygobius lacertus|Gobiidae
-0505|Checkered Puffer|Sphoeroides testudineus|Tetraodontidae
-0320|Checkered Shy Blenny Complex|Starksia ocellata complex|Labrisomidae
-0002|Cherubfish|Centropyge argi|Pomacanthidae
-0675|Chessboard Shy Blenny Complex|Starksia sluiteri complex|Labrisomidae
-0383|Chestnut Moray|Enchelycore carychroa|Muraenidae
-0778|Chub Mackerel|Scomber japonicus|Scombridae
-0824|Cinta Goby|Tigrigobius redimiculus|Gobiidae
-0419|Cleaning Goby|Elacatinus genie|Gobiidae
-0517|Clearnose Skate|Rostroraja eglanteria|Rajidae
-0838|Clown Goby|Microgobius gulosus|Gobiidae
-0214|Clown Wrasse|Halichoeres maculipinna|Labridae
-0367|Cobia|Rachycentron canadum|Rachycentridae
-0049|Cocoa Damselfish|Stegastes xanthurus|Pomacentridae
-0881|Code Goby|Gobiosoma robustum|Gobiidae
-0947|Colin's Sponge Goby|Elacatinus colini|Gobiidae
-0080|Colon Goby|Coryphopterus dicrus|Gobiidae
-0233|Common Snook|Centropomus undecimalis|Centropomidae
-0354|Conchfish|Astrapogon stellatus|Apogonidae
-0093|Coney|Cephalopholis fulva|Serranidae
-0810|Coney x Creolefish Hybrid|Menephorus sp.|Serranidae
-0379|Conger Eel|Conger oceanicus|Congridae
-0918|Contoy Hamlet|Hypoplectrus ecosur|Serranidae
-0795|Convict Goby|Lythrypnus phorellus|Gobiidae
-0321|Coral Blenny|Paraclinus cingulatus|Labrisomidae
-0672|Coral Scorpionfish|Scorpaena albifimbria|Scorpaenidae
-0445|Corocoro Grunt|Orthopristis ruber|Haemulidae
-0454|Cottonmouth Jack|Uraspis secunda|Carangidae
-0107|Cottonwick|Haemulon melanurum|Haemulidae
-0807|Cownose Ray|Rhinoptera bonasus|Dasyatidae
-1079|Cozumel Toadfish (not the same as Splendid Toad)|Sanopus johnsoni|Batrachoididae
-0215|Creole Wrasse|Bodianus parrae|Labridae
-0180|Creolefish (Atlantic)|Paranthias furcifer|Serranidae
-0608|Crested Blenny|Hypleurochilus geminatus|Blenniidae
-0420|Crested Goby|Lophogobius cyprinoides|Gobiidae
-0960|Crested Pipefish|Cosmocampus brachycephalus|Syngnathidae
-0135|Crevalle Jack|Caranx hippos|Carangidae
-0858|Crosshatch Bass|Serranus luciopercanus|Serranidae
-1062|Cryptic Clingfish|Tomicodon cryptus|Gobiesocidae
-0987|Cubana Goby (undescribed Elactinus sp A Cuba2016)|Elacatinus sp. A|Gobiidae
-0055|Cubbyu|Pareques umbrosus|Sciaenidae
-0190|Cubera Snapper|Lutjanus cyanopterus|Lutjanidae
-0759|Cunner|Tautogolabrus adspersus|Labridae
-0703|Cusk|Brosme brosme|Gadidae
-1125|Darksaddle Blenny|Starksia sella|Labrisomidae
-0421|Dash Goby|Ctenogobius saepepallens|Gobiidae
-0921|Dashback Goby|Microgobius signatus|Gobiidae
-0716|Daubed Shanny|Lumpenus maculatus|Stichaeidae
-0696|Deepreef Scorpionfish|Scorpaenodes tredecimspinosus|Scorpaenidae
-0567|Deepwater Squirrelfish|Sargocentron bullisi|Holocentridae
-0800|Delalande Blenny|Malacoctenus delalandii|Labrisomidae
-0014|Diamond Blenny|Malacoctenus boehlkei|Labrisomidae
-0687|Diamond Pipefish|Syngnathus sp.|Syngnathidae
-1051|Diphasic Goby|Lythrypnus heterochroma|Gobiidae
-0205|Doctorfish|Acanthurus chirurgus|Acanthuridae
-0191|Dog Snapper|Lutjanus jocu|Lutjanidae
-0391|Dotterel Filefish|Aluterus heudeloti|Monacanthidae
-1088|Doubtful Lizardfish|Saurida suspicio|Synodontidae
-0323|Downy Blenny|Labrisomus kalisherae|Labrisomidae
-0864|Drab Sole|Achirus achirus|Achiridae
-0904|Dusky Anchovy|Anchoa lyolepis|Engraulidae
-0324|Dusky Blenny|Malacoctenus gilli|Labrisomidae
-0038|Dusky Cardinalfish|Phaeoptyx pigmentaria|Apogonidae
-0050|Dusky Damselfish|Stegastes adustus|Pomacentridae
-0397|Dusky Flounder|Syacium papillosum|Bothidae
-0986|Dusky Grouper|Epinephelus marginata|Serranidae
-0463|Dusky Jawfish|Opistognathus whitehurstii|Opistognathidae
-0692|Dusky Pipefish|Syngnathus floridae|Syngnathidae
-0553|Dusky Shark|Carcharhinus obscurus|Carcharhinidae
-0199|Dusky Squirrelfish|Sargocentron vexillarium|Holocentridae
-0407|Dwarf Frogfish|Antennarius pauciradiatus|Antennariidae
-0413|Dwarf Goatfish|Upeneus parvus|Mullidae
-1022|Dwarf Goby|Lythrypnus elasson|Gobiidae
-0629|Dwarf Herring|Jenkinsia lamprotaenia|Atherinidae, Clupeidae, and Engraulidae
-0534|Dwarf Sand Perch|Diplectrum bivittatum|Serranidae
-0887|Dwarf Seahorse|Hippocampus zosterae|Syngnathidae
-1096|Dwarf Shy Blenny|Starksia nanodes|Labrisomidae
-0322|Dwarf Shy Blenny Complex|Starksia nanodes complex|Labrisomidae
-1089|Dwarf Spinyhead Blenny|Acanthemblemaria paula|Chaenopsidae
-0587|Dwarf Wrasse|Doratonotus megalepis|Labridae
-0325|Eelgrass Blenny|Stathmonotus stahli|Chaenopsidae
-0996|Eightlined Goby (undescribed Ginburgellus spE Cuba2016)|Ginburgellus sp A|Gobiidae
-0363|Emerald Clingfish|Acyrtops beryllinus|Gobiesocidae
-0488|Emerald Parrotfish|Nicholsina usta usta|Scaridae
-0771|Emperor Angelfish (exotic)|Pomacanthus imperator|Pomacanthidae
-0868|Erect Goby|Microgobius erectus|Gobiidae
-0422|Exuma Goby|Elacatinus atronasum|Gobiidae
-0073|Eyed Flounder|Bothus ocellatus|Bothidae
-0010|Fairy Basslet|Gramma loreto|Grammatidae
-1082|Falcon (Red Banner) Blenny|Emblemariopsis falcon|Chaenopsidae
-1053|False Moray|Kaupichthys hyoproroides|Chlopsidae
-0803|False Pilchard|Harengula clupeola|Atherinidae, Clupeidae, and Engraulidae
-0480|Fantail Mullet|Mugil trichodon|Mugilidae
-0717|Fawn Cusk Eel|Lepophidium cervinum|Ophidiidae
-0700|Feather Blenny|Hypsoblennius hentz|Blenniidae
-0922|Featherduster Blenny|Hypleurochilus multifilis|Blenniidae
-0804|Filament Blenny|Emblemaria hyltoni|Chaenopsidae
-0880|Finetooth Shark|Carcharhinus isodon|Carcharhinidae
-0681|Flabby Sole|Gymnachirus nudus|Achiridae
-0941|Flagfin Glass Blenny Complex|Emblemariopsis sp. (Flagfin complex)|Chaenopsidae
-0476|Flagfin Mojarra|Eucinostomus melanopterus|Gerreidae
-0301|Flameback Angelfish|Centropyge aurantonotus|Pomacanthidae
-0039|Flamefish|Apogon maculatus|Apogonidae
-0484|Flat Needlefish|Ablennes hians|Belonidae
-0917|Florida Barred Hamlet|Hypoplectrus floridae|Serranidae
-0882|Florida Blenny|Chasmodes saburrae|Blenniidae
-0455|Florida Pompano|Trachinotus carolinus|Carangidae
-0959|Florida Smoothhead Glass Blenny|Emblemariopsis diaphana|Chaenopsidae
-0225|Flying Gurnard|Dactylopterus volitans|Dactylopteridae
-1103|Forked-bar Blenny|Starksia y-lineata|Labrisomidae
-0725|Four Spot Flounder|Paralichthys oblongus|Bothidae
-0704|Fourbeard Rockling|Enchelyopus cimbrius|Gadidae
-0031|Foureye Butterflyfish|Chaetodon capistratus|Chaetodontidae
-0966|Fourspot Parrotfish|Scarus zelindae|Scaridae
-0618|Freckled Blenny|Hypsoblennius ionthas|Blenniidae
-0355|Freckled Cardinalfish|Phaeoptyx conklini|Apogonidae
-0564|Freckled Soapfish|Rypticus bistrispinus|Grammistidae
-0948|Frecklefin Goby|Tigrigobius gemmatus|Gobiidae
-0003|French Angelfish|Pomacanthus paru|Pomacanthidae
-0108|French Grunt|Haemulon flavolineatum|Haemulidae
-1078|Freshwater Gregory|Stegastes otophorus|Pomacentridae
-1137|Frigate Mackerel|Auxis thazard|Scombridae
-0423|Frillfin Goby|Bathygobius soporator|Gobiidae
-0962|Fringed / Planehead / Pygmy Filefish Complex|Monacanthus ciliatus / Stephanolepis hispida / Stephanolepis setifer|Monacanthidae
-0392|Fringed Filefish|Monacanthus ciliatus|Monacanthidae
-0802|Gafttopsail Sea Catfish|Bagre marinus|Ariidae
-0094|Gag|Mycteroperca microlepis|Serranidae
-0638|Giraffe Garden Eel|Heteroconger camelopardalis|Congridae
-0551|Glass Blenny|Coralliozetus diaphanus|Chaenopsidae
-0012|Glasseye Snapper (Atlantic)|Heteropriacanthus cruentatus|Priacanthidae
-0236|Glassy Sweeper|Pempheris schomburgkii|Pempheridae
-0933|Glover's Reef Toadfish|Vladichthys gloverensis|Batrachoididae
-0924|Goatee Blenny|Paraclinus barbatus|Labrisomidae
-0990|Golden Fairy Basslet|Gramma dejongi|Grammatidae
-0122|Golden Hamlet|Hypoplectrus gummigutta|Serranidae
-0617|Golden Smooth Trunkfish|Lactophrys triqueter|Ostraciidae
-0062|Goldentail Moray|Gymnothorax miliaris|Muraenidae
-0876|Goldface Toby|Canthigaster jamestyleri|Tetraodontidae
-0326|Goldline Blenny|Malacoctenus aurolineatus|Labrisomidae
-0081|Goldspot Goby|Gnatholepis thompsoni|Gobiidae
-0388|Goldspotted Eel|Myrichthys ocellatus|Ophichthidae
-0680|Goldspotted Killifish|Floridichthys carpio|Cyprinodontidae
-0096|Goliath Grouper|Epinephelus itajara|Serranidae
-0762|Goosefish|Lophius americanus|Lophiidae
-0697|Goosehead Scorpionfish|Scorpaena bergii|Scorpaenidae
-0871|Grass Porgy|Calamus arctifrons|Sparidae
-0004|Gray Angelfish|Pomacanthus arcuatus|Pomacanthidae
-0192|Gray Snapper|Lutjanus griseus|Lutjanidae
-0208|Gray Triggerfish|Balistes capriscus|Balistidae
-0095|Graysby|Cephalopholis cruentata|Serranidae
-0877|Gray_white-eyed goby|Emblemaria spp|Chaenopsidae
-0007|Great Barracuda|Sphyraena barracuda|Sphyraenidae
-0548|Great Hammerhead|Sphyrna mokarran|Sphyrnidae
-0136|Greater Amberjack|Seriola dumerili|Carangidae
-0234|Greater Soapfish|Rypticus saponaceus|Grammistidae
-0832|Green Blenny (Utila/Mona)|Blennidae sp. B (Green Blenny)|Blenniidae
-0063|Green Moray|Gymnothorax funebris|Muraenidae
-0173|Green Razorfish|Xyrichtys splendens|Labridae
-0661|Green Sea Turtle|Chelonia mydas|Cheloniidae
-0662|Green Sea Turtle w/ FP Tumor|Chelonia mydas|Cheloniidae
-0976|Greenback (aka Greenlip) Parrotfish|Scarus trispinosus|Scaridae
-0424|Greenbanded Goby|Tigrigobius multifasciatus|Gobiidae
-0607|Greenbanded Wrasse|Halichoeres bathyphilus|Labridae
-0147|Greenblotch Parrotfish|Sparisoma atomarium|Scaridae
-1156|Greenfield's Blenny|Starksia greenfieldi|Labrisomidae
-0746|Grubby Sculpin|Myoxocephalus aenaeus|Cottidae
-0302|Guaguanche|Sphyraena guachancho|Sphyraenidae
-0074|Gulf Flounder|Paralichthys albigutta|Bothidae
-1112|Gulf Kingfish|Menticirrhus littoralis|Sciaenidae
-0679|Gulf Pipefish|Syngnathus scovelli|Syngnathidae
-0574|Gulf Toadfish|Opsanus beta|Batrachoididae
-0705|Haddock|Melanogrammus aeglefinus|Gadidae
-0938|Hairy Blenny (actual species; not complex)|Labrisomus nuchipinnis|Labrisomidae
-0015|Hairy Blenny Complex|Labrisomus nuchipinnis/L. conditus/L.cricota|Labrisomidae
-0405|Halfbeak|Hyporhamphus unifasciatus|Hemiramphidae
-0843|Hamlet - Juvenile|Hypoplectrus sp.|Serranidae
-1098|Hamlet sp C (Black USVI)|Hypoplectrus sp. (spC)|Serranidae
-1074|Hardhead Sea Catfish|Ariopsis felis|Ariidae
-0888|Hardhead Silverside|Atherinomorus stipes|Atherinidae, Clupeidae, and Engraulidae
-0490|Harlequin / Banded Pipefish|Micrognathus crinitus|Syngnathidae
-0181|Harlequin Bass|Serranus tigrinus|Serranidae
-0926|Harvestfish|Peprilus paru|Stromateidae
-0656|Hawksbill Sea Turtle|Eretmochelys imbricata|Cheloniidae
-0303|Heliotrope Basslet|Lipogramma klayi|Grammatidae
-0654|Highfin (Red Banner) Blenny (pka Red Banner Blenny)|Emblemariopsis tayrona (prev E. ramirezi)|Chaenopsidae
-1090|Highfin Blenny|Lupinoblennius nicholsi|Chaenopsidae
-1054|Highfin Goby|Gobionellus oceanicus|Gobiidae
-0056|Highhat|Pareques acuminatus / Pareques lineatus|Sciaenidae
-0726|Hogchoker|Trinectes maculatus|Soleidae
-0130|Hogfish|Lachnolaimus maximus|Labridae
-0025|Honeycomb Cowfish|Acanthostracion polygonius|Ostraciidae
-0384|Honeycomb Moray|Gymnothorax saxicola|Muraenidae
-0969|Horned Blenny|Paraclinus grandicomis|Labrisomidae
-0899|Hornless (Red Banner) Blenny|Emblemariopsis randalli|Chaenopsidae
-0137|Horse-eye Jack|Caranx latus|Carangidae
-0227|Houndfish|Tylosurus crocodilus crocodilus|Belonidae
-0082|Hovering Dartfish (Hovering Goby)|Ptereleotris helenae|Ptereleotridae
-0925|Hybrid Boxfish (spotted/scrawled trunkfish)||Ostraciidae
-1092|Hybrid Fairy Basslet x Golden Fairy Basslet|Gramma loreto x Gramma dejongi|Grammatidae
-0129|Hybrid Hamlet|Hypoplectrus (Hybrid)|Serranidae
-0327|Imitator Blenny|Malacoctenus erdmani|Labrisomidae
-0123|Indigo Hamlet|Hypoplectrus indigo|Serranidae
-0470|Inshore Lizardfish|Synodus foetens|Synodontidae
-1128|Insular Pipefish|Anarchopterus tectus|Syngnathidae
-0526|invalid||Chaenopsidae
-0337|invalid spp||Chaenopsidae
-0612|Irish Pompano|Diapterus auratus|Gerreidae
-0676|Island Frillfin|Bathygobius mystacium|Gobiidae
-0408|Island Frogfish|Antennarius bermudensis|Antennariidae
-0867|Island Goby|Lythrypnus nesiotes|Gobiidae
-0949|Island Seahorse (undescribed)|Hippocampus sp.|Syngnathidae
-0057|Jackknife-Fish|Eques lanceolatus|Sciaenidae
-0875|Jaggedhead (aka Devil or Whitecheek) Blenny|Acanthemblemaria johnsoni|Chaenopsidae
-0825|Jarocho Goby|Elacatinus jarocho|Gobiidae
-1056|Jarocho Hamlet|Hypoplectrus atlahua|Serranidae
-0821|Jawfish (Brasil)|Opistognathus sp|Opistognathidae
-0157|Jolthead Porgy|Calamus bajonado|Sparidae
-0792|Juvenile Grunt|Haemulon sp.|Haemulidae
-0485|Keeltail Needlefish|Platybelone argalus argalus|Belonidae
-0659|Kemp's Ridley Sea Turtle|Lepidochelys kempii|Cheloniidae
-0628|Key Brotula|Ogilbia cayorum|Bythitidae
-0691|Key Worm Eel|Ahlia egmontis|Ophichthidae
-0473|King Mackerel|Scomberomorus cavalla|Scombridae
-0497|Knobbed Porgy|Calamus nodosus|Sparidae
-0909|Kuna Goby|Coryphopterus kuna|Gobiidae
-0348|Ladyfish|Elops saurus|Elopidae
-1081|Lancer (Red Banner) Blenny|Emblemariopsis lancea|Chaenopsidae
-0223|Lancer Dragonet|Paradiplogrammus bairdi|Callionymidae
-0854|Lancetail Wormfish|Microdesmus lanceolatus|Microdesmidae
-0193|Lane Snapper|Lutjanus synagris|Lutjanidae
-0182|Lantern Bass|Serranus baldwini|Serranidae
-0575|Large Eye Toadfish (Estuarine Species Only)|Batrachoides gilberti|Batrachoididae
-0857|Large-tooth Sawfish|Pristis perotteti|Pristidae
-0446|Latin Grunt|Haemulon steindachneri|Haemulidae
-0658|Leatherback Sea Turtle|Dermochelys coriacea|Dermochelyidae
-0897|Lemon Goby|Vomerogobius flavus|Gobiidae
-0554|Lemon Shark|Negaprion brevirostris|Carcharhinidae
-0425|Leopard Goby|Tigrigobius saucras|Gobiidae
-0605|Leopard Searobin|Prionotus scitulus|Triglidae
-0578|Leopard Toadfish|Opsanus pardus|Batrachoididae
-0465|Lesser Amberjack|Seriola fasciata|Carangidae
-0515|Lesser Devil Ray (aka Atlantic Devil Ray)|Mobula hypostoma|Mobulidae
-0169|Lesser Electric Ray|Narcine bancroftii|Torpedinidae
-0491|Lined Seahorse|Hippocampus erectus|Syngnathidae
-0782|Lined Sole|Achirus lineatus|Achiridae
-0416|Linesnout Goby|Elacatinus lori|Gobiidae
-0646|Lipstick surgeonfish (exotic)|Naso lituratus|Acanthuridae
-0755|Little Skate|Leucoraja erinacea|Rajidae
-0599|Little Tunny|Euthynnus alletteratus|Scombridae
-0158|Littlehead Porgy|Calamus proridens|Sparidae
-0894|Littlescale Threadfin|Polydactylus oligodon|Polynemidae
-0957|Liza Mullet|Mugil liza|Mugilidae
-0343|Lofty Triplefin|Enneanectes altivelis|Tripterygiidae
-0657|Loggerhead Sea Turtle|Caretta caretta|Cheloniidae
-0965|Long-Spined Sea Urchin|Diadema antillarum|Diadematidae
-0328|Longfin Blenny|Labrisomus haitiensis|Labrisomidae
-0051|Longfin Damselfish|Stegastes diencaeus|Pomacentridae
-0312|Longhorn Blenny|Hypsoblennius exstochilus|Blenniidae
-0747|Longhorn Sculpin|Myoxocephalus octodecemspinosus|Cottidae
-0200|Longjaw Squirrelfish|Neoniphon marianus|Holocentridae
-0224|Longlure Frogfish|Antennarius multiocellatus|Antennariidae
-0956|Longnose Batfish|Ogcocephalus corniger|Ogcocephalidae
-1108|Longnose Stingray|Hypanus guttatus|Dasyatidae
-0032|Longsnout Butterflyfish|Chaetodon aculeatus|Chaetodontidae
-0492|Longsnout Seahorse|Hippocampus reidi|Syngnathidae
-0615|Longspine Porgy|Stenotomus caprinus|Sparidae
-0201|Longspine Squirrelfish|Holocentrus rufus|Holocentridae
-0456|Lookdown|Selene vomer|Carangidae
-0764|Lumpfish|Cyclopterus lumpus|Cyclopteridae
-1115|Lutz' Stingray (Brazil only)|Hypanus berthalutzae|Dasyatidae
-0785|M. meeki|Microgobius meeki|Gobiidae
-0457|Mackerel Scad|Decapterus macarellus|Carangidae
-0688|Maculated Flounder|Bothus maculiferus|Bothidae
-0851|Madmango Sea Catfish|Cathorops spixii|Ariidae
-0373|Mahi Mahi / Dolphin / Dorado|Coryphaena hippurus|Coryphaenidae
-1123|Mahogany Goby|Lythrypnus crocodilus|Gobiidae
-0194|Mahogany Snapper|Lutjanus mahogoni|Lutjanidae
-0589|Man-of-war Fish|Nomeus gronovii|Stromateidae
-0886|Mangrove Gambusia|Gambusia rhizophorae|Poeciliidae
-1144|Manyscaled Blenny|Starksia multilepis|Labrisomidae
-0380|Manytooth Conger|Conger triporiceps|Congridae
-0668|Marbled Blenny|Paraclinus marmoratus|Labrisomidae
-0439|Marbled Grouper|Dermatolepis inermis|Serranidae
-1119|Marbled Moray|Uropterygius macularius|Muraenidae
-0506|Marbled Puffer|Sphoeroides dorsalis|Tetraodontidae
-0873|Mardi Gras Wrasse|Halichoeres burekae|Labridae
-0674|Margintail Conger|Paraconger caudilimbatus|Congridae
-0083|Masked Goby / Glass Goby|Coryphopterus personatus / hyalinus|Gobiidae
-0124|Masked Hamlet|Hypoplectrus providencianus|Serranidae
-0937|Masquerader Hairy Blenny|Labrisomus conditus|Labrisomidae
-0951|Matador Triplefin|Enneanectes matador|Tripterygiidae
-1025|Maya Hamlet|Hypoplectrus maya|Serranidae
-0822|Medusa Blenny|Acanthemblemaria medusa|Chaenopsidae
-0148|Midnight Parrotfish|Scarus coelestinus|Scaridae
-0329|Mimic Blenny|Labrisomus guppyi|Labrisomidae
-0356|Mimic Cardinalfish|Apogon phenax|Apogonidae
-0344|Mimic Triplefin|Enneanectes jordani|Tripterygiidae
-0406|Mirrorwing Flyingfish|Hirundichthys speculiger|Exocoetidae
-0440|Misty Grouper|Epinephelus mystacinus|Serranidae
-0939|Mock Blenny|Labrisomus cricota|Labrisomidae
-0641|Mola mola|Mola mola|Molidae
-0016|Molly Miller|Scartella cristata|Blenniidae
-0836|Mosquitofish|Gambusia affinis|Poeciliidae
-1066|Moth Blenny|Ekemblemaria nigra|Chaenopsidae
-0464|Mottled Jawfish|Opistognathus maxillosus|Opistognathidae
-0477|Mottled Mojarra|Eucinostomus lefroyi|Gerreidae
-0783|Moustache Jawfish|Opistognathus lonchurus|Opistognathidae
-0739|Mummichog|Fundulus heteroclitus heteroclitus|Cyprinodontidae
-0525|Mushroom Scorpionfish|Scorpaena inermis|Scorpaenidae
-0535|Mutton Hamlet|Alphestes afer|Serranidae
-0195|Mutton Snapper|Lutjanus analis|Lutjanidae
-1005|Naked Sole|Gymnachirus melas|Achiridae
-0097|Nassau Grouper|Epinephelus striatus|Serranidae
-0084|Neon Goby|Elacatinus oceanops|Gobiidae
-0912|Nevis-St. Kitts Hamlet (Not Quite Shy Hybrid)|Hypoplectrus sp. A (Nevis)|Serranidae
-1122|Nicaragua Mosquitofish|Gambusia nicaraguensis|Poeciliidae
-1063|Nicaragua Yellowprow Goby|Elacatinus xanthiprora|Gobiidae
-0372|Night Sergeant|Abudefduf taurus|Pomacentridae
-0426|Nineline Goby|Ginsburgellus novemlineatus|Gobiidae
-1019|Noronha Blenny|Scartella itajobi|Labrisomidae
-1016|Noronha Cleaner Goby|Elacatinus phthirophagus|Gobiidae
-1142|Noronha Clingfish|Acyrtus pauciradiatus|Gobiesocidae
-1148|Noronha Dwarf Goby|Lythrypnus sp.D|Gobiidae
-1149|Noronha Frillfin Goby|Bathygobius brasiliensis|Gobiidae
-1140|Noronha Saddled Blenny|Malacoctenus lianae|Labrisomidae
-0815|Noronha Wrasse|Thalassoma noronhanum|Labridae
-0008|Northern / Southern Sennet|Sphyraena borealis/picudilla|Sphyraenidae
-0774|Northern Kingcroaker|Menticirrhus saxatilis|Sciaenidae
-0766|Northern Pipefish|Syngnathus fuscus|Syngnathidae
-0767|Northern Puffer|Sphoeroides maculatus|Tetraodontidae
-0718|Northern Sand Lance|Ammodytes dubius|Ammodytidae
-0748|Northern Searobin|Prionotus carolinus|Triglidae
-0569|Northern Stargazer|Astroscopus guttatus|Uranoscopidae
-0852|Notchtongue Goby|Bathygobius curacao|Gobiidae
-0187|Nurse Shark|Ginglymostoma cirratum|Ginglymostomatidae
-0719|Ocean Pout|Macrozoarces americanus|Zoarcidae
-0206|Ocean Surgeonfish|Acanthurus tractus|Acanthuridae
-0209|Ocean Triggerfish|Canthidermis sufflamen|Balistidae
-0514|Oceanic Manta Ray|Mobula birostris|Mobulidae
-0555|Oceanic Whitetip Shark|Carcharhinus longimanus|Carcharhinidae
-0398|Ocellated Flounder|Paralichthys ommatus|Bothidae
-0409|Ocellated Frogfish|Antennarius ocellatus|Antennariidae
-0673|Ocellated Tonguefish|Symphurus ommaspilus|Cynoglossidae
-0357|Oddscale Cardinalfish|Apogon evermanni|Apogonidae
-0660|Olive Ridley Sea Turtle|Lepidochelys olivacea|Cheloniidae
-1002|One-striped Goby (undescribed spE Cuba2016)|Elacatinus sp B|Gobiidae
-0994|Onespot Rabbitfish (exotic)|Siganus unimaculatus|Siganidae
-0684|Onestripe Eel|Aprognathodon platyventris|Ophichthidae
-0828|Opossum Pipefish|Microphis brachyurus|Syngnathidae
-0068|Orange Filefish|Aluterus schoepfii|Monacanthidae
-1061|Orange-spotted Clingfish|Acyrtus lanthanum|Gobiesocidae
-0536|Orangeback Bass|Serranus annularis|Serranidae
-0085|Orangesided Goby|Tigrigobius dilepis|Gobiidae
-0694|Orangespotted Blenny|Hypleurochilus springeri|Blenniidae
-0069|Orangespotted Filefish|Cantherhines pullus|Monacanthidae
-0427|Orangespotted Goby|Nes longus|Gobiidae
-0631|Orbicular Batfish (Exotic)|Platax orbicularis|Ephippidae
-0580|Oyster Toadfish|Opsanus tau|Batrachoididae
-0953|Padded Clingfish|Arcos macrophthalmus|Gobiesocidae
-0787|Painted Wrasse|Halichoeres caudalis|Labridae
-0358|Pale Cardinalfish|Apogon planifrons|Apogonidae
-1052|Paleback Goby|Gobulus myersi|Gobiidae
-0330|Palehead Blenny|Labrisomus gobio|Labrisomidae
-1071|Palette Surgeonfish (exotic)|Paracanthurus hepatus|Acanthuridae
-0086|Pallid Goby|Coryphopterus eidolon|Gobiidae
-0791|Pallid Snake Eel|Ophichthus sp.|Ophichthidae
-0138|Palometa|Trachinotus goodei|Carangidae
-0914|Panama Cleaner Goby|Gobiosoma sp.|Gobiidae
-0307|Pancake Batfish|Halieutichthys aculeatus|Ogcocephalidae
-0891|Panther Grouper (exotic)|Cromileptes altivelis|Serranidae
-0364|Papillate Clingfish|Acyrtus artius|Gobiesocidae
-0331|Papillose Blenny|Acanthemblemaria chaplini|Chaenopsidae
-0895|Patch-Reef Goby (part of Bridled Goby Complex)|Coryphopterus tortugae|Gobiidae
-0075|Peacock Flounder|Bothus lunatus|Bothidae
-0860|Peacock Grouper (exotic)|Cephalopholis argus|Serranidae
-0313|Pearl Blenny|Entomacrodus nigricans|Blenniidae
-0590|Pearlfish|Carapus bermudensis|Carapidae
-0174|Pearly Razorfish|Xyrichtys novacula|Labridae
-0794|Pennant Coralfish|Heniochus acuminatus|Chaetodontidae
-0183|Peppermint Basslet|Liopropoma rubre|Liopropomatinae
-0087|Peppermint Goby|Coryphopterus lipernes|Gobiidae
-0139|Permit|Trachinotus falcatus|Carangidae
-0447|Pigfish|Orthopristis chrysoptera|Haemulidae
-0458|Pilot Fish|Naucrates ductor|Carangidae
-0498|Pinfish|Lagodon rhomboides|Sparidae
-0999|Pinstriped Hamlet (undescribed spD Cuba2016)|Hypoplectrus sp C|Serranidae
-0493|Pipehorse|Amphelikturus dendriticus|Syngnathidae
-0332|Pirate Blenny|Emblemaria piratula|Chaenopsidae
-0393|Planehead Filefish|Stephanolepis hispida|Monacanthidae
-0159|Pluma|Calamus pennatula|Sparidae
-0176|Plumed Scorpionfish|Scorpaena grandicornis|Scorpaenidae
-0308|Polka-dot Batfish|Ogcocephalus cubifrons|Ogcocephalidae
-0706|Pollock|Pollachius virens|Gadidae
-0374|Pompano Dolphin|Coryphaena equisietis|Coryphaenidae
-0166|Porcupinefish|Diodon hystrix|Diodontidae
-0111|Porkfish|Anisotremus virginicus|Haemulidae
-0149|Princess Parrotfish|Scarus taeniopterus|Scaridae
-0216|Puddingwife|Halichoeres radiatus|Labridae
-0333|Puffcheek Blenny|Labrisomus bucciferus|Labrisomidae
-0645|Pugjaw Wormfish|Cerdale floridana|Microdesmidae
-0870|Pugnose Pipefish|Bryx dunckeri|Syngnathidae
-0044|Purple Reeffish|Chromis scotti|Pomacentridae
-0064|Purplemouth Moray|Gymnothorax vicinus|Muraenidae
-0394|Pygmy Filefish|Stephanolepis setifer|Monacanthidae
-0786|Pygmy Goby|Lythrypnus minimus|Gobiidae
-0537|Pygmy Sea Bass|Serraniculus pumilio|Serranidae
-0005|Queen Angelfish|Holacanthus ciliaris|Pomacanthidae
-0150|Queen Parrotfish|Scarus vetula|Scaridae
-0210|Queen Triggerfish|Balistes vetula|Balistidae
-0903|Querimana Silverside|Melanorhinus microps|Atherinopsidae
-0334|Quillfin Blenny|Gobioclinus filamentosus|Labrisomidae
-0640|Racoon Butterflyfish (Exotic)|Chaetodon lunula|Chaetodontidae
-0720|Radiated Shanny|Ulvaria subbifurcata|Stichaeidae
-0151|Rainbow Parrotfish|Scarus guacamaia|Scaridae
-0140|Rainbow Runner|Elagatis bipinnulata|Carangidae
-0745|Rainbow Smelt|Osmerus mordax|Osmeridae
-0217|Rainbow Wrasse|Halichoeres pictus|Labridae
-0872|Rainwater Killifish|Lucania parva|Fundulidae
-1120|Randall's Soapfish|Rypticus randalli|Grammistidae
-0796|Red Barbier|Hemanthias vivanus|Serranidae
-0365|Red Clingfish|Acyrtus rubiginosus|Gobiesocidae
-0371|Red Cornetfish|Fistularia petimba|Fistulariidae
-0610|Red Drum|Sciaenops ocellatus|Sciaenidae
-0414|Red Goatfish|Mullus auratus|Mullidae
-0098|Red Grouper|Epinephelus morio|Serranidae
-0707|Red Hake|Urophycis chuss|Gadidae
-0099|Red Hind|Epinephelus guttatus|Serranidae
-0683|Red Lionfish (exotic)|Pterois volitans|Scorpaenidae
-0471|Red Lizardfish|Synodus synodus|Synodontidae
-0499|Red Porgy|Pagrus pagrus|Sparidae
-0562|Red Snapper|Lutjanus campechanus|Lutjanidae
-0905|Red Squirrelfish|Sargocentron hastatum|Holocentridae
-0152|Redband Parrotfish|Sparisoma aurofrenatum|Scaridae
-0345|Redbelly (pka Redeye) Triplefin|Enneanectes jordani (pka E. pectoralis)|Tripterygiidae
-0885|Redcheek Goby|Tigrigobius rubrigenis|Gobiidae
-0623|Redear Sardine (Redear Herring)|Harengula humeralis|Atherinidae, Clupeidae, and Engraulidae
-0814|Redeye (aka Gray) Parrotfish|Sparisoma axillare|Scaridae
-1010|Redeye Mullet|Mugil rubrioculus|Mugilidae
-0576|Redface Moray|Monopenchelys acuta|Muraenidae
-0486|Redfin Needlefish|Strongylura notata notata|Belonidae
-0749|Redfish sp.|Sebastes sp.|Scorpaenidae
-0017|Redlip Blenny|Ophioblennius macclurei|Blenniidae
-1018|Redlip Blenny (Brazil)|Ophioblennius trinitatis|Blenniidae
-0226|Redspotted Hawkfish|Amblycirrhitus pinos|Cirrhitidae
-0154|Redtail Parrotfish|Sparisoma chrysopterum|Scaridae
-0459|Redtail Scad|Decapterus tabl|Carangidae
-1087|Redtooth Triggerfish (non-native)|Odonus niger|Balistidae
-0538|Reef Bass|Pseudogramma gregoryi|Serranidae
-0033|Reef Butterflyfish|Chaetodon sedentarius|Chaetodontidae
-0058|Reef Croaker|Odontoscion dentex|Sciaenidae
-0797|Reef Parrotfish|Sparisoma amplum|Scaridae
-0177|Reef Scorpionfish|Scorpaenodes caribbaeus|Scorpaenidae
-0188|Reef Shark (Caribbean)|Carcharhinus perezii|Carcharhinidae
-0202|Reef Squirrelfish|Holocentrus coruscus|Holocentridae
-0784|Reef-cave Brotula|Grammonus claudei|Bythitidae
-0964|Regal Demoiselle (Exotic)|Neopomacentrus cyanomos|Pomacentridae
-0604|Remora|Remora remora|Echeneidae
-0665|Resh Pikeblenny|Chaenopsis resh|Chaenopsidae
-0385|Reticulate Moray|Muraena retifera|Muraenidae
-0780|Ribbon Blenny|Emblemaria vitta|Chaenopsidae
-0869|Ridgefin Eel|Callechelys springeri|Ophichthidae
-0335|Ringed Shy Blenny Complex|Starksia hassi complex|Labrisomidae
-0981|Ringneck Blenny (aka Variable Blenny)|Parablennius pilicornis|Blenniidae
-0812|Rocas Gregory|Stegastes rocasensis|Pomacentridae
-0006|Rock Beauty|Holacanthus tricolor|Pomacanthidae
-0721|Rock Gunnel|Pholis gunnellus|Pholidae
-0100|Rock Hind|Epinephelus adscensionis|Serranidae
-0624|Rock Sea Bass|Centropristis philadelphica|Serranidae
-0428|Rockcut Goby|Gobiosoma grosvenori|Gobiidae
-1020|Rockpool Blenny|Entomacrodus vomerinus|Blenniidae
-0018|Rosy Blenny|Malacoctenus macropus|Labrisomidae
-0175|Rosy Razorfish|Xyrichtys martinicensis|Labridae
-0460|Rough Scad|Trachurus lathami|Carangidae
-0586|Rough Triggerfish|Canthidermis maculatus|Balistidae
-0306|Roughback Batfish|Ogcocephalus parvus|Ogcocephalidae
-0336|Roughhead Blenny|Acanthemblemaria aspera|Chaenopsidae
-0346|Roughhead Triplefin|Enneanectes boehlkei|Tripterygiidae
-0359|Roughlip Cardinalfish|Apogon robinsi|Apogonidae
-0520|Roughtail Stingray|Dasyatis centroura|Dasyatidae
-0859|Roughtongued Bass|Pronotogrammus martinicensis|Serranidae
-0461|Round Scad|Decapterus punctatus|Carangidae
-0893|Roundel Skate|Raja texana|Rajidae
-0429|Rusty Goby|Priolepis hipoliti|Gobiidae
-0788|Saddle Bass|Serranus notospilus|Serranidae
-1004|Saddle Squirrelfish|Sargocentron poco|Holocentridae
-0570|Saddle Stargazer|Gillellus rubrocinctus|Dactyloscopidae
-0019|Saddled Blenny|Malacoctenus triangulatus|Labrisomidae
-1017|Saddled Blenny Brazilian Complex|Malacoctenus aff triangulatus species (Brazil)|Labrisomidae
-0686|Saddled Parrotfish|Sparisoma frondosum|Scaridae
-0020|Sailfin Blenny|Emblemaria pandionis|Chaenopsidae
-0837|Sailfin Molly|Poecilia latipinna|Poeciliidae
-0650|Sailfin tang (exotic)|Zebrasoma veliferum|Acanthuridae
-0805|Sailfish|Istiophorus platypterus|Istiophoridae
-0112|Sailors Choice|Haemulon parra|Haemulidae
-0230|Sand Diver|Synodus intermedius|Synodontidae
-0377|Sand Drum|Umbrina coroides|Sciaenidae
-0184|Sand Perch|Diplectrum formosum|Serranidae
-0571|Sand Stargazer|Dactyloscopus tridigitatus|Dactyloscopidae
-0644|Sand Tiger|Carcharias taurus|Odontaspididae
-0238|Sand Tilefish|Malacanthus plumieri|Malacanthidae
-0936|Sand-Canyon Goby (part of Bridled Goby Complex)|Coryphopterus venezuelae (was C. bol)|Gobiidae
-0556|Sandbar Shark|Carcharhinus plumbeus|Carcharhinidae
-0581|Sapo|Batrachoides surinamensis|Batrachoididae
-0663|Sapo Bocon|Amphichthys cryptocentrus|Batrachoididae
-0664|Sapo Cano|Thalassophryne maculosa|Batrachoididae
-0494|Sargassum Pipefish|Syngnathus pelagicus|Syngnathidae
-0211|Sargassum Triggerfish|Xanthichthys ringens|Balistidae
-0410|Sargassumfish|Histrio histrio|Antennariidae
-0160|Saucereye Porgy|Calamus calamus|Sparidae
-0360|Sawcheek Cardinalfish|Apogon quadrisquamatus|Apogonidae
-0611|Scaled Sardine|Harengula jaguana|Atherinidae, Clupeidae, and Engraulidae
-1104|Scaled Sardine / False Herring complex|Harengula clupeola / Harengula jaguana|Clupeidae
-0549|Scalloped Hammerhead|Sphyrna lewini|Sphyrnidae
-0101|Scamp|Mycteroperca phenax|Serranidae
-0539|School Bass|Schultzea beta|Serranidae
-0196|Schoolmaster|Lutjanus apodus|Lutjanidae
-0026|Scrawled Cowfish|Acanthostracion quadricornis|Ostraciidae
-0070|Scrawled Filefish|Aluterus scriptus|Monacanthidae
-0591|Scrawled Sole|Trinectes inscriptus|Soleidae
-0620|Scup|Stenotomus chrysops|Sparidae
-0500|Sea Bream|Archosargus rhomboidalis|Sparidae
-0750|Sea Raven|Hemitripterus americanus|Cottidae
-0655|Sea Turtle sp. (unidentified)||Cheloniidae
-0021|Seaweed Blenny|Parablennius marmoreus|Blenniidae
-0934|Secretary Blenny|Acanthemblemaria maria|Chaenopsidae
-0430|Seminole Goby|Microgobius carri|Gobiidae
-0052|Sergeant Major|Abudefduf saxatilis|Pomacentridae
-1070|Sharknose / Cleaning Goby Complex Bahamas TCI|Elacatinus evelynae / Elacatinus genie complex|Gobiidae
-0431|Sharknose Goby|Elacatinus evelynae|Gobiidae
-0231|Sharksucker|Echeneis naucrates|Echeneidae
-0167|Sharpnose Puffer|Canthigaster rostrata|Tetraodontidae
-0065|Sharptail Eel|Myrichthys breviceps|Ophichthidae
-0161|Sheepshead|Archosargus probatocephalus|Sparidae
-0740|Sheepshead Minnow|Cyprinodon variegatus|Cyprinodontidae
-0162|Sheepshead Porgy|Calamus penna|Sparidae
-0910|Shelf Flounder|Etropus cyclosquamus|Paralichthyidae
-1105|Shoal Flounder|Syacium gunteri|Bothidae
-0310|Short Bigeye|Pristigenys alta|Priacanthidae
-0495|Shortfin Pipefish|Cosmocampus elucens|Syngnathidae
-0573|Shortfin Sweeper|Pempheris poeyi|Pempheridae
-0751|Shorthorn Sculpin|Myoxocephalus scorpius|Cottidae
-0309|Shortnose Batfish|Ogcocephalus nasutus|Ogcocephalidae
-1083|Shortspine (Red Banner) Blenny|Emblemariopsis dianae|Chaenopsidae
-0088|Shortstripe Goby|Elacatinus chancei|Gobiidae
-0698|Shorttail Snake Eel|Callechelys guineensis|Ophichthidae
-0399|Shrimp Flounder|Gastropsetta frontalis|Bothidae
-0125|Shy Hamlet|Hypoplectrus guttavarius|Serranidae
-0606|Sicklefin Devil Ray (aka Greater Devil Ray)|Mobula tarapacana|Mobulidae
-0799|Silk Snapper|Lutjanus vivanus|Lutjanidae
-0558|Silky Shark|Carcharhinus falciformis|Carcharhinidae
-0708|Silver Hake|Merluccius bilinearis|Gadidae
-0478|Silver Jenny|Eucinostomus gula|Gerreidae
-0742|Silver Perch|Bairdiella chrysoura|Sciaenidae
-0502|Silver Porgy|Diplodus caudimacula|Sparidae
-0773|Skate sp.|Leucoraja sp.|Rajidae
-1097|Skilletfish|Gobiesox strumosus|Gobiesocidae
-0642|Skipjack Tuna|Katsuwonus pelamis|Scombridae
-0432|Slaty Goby|Elacatinus tenox|Gobiidae
-0071|Slender Filefish|Monacanthus tuckeri|Monacanthidae
-0479|Slender Mojarra|Eucinostomus jonesii|Gerreidae
-0968|Slender Mojarra / Spotfin Mojarra Complex|Eucinostomus jonesii / Eucinostomus argenteus|Gerreidae
-0218|Slippery Dick|Halichoeres bivittatus|Labridae
-0945|Slope Soapfish|Rypticus carpenteri|Grammistidae
-0113|Smallmouth Grunt|Haemulon chrysargyreum|Haemulidae
-0516|Smalltooth Sawfish|Pristis pectinata|Pristidae
-0521|Smooth Butterfly Ray|Gymnura micrura|Dasyatidae
-0889|Smooth clingfish|Gobiesox nudus|Gobiesocidae
-0772|Smooth Flounder|Pleuronectes putnami|Pleuronectidae
-0550|Smooth Hammerhead|Sphyrna zygaena|Sphyrnidae
-0027|Smooth Trunkfish|Lactophrys triqueter|Ostraciidae
-1101|Smoothcheek Scorpionfish|Scorpaena isthmensis|Scorpaenidae
-0647|Smootheye Shy Blenny Complex|Starksia atlantica complex|Labrisomidae
-1067|Smoothhead Glass Blenny (pka Blackhead Blenny)|Emblemariopsis bahamensis|Chaenopsidae
-0942|Smoothhead Glass Blenny Complex|Emblemariopsis sp. (Smoothhead complex)|Chaenopsidae
-1146|Smoothhead Scorpionfish|Scorpaena calcarata|Scorpaenidae
-0722|Snakeblenny|Lumpenus lumpretaeformis|Stichaeidae
-0472|Snakefish|Trachinocephalus myops|Synodontidae
-0540|Snow Bass|Serranus chionaraia|Serranidae
-0779|Snowy Grouper|Hyporthodus niveatus|Serranidae
-0823|Social Wrasse|Halichoeres socialis|Labridae
-0770|Sohal Surgeonfish (exotic)|Acanthurus sohal|Acanthuridae
-0970|Sooty Eel|Bascanichthys bascanium|Ophichthidae
-0634|Southern Flounder|Paralichthys lethostigma|Bothidae
-0513|Southern Guitarfish|Rhinobatos percellens|Rhinobatidae
-0369|Southern Hake|Urophycis floridana|Gadidae
-1138|Southern Ladyfish|Elops smithi|Elopidae
-0507|Southern Puffer|Sphoeroides nephelus|Tetraodontidae
-0940|Southern Smoothhead Glass Blenny|Emblemariopsis bottomei|Chaenopsidae
-0572|Southern Stargazer|Astroscopus y-graecum|Uranoscopidae
-0170|Southern Stingray|Hypanus americanus|Dasyatidae
-0898|Spaghetti Eel|Moringua edwardsi|Moringuidae
-0114|Spanish Grunt|Haemulon macrostoma|Haemulidae
-0131|Spanish Hogfish|Bodianus rufus|Labridae
-0143|Spanish Mackerel|Scomberomorus maculatus|Scombridae
-0906|Spanish Sardine|Sardinella aurita|Atherinidae, Clupeidae, and Engraulidae
-0913|Speckled Blenny|Acanthemblemaria betinensis|Chaenopsidae
-0689|Speckled Hind|Epinephelus drummondhayi|Serranidae
-0958|Spiked Pipefish||Syngnathidae
-0911|Spikefin Glass Blenny (pka Caribbean Flagfin Glass Blenny)|Emblemariopsis carib|Chaenopsidae
-0559|Spinner Shark|Carcharhinus brevipinna|Carcharhinidae
-0756|Spiny Dogfish|Squalus acanthias|Squalidae
-0840|Spiny Flounder|Engyophrys senta|Bothidae
-0667|Spiny Sailfin Blenny|Emblemaria diphyodontis|Chaenopsidae
-0527|Spinycheek Scorpionfish|Neomerinthe hemingwayi|Scorpaenidae
-1057|Spinycheek Soldierfish|Corniger spinosus|Holocentridae
-0338|Spinyhead Blenny|Acanthemblemaria spinosa|Chaenopsidae
-1023|Splendid Shy Blenny (Cayman endemic)|Starksia splendens|Labrisomidae
-0582|Splendid Toadfish|Sanopus splendidus|Batrachoididae
-0412|Splitlure Frogfish (pka Striated Frogfish)|Antennarius scaber|Antennariidae
-0361|Sponge Cardinalfish|Phaeoptyx xenus|Apogonidae
-0711|Spot|Leiostomus xanthurus|Sciaenidae
-0022|Spotcheek Blenny|Labrisomus nigricinctus|Labrisomidae
-0509|Spotfin Burrfish|Chilomycterus reticulatus|Diodontidae
-0034|Spotfin Butterflyfish|Chaetodon ocellatus|Chaetodontidae
-0639|Spotfin Flounder|Cyclopsetta fimbriata|Paralichthyidae
-0596|Spotfin Goby|Oxyurichthys stigmalophius|Gobiidae
-0132|Spotfin Hogfish|Bodianus pulchellus|Labridae
-0919|Spotfin Jawfish|Opistognathus robinsi|Opistognathidae
-0601|Spotfin Mojarra|Eucinostomus argenteus|Gerreidae
-0690|Spotjaw Blenny|Acanthemblemaria rivasi|Chaenopsidae
-0089|Spotlight Goby|Elacatinus louisae|Gobiidae
-0856|Spottail Goby|Ctenogobius stigmaturus|Gobiidae
-0501|Spottail Pinfish|Diplodus holbrookii|Sparidae
-1110|Spotted Batfish|Ogcocephalus pantostictus|Ogcocephalidae
-0375|Spotted Dragonet|Diplogrammus pauciradiatus|Callionymidae
-1118|Spotted Driftfish|Ariomma regulus|Ariommatidae
-0059|Spotted Drum|Eques punctatus|Sciaenidae
-0171|Spotted Eagle Ray|Aetobatus narinari|Myliobatidae
-0076|Spotted Goatfish|Pseudupeneus maculatus|Mullidae
-0434|Spotted Goby|Coryphopterus punctipectophorus|Gobiidae
-0370|Spotted Hake|Urophycis regia|Gadidae
-0066|Spotted Moray|Gymnothorax moringa|Muraenidae
-0178|Spotted Scorpionfish|Scorpaena plumieri plumieri|Scorpaenidae
-0626|Spotted Seatrout|Cynoscion nebulosus|Sciaenidae
-0389|Spotted Snake Eel|Ophichthus ophis|Ophichthidae
-0565|Spotted Soapfish|Rypticus subbifrenatus|Grammistidae
-0390|Spotted Spoon-nose Eel|Echiophis intertinctus|Ophichthidae
-0028|Spotted Trunkfish|Lactophrys bicaudalis|Ostraciidae
-1021|Spotted Whiff|Citharichthys macrops|Bothidae
-0978|Spottedfin Tonguefish|Symphurus diomedeanus|Cynoglossidae
-1064|Springer's Blenny (Smootheye Shy Blenny Complex species)|Starksia springeri|Labrisomidae
-0203|Squirrelfish|Holocentrus adscensionis|Holocentridae
-0974|St Paul's Damselfish|Stegastes sanctipauli|Pomacentridae
-0846|St. Vincent Linesnout goby|Elacatinus sp. St. Vincent|Gobiidae
-1008|Stalk Blenny / False Papillose Blenny|Acanthemblemaria greenfieldi|Chaenopsidae
-0366|Stippled Clingfish|Gobiesox punctulatus|Gobiesocidae
-0848|Stippled spoon-nose Eel|Echiophis punctifer|Ophichthidae
-0155|Stoplight Parrotfish|Sparisoma viride|Scaridae
-0386|Stout Moray|Muraena robusta|Muraenidae
-0813|Streamer Wrasse (aka Brazilian Creole Wrasse)|Bodianus brasiliensis|Labridae
-0619|Striped Bass|Morone saxatilis|Percichthyidae
-0701|Striped Blenny|Chasmodes bosquianus|Blenniidae
-0508|Striped Burrfish|Chilomycterus schoepfii|Diodontidae
-0522|Striped Cardinalfish|Apogon robbyi|Apogonidae
-0378|Striped Croaker|Bairdiella sanctaeluciae|Sciaenidae
-0115|Striped Grunt|Haemulon striatum|Haemulidae
-0979|Striped Hamlet (restricted to Fort Liberte Haiti)|Hypoplectrus liberte|Serranidae
-0741|Striped Killifish|Fundulus majalis|Cyprinodontidae
-1012|Striped Mojarra|Eugerres plumieri|Gerreidae
-0481|Striped Mullet|Mugil cephalus|Mugilidae
-0156|Striped Parrotfish|Scarus iseri|Scaridae
-0682|Striped Searobin|Prionotus evolans|Triglidae
-0818|Striped Trumpet|Aulostomus strigosus|Aulostomidae
-0621|Summer Flounder (Fluke)|Paralichthys dentatus|Bothidae
-0045|Sunshinefish|Chromis insolata|Pomacentridae
-0833|Surf Eel|Ichthyapus ophioneus|Ophichthidae
-0944|Surf Shy Blenny Complex|Starksia smithvanizi complex|Labrisomidae
-0902|Surge Clingfish|Tomicodon rupestris|Gobiesocidae
-0853|Surgeonfish Mutant|Acanthurus spp.|Acanthuridae
-0467|Swordtail Jawfish|Lonchopisthus micrognathus|Opistognathidae
-0126|Tan Hamlet|Hypoplectrus randallorum|Serranidae
-0237|Tarpon|Megalops atlanticus|Elopidae
-0541|Tattler Bass|Serranus phoebe|Serranidae
-0630|Tautog|Tautoga onitis|Labridae
-0314|Tessellated Blenny|Hypsoblennius invemar|Blenniidae
-0757|Thorny Skate|Amblyraja radiata|Rajidae
-0401|Three-eye Flounder|Ancylopsetta dilecta|Bothidae
-0304|Threeline Basslet|Lipogramma trilineatum|Grammatidae
-0053|Threespot Damselfish|Stegastes planifrons|Pomacentridae
-1055|Tidewater Mojarra|Eucinostomus harengulus|Gerreidae
-0435|Tiger Goby|Gobiosoma macrodon|Gobiidae
-0102|Tiger Grouper|Mycteroperca tigris|Serranidae
-0560|Tiger Shark|Galeocerdo cuvier|Carcharhinidae
-0487|Timucu|Strongylura timucu|Belonidae
-0185|Tobaccofish|Serranus tabacarius|Serranidae
-0116|Tomtate|Haemulon aurolineatum|Haemulidae
-0930|Topsail Chub|Kyphosus cinerascens|Kyphosidae
-0592|Townsend Angelfish (Hybrid Queen/Blue)|Holacanthus sp. (Hybrid)|Pomacanthidae
-0585|Tripletail|Lobotes surinamensis|Lobotidae
-0402|Tropical Flounder|Paralichthys tropicus|Bothidae
-0239|Trumpetfish|Aulostomus maculatus|Aulostomidae
-0029|Trunkfish|Lactophrys trigonus|Ostraciidae
-0983|Tuiupiranga Parrotfish|Sparisoma tuiupiranga|Scaridae
-0829|Tunnel Goby|Psilotris kaufmani|Gobiidae
-0603|Tusked Goby|Risor ruber|Gobiidae
-0677|Twinhorn Blenny|Coralliozetus cardonae|Chaenopsidae
-0542|Twinspot Bass|Serranus flaviventris|Serranidae
-0954|Two-Bar Triplefin|Enneanectes deloachorum|Tripterygiidae
-0040|Twospot Cardinalfish|Apogon pseudomaculatus|Apogonidae
-0400|Twospot Flounder|Bothus robinsi|Bothidae
-0693|Twostripe Puffer|Canthigaster figueiredoi|Tetraodontidae
-0395|Unicorn Filefish|Aluterus monoceros|Monacanthidae
-1121|Unidentified Cardinalfish|Apogon sp.|Apogonidae
-1107|Unidentified Cleaning / Sponge Goby (Elacatinus sp.)|Elacatinus sp.|Gobiidae
-0961|Unidentified Clingfish||Gobiesocidae
-1126|Unidentified Cornetfish|Fistularia sp.|Fistulariidae
-1086|Unidentified Cusk-eel|Ophidiidae sp.|Ophidiidae
-0319|Unidentified Darkheaded Blenny Emblemariopsis sp. B|Emblemariopsis sp. B (Darkheaded)|Chaenopsidae
-0669|Unidentified Emblemariopsis spp (incl. Spikefin and Flagfin)|Emblemariopsis spp.|Chaenopsidae
-1114|Unidentified Flyingfish|Exocoetidae sp|Exocoetidae
-0928|Unidentified Halfbeak|Hyporhamphus sp./ Hemiramphus sp./ Euleptorhamphus|Hemiramphidae
-1155|Unidentified Hammerhead Shark|Sphyma sp.|Sphyrnidae
-1127|Unidentified Jack|Carangidae sp.|Carangidae
-1091|Unidentified Jawfish|Opistognathus sp.|Opistognathidae
-1129|Unidentified Killifish|Cyprinodontidae sp.|Cyprinodontidae
-0916|Unidentified Lizardfish|Synodus sp.|Synodontidae
-1143|Unidentified Lythrypnus Goby|Lythrypnus sp.|Gobiidae
-1009|Unidentified Mojarra sp.|Eucinostomus/Gerres spp.|Gerreidae
-0971|Unidentified Mullet|Mugil sp.|Mugilidae
-0927|Unidentified Needlefish||Belonidae
-1093|Unidentified Pipefish (Syngnathus sp.)|Syngnathus sp. (unidentified)|Syngnathidae
-0834|Unidentified Pipefish sp.||Syngnathidae
-1073|Unidentified Porgy||Sparidae
-1145|Unidentified Requiem Shark|Carcharinidae sp.|Carcharhinidae
-0995|Unidentified Scad||Carangidae
-1152|Unidentified Scorpionfish|Scorpaenidae sp.|Scorpaenidae
-0866|Unidentified Sea Catfish|Ariidae|Ariidae
-1133|Unidentified Seahorse|Hippocampus sp.|Syngnathidae
-1113|Unidentified Searobin|Prionotus sp.|Triglidae
-0518|Unidentified Shy Blenny Starksia|Starksia sp.|Labrisomidae
-0232|Unidentified Silvery Fish (Silversides / Anchovies / Herrings)|Atheriniformes sp./ Clupeiformes sp.|Atherinidae, Clupeidae, and Engraulidae
-1077|Unidentified Snake Eel|Ophichthidae sp.|Ophichthidae
-1011|Unidentified Sole sp. (Achiridae sp.)|Achiridae sp.|Achiridae
-1132|Unidentified Toadfish|Batrachoididae sp.|Batrachoididae
-1150|Unidentified Tonguefish|Symphurus sp.|Cynoglossidae
-0622|Unidentified Triplefin species|Enneanectes sp.|Tripterygiidae
-1124|Unidentified Tuna|Thunnus sp.|Scombridae
-0908|Veracruz Hamlet|Hypoplectrus castroaguirrei|Serranidae
-0563|Vermillion Snapper|Rhomboplites aurorubens|Lutjanidae
-0544|Vieja|Serranus dewegeri|Serranidae
-0067|Viper Moray|Enchelycore nigricans|Muraenidae
-0474|Wahoo|Acanthocybium solandri|Scombridae
-0613|Wall Goby (aka Semiscaled Goby)|Tigrigobius pallens|Gobiidae
-0441|Warsaw Grouper|Epinephelus nigritus|Serranidae
-0988|Warteye Stargazer|Gillellus uranidea|Dactyloscopidae
-0168|Web Burrfish|Chilomycterus antillarum|Diodontidae
-0092|Western Comb Grouper|Mycteroperca acutirostris|Serranidae
-0781|Western Smoothhead Glass Blenny (pka Seafan Blenny)|Emblemariopsis pricei|Chaenopsidae
-0546|Whale Shark|Rhincodon typus|Rhincodontidae
-0671|White Grouper|Mycteroperca cidi|Serranidae
-0117|White Grunt|Haemulon plumierii|Haemulidae
-0709|White Hake|Urophycis tenuis|Gadidae
-0110|White Margate|Haemulon album|Haemulidae
-0482|White Mullet|Mugil curema|Mugilidae
-0743|White Perch|Morone americana|Percichthyidae
-0643|White Trevally|Pseudocaranx dentex|Carangidae
-0436|White-eye Goby|Bollmannia boqueronensis|Gobiidae
-1001|White-tailed Hamelt (undescribed spF Cuba2017)|Hypoplectrus sp D|Serranidae
-1000|Whitebar Goby (undescribed spG Cuba2016)|Tigrigobius sp A|Gobiidae
-0503|Whitebone Porgy|Calamus leucosteus|Sparidae
-0523|Whitefin Sharksucker|Echeneis neucratoides|Echeneidae
-0998|Whitelined Grunt (undescribed spC Cuba2016)|Haemulon sp A|Haemulidae
-0583|Whitelined Toadfish|Sanopus greenfieldorum|Batrachoididae
-0827|Whitemouth Croaker|Micropogonias furnieri|Sciaenidae
-0496|Whitenose Pipefish|Cosmocampus albirostris|Syngnathidae
-0816|Whitespotted (aka Blackear) Moray|Muraena pavonina|Muraenidae
-0072|Whitespotted Filefish|Cantherhines macrocerus|Monacanthidae
-0566|Whitespotted Soapfish|Rypticus maculatus|Grammistidae
-0790|Whitespotted Surgeonfish (Exotic)|Acanthurus guttatus|Acanthuridae
-0584|Whitespotted Toadfish|Sanopus astrifer|Batrachoididae
-0041|Whitestar Cardinalfish|Apogon lachneri|Apogonidae
-0831|Whitestriped Squirrelfish (St. Vincent)|unID|Holocentridae
-1024|Williams Blenny (Blackcheek Shy Blenny complex species)|Starksia williamsi|Labrisomidae
-0727|Windowpane Flounder|Scophthalmus aquosus|Bothidae
-0932|Windward Triplefin|Enneanectes wilki|Tripterygiidae
-0728|Winter Flounder|Pseudopleuronectes americanus|Pleuronectidae
-0758|Winter Skate|Leucoraja ocellata|Rajidae
-0729|Witch Flounder|Glyptocephalus cynoglossus|Pleuronectidae
-0543|Wrasse Basslet|Liopropoma eukrines|Liopropomatinae
-0339|Wrasse Blenny|Hemiemblemaria simulus|Chaenopsidae
-0609|Yellow Garden Eel|Heteroconger luteolus|Congridae
-0077|Yellow Goatfish|Mulloidichthys martinicus|Mullidae
-0141|Yellow Jack|Caranx bartholomaei|Carangidae
-0468|Yellow Jawfish|Opistognathus gilberti|Opistognathidae
-0648|Yellow Sailfin Tang (exotic)|Zebrasoma flavescens|Acanthuridae
-0172|Yellow Stingray|Urobatis jamaicensis|Urolophidae
-1131|Yellow Triplefin|Enneanectes flavus|Tripterygiidae
-0127|Yellowbelly Hamlet|Hypoplectrus aberrans|Serranidae
-0305|Yellowcheek Basslet|Gramma linki|Grammatidae
-0219|Yellowcheek Wrasse|Halichoeres cyanocephalus|Labridae
-0830|Yellowedge Grouper|Epinephelus flavolimbatus|Serranidae
-0341|Yellowface Pikeblenny|Chaenopsis limbaughi|Chaenopsidae
-0793|Yellowfin Chromis|Chromis flavicauda|Pomacentridae
-0103|Yellowfin Grouper|Mycteroperca venenosa|Serranidae
-0229|Yellowfin Mojarra|Gerres cinereus|Gerreidae
-0625|Yellowfin Tuna|Thunnus albacares|Scombridae
-0228|Yellowhead Jawfish|Opistognathus aurifrons|Opistognathidae
-0220|Yellowhead Wrasse|Halichoeres garnoti|Labridae
-0090|Yellowline Goby|Elacatinus horsti|Gobiidae
-0104|Yellowmouth Grouper|Mycteroperca interstitialis|Serranidae
-0437|Yellownose Goby|Elacatinus randalli|Gobiidae
-0438|Yellowprow Goby|Elacatinus xanthiprora|Gobiidae
-0973|Yellowstriped Grunt|Haemulon squamipinna|Haemulidae
-0153|Yellowtail (Redfin) Parrotfish|Sparisoma rubripinne|Scaridae
-1102|Yellowtail Amberjack|Seriola lalandi|Carangidae
-0054|Yellowtail Damselfish|Microspathodon chrysurus|Pomacentridae
-0730|Yellowtail Flounder|Limanda ferruginea|Pleuronectidae
-0128|Yellowtail Hamlet|Hypoplectrus chlorurus|Serranidae
-0046|Yellowtail Reeffish|Chromis enchrysura|Pomacentridae
-0649|Yellowtail Sailfin Tang (exotic)|Zebrasoma xanthurum|Acanthuridae
-0197|Yellowtail Snapper|Ocyurus chrysurus|Lutjanidae
-0651|Yellowtip Damselfish|Stegastes pictus|Pomacentridae
-0315|Zebratail Blenny|Hypleurochilus caudovittatus|Blenniidae
+0884|Acadian Redfish|Sebastes fasciatus|Scorpaenidae|Scorpionfish
+1154|Accidental Clingfish|Tomicodon reitzae|Gobiesocidae|Clingfish
+1130|African Oyster Blenny|Hypleurochilus aequipinnis|Blenniidae|Blenny - Combtooth
+0448|African Pompano|Alectis ciliaris|Carangidae|Jack
+1135|Agujon Needlefish|Tylosurus acus|Belonidae|Needlefish
+0731|Alewife Herring|Alosa pseudoharengus|Clupeidae|Herring
+0449|Almaco Jack|Seriola rivoliana|Carangidae|Jack
+0712|American Eel|Anguilla rostrata|Anguillidae|Eel (Freshwater)
+0723|American Plaice|Hippoglossoides platessoides|Pleuronectidae|Flounder (Right-Eye)
+0732|American Shad|Alosa sapidissima|Clupeidae|Herring
+0997|Anemone Starksia sp (undescribed spB Cuba2016)|Starksia sp A|Labrisomidae|Blenny - Labrisomids
+0528|Aquavina|Diplectrum radiale|Serranidae|Seabass
+0714|Arctic Shanny|Stichaeus punctatus punctatus|Stichaeidae|Prickleback
+1100|Argentine Seabass|Acanthistius brasilianus|Serranidae|Seabass
+0013|Arrow Blenny|Lucayablennius zingaro|Chaenopsidae|Blenny - Pike, tube, and flag
+1076|Arrow Stargazer|Gillellus greyae|Dactyloscopidae|Sand Stargazers
+0616|Atlantic Bonito|Sarda sarda|Scombridae|Mackerel
+0450|Atlantic Bumper|Chloroscombrus chrysurus|Carangidae|Jack
+0702|Atlantic Cod|Gadus morhua|Gadidae|Cod
+0710|Atlantic Croaker|Micropogonias undulatus|Sciaenidae|Drum
+1116|Atlantic Cutlassfish|Trichiurus lepturus|Trichiuridae|Cutlassfish
+0349|Atlantic Flashlight|Kryptophanaron alfredi|Anomalopidae|Flashlight
+0512|Atlantic Guitarfish|Rhinobatos lentiginosus|Rhinobatidae|Guitarfish
+0763|Atlantic Hagfish|Myxine glutinosa|Myxinidae|Hagfish
+0733|Atlantic Herring|Clupea harengus|Clupeidae|Herring
+0451|Atlantic Leatherjack|Oligoplites saurus|Carangidae|Jack
+0736|Atlantic Mackerel|Scomber scombrus|Scombridae|Mackerel
+1099|Atlantic Mangrove Blenny|Lupinoblennius vinctus|Chaenopsidae|Blenny - Pike, tube, and flag
+0950|Atlantic Manta Ray|Mobula yarae|Mobulidae|Manta
+0734|Atlantic Menhaden|Brevoortia tyrannus|Clupeidae|Herring
+0844|Atlantic Midshipman|Porichthys plectrodon|Batrachoididae|Toadfish
+0923|Atlantic Moonfish|Selene setapinnis|Carangidae|Jack
+0483|Atlantic Needlefish|Strongylura marina|Belonidae|Needlefish
+0993|Atlantic Oyster Blenny|Hypleurochilus pseudoaequipinnis|Blenniidae|Blenny - Combtooth
+0744|Atlantic Salmon|Salmo salar|Salmonidae|Trout/Salmon
+0768|Atlantic Seasnail|Liparis atlanticus|Cyclopteridae|Lumpfish & Snailfish
+0557|Atlantic Sharpnose Shark|Rhizoprionodon terraenovae|Carcharhinidae|Requiem Shark
+0769|Atlantic Silverside|Menidia menidia|Atherinopsidae|Neotropical Silversides
+0235|Atlantic Spadefish|Chaetodipterus faber|Ephippidae|Spadefish
+0765|Atlantic Spiny Lumpsucker|Eumicrotremus spinosus|Cyclopteridae|Lumpfish & Snailfish
+0841|Atlantic Stingray|Dasyatis sabina|Dasyatidae|Stingray
+0633|Atlantic Thread Herring|Opisthonema oglinum|Clupeidae|Herring
+0878|Atlantic Tomcod|Microgadus tomcod|Gadidae|Cod
+0510|Atlantic Torpedo Ray|Torpedo nobiliana|Torpedinidae|Electric Ray
+0713|Atlantic Wolffish|Anarhichas lupus|Anarhichadidae|Wolffish
+0847|Bahamas (Red Banner) Blenny (pka Redspine Glass Blenny)|Emblemariopsis occidentalis|Chaenopsidae|Blenny - Pike, tube, and flag
+0403|Balao|Hemiramphus balao|Hemiramphidae|Halfbeak
+1106|Bald Blenny|Paraclinus infrons|Labrisomidae|Blenny - Labrisomids
+0163|Balloonfish|Diodon holocanthus|Diodontidae|Porcupinefish
+0404|Ballyhoo|Hemiramphus brasiliensis|Hemiramphidae|Halfbeak
+0316|Banded Blenny|Paraclinus fasciatus|Labrisomidae|Blenny - Labrisomids
+0030|Banded Butterflyfish|Chaetodon striatus|Chaetodontidae|Butterflyfish
+0715|Banded Gunnel|Pholis fasciata|Pholidae|Gunnel
+0462|Banded Jawfish|Opistognathus macrognathus|Opistognathidae|Jawfish
+0738|Banded Killifish|Fundulus diaphanus|Cyprinodontidae|Killifish
+0890|Banded Puffer|Colomesus psittacus|Tetraodontidae|Puffer
+0614|Banded Rudderfish|Seriola zonata|Carangidae|Jack
+0164|Bandtail Puffer|Sphoeroides spengleri|Tetraodontidae|Puffer
+0545|Bandtail Searobin|Prionotus ophryas|Triglidae|Searobin
+0652|Bandtooth Conger|Ariosoma balearicum|Congridae|Conger
+0594|Bank Butterflyfish|Chaetodon aya|Chaetodontidae|Butterflyfish
+0529|Bank Sea Bass|Centropristis ocyurus|Serranidae|Seabass
+0883|Banner Blenny|Emblemaria atlantica|Chaenopsidae|Blenny - Pike, tube, and flag
+0415|Banner Goby|Microgobius microlepis|Gobiidae|Goby
+0777|Bantam Bass|Parasphyraenops incisus|Serranidae|Seabass
+0133|Bar Jack|Caranx ruber|Carangidae|Jack
+0820|Barber Goby (aka Widestripe Goby)|Gobiosoma figaro|Gobiidae|Goby
+0524|Barbfish|Scorpaena brasiliensis|Scorpaenidae|Scorpionfish
+0632|Barbu|Polydactylus virginicus|Polynemidae|Threadfin
+0317|Barfin Blenny|Malacoctenus versicolor|Labrisomidae|Blenny - Labrisomids
+0952|Barfin Goby|Coryphopterus alloides|Gobiidae|Goby
+0311|Barred Blenny|Hypleurochilus bermudensis|Blenniidae|Blenny - Combtooth
+0035|Barred Cardinalfish|Apogon binotatus|Apogonidae|Cardinalfish
+0362|Barred Clingfish|Tomicodon fasciatus|Gobiesocidae|Clingfish
+0118|Barred Hamlet (Caribbean)|Hypoplectrus puella|Serranidae|Seabass
+0862|Barred Searobin|Prionotus martis|Triglidae|Searobin
+0466|Barsnout Goby|Elacatinus illecebrosum|Gobiidae|Goby
+0417|Bartail Goby|Coryphopterus thrix|Gobiidae|Goby
+0752|Basking Shark|Cetorhinus maximus|Lamnidae|Mackerel Shark
+0760|Bay Anchovy|Anchoa mitchilli|Engraulidae|Anchovy
+0963|Bearded Brotula|Brotula barbata|Ophidiidae|Cusk-eel
+0806|Bearded Goby|Barbulifer ceuthoecus|Gobiidae|Goby
+0579|Bearded Toadfish|Sanopus barbatus|Batrachoididae|Toadfish
+0047|Beaugregory|Stegastes leucostictus|Pomacentridae|Damselfish
+1060|Belize Blackcheek Blenny|Starksia weigti|Labrisomidae|Blenny - Labrisomids
+0036|Belted Cardinalfish|Apogon townsendi|Apogonidae|Cardinalfish
+0577|Belted Sandfish|Serranus subligarius|Serranidae|Seabass
+0635|Bermuda Bream|Diplodus bermudensis|Sparidae|Porgy
+0221|Bermuda Chub/Gray Chub|Kyphosus sectatrix / K. bigibbus|Kyphosidae|Chub
+0991|Bermuda Creole Wrasse|Clepticus sp. A|Labridae|Wrasse
+0636|Bermuda Halfbeak|Hemiramphus bermudensis|Hemiramphidae|Halfbeak
+0992|Bermuda Hog-mouth Fry (aka Bermuda Anchovy)|Anchoa choerostoma|Engraulidae|Anchovy
+0678|Bermuda killifish|Fundulus bermudae|Cyprinodontidae|Killifish
+0811|Bicolor Blenny|Malacoctenus sp.|Labrisomidae|Blenny - Labrisomids
+0048|Bicolor Damselfish|Stegastes partitus|Pomacentridae|Damselfish
+0835|Bicolored Sand Eel|Bascanichthys paulensis|Ophichthidae|Snake Eel
+1111|Big-eyed Frogfish|Antennarius radiosus|Antennariidae|Frogfish
+0011|Bigeye|Priacanthus arenatus|Priacanthidae|Bigeye
+0955|Bigeye Anchovy|Anchoa lamprotaenia|Engraulidae|Anchovy
+0475|Bigeye Mojarra|Eucinostomus havana|Gerreidae|Mojarra
+0452|Bigeye Scad|Selar crumenophthalmus|Carangidae|Jack
+0874|Bighead Searobin|Prionotus tribulus|Triglidae|Searobin
+0350|Bigtooth Cardinalfish|Apogon affinis|Apogonidae|Cardinalfish
+0588|Black Brotula|Stygnobrotula latebricola|Bythitidae|Viviparous Brotula
+0376|Black Drum|Pogonias cromis|Sciaenidae|Drum
+0207|Black Durgon|Melichthys niger|Balistidae|Triggerfish
+0091|Black Grouper|Mycteroperca bonaci|Serranidae|Seabass
+0443|Black Grunt|Haemulon bonariense|Haemulidae|Grunt
+0119|Black Hamlet|Hypoplectrus nigricans|Serranidae|Seabass
+0453|Black Jack|Caranx lugubris|Carangidae|Jack
+0109|Black Margate|Anisotremus surinamensis|Haemulidae|Grunt
+0531|Black Sea Bass|Centropristis striata|Serranidae|Seabass
+0600|Black Snapper|Apsilus dentatus|Lutjanidae|Snapper
+1151|Black-tailed Dascyllus (Non-native)|Dascyllus melanurus|Pomacentridae|Damselfish
+0695|Blackbar Drum|Equetus iwamotoi|Sciaenidae|Drum
+1095|Blackbar Shy Blenny|Starksia fasciata|Labrisomidae|Blenny - Labrisomids
+0198|Blackbar Soldierfish|Myripristis jacobus|Holocentridae|Squirrelfish
+1059|Blackbelly Blenny|Stathmonotus hemphillii|Chaenopsidae|Blenny - Pike, tube, and flag
+0009|Blackcap Basslet|Gramma melacara|Grammatidae|Basslet
+0849|Blackcheek Shy Blenny Complex|Starksia lepicoelia complex|Labrisomidae|Blenny - Labrisomids
+0724|Blackcheek Tonguefish|Symphurus plagiusa|Cynoglossidae|Tonguefishes
+0826|Blackear Bass|Serranus atrobranchus|Serranidae|Seabass
+0212|Blackear Wrasse|Halichoeres poeyi|Labridae|Wrasse
+0381|Blackedge Moray|Gymnothorax nigromarginatus|Muraenidae|Moray
+0342|Blackedge Triplefin|Enneanectes atrorus|Tripterygiidae|Triplefin (Blenny)
+0318|Blackfin Blenny|Paraclinus nigripinnis|Labrisomidae|Blenny - Labrisomids
+0037|Blackfin Cardinalfish|Astrapogon puncticulatus|Apogonidae|Cardinalfish
+1058|Blackfin Glass Blenny (pka Fine-cirrus Blenny)|Emblemariopsis leptocirris|Chaenopsidae|Blenny - Pike, tube, and flag
+0189|Blackfin Snapper|Lutjanus buccanella|Lutjanidae|Snapper
+1153|Blackfin Tuna|Thunnus atlanticus|Scombridae|Mackerel
+1072|Blackfinned Clingfish|Gobiesox nigripinnis|Gobiesocidae|Clingfish
+0842|Blacknose Shark|Carcharhinus acronotus|Carcharhinidae|Requiem Shark
+1014|Blackpored Eel|Ophichthus melanoporus|Ophichthidae|Snake Eel
+0670|Blackringed Goby|Tigrigobius zebrellus|Gobiidae|Goby
+0387|Blackspotted Snake Eel|Quassiremus ascensionis|Ophichthidae|Snake Eel
+0186|Blacktip Shark|Carcharhinus limbatus|Carcharhinidae|Requiem Shark
+0798|Blackwing Searobin|Prionotus rubio|Triglidae|Searobin
+0001|Blue Angelfish|Holacanthus bermudensis|Pomacanthidae|Angelfish
+0042|Blue Chromis|Azurina cyanea|Pomacentridae|Damselfish
+0896|Blue Croaker|Bairdiella batabana|Sciaenidae|Drum
+0078|Blue Dartfish (Blue Goby)|Ptereleotris calliurus|Ptereleotridae|Dartfish
+0120|Blue Hamlet|Hypoplectrus gemma|Serranidae|Seabass
+0602|Blue Marlin|Makaira nigricans|Istiophoridae|Billfishes
+0144|Blue Parrotfish|Scarus coeruleus|Scaridae|Parrotfish
+0134|Blue Runner|Caranx crysos|Carangidae|Jack
+0753|Blue Shark|Prionace glauca|Carcharhinidae|Requiem Shark
+0204|Blue Tang|Acanthurus coeruleus|Acanthuridae|Surgeonfish
+0735|Blueback Herring|Alosa aestivalis|Clupeidae|Herring
+0637|Bluebar Jawfish (no longer a valid spp; Yellowhead Jawfish)|Opistognathus sp.|Opistognathidae|Jawfish
+0775|Bluefin Tuna|Thunnus thynnus|Scombridae|Mackerel
+0737|Bluefish|Pomatomus saltatrix|Pomatomidae|Bluefish
+1085|Bluegold Glass Blenny|Emblemariopsis ruetzleri|Chaenopsidae|Blenny - Pike, tube, and flag
+0776|Bluegold Goby|Lythrypnus spilus|Gobiidae|Goby
+0213|Bluehead|Thalassoma bifasciatum|Labridae|Wrasse
+0931|Bluelip Hamlet|Hypoplectrus affinis|Serranidae|Seabass
+0145|Bluelip Parrotfish|Cryptotomus roseus|Scaridae|Parrotfish
+0920|Bluespotted Blenny|Acanthemblemaria cf. rivasi|Chaenopsidae|Blenny - Pike, tube, and flag
+0222|Bluespotted Cornetfish|Fistularia tabacaria|Fistulariidae|Cornetfish
+0801|Bluespotted Damselfish|Stegastes fuscus|Pomacentridae|Damselfish
+0789|Bluespotted Searobin|Prionotus roseus|Triglidae|Searobin
+0653|Bluestriped Dartfish|Ptereleotris randalli|Ptereleotridae|Dartfish
+0105|Bluestriped Grunt|Haemulon sciurus|Haemulidae|Grunt
+0469|Bluestriped Lizardfish|Synodus saurus|Synodontidae|Lizardfish
+0340|Bluethroat Pikeblenny|Chaenopsis ocellata|Chaenopsidae|Blenny - Pike, tube, and flag
+0850|Bluewing Searobin|Prionotus punctatus|Triglidae|Searobin
+1065|Blunt-snout Goby|Psilotris amblyrhynchus|Gobiidae|Goby
+1117|Bluntnose Jack|Hemicaranx amblyrhynchus|Carangidae|Jack
+0754|Bluntnose Stingray|Hypanus say|Dasyatidae|Stingray
+0023|Boga|Haemulon vittatum|Haemulidae|Grunt
+0347|Bonefish|Albula vulpes|Albulidae|Bonefish
+0547|Bonnethead|Sphyrna tiburo|Sphyrnidae|Hammerhead Shark
+0024|Bonnetmouth|Emmelichthyops atlanticus|Haemulidae|Grunt
+0943|Brassy Chub|Kyphosus vaigiensis|Kyphosidae|Chub
+1147|Brazil Clingfish|Tomicodon australis|Gobiesocidae|Clingfish
+1075|Brazil Ocean Surgeonfish|Acanthurus bahianus|Acanthuridae|Surgeonfish
+0975|Brazilian Basslet|Gramma brasiliensis|Grammatidae|Basslet
+0819|Brazilian Cardinal|Apogon americanus|Apogonidae|Cardinalfish
+0980|Brazilian Chromis (aka Jubauna Reeffish)|Chromis jubauna|Pomacentridae|Damselfish
+1013|Brazilian Clown Wrasse|Halichoeres penrosei|Labridae|Wrasse
+1015|Brazilian Cocoa Damselfish|Stegastes variabilis|Pomacentridae|Damselfish
+1084|Brazilian Glass Blenny|Emblemariopsis signifer|Chaenopsidae|Blenny - Pike, tube, and flag
+0809|Brazilian Razorfish|Xyrichtys incandescens|Labridae|Wrasse
+0977|Brazilian Reef Stingray|Hypanus marianae|Dasyatidae|Stingray
+1141|Brazilian Saddled Blenny|Malacoctenus zaluari|Labrisomidae|Blenny - Labrisomids
+0967|Brazilian Wrasse|Halichoeres brasiliensis|Labridae|Wrasse
+0982|Brazilian Yellowcheek Wrasse|Halichoeres dimidiatus|Labridae|Wrasse
+0351|Bridle Cardinalfish|Apogon aurolineatus|Apogonidae|Cardinalfish
+0165|Bridled Burrfish|Chilomycterus antennatus|Diodontidae|Porcupinefish
+0935|Bridled Goby (true species; not complex)|Coryphopterus glaucofraenum|Gobiidae|Goby
+0079|Bridled Goby Complex (Bridled/Sand-Canyon/Patch-Reef)|C. glaucofraenum/C. venezuelae/C. tortugae|Gobiidae|Goby
+0382|Broadbanded Moray|Channomuraena vittata|Muraenidae|Moray
+0352|Broadsaddle Cardinalfish|Apogon pillionatus|Apogonidae|Cardinalfish
+0418|Broadstripe Goby|Elacatinus prochilos|Gobiidae|Goby
+1006|Broadstripe/Sharknose Goby Group Windward Lesser Antilles|Elacatinus prochilos / Elacatinus evelynae group|Gobiidae|Goby
+0353|Bronze Cardinalfish|Astrapogon alutus|Apogonidae|Cardinalfish
+0444|Bronzestriped Grunt|Haemulon boschmae|Haemulidae|Grunt
+0865|Brown Burrfish|Chilomycterus spinosus spinosus|Diodontidae|Porcupinefish
+0043|Brown Chromis|Azurina multilineata|Pomacentridae|Damselfish
+0060|Brown Garden Eel|Heteroconger longissimus|Congridae|Conger
+0817|Brownbar Goby|Priolepis dawsoni|Gobiidae|Goby
+0808|Brownstripe Grunt|Anisotremus moricandi|Haemulidae|Grunt
+0892|Brushtail Tang (exotic)|Zebrasoma scopas|Acanthuridae|Surgeonfish
+0146|Bucktooth Parrotfish|Sparisoma radians|Scaridae|Parrotfish
+0915|Bulb-Snout Snake Eels (incl. Whip Eel)|Bascanichthys spp. (incl. B. scuticaris)|Ophichthidae|Snake Eel
+0900|Bull Pipefish|Syngnathus springeri|Syngnathidae|Pipefish and Seahorse
+0552|Bull Shark|Carcharhinus leucas|Carcharhinidae|Requiem Shark
+1136|Bullnose Ray|Myliobatis freminvillei|Myliobatidae|Eagle Ray
+1109|Burro Grunt|Rhonciscus crocro|Haemulidae|Grunt
+0121|Butter Hamlet|Hypoplectrus unicolor|Serranidae|Seabass
+0761|Butterfish|Peprilus triacanthus|Stromateidae|Butterfishes
+0106|Caesar Grunt|Haemulon carbonarium|Haemulidae|Grunt
+0532|Candy Basslet|Liopropoma carmabi|Liopropomatinae|Basslet / Seabass
+0568|Cardinal Soldierfish|Plectrypops retrospinis|Holocentridae|Squirrelfish
+1080|Caribbean Blenny|Emblemaria caldwelli|Chaenopsidae|Blenny - Pike, tube, and flag
+0901|Caribbean Neon Goby|Elacatinus lobeli|Gobiidae|Goby
+0907|Caribbean ocellated moray|Gymnothorax ocellatus|Muraenidae|Moray
+0685|Caribbean Pipefish|Syngnathus caribbaeus|Syngnathidae|Pipefish and Seahorse
+0504|Caribbean Puffer|Sphoeroides greeleyi|Tetraodontidae|Puffer
+0561|Caribbean Red Snapper|Lutjanus purpureus|Lutjanidae|Snapper
+0627|Caribbean Tonguefish|Symphurus arawak|Cynoglossidae|Tonguefishes
+0511|Caribbean Torpedo|Torpedo sp.|Torpedinidae|Electric Ray
+0519|Caribbean Whiptail Stingray|Himantura schmardae|Dasyatidae|Stingray
+0368|Carolina Hake|Urophycis earllii|Gadidae|Cod
+0533|Cave Basslet|Liopropoma mowbrayi|Liopropomatinae|Basslet / Seabass
+0929|Cayman Bluespotted Variant Yellow Jawfish (aka Dottie’s Jawfish)|Opistognathus cf. gilberti|Opistognathidae|Jawfish
+0946|Cayman Cleaning Goby|Elacatinus cayman|Gobiidae|Goby
+1068|Cayman Greenbanded Goby|Tigrigobius harveyi|Gobiidae|Goby
+1003|Cayman Sponge Goby|Elacatinus centralis|Gobiidae|Goby
+0142|Cero|Scomberomorus regalis|Scombridae|Mackerel
+0061|Chain Moray|Echidna catenata|Muraenidae|Moray
+0879|Chain Pipefish|Syngnathus louisianae|Syngnathidae|Pipefish and Seahorse
+0179|Chalk Bass|Serranus tortugarum|Serranidae|Seabass
+0666|Chameleon Blenny|Protemblemaria punctata|Chaenopsidae|Blenny - Pike, tube, and flag
+0396|Channel Flounder|Syacium micrurum|Bothidae|Flounder
+1069|Checkerboard Frillfin|Bathygobius lacertus|Gobiidae|Goby
+0505|Checkered Puffer|Sphoeroides testudineus|Tetraodontidae|Puffer
+0320|Checkered Shy Blenny Complex|Starksia ocellata complex|Labrisomidae|Blenny - Labrisomids
+0002|Cherubfish|Centropyge argi|Pomacanthidae|Angelfish
+0675|Chessboard Shy Blenny Complex|Starksia sluiteri complex|Labrisomidae|Blenny - Labrisomids
+0383|Chestnut Moray|Enchelycore carychroa|Muraenidae|Moray
+0778|Chub Mackerel|Scomber japonicus|Scombridae|Mackerel
+0824|Cinta Goby|Tigrigobius redimiculus|Gobiidae|Goby
+0419|Cleaning Goby|Elacatinus genie|Gobiidae|Goby
+0517|Clearnose Skate|Rostroraja eglanteria|Rajidae|Skate
+0838|Clown Goby|Microgobius gulosus|Gobiidae|Goby
+0214|Clown Wrasse|Halichoeres maculipinna|Labridae|Wrasse
+0367|Cobia|Rachycentron canadum|Rachycentridae|Cobia
+0049|Cocoa Damselfish|Stegastes xanthurus|Pomacentridae|Damselfish
+0881|Code Goby|Gobiosoma robustum|Gobiidae|Goby
+0947|Colin's Sponge Goby|Elacatinus colini|Gobiidae|Goby
+0080|Colon Goby|Coryphopterus dicrus|Gobiidae|Goby
+0233|Common Snook|Centropomus undecimalis|Centropomidae|Snook
+0354|Conchfish|Astrapogon stellatus|Apogonidae|Cardinalfish
+0093|Coney|Cephalopholis fulva|Serranidae|Seabass
+0810|Coney x Creolefish Hybrid|Menephorus sp.|Serranidae|Seabass
+0379|Conger Eel|Conger oceanicus|Congridae|Conger
+0918|Contoy Hamlet|Hypoplectrus ecosur|Serranidae|Seabass
+0795|Convict Goby|Lythrypnus phorellus|Gobiidae|Goby
+0321|Coral Blenny|Paraclinus cingulatus|Labrisomidae|Blenny - Labrisomids
+0672|Coral Scorpionfish|Scorpaena albifimbria|Scorpaenidae|Scorpionfish
+0445|Corocoro Grunt|Orthopristis ruber|Haemulidae|Grunt
+0454|Cottonmouth Jack|Uraspis secunda|Carangidae|Jack
+0107|Cottonwick|Haemulon melanurum|Haemulidae|Grunt
+0807|Cownose Ray|Rhinoptera bonasus|Dasyatidae|Stingray
+1079|Cozumel Toadfish (not the same as Splendid Toad)|Sanopus johnsoni|Batrachoididae|Toadfish
+0215|Creole Wrasse|Bodianus parrae|Labridae|Wrasse
+0180|Creolefish (Atlantic)|Paranthias furcifer|Serranidae|Seabass
+0608|Crested Blenny|Hypleurochilus geminatus|Blenniidae|Blenny - Combtooth
+0420|Crested Goby|Lophogobius cyprinoides|Gobiidae|Goby
+0960|Crested Pipefish|Cosmocampus brachycephalus|Syngnathidae|Pipefish and Seahorse
+0135|Crevalle Jack|Caranx hippos|Carangidae|Jack
+0858|Crosshatch Bass|Serranus luciopercanus|Serranidae|Seabass
+1062|Cryptic Clingfish|Tomicodon cryptus|Gobiesocidae|Clingfish
+0987|Cubana Goby (undescribed Elactinus sp A Cuba2016)|Elacatinus sp. A|Gobiidae|Goby
+0055|Cubbyu|Pareques umbrosus|Sciaenidae|Drum
+0190|Cubera Snapper|Lutjanus cyanopterus|Lutjanidae|Snapper
+0759|Cunner|Tautogolabrus adspersus|Labridae|Wrasse
+0703|Cusk|Brosme brosme|Gadidae|Cod
+1125|Darksaddle Blenny|Starksia sella|Labrisomidae|Blenny - Labrisomids
+0421|Dash Goby|Ctenogobius saepepallens|Gobiidae|Goby
+0921|Dashback Goby|Microgobius signatus|Gobiidae|Goby
+0716|Daubed Shanny|Lumpenus maculatus|Stichaeidae|Prickleback
+0696|Deepreef Scorpionfish|Scorpaenodes tredecimspinosus|Scorpaenidae|Scorpionfish
+0567|Deepwater Squirrelfish|Sargocentron bullisi|Holocentridae|Squirrelfish
+0800|Delalande Blenny|Malacoctenus delalandii|Labrisomidae|Blenny - Labrisomids
+0014|Diamond Blenny|Malacoctenus boehlkei|Labrisomidae|Blenny - Labrisomids
+0687|Diamond Pipefish|Syngnathus sp.|Syngnathidae|Pipefish and Seahorse
+1051|Diphasic Goby|Lythrypnus heterochroma|Gobiidae|Goby
+0205|Doctorfish|Acanthurus chirurgus|Acanthuridae|Surgeonfish
+0191|Dog Snapper|Lutjanus jocu|Lutjanidae|Snapper
+0391|Dotterel Filefish|Aluterus heudeloti|Monacanthidae|Filefish
+1088|Doubtful Lizardfish|Saurida suspicio|Synodontidae|Lizardfish
+0323|Downy Blenny|Labrisomus kalisherae|Labrisomidae|Blenny - Labrisomids
+0864|Drab Sole|Achirus achirus|Achiridae|Sole (American)
+0904|Dusky Anchovy|Anchoa lyolepis|Engraulidae|Anchovy
+0324|Dusky Blenny|Malacoctenus gilli|Labrisomidae|Blenny - Labrisomids
+0038|Dusky Cardinalfish|Phaeoptyx pigmentaria|Apogonidae|Cardinalfish
+0050|Dusky Damselfish|Stegastes adustus|Pomacentridae|Damselfish
+0397|Dusky Flounder|Syacium papillosum|Bothidae|Flounder
+0986|Dusky Grouper|Epinephelus marginata|Serranidae|Seabass
+0463|Dusky Jawfish|Opistognathus whitehurstii|Opistognathidae|Jawfish
+0692|Dusky Pipefish|Syngnathus floridae|Syngnathidae|Pipefish and Seahorse
+0553|Dusky Shark|Carcharhinus obscurus|Carcharhinidae|Requiem Shark
+0199|Dusky Squirrelfish|Sargocentron vexillarium|Holocentridae|Squirrelfish
+0407|Dwarf Frogfish|Antennarius pauciradiatus|Antennariidae|Frogfish
+0413|Dwarf Goatfish|Upeneus parvus|Mullidae|Goatfish
+1022|Dwarf Goby|Lythrypnus elasson|Gobiidae|Goby
+0629|Dwarf Herring|Jenkinsia lamprotaenia|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+0534|Dwarf Sand Perch|Diplectrum bivittatum|Serranidae|Seabass
+0887|Dwarf Seahorse|Hippocampus zosterae|Syngnathidae|Pipefish and Seahorse
+1096|Dwarf Shy Blenny|Starksia nanodes|Labrisomidae|Blenny - Labrisomids
+0322|Dwarf Shy Blenny Complex|Starksia nanodes complex|Labrisomidae|Blenny - Labrisomids
+1089|Dwarf Spinyhead Blenny|Acanthemblemaria paula|Chaenopsidae|Blenny - Pike, tube, and flag
+0587|Dwarf Wrasse|Doratonotus megalepis|Labridae|Wrasse
+0325|Eelgrass Blenny|Stathmonotus stahli|Chaenopsidae|Blenny - Pike, tube, and flag
+0996|Eightlined Goby (undescribed Ginburgellus spE Cuba2016)|Ginburgellus sp A|Gobiidae|Goby
+0363|Emerald Clingfish|Acyrtops beryllinus|Gobiesocidae|Clingfish
+0488|Emerald Parrotfish|Nicholsina usta usta|Scaridae|Parrotfish
+0771|Emperor Angelfish (exotic)|Pomacanthus imperator|Pomacanthidae|Angelfish
+0868|Erect Goby|Microgobius erectus|Gobiidae|Goby
+0422|Exuma Goby|Elacatinus atronasum|Gobiidae|Goby
+0073|Eyed Flounder|Bothus ocellatus|Bothidae|Flounder
+0010|Fairy Basslet|Gramma loreto|Grammatidae|Basslet
+1082|Falcon (Red Banner) Blenny|Emblemariopsis falcon|Chaenopsidae|Blenny - Pike, tube, and flag
+1053|False Moray|Kaupichthys hyoproroides|Chlopsidae|False Moray Eels
+0803|False Pilchard|Harengula clupeola|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+0480|Fantail Mullet|Mugil trichodon|Mugilidae|Mullet
+0717|Fawn Cusk Eel|Lepophidium cervinum|Ophidiidae|Cusk-eel
+0700|Feather Blenny|Hypsoblennius hentz|Blenniidae|Blenny - Combtooth
+0922|Featherduster Blenny|Hypleurochilus multifilis|Blenniidae|Blenny - Combtooth
+0804|Filament Blenny|Emblemaria hyltoni|Chaenopsidae|Blenny - Pike, tube, and flag
+0880|Finetooth Shark|Carcharhinus isodon|Carcharhinidae|Requiem Shark
+0681|Flabby Sole|Gymnachirus nudus|Achiridae|Sole (American)
+0941|Flagfin Glass Blenny Complex|Emblemariopsis sp. (Flagfin complex)|Chaenopsidae|Blenny - Pike, tube, and flag
+0476|Flagfin Mojarra|Eucinostomus melanopterus|Gerreidae|Mojarra
+0301|Flameback Angelfish|Centropyge aurantonotus|Pomacanthidae|Angelfish
+0039|Flamefish|Apogon maculatus|Apogonidae|Cardinalfish
+0484|Flat Needlefish|Ablennes hians|Belonidae|Needlefish
+0917|Florida Barred Hamlet|Hypoplectrus floridae|Serranidae|Seabass
+0882|Florida Blenny|Chasmodes saburrae|Blenniidae|Blenny - Combtooth
+0455|Florida Pompano|Trachinotus carolinus|Carangidae|Jack
+0959|Florida Smoothhead Glass Blenny|Emblemariopsis diaphana|Chaenopsidae|Blenny - Pike, tube, and flag
+0225|Flying Gurnard|Dactylopterus volitans|Dactylopteridae|Flying Gurnard
+1103|Forked-bar Blenny|Starksia y-lineata|Labrisomidae|Blenny - Labrisomids
+0725|Four Spot Flounder|Paralichthys oblongus|Bothidae|Flounder
+0704|Fourbeard Rockling|Enchelyopus cimbrius|Gadidae|Cod
+0031|Foureye Butterflyfish|Chaetodon capistratus|Chaetodontidae|Butterflyfish
+0966|Fourspot Parrotfish|Scarus zelindae|Scaridae|Parrotfish
+0618|Freckled Blenny|Hypsoblennius ionthas|Blenniidae|Blenny - Combtooth
+0355|Freckled Cardinalfish|Phaeoptyx conklini|Apogonidae|Cardinalfish
+0564|Freckled Soapfish|Rypticus bistrispinus|Grammistidae|Soapfishes
+0948|Frecklefin Goby|Tigrigobius gemmatus|Gobiidae|Goby
+0003|French Angelfish|Pomacanthus paru|Pomacanthidae|Angelfish
+0108|French Grunt|Haemulon flavolineatum|Haemulidae|Grunt
+1078|Freshwater Gregory|Stegastes otophorus|Pomacentridae|Damselfish
+1137|Frigate Mackerel|Auxis thazard|Scombridae|Mackerel
+0423|Frillfin Goby|Bathygobius soporator|Gobiidae|Goby
+0962|Fringed / Planehead / Pygmy Filefish Complex|Monacanthus ciliatus / Stephanolepis hispida / Stephanolepis setifer|Monacanthidae|Filefish
+0392|Fringed Filefish|Monacanthus ciliatus|Monacanthidae|Filefish
+0802|Gafttopsail Sea Catfish|Bagre marinus|Ariidae|Sea Catfishes
+0094|Gag|Mycteroperca microlepis|Serranidae|Seabass
+0638|Giraffe Garden Eel|Heteroconger camelopardalis|Congridae|Conger
+0551|Glass Blenny|Coralliozetus diaphanus|Chaenopsidae|Blenny - Pike, tube, and flag
+0012|Glasseye Snapper (Atlantic)|Heteropriacanthus cruentatus|Priacanthidae|Bigeye
+0236|Glassy Sweeper|Pempheris schomburgkii|Pempheridae|Sweeper
+0933|Glover's Reef Toadfish|Vladichthys gloverensis|Batrachoididae|Toadfish
+0924|Goatee Blenny|Paraclinus barbatus|Labrisomidae|Blenny - Labrisomids
+0990|Golden Fairy Basslet|Gramma dejongi|Grammatidae|Basslet
+0122|Golden Hamlet|Hypoplectrus gummigutta|Serranidae|Seabass
+0617|Golden Smooth Trunkfish|Lactophrys triqueter|Ostraciidae|Boxfish
+0062|Goldentail Moray|Gymnothorax miliaris|Muraenidae|Moray
+0876|Goldface Toby|Canthigaster jamestyleri|Tetraodontidae|Puffer
+0326|Goldline Blenny|Malacoctenus aurolineatus|Labrisomidae|Blenny - Labrisomids
+0081|Goldspot Goby|Gnatholepis thompsoni|Gobiidae|Goby
+0388|Goldspotted Eel|Myrichthys ocellatus|Ophichthidae|Snake Eel
+0680|Goldspotted Killifish|Floridichthys carpio|Cyprinodontidae|Killifish
+0096|Goliath Grouper|Epinephelus itajara|Serranidae|Seabass
+0762|Goosefish|Lophius americanus|Lophiidae|Goosefish
+0697|Goosehead Scorpionfish|Scorpaena bergii|Scorpaenidae|Scorpionfish
+0871|Grass Porgy|Calamus arctifrons|Sparidae|Porgy
+0004|Gray Angelfish|Pomacanthus arcuatus|Pomacanthidae|Angelfish
+0192|Gray Snapper|Lutjanus griseus|Lutjanidae|Snapper
+0208|Gray Triggerfish|Balistes capriscus|Balistidae|Triggerfish
+0095|Graysby|Cephalopholis cruentata|Serranidae|Seabass
+0877|Gray_white-eyed goby|Emblemaria spp|Chaenopsidae|Blenny - Pike, tube, and flag
+0007|Great Barracuda|Sphyraena barracuda|Sphyraenidae|Barracuda
+0548|Great Hammerhead|Sphyrna mokarran|Sphyrnidae|Hammerhead Shark
+0136|Greater Amberjack|Seriola dumerili|Carangidae|Jack
+0234|Greater Soapfish|Rypticus saponaceus|Grammistidae|Soapfishes
+0832|Green Blenny (Utila/Mona)|Blennidae sp. B (Green Blenny)|Blenniidae|Blenny - Combtooth
+0063|Green Moray|Gymnothorax funebris|Muraenidae|Moray
+0173|Green Razorfish|Xyrichtys splendens|Labridae|Wrasse
+0661|Green Sea Turtle|Chelonia mydas|Cheloniidae|Sea Turtles
+0662|Green Sea Turtle w/ FP Tumor|Chelonia mydas|Cheloniidae|Sea Turtles
+0976|Greenback (aka Greenlip) Parrotfish|Scarus trispinosus|Scaridae|Parrotfish
+0424|Greenbanded Goby|Tigrigobius multifasciatus|Gobiidae|Goby
+0607|Greenbanded Wrasse|Halichoeres bathyphilus|Labridae|Wrasse
+0147|Greenblotch Parrotfish|Sparisoma atomarium|Scaridae|Parrotfish
+1156|Greenfield's Blenny|Starksia greenfieldi|Labrisomidae|Blenny - Labrisomids
+0746|Grubby Sculpin|Myoxocephalus aenaeus|Cottidae|Sculpin
+0302|Guaguanche|Sphyraena guachancho|Sphyraenidae|Barracuda
+0074|Gulf Flounder|Paralichthys albigutta|Bothidae|Flounder
+1112|Gulf Kingfish|Menticirrhus littoralis|Sciaenidae|Drum
+0679|Gulf Pipefish|Syngnathus scovelli|Syngnathidae|Pipefish and Seahorse
+0574|Gulf Toadfish|Opsanus beta|Batrachoididae|Toadfish
+0705|Haddock|Melanogrammus aeglefinus|Gadidae|Cod
+0938|Hairy Blenny (actual species; not complex)|Labrisomus nuchipinnis|Labrisomidae|Blenny - Labrisomids
+0015|Hairy Blenny Complex|Labrisomus nuchipinnis/L. conditus/L.cricota|Labrisomidae|Blenny - Labrisomids
+0405|Halfbeak|Hyporhamphus unifasciatus|Hemiramphidae|Halfbeak
+0843|Hamlet - Juvenile|Hypoplectrus sp.|Serranidae|Seabass
+1098|Hamlet sp C (Black USVI)|Hypoplectrus sp. (spC)|Serranidae|Seabass
+1074|Hardhead Sea Catfish|Ariopsis felis|Ariidae|Sea Catfishes
+0888|Hardhead Silverside|Atherinomorus stipes|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+0490|Harlequin / Banded Pipefish|Micrognathus crinitus|Syngnathidae|Pipefish and Seahorse
+0181|Harlequin Bass|Serranus tigrinus|Serranidae|Seabass
+0926|Harvestfish|Peprilus paru|Stromateidae|Butterfishes
+0656|Hawksbill Sea Turtle|Eretmochelys imbricata|Cheloniidae|Sea Turtles
+0303|Heliotrope Basslet|Lipogramma klayi|Grammatidae|Basslet
+0654|Highfin (Red Banner) Blenny (pka Red Banner Blenny)|Emblemariopsis tayrona (prev E. ramirezi)|Chaenopsidae|Blenny - Pike, tube, and flag
+1090|Highfin Blenny|Lupinoblennius nicholsi|Chaenopsidae|Blenny - Pike, tube, and flag
+1054|Highfin Goby|Gobionellus oceanicus|Gobiidae|Goby
+0056|Highhat|Pareques acuminatus / Pareques lineatus|Sciaenidae|Drum
+0726|Hogchoker|Trinectes maculatus|Soleidae|Sole
+0130|Hogfish|Lachnolaimus maximus|Labridae|Wrasse
+0025|Honeycomb Cowfish|Acanthostracion polygonius|Ostraciidae|Boxfish
+0384|Honeycomb Moray|Gymnothorax saxicola|Muraenidae|Moray
+0969|Horned Blenny|Paraclinus grandicomis|Labrisomidae|Blenny - Labrisomids
+0899|Hornless (Red Banner) Blenny|Emblemariopsis randalli|Chaenopsidae|Blenny - Pike, tube, and flag
+0137|Horse-eye Jack|Caranx latus|Carangidae|Jack
+0227|Houndfish|Tylosurus crocodilus crocodilus|Belonidae|Needlefish
+0082|Hovering Dartfish (Hovering Goby)|Ptereleotris helenae|Ptereleotridae|Dartfish
+0925|Hybrid Boxfish (spotted/scrawled trunkfish)||Ostraciidae|Boxfish
+1092|Hybrid Fairy Basslet x Golden Fairy Basslet|Gramma loreto x Gramma dejongi|Grammatidae|Basslet
+0129|Hybrid Hamlet|Hypoplectrus (Hybrid)|Serranidae|Seabass
+0327|Imitator Blenny|Malacoctenus erdmani|Labrisomidae|Blenny - Labrisomids
+0123|Indigo Hamlet|Hypoplectrus indigo|Serranidae|Seabass
+0470|Inshore Lizardfish|Synodus foetens|Synodontidae|Lizardfish
+1128|Insular Pipefish|Anarchopterus tectus|Syngnathidae|Pipefish and Seahorse
+0526|invalid||Chaenopsidae|Blenny - Pike, tube, and flag
+0337|invalid spp||Chaenopsidae|Blenny - Pike, tube, and flag
+0612|Irish Pompano|Diapterus auratus|Gerreidae|Mojarra
+0676|Island Frillfin|Bathygobius mystacium|Gobiidae|Goby
+0408|Island Frogfish|Antennarius bermudensis|Antennariidae|Frogfish
+0867|Island Goby|Lythrypnus nesiotes|Gobiidae|Goby
+0949|Island Seahorse (undescribed)|Hippocampus sp.|Syngnathidae|Pipefish and Seahorse
+0057|Jackknife-Fish|Eques lanceolatus|Sciaenidae|Drum
+0875|Jaggedhead (aka Devil or Whitecheek) Blenny|Acanthemblemaria johnsoni|Chaenopsidae|Blenny - Pike, tube, and flag
+0825|Jarocho Goby|Elacatinus jarocho|Gobiidae|Goby
+1056|Jarocho Hamlet|Hypoplectrus atlahua|Serranidae|Seabass
+0821|Jawfish (Brasil)|Opistognathus sp|Opistognathidae|Jawfish
+0157|Jolthead Porgy|Calamus bajonado|Sparidae|Porgy
+0792|Juvenile Grunt|Haemulon sp.|Haemulidae|Grunt
+0485|Keeltail Needlefish|Platybelone argalus argalus|Belonidae|Needlefish
+0659|Kemp's Ridley Sea Turtle|Lepidochelys kempii|Cheloniidae|Sea Turtles
+0628|Key Brotula|Ogilbia cayorum|Bythitidae|Viviparous Brotula
+0691|Key Worm Eel|Ahlia egmontis|Ophichthidae|Snake Eel
+0473|King Mackerel|Scomberomorus cavalla|Scombridae|Mackerel
+0497|Knobbed Porgy|Calamus nodosus|Sparidae|Porgy
+0909|Kuna Goby|Coryphopterus kuna|Gobiidae|Goby
+0348|Ladyfish|Elops saurus|Elopidae|Tarpon
+1081|Lancer (Red Banner) Blenny|Emblemariopsis lancea|Chaenopsidae|Blenny - Pike, tube, and flag
+0223|Lancer Dragonet|Paradiplogrammus bairdi|Callionymidae|Dragonet
+0854|Lancetail Wormfish|Microdesmus lanceolatus|Microdesmidae|Wormfish
+0193|Lane Snapper|Lutjanus synagris|Lutjanidae|Snapper
+0182|Lantern Bass|Serranus baldwini|Serranidae|Seabass
+0575|Large Eye Toadfish (Estuarine Species Only)|Batrachoides gilberti|Batrachoididae|Toadfish
+0857|Large-tooth Sawfish|Pristis perotteti|Pristidae|Sawfish
+0446|Latin Grunt|Haemulon steindachneri|Haemulidae|Grunt
+0658|Leatherback Sea Turtle|Dermochelys coriacea|Dermochelyidae|Leatherback Sea Turtle
+0897|Lemon Goby|Vomerogobius flavus|Gobiidae|Goby
+0554|Lemon Shark|Negaprion brevirostris|Carcharhinidae|Requiem Shark
+0425|Leopard Goby|Tigrigobius saucras|Gobiidae|Goby
+0605|Leopard Searobin|Prionotus scitulus|Triglidae|Searobin
+0578|Leopard Toadfish|Opsanus pardus|Batrachoididae|Toadfish
+0465|Lesser Amberjack|Seriola fasciata|Carangidae|Jack
+0515|Lesser Devil Ray (aka Atlantic Devil Ray)|Mobula hypostoma|Mobulidae|Manta
+0169|Lesser Electric Ray|Narcine bancroftii|Torpedinidae|Electric Ray
+0491|Lined Seahorse|Hippocampus erectus|Syngnathidae|Pipefish and Seahorse
+0782|Lined Sole|Achirus lineatus|Achiridae|Sole (American)
+0416|Linesnout Goby|Elacatinus lori|Gobiidae|Goby
+0646|Lipstick surgeonfish (exotic)|Naso lituratus|Acanthuridae|Surgeonfish
+0755|Little Skate|Leucoraja erinacea|Rajidae|Skate
+0599|Little Tunny|Euthynnus alletteratus|Scombridae|Mackerel
+0158|Littlehead Porgy|Calamus proridens|Sparidae|Porgy
+0894|Littlescale Threadfin|Polydactylus oligodon|Polynemidae|Threadfin
+0957|Liza Mullet|Mugil liza|Mugilidae|Mullet
+0343|Lofty Triplefin|Enneanectes altivelis|Tripterygiidae|Triplefin (Blenny)
+0657|Loggerhead Sea Turtle|Caretta caretta|Cheloniidae|Sea Turtles
+0965|Long-Spined Sea Urchin|Diadema antillarum|Diadematidae|Sea Urchin
+0328|Longfin Blenny|Labrisomus haitiensis|Labrisomidae|Blenny - Labrisomids
+0051|Longfin Damselfish|Stegastes diencaeus|Pomacentridae|Damselfish
+0312|Longhorn Blenny|Hypsoblennius exstochilus|Blenniidae|Blenny - Combtooth
+0747|Longhorn Sculpin|Myoxocephalus octodecemspinosus|Cottidae|Sculpin
+0200|Longjaw Squirrelfish|Neoniphon marianus|Holocentridae|Squirrelfish
+0224|Longlure Frogfish|Antennarius multiocellatus|Antennariidae|Frogfish
+0956|Longnose Batfish|Ogcocephalus corniger|Ogcocephalidae|Batfish
+1108|Longnose Stingray|Hypanus guttatus|Dasyatidae|Stingray
+0032|Longsnout Butterflyfish|Chaetodon aculeatus|Chaetodontidae|Butterflyfish
+0492|Longsnout Seahorse|Hippocampus reidi|Syngnathidae|Pipefish and Seahorse
+0615|Longspine Porgy|Stenotomus caprinus|Sparidae|Porgy
+0201|Longspine Squirrelfish|Holocentrus rufus|Holocentridae|Squirrelfish
+0456|Lookdown|Selene vomer|Carangidae|Jack
+0764|Lumpfish|Cyclopterus lumpus|Cyclopteridae|Lumpfish & Snailfish
+1115|Lutz' Stingray (Brazil only)|Hypanus berthalutzae|Dasyatidae|Stingray
+0785|M. meeki|Microgobius meeki|Gobiidae|Goby
+0457|Mackerel Scad|Decapterus macarellus|Carangidae|Jack
+0688|Maculated Flounder|Bothus maculiferus|Bothidae|Flounder
+0851|Madmango Sea Catfish|Cathorops spixii|Ariidae|Sea Catfishes
+0373|Mahi Mahi / Dolphin / Dorado|Coryphaena hippurus|Coryphaenidae|Dolphinfish
+1123|Mahogany Goby|Lythrypnus crocodilus|Gobiidae|Goby
+0194|Mahogany Snapper|Lutjanus mahogoni|Lutjanidae|Snapper
+0589|Man-of-war Fish|Nomeus gronovii|Stromateidae|Butterfishes
+0886|Mangrove Gambusia|Gambusia rhizophorae|Poeciliidae|Mosquitofish
+1144|Manyscaled Blenny|Starksia multilepis|Labrisomidae|Blenny - Labrisomids
+0380|Manytooth Conger|Conger triporiceps|Congridae|Conger
+0668|Marbled Blenny|Paraclinus marmoratus|Labrisomidae|Blenny - Labrisomids
+0439|Marbled Grouper|Dermatolepis inermis|Serranidae|Seabass
+1119|Marbled Moray|Uropterygius macularius|Muraenidae|Moray
+0506|Marbled Puffer|Sphoeroides dorsalis|Tetraodontidae|Puffer
+0873|Mardi Gras Wrasse|Halichoeres burekae|Labridae|Wrasse
+0674|Margintail Conger|Paraconger caudilimbatus|Congridae|Conger
+0083|Masked Goby / Glass Goby|Coryphopterus personatus / hyalinus|Gobiidae|Goby
+0124|Masked Hamlet|Hypoplectrus providencianus|Serranidae|Seabass
+0937|Masquerader Hairy Blenny|Labrisomus conditus|Labrisomidae|Blenny - Labrisomids
+0951|Matador Triplefin|Enneanectes matador|Tripterygiidae|Triplefin (Blenny)
+1025|Maya Hamlet|Hypoplectrus maya|Serranidae|Seabass
+0822|Medusa Blenny|Acanthemblemaria medusa|Chaenopsidae|Blenny - Pike, tube, and flag
+0148|Midnight Parrotfish|Scarus coelestinus|Scaridae|Parrotfish
+0329|Mimic Blenny|Labrisomus guppyi|Labrisomidae|Blenny - Labrisomids
+0356|Mimic Cardinalfish|Apogon phenax|Apogonidae|Cardinalfish
+0344|Mimic Triplefin|Enneanectes jordani|Tripterygiidae|Triplefin (Blenny)
+0406|Mirrorwing Flyingfish|Hirundichthys speculiger|Exocoetidae|Flyingfish
+0440|Misty Grouper|Epinephelus mystacinus|Serranidae|Seabass
+0939|Mock Blenny|Labrisomus cricota|Labrisomidae|Blenny - Labrisomids
+0641|Mola mola|Mola mola|Molidae|Molas
+0016|Molly Miller|Scartella cristata|Blenniidae|Blenny - Combtooth
+0836|Mosquitofish|Gambusia affinis|Poeciliidae|Mosquitofish
+1066|Moth Blenny|Ekemblemaria nigra|Chaenopsidae|Blenny - Pike, tube, and flag
+0464|Mottled Jawfish|Opistognathus maxillosus|Opistognathidae|Jawfish
+0477|Mottled Mojarra|Eucinostomus lefroyi|Gerreidae|Mojarra
+0783|Moustache Jawfish|Opistognathus lonchurus|Opistognathidae|Jawfish
+0739|Mummichog|Fundulus heteroclitus heteroclitus|Cyprinodontidae|Killifish
+0525|Mushroom Scorpionfish|Scorpaena inermis|Scorpaenidae|Scorpionfish
+0535|Mutton Hamlet|Alphestes afer|Serranidae|Seabass
+0195|Mutton Snapper|Lutjanus analis|Lutjanidae|Snapper
+1005|Naked Sole|Gymnachirus melas|Achiridae|Sole (American)
+0097|Nassau Grouper|Epinephelus striatus|Serranidae|Seabass
+0084|Neon Goby|Elacatinus oceanops|Gobiidae|Goby
+0912|Nevis-St. Kitts Hamlet (Not Quite Shy Hybrid)|Hypoplectrus sp. A (Nevis)|Serranidae|Seabass
+1122|Nicaragua Mosquitofish|Gambusia nicaraguensis|Poeciliidae|Mosquitofish
+1063|Nicaragua Yellowprow Goby|Elacatinus xanthiprora|Gobiidae|Goby
+0372|Night Sergeant|Abudefduf taurus|Pomacentridae|Damselfish
+0426|Nineline Goby|Ginsburgellus novemlineatus|Gobiidae|Goby
+1019|Noronha Blenny|Scartella itajobi|Labrisomidae|Blenny - Labrisomids
+1016|Noronha Cleaner Goby|Elacatinus phthirophagus|Gobiidae|Goby
+1142|Noronha Clingfish|Acyrtus pauciradiatus|Gobiesocidae|Clingfish
+1148|Noronha Dwarf Goby|Lythrypnus sp.D|Gobiidae|Goby
+1149|Noronha Frillfin Goby|Bathygobius brasiliensis|Gobiidae|Goby
+1140|Noronha Saddled Blenny|Malacoctenus lianae|Labrisomidae|Blenny - Labrisomids
+0815|Noronha Wrasse|Thalassoma noronhanum|Labridae|Wrasse
+0008|Northern / Southern Sennet|Sphyraena borealis/picudilla|Sphyraenidae|Barracuda
+0774|Northern Kingcroaker|Menticirrhus saxatilis|Sciaenidae|Drum
+0766|Northern Pipefish|Syngnathus fuscus|Syngnathidae|Pipefish and Seahorse
+0767|Northern Puffer|Sphoeroides maculatus|Tetraodontidae|Puffer
+0718|Northern Sand Lance|Ammodytes dubius|Ammodytidae|Sand Lance
+0748|Northern Searobin|Prionotus carolinus|Triglidae|Searobin
+0569|Northern Stargazer|Astroscopus guttatus|Uranoscopidae|Stargazer
+0852|Notchtongue Goby|Bathygobius curacao|Gobiidae|Goby
+0187|Nurse Shark|Ginglymostoma cirratum|Ginglymostomatidae|Carpet Shark
+0719|Ocean Pout|Macrozoarces americanus|Zoarcidae|Eelpout
+0206|Ocean Surgeonfish|Acanthurus tractus|Acanthuridae|Surgeonfish
+0209|Ocean Triggerfish|Canthidermis sufflamen|Balistidae|Triggerfish
+0514|Oceanic Manta Ray|Mobula birostris|Mobulidae|Manta
+0555|Oceanic Whitetip Shark|Carcharhinus longimanus|Carcharhinidae|Requiem Shark
+0398|Ocellated Flounder|Paralichthys ommatus|Bothidae|Flounder
+0409|Ocellated Frogfish|Antennarius ocellatus|Antennariidae|Frogfish
+0673|Ocellated Tonguefish|Symphurus ommaspilus|Cynoglossidae|Tonguefishes
+0357|Oddscale Cardinalfish|Apogon evermanni|Apogonidae|Cardinalfish
+0660|Olive Ridley Sea Turtle|Lepidochelys olivacea|Cheloniidae|Sea Turtles
+1002|One-striped Goby (undescribed spE Cuba2016)|Elacatinus sp B|Gobiidae|Goby
+0994|Onespot Rabbitfish (exotic)|Siganus unimaculatus|Siganidae|Rabbitfish
+0684|Onestripe Eel|Aprognathodon platyventris|Ophichthidae|Snake Eel
+0828|Opossum Pipefish|Microphis brachyurus|Syngnathidae|Pipefish and Seahorse
+0068|Orange Filefish|Aluterus schoepfii|Monacanthidae|Filefish
+1061|Orange-spotted Clingfish|Acyrtus lanthanum|Gobiesocidae|Clingfish
+0536|Orangeback Bass|Serranus annularis|Serranidae|Seabass
+0085|Orangesided Goby|Tigrigobius dilepis|Gobiidae|Goby
+0694|Orangespotted Blenny|Hypleurochilus springeri|Blenniidae|Blenny - Combtooth
+0069|Orangespotted Filefish|Cantherhines pullus|Monacanthidae|Filefish
+0427|Orangespotted Goby|Nes longus|Gobiidae|Goby
+0631|Orbicular Batfish (Exotic)|Platax orbicularis|Ephippidae|Spadefish
+0580|Oyster Toadfish|Opsanus tau|Batrachoididae|Toadfish
+0953|Padded Clingfish|Arcos macrophthalmus|Gobiesocidae|Clingfish
+0787|Painted Wrasse|Halichoeres caudalis|Labridae|Wrasse
+0358|Pale Cardinalfish|Apogon planifrons|Apogonidae|Cardinalfish
+1052|Paleback Goby|Gobulus myersi|Gobiidae|Goby
+0330|Palehead Blenny|Labrisomus gobio|Labrisomidae|Blenny - Labrisomids
+1071|Palette Surgeonfish (exotic)|Paracanthurus hepatus|Acanthuridae|Surgeonfish
+0086|Pallid Goby|Coryphopterus eidolon|Gobiidae|Goby
+0791|Pallid Snake Eel|Ophichthus sp.|Ophichthidae|Snake Eel
+0138|Palometa|Trachinotus goodei|Carangidae|Jack
+0914|Panama Cleaner Goby|Gobiosoma sp.|Gobiidae|Goby
+0307|Pancake Batfish|Halieutichthys aculeatus|Ogcocephalidae|Batfish
+0891|Panther Grouper (exotic)|Cromileptes altivelis|Serranidae|Seabass
+0364|Papillate Clingfish|Acyrtus artius|Gobiesocidae|Clingfish
+0331|Papillose Blenny|Acanthemblemaria chaplini|Chaenopsidae|Blenny - Pike, tube, and flag
+0895|Patch-Reef Goby (part of Bridled Goby Complex)|Coryphopterus tortugae|Gobiidae|Goby
+0075|Peacock Flounder|Bothus lunatus|Bothidae|Flounder
+0860|Peacock Grouper (exotic)|Cephalopholis argus|Serranidae|Seabass
+0313|Pearl Blenny|Entomacrodus nigricans|Blenniidae|Blenny - Combtooth
+0590|Pearlfish|Carapus bermudensis|Carapidae|Carapuds
+0174|Pearly Razorfish|Xyrichtys novacula|Labridae|Wrasse
+0794|Pennant Coralfish|Heniochus acuminatus|Chaetodontidae|Butterflyfish
+0183|Peppermint Basslet|Liopropoma rubre|Liopropomatinae|Basslet / Seabass
+0087|Peppermint Goby|Coryphopterus lipernes|Gobiidae|Goby
+0139|Permit|Trachinotus falcatus|Carangidae|Jack
+0447|Pigfish|Orthopristis chrysoptera|Haemulidae|Grunt
+0458|Pilot Fish|Naucrates ductor|Carangidae|Jack
+0498|Pinfish|Lagodon rhomboides|Sparidae|Porgy
+0999|Pinstriped Hamlet (undescribed spD Cuba2016)|Hypoplectrus sp C|Serranidae|Seabass
+0493|Pipehorse|Amphelikturus dendriticus|Syngnathidae|Pipefish and Seahorse
+0332|Pirate Blenny|Emblemaria piratula|Chaenopsidae|Blenny - Pike, tube, and flag
+0393|Planehead Filefish|Stephanolepis hispida|Monacanthidae|Filefish
+0159|Pluma|Calamus pennatula|Sparidae|Porgy
+0176|Plumed Scorpionfish|Scorpaena grandicornis|Scorpaenidae|Scorpionfish
+0308|Polka-dot Batfish|Ogcocephalus cubifrons|Ogcocephalidae|Batfish
+0706|Pollock|Pollachius virens|Gadidae|Cod
+0374|Pompano Dolphin|Coryphaena equisietis|Coryphaenidae|Dolphinfish
+0166|Porcupinefish|Diodon hystrix|Diodontidae|Porcupinefish
+0111|Porkfish|Anisotremus virginicus|Haemulidae|Grunt
+0149|Princess Parrotfish|Scarus taeniopterus|Scaridae|Parrotfish
+0216|Puddingwife|Halichoeres radiatus|Labridae|Wrasse
+0333|Puffcheek Blenny|Labrisomus bucciferus|Labrisomidae|Blenny - Labrisomids
+0645|Pugjaw Wormfish|Cerdale floridana|Microdesmidae|Wormfish
+0870|Pugnose Pipefish|Bryx dunckeri|Syngnathidae|Pipefish and Seahorse
+0044|Purple Reeffish|Chromis scotti|Pomacentridae|Damselfish
+0064|Purplemouth Moray|Gymnothorax vicinus|Muraenidae|Moray
+0394|Pygmy Filefish|Stephanolepis setifer|Monacanthidae|Filefish
+0786|Pygmy Goby|Lythrypnus minimus|Gobiidae|Goby
+0537|Pygmy Sea Bass|Serraniculus pumilio|Serranidae|Seabass
+0005|Queen Angelfish|Holacanthus ciliaris|Pomacanthidae|Angelfish
+0150|Queen Parrotfish|Scarus vetula|Scaridae|Parrotfish
+0210|Queen Triggerfish|Balistes vetula|Balistidae|Triggerfish
+0903|Querimana Silverside|Melanorhinus microps|Atherinopsidae|Neotropical Silversides
+0334|Quillfin Blenny|Gobioclinus filamentosus|Labrisomidae|Blenny - Labrisomids
+0640|Racoon Butterflyfish (Exotic)|Chaetodon lunula|Chaetodontidae|Butterflyfish
+0720|Radiated Shanny|Ulvaria subbifurcata|Stichaeidae|Prickleback
+0151|Rainbow Parrotfish|Scarus guacamaia|Scaridae|Parrotfish
+0140|Rainbow Runner|Elagatis bipinnulata|Carangidae|Jack
+0745|Rainbow Smelt|Osmerus mordax|Osmeridae|Smelt
+0217|Rainbow Wrasse|Halichoeres pictus|Labridae|Wrasse
+0872|Rainwater Killifish|Lucania parva|Fundulidae|Topminnows and Killifishes
+1120|Randall's Soapfish|Rypticus randalli|Grammistidae|Soapfishes
+0796|Red Barbier|Hemanthias vivanus|Serranidae|Seabass
+0365|Red Clingfish|Acyrtus rubiginosus|Gobiesocidae|Clingfish
+0371|Red Cornetfish|Fistularia petimba|Fistulariidae|Cornetfish
+0610|Red Drum|Sciaenops ocellatus|Sciaenidae|Drum
+0414|Red Goatfish|Mullus auratus|Mullidae|Goatfish
+0098|Red Grouper|Epinephelus morio|Serranidae|Seabass
+0707|Red Hake|Urophycis chuss|Gadidae|Cod
+0099|Red Hind|Epinephelus guttatus|Serranidae|Seabass
+0683|Red Lionfish (exotic)|Pterois volitans|Scorpaenidae|Scorpionfish
+0471|Red Lizardfish|Synodus synodus|Synodontidae|Lizardfish
+0499|Red Porgy|Pagrus pagrus|Sparidae|Porgy
+0562|Red Snapper|Lutjanus campechanus|Lutjanidae|Snapper
+0905|Red Squirrelfish|Sargocentron hastatum|Holocentridae|Squirrelfish
+0152|Redband Parrotfish|Sparisoma aurofrenatum|Scaridae|Parrotfish
+0345|Redbelly (pka Redeye) Triplefin|Enneanectes jordani (pka E. pectoralis)|Tripterygiidae|Triplefin (Blenny)
+0885|Redcheek Goby|Tigrigobius rubrigenis|Gobiidae|Goby
+0623|Redear Sardine (Redear Herring)|Harengula humeralis|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+0814|Redeye (aka Gray) Parrotfish|Sparisoma axillare|Scaridae|Parrotfish
+1010|Redeye Mullet|Mugil rubrioculus|Mugilidae|Mullet
+0576|Redface Moray|Monopenchelys acuta|Muraenidae|Moray
+0486|Redfin Needlefish|Strongylura notata notata|Belonidae|Needlefish
+0749|Redfish sp.|Sebastes sp.|Scorpaenidae|Scorpionfish
+0017|Redlip Blenny|Ophioblennius macclurei|Blenniidae|Blenny - Combtooth
+1018|Redlip Blenny (Brazil)|Ophioblennius trinitatis|Blenniidae|Blenny - Combtooth
+0226|Redspotted Hawkfish|Amblycirrhitus pinos|Cirrhitidae|Hawkfish
+0154|Redtail Parrotfish|Sparisoma chrysopterum|Scaridae|Parrotfish
+0459|Redtail Scad|Decapterus tabl|Carangidae|Jack
+1087|Redtooth Triggerfish (non-native)|Odonus niger|Balistidae|Triggerfish
+0538|Reef Bass|Pseudogramma gregoryi|Serranidae|Seabass
+0033|Reef Butterflyfish|Chaetodon sedentarius|Chaetodontidae|Butterflyfish
+0058|Reef Croaker|Odontoscion dentex|Sciaenidae|Drum
+0797|Reef Parrotfish|Sparisoma amplum|Scaridae|Parrotfish
+0177|Reef Scorpionfish|Scorpaenodes caribbaeus|Scorpaenidae|Scorpionfish
+0188|Reef Shark (Caribbean)|Carcharhinus perezii|Carcharhinidae|Requiem Shark
+0202|Reef Squirrelfish|Holocentrus coruscus|Holocentridae|Squirrelfish
+0784|Reef-cave Brotula|Grammonus claudei|Bythitidae|Viviparous Brotula
+0964|Regal Demoiselle (Exotic)|Neopomacentrus cyanomos|Pomacentridae|Damselfish
+0604|Remora|Remora remora|Echeneidae|Remora
+0665|Resh Pikeblenny|Chaenopsis resh|Chaenopsidae|Blenny - Pike, tube, and flag
+0385|Reticulate Moray|Muraena retifera|Muraenidae|Moray
+0780|Ribbon Blenny|Emblemaria vitta|Chaenopsidae|Blenny - Pike, tube, and flag
+0869|Ridgefin Eel|Callechelys springeri|Ophichthidae|Snake Eel
+0335|Ringed Shy Blenny Complex|Starksia hassi complex|Labrisomidae|Blenny - Labrisomids
+0981|Ringneck Blenny (aka Variable Blenny)|Parablennius pilicornis|Blenniidae|Blenny - Combtooth
+0812|Rocas Gregory|Stegastes rocasensis|Pomacentridae|Damselfish
+0006|Rock Beauty|Holacanthus tricolor|Pomacanthidae|Angelfish
+0721|Rock Gunnel|Pholis gunnellus|Pholidae|Gunnel
+0100|Rock Hind|Epinephelus adscensionis|Serranidae|Seabass
+0624|Rock Sea Bass|Centropristis philadelphica|Serranidae|Seabass
+0428|Rockcut Goby|Gobiosoma grosvenori|Gobiidae|Goby
+1020|Rockpool Blenny|Entomacrodus vomerinus|Blenniidae|Blenny - Combtooth
+0018|Rosy Blenny|Malacoctenus macropus|Labrisomidae|Blenny - Labrisomids
+0175|Rosy Razorfish|Xyrichtys martinicensis|Labridae|Wrasse
+0460|Rough Scad|Trachurus lathami|Carangidae|Jack
+0586|Rough Triggerfish|Canthidermis maculatus|Balistidae|Triggerfish
+0306|Roughback Batfish|Ogcocephalus parvus|Ogcocephalidae|Batfish
+0336|Roughhead Blenny|Acanthemblemaria aspera|Chaenopsidae|Blenny - Pike, tube, and flag
+0346|Roughhead Triplefin|Enneanectes boehlkei|Tripterygiidae|Triplefin (Blenny)
+0359|Roughlip Cardinalfish|Apogon robinsi|Apogonidae|Cardinalfish
+0520|Roughtail Stingray|Dasyatis centroura|Dasyatidae|Stingray
+0859|Roughtongued Bass|Pronotogrammus martinicensis|Serranidae|Seabass
+0461|Round Scad|Decapterus punctatus|Carangidae|Jack
+0893|Roundel Skate|Raja texana|Rajidae|Skate
+0429|Rusty Goby|Priolepis hipoliti|Gobiidae|Goby
+0788|Saddle Bass|Serranus notospilus|Serranidae|Seabass
+1004|Saddle Squirrelfish|Sargocentron poco|Holocentridae|Squirrelfish
+0570|Saddle Stargazer|Gillellus rubrocinctus|Dactyloscopidae|Sand Stargazers
+0019|Saddled Blenny|Malacoctenus triangulatus|Labrisomidae|Blenny - Labrisomids
+1017|Saddled Blenny Brazilian Complex|Malacoctenus aff triangulatus species (Brazil)|Labrisomidae|Blenny - Labrisomids
+0686|Saddled Parrotfish|Sparisoma frondosum|Scaridae|Parrotfish
+0020|Sailfin Blenny|Emblemaria pandionis|Chaenopsidae|Blenny - Pike, tube, and flag
+0837|Sailfin Molly|Poecilia latipinna|Poeciliidae|Mosquitofish
+0650|Sailfin tang (exotic)|Zebrasoma veliferum|Acanthuridae|Surgeonfish
+0805|Sailfish|Istiophorus platypterus|Istiophoridae|Billfishes
+0112|Sailors Choice|Haemulon parra|Haemulidae|Grunt
+0230|Sand Diver|Synodus intermedius|Synodontidae|Lizardfish
+0377|Sand Drum|Umbrina coroides|Sciaenidae|Drum
+0184|Sand Perch|Diplectrum formosum|Serranidae|Seabass
+0571|Sand Stargazer|Dactyloscopus tridigitatus|Dactyloscopidae|Sand Stargazers
+0644|Sand Tiger|Carcharias taurus|Odontaspididae|Sand Tiger (shark)
+0238|Sand Tilefish|Malacanthus plumieri|Malacanthidae|Tilefish
+0936|Sand-Canyon Goby (part of Bridled Goby Complex)|Coryphopterus venezuelae (was C. bol)|Gobiidae|Goby
+0556|Sandbar Shark|Carcharhinus plumbeus|Carcharhinidae|Requiem Shark
+0581|Sapo|Batrachoides surinamensis|Batrachoididae|Toadfish
+0663|Sapo Bocon|Amphichthys cryptocentrus|Batrachoididae|Toadfish
+0664|Sapo Cano|Thalassophryne maculosa|Batrachoididae|Toadfish
+0494|Sargassum Pipefish|Syngnathus pelagicus|Syngnathidae|Pipefish and Seahorse
+0211|Sargassum Triggerfish|Xanthichthys ringens|Balistidae|Triggerfish
+0410|Sargassumfish|Histrio histrio|Antennariidae|Frogfish
+0160|Saucereye Porgy|Calamus calamus|Sparidae|Porgy
+0360|Sawcheek Cardinalfish|Apogon quadrisquamatus|Apogonidae|Cardinalfish
+0611|Scaled Sardine|Harengula jaguana|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+1104|Scaled Sardine / False Herring complex|Harengula clupeola / Harengula jaguana|Clupeidae|Herring
+0549|Scalloped Hammerhead|Sphyrna lewini|Sphyrnidae|Hammerhead Shark
+0101|Scamp|Mycteroperca phenax|Serranidae|Seabass
+0539|School Bass|Schultzea beta|Serranidae|Seabass
+0196|Schoolmaster|Lutjanus apodus|Lutjanidae|Snapper
+0026|Scrawled Cowfish|Acanthostracion quadricornis|Ostraciidae|Boxfish
+0070|Scrawled Filefish|Aluterus scriptus|Monacanthidae|Filefish
+0591|Scrawled Sole|Trinectes inscriptus|Soleidae|Sole
+0620|Scup|Stenotomus chrysops|Sparidae|Porgy
+0500|Sea Bream|Archosargus rhomboidalis|Sparidae|Porgy
+0750|Sea Raven|Hemitripterus americanus|Cottidae|Sculpin
+0655|Sea Turtle sp. (unidentified)||Cheloniidae|Sea Turtles
+0021|Seaweed Blenny|Parablennius marmoreus|Blenniidae|Blenny - Combtooth
+0934|Secretary Blenny|Acanthemblemaria maria|Chaenopsidae|Blenny - Pike, tube, and flag
+0430|Seminole Goby|Microgobius carri|Gobiidae|Goby
+0052|Sergeant Major|Abudefduf saxatilis|Pomacentridae|Damselfish
+1070|Sharknose / Cleaning Goby Complex Bahamas TCI|Elacatinus evelynae / Elacatinus genie complex|Gobiidae|Goby
+0431|Sharknose Goby|Elacatinus evelynae|Gobiidae|Goby
+0231|Sharksucker|Echeneis naucrates|Echeneidae|Remora
+0167|Sharpnose Puffer|Canthigaster rostrata|Tetraodontidae|Puffer
+0065|Sharptail Eel|Myrichthys breviceps|Ophichthidae|Snake Eel
+0161|Sheepshead|Archosargus probatocephalus|Sparidae|Porgy
+0740|Sheepshead Minnow|Cyprinodon variegatus|Cyprinodontidae|Killifish
+0162|Sheepshead Porgy|Calamus penna|Sparidae|Porgy
+0910|Shelf Flounder|Etropus cyclosquamus|Paralichthyidae|Sand Flounder
+1105|Shoal Flounder|Syacium gunteri|Bothidae|Flounder
+0310|Short Bigeye|Pristigenys alta|Priacanthidae|Bigeye
+0495|Shortfin Pipefish|Cosmocampus elucens|Syngnathidae|Pipefish and Seahorse
+0573|Shortfin Sweeper|Pempheris poeyi|Pempheridae|Sweeper
+0751|Shorthorn Sculpin|Myoxocephalus scorpius|Cottidae|Sculpin
+0309|Shortnose Batfish|Ogcocephalus nasutus|Ogcocephalidae|Batfish
+1083|Shortspine (Red Banner) Blenny|Emblemariopsis dianae|Chaenopsidae|Blenny - Pike, tube, and flag
+0088|Shortstripe Goby|Elacatinus chancei|Gobiidae|Goby
+0698|Shorttail Snake Eel|Callechelys guineensis|Ophichthidae|Snake Eel
+0399|Shrimp Flounder|Gastropsetta frontalis|Bothidae|Flounder
+0125|Shy Hamlet|Hypoplectrus guttavarius|Serranidae|Seabass
+0606|Sicklefin Devil Ray (aka Greater Devil Ray)|Mobula tarapacana|Mobulidae|Manta
+0799|Silk Snapper|Lutjanus vivanus|Lutjanidae|Snapper
+0558|Silky Shark|Carcharhinus falciformis|Carcharhinidae|Requiem Shark
+0708|Silver Hake|Merluccius bilinearis|Gadidae|Cod
+0478|Silver Jenny|Eucinostomus gula|Gerreidae|Mojarra
+0742|Silver Perch|Bairdiella chrysoura|Sciaenidae|Drum
+0502|Silver Porgy|Diplodus caudimacula|Sparidae|Porgy
+0773|Skate sp.|Leucoraja sp.|Rajidae|Skate
+1097|Skilletfish|Gobiesox strumosus|Gobiesocidae|Clingfish
+0642|Skipjack Tuna|Katsuwonus pelamis|Scombridae|Mackerel
+0432|Slaty Goby|Elacatinus tenox|Gobiidae|Goby
+0071|Slender Filefish|Monacanthus tuckeri|Monacanthidae|Filefish
+0479|Slender Mojarra|Eucinostomus jonesii|Gerreidae|Mojarra
+0968|Slender Mojarra / Spotfin Mojarra Complex|Eucinostomus jonesii / Eucinostomus argenteus|Gerreidae|Mojarra
+0218|Slippery Dick|Halichoeres bivittatus|Labridae|Wrasse
+0945|Slope Soapfish|Rypticus carpenteri|Grammistidae|Soapfishes
+0113|Smallmouth Grunt|Haemulon chrysargyreum|Haemulidae|Grunt
+0516|Smalltooth Sawfish|Pristis pectinata|Pristidae|Sawfish
+0521|Smooth Butterfly Ray|Gymnura micrura|Dasyatidae|Stingray
+0889|Smooth clingfish|Gobiesox nudus|Gobiesocidae|Clingfish
+0772|Smooth Flounder|Pleuronectes putnami|Pleuronectidae|Flounder (Right-Eye)
+0550|Smooth Hammerhead|Sphyrna zygaena|Sphyrnidae|Hammerhead Shark
+0027|Smooth Trunkfish|Lactophrys triqueter|Ostraciidae|Boxfish
+1101|Smoothcheek Scorpionfish|Scorpaena isthmensis|Scorpaenidae|Scorpionfish
+0647|Smootheye Shy Blenny Complex|Starksia atlantica complex|Labrisomidae|Blenny - Labrisomids
+1067|Smoothhead Glass Blenny (pka Blackhead Blenny)|Emblemariopsis bahamensis|Chaenopsidae|Blenny - Pike, tube, and flag
+0942|Smoothhead Glass Blenny Complex|Emblemariopsis sp. (Smoothhead complex)|Chaenopsidae|Blenny - Pike, tube, and flag
+1146|Smoothhead Scorpionfish|Scorpaena calcarata|Scorpaenidae|Scorpionfish
+0722|Snakeblenny|Lumpenus lumpretaeformis|Stichaeidae|Prickleback
+0472|Snakefish|Trachinocephalus myops|Synodontidae|Lizardfish
+0540|Snow Bass|Serranus chionaraia|Serranidae|Seabass
+0779|Snowy Grouper|Hyporthodus niveatus|Serranidae|Seabass
+0823|Social Wrasse|Halichoeres socialis|Labridae|Wrasse
+0770|Sohal Surgeonfish (exotic)|Acanthurus sohal|Acanthuridae|Surgeonfish
+0970|Sooty Eel|Bascanichthys bascanium|Ophichthidae|Snake Eel
+0634|Southern Flounder|Paralichthys lethostigma|Bothidae|Flounder
+0513|Southern Guitarfish|Rhinobatos percellens|Rhinobatidae|Guitarfish
+0369|Southern Hake|Urophycis floridana|Gadidae|Cod
+1138|Southern Ladyfish|Elops smithi|Elopidae|Tarpon
+0507|Southern Puffer|Sphoeroides nephelus|Tetraodontidae|Puffer
+0940|Southern Smoothhead Glass Blenny|Emblemariopsis bottomei|Chaenopsidae|Blenny - Pike, tube, and flag
+0572|Southern Stargazer|Astroscopus y-graecum|Uranoscopidae|Stargazer
+0170|Southern Stingray|Hypanus americanus|Dasyatidae|Stingray
+0898|Spaghetti Eel|Moringua edwardsi|Moringuidae|Worm or Spaghetti Eels
+0114|Spanish Grunt|Haemulon macrostoma|Haemulidae|Grunt
+0131|Spanish Hogfish|Bodianus rufus|Labridae|Wrasse
+0143|Spanish Mackerel|Scomberomorus maculatus|Scombridae|Mackerel
+0906|Spanish Sardine|Sardinella aurita|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+0913|Speckled Blenny|Acanthemblemaria betinensis|Chaenopsidae|Blenny - Pike, tube, and flag
+0689|Speckled Hind|Epinephelus drummondhayi|Serranidae|Seabass
+0958|Spiked Pipefish||Syngnathidae|Pipefish and Seahorse
+0911|Spikefin Glass Blenny (pka Caribbean Flagfin Glass Blenny)|Emblemariopsis carib|Chaenopsidae|Blenny - Pike, tube, and flag
+0559|Spinner Shark|Carcharhinus brevipinna|Carcharhinidae|Requiem Shark
+0756|Spiny Dogfish|Squalus acanthias|Squalidae|Dogfish
+0840|Spiny Flounder|Engyophrys senta|Bothidae|Flounder
+0667|Spiny Sailfin Blenny|Emblemaria diphyodontis|Chaenopsidae|Blenny - Pike, tube, and flag
+0527|Spinycheek Scorpionfish|Neomerinthe hemingwayi|Scorpaenidae|Scorpionfish
+1057|Spinycheek Soldierfish|Corniger spinosus|Holocentridae|Squirrelfish
+0338|Spinyhead Blenny|Acanthemblemaria spinosa|Chaenopsidae|Blenny - Pike, tube, and flag
+1023|Splendid Shy Blenny (Cayman endemic)|Starksia splendens|Labrisomidae|Blenny - Labrisomids
+0582|Splendid Toadfish|Sanopus splendidus|Batrachoididae|Toadfish
+0412|Splitlure Frogfish (pka Striated Frogfish)|Antennarius scaber|Antennariidae|Frogfish
+0361|Sponge Cardinalfish|Phaeoptyx xenus|Apogonidae|Cardinalfish
+0711|Spot|Leiostomus xanthurus|Sciaenidae|Drum
+0022|Spotcheek Blenny|Labrisomus nigricinctus|Labrisomidae|Blenny - Labrisomids
+0509|Spotfin Burrfish|Chilomycterus reticulatus|Diodontidae|Porcupinefish
+0034|Spotfin Butterflyfish|Chaetodon ocellatus|Chaetodontidae|Butterflyfish
+0639|Spotfin Flounder|Cyclopsetta fimbriata|Paralichthyidae|Sand Flounder
+0596|Spotfin Goby|Oxyurichthys stigmalophius|Gobiidae|Goby
+0132|Spotfin Hogfish|Bodianus pulchellus|Labridae|Wrasse
+0919|Spotfin Jawfish|Opistognathus robinsi|Opistognathidae|Jawfish
+0601|Spotfin Mojarra|Eucinostomus argenteus|Gerreidae|Mojarra
+0690|Spotjaw Blenny|Acanthemblemaria rivasi|Chaenopsidae|Blenny - Pike, tube, and flag
+0089|Spotlight Goby|Elacatinus louisae|Gobiidae|Goby
+0856|Spottail Goby|Ctenogobius stigmaturus|Gobiidae|Goby
+0501|Spottail Pinfish|Diplodus holbrookii|Sparidae|Porgy
+1110|Spotted Batfish|Ogcocephalus pantostictus|Ogcocephalidae|Batfish
+0375|Spotted Dragonet|Diplogrammus pauciradiatus|Callionymidae|Dragonet
+1118|Spotted Driftfish|Ariomma regulus|Ariommatidae|Driftfishes
+0059|Spotted Drum|Eques punctatus|Sciaenidae|Drum
+0171|Spotted Eagle Ray|Aetobatus narinari|Myliobatidae|Eagle Ray
+0076|Spotted Goatfish|Pseudupeneus maculatus|Mullidae|Goatfish
+0434|Spotted Goby|Coryphopterus punctipectophorus|Gobiidae|Goby
+0370|Spotted Hake|Urophycis regia|Gadidae|Cod
+0066|Spotted Moray|Gymnothorax moringa|Muraenidae|Moray
+0178|Spotted Scorpionfish|Scorpaena plumieri plumieri|Scorpaenidae|Scorpionfish
+0626|Spotted Seatrout|Cynoscion nebulosus|Sciaenidae|Drum
+0389|Spotted Snake Eel|Ophichthus ophis|Ophichthidae|Snake Eel
+0565|Spotted Soapfish|Rypticus subbifrenatus|Grammistidae|Soapfishes
+0390|Spotted Spoon-nose Eel|Echiophis intertinctus|Ophichthidae|Snake Eel
+0028|Spotted Trunkfish|Lactophrys bicaudalis|Ostraciidae|Boxfish
+1021|Spotted Whiff|Citharichthys macrops|Bothidae|Flounder
+0978|Spottedfin Tonguefish|Symphurus diomedeanus|Cynoglossidae|Tonguefishes
+1064|Springer's Blenny (Smootheye Shy Blenny Complex species)|Starksia springeri|Labrisomidae|Blenny - Labrisomids
+0203|Squirrelfish|Holocentrus adscensionis|Holocentridae|Squirrelfish
+0974|St Paul's Damselfish|Stegastes sanctipauli|Pomacentridae|Damselfish
+0846|St. Vincent Linesnout goby|Elacatinus sp. St. Vincent|Gobiidae|Goby
+1008|Stalk Blenny / False Papillose Blenny|Acanthemblemaria greenfieldi|Chaenopsidae|Blenny - Pike, tube, and flag
+0366|Stippled Clingfish|Gobiesox punctulatus|Gobiesocidae|Clingfish
+0848|Stippled spoon-nose Eel|Echiophis punctifer|Ophichthidae|Snake Eel
+0155|Stoplight Parrotfish|Sparisoma viride|Scaridae|Parrotfish
+0386|Stout Moray|Muraena robusta|Muraenidae|Moray
+0813|Streamer Wrasse (aka Brazilian Creole Wrasse)|Bodianus brasiliensis|Labridae|Wrasse
+0619|Striped Bass|Morone saxatilis|Percichthyidae|Temperate Basses
+0701|Striped Blenny|Chasmodes bosquianus|Blenniidae|Blenny - Combtooth
+0508|Striped Burrfish|Chilomycterus schoepfii|Diodontidae|Porcupinefish
+0522|Striped Cardinalfish|Apogon robbyi|Apogonidae|Cardinalfish
+0378|Striped Croaker|Bairdiella sanctaeluciae|Sciaenidae|Drum
+0115|Striped Grunt|Haemulon striatum|Haemulidae|Grunt
+0979|Striped Hamlet (restricted to Fort Liberte Haiti)|Hypoplectrus liberte|Serranidae|Seabass
+0741|Striped Killifish|Fundulus majalis|Cyprinodontidae|Killifish
+1012|Striped Mojarra|Eugerres plumieri|Gerreidae|Mojarra
+0481|Striped Mullet|Mugil cephalus|Mugilidae|Mullet
+0156|Striped Parrotfish|Scarus iseri|Scaridae|Parrotfish
+0682|Striped Searobin|Prionotus evolans|Triglidae|Searobin
+0818|Striped Trumpet|Aulostomus strigosus|Aulostomidae|Trumpetfish
+0621|Summer Flounder (Fluke)|Paralichthys dentatus|Bothidae|Flounder
+0045|Sunshinefish|Chromis insolata|Pomacentridae|Damselfish
+0833|Surf Eel|Ichthyapus ophioneus|Ophichthidae|Snake Eel
+0944|Surf Shy Blenny Complex|Starksia smithvanizi complex|Labrisomidae|Blenny - Labrisomids
+0902|Surge Clingfish|Tomicodon rupestris|Gobiesocidae|Clingfish
+0853|Surgeonfish Mutant|Acanthurus spp.|Acanthuridae|Surgeonfish
+0467|Swordtail Jawfish|Lonchopisthus micrognathus|Opistognathidae|Jawfish
+0126|Tan Hamlet|Hypoplectrus randallorum|Serranidae|Seabass
+0237|Tarpon|Megalops atlanticus|Elopidae|Tarpon
+0541|Tattler Bass|Serranus phoebe|Serranidae|Seabass
+0630|Tautog|Tautoga onitis|Labridae|Wrasse
+0314|Tessellated Blenny|Hypsoblennius invemar|Blenniidae|Blenny - Combtooth
+0757|Thorny Skate|Amblyraja radiata|Rajidae|Skate
+0401|Three-eye Flounder|Ancylopsetta dilecta|Bothidae|Flounder
+0304|Threeline Basslet|Lipogramma trilineatum|Grammatidae|Basslet
+0053|Threespot Damselfish|Stegastes planifrons|Pomacentridae|Damselfish
+1055|Tidewater Mojarra|Eucinostomus harengulus|Gerreidae|Mojarra
+0435|Tiger Goby|Gobiosoma macrodon|Gobiidae|Goby
+0102|Tiger Grouper|Mycteroperca tigris|Serranidae|Seabass
+0560|Tiger Shark|Galeocerdo cuvier|Carcharhinidae|Requiem Shark
+0487|Timucu|Strongylura timucu|Belonidae|Needlefish
+0185|Tobaccofish|Serranus tabacarius|Serranidae|Seabass
+0116|Tomtate|Haemulon aurolineatum|Haemulidae|Grunt
+0930|Topsail Chub|Kyphosus cinerascens|Kyphosidae|Chub
+0592|Townsend Angelfish (Hybrid Queen/Blue)|Holacanthus sp. (Hybrid)|Pomacanthidae|Angelfish
+0585|Tripletail|Lobotes surinamensis|Lobotidae|Tripletail
+0402|Tropical Flounder|Paralichthys tropicus|Bothidae|Flounder
+0239|Trumpetfish|Aulostomus maculatus|Aulostomidae|Trumpetfish
+0029|Trunkfish|Lactophrys trigonus|Ostraciidae|Boxfish
+0983|Tuiupiranga Parrotfish|Sparisoma tuiupiranga|Scaridae|Parrotfish
+0829|Tunnel Goby|Psilotris kaufmani|Gobiidae|Goby
+0603|Tusked Goby|Risor ruber|Gobiidae|Goby
+0677|Twinhorn Blenny|Coralliozetus cardonae|Chaenopsidae|Blenny - Pike, tube, and flag
+0542|Twinspot Bass|Serranus flaviventris|Serranidae|Seabass
+0954|Two-Bar Triplefin|Enneanectes deloachorum|Tripterygiidae|Triplefin (Blenny)
+0040|Twospot Cardinalfish|Apogon pseudomaculatus|Apogonidae|Cardinalfish
+0400|Twospot Flounder|Bothus robinsi|Bothidae|Flounder
+0693|Twostripe Puffer|Canthigaster figueiredoi|Tetraodontidae|Puffer
+0395|Unicorn Filefish|Aluterus monoceros|Monacanthidae|Filefish
+1121|Unidentified Cardinalfish|Apogon sp.|Apogonidae|Cardinalfish
+1107|Unidentified Cleaning / Sponge Goby (Elacatinus sp.)|Elacatinus sp.|Gobiidae|Goby
+0961|Unidentified Clingfish||Gobiesocidae|Clingfish
+1126|Unidentified Cornetfish|Fistularia sp.|Fistulariidae|Cornetfish
+1086|Unidentified Cusk-eel|Ophidiidae sp.|Ophidiidae|Cusk-eel
+0319|Unidentified Darkheaded Blenny Emblemariopsis sp. B|Emblemariopsis sp. B (Darkheaded)|Chaenopsidae|Blenny - Pike, tube, and flag
+0669|Unidentified Emblemariopsis spp (incl. Spikefin and Flagfin)|Emblemariopsis spp.|Chaenopsidae|Blenny - Pike, tube, and flag
+1114|Unidentified Flyingfish|Exocoetidae sp|Exocoetidae|Flyingfish
+0928|Unidentified Halfbeak|Hyporhamphus sp./ Hemiramphus sp./ Euleptorhamphus|Hemiramphidae|Halfbeak
+1155|Unidentified Hammerhead Shark|Sphyma sp.|Sphyrnidae|Hammerhead Shark
+1127|Unidentified Jack|Carangidae sp.|Carangidae|Jack
+1091|Unidentified Jawfish|Opistognathus sp.|Opistognathidae|Jawfish
+1129|Unidentified Killifish|Cyprinodontidae sp.|Cyprinodontidae|Killifish
+0916|Unidentified Lizardfish|Synodus sp.|Synodontidae|Lizardfish
+1143|Unidentified Lythrypnus Goby|Lythrypnus sp.|Gobiidae|Goby
+1009|Unidentified Mojarra sp.|Eucinostomus/Gerres spp.|Gerreidae|Mojarra
+0971|Unidentified Mullet|Mugil sp.|Mugilidae|Mullet
+0927|Unidentified Needlefish||Belonidae|Needlefish
+1093|Unidentified Pipefish (Syngnathus sp.)|Syngnathus sp. (unidentified)|Syngnathidae|Pipefish and Seahorse
+0834|Unidentified Pipefish sp.||Syngnathidae|Pipefish and Seahorse
+1073|Unidentified Porgy||Sparidae|Porgy
+1145|Unidentified Requiem Shark|Carcharinidae sp.|Carcharhinidae|Requiem Shark
+0995|Unidentified Scad||Carangidae|Jack
+1152|Unidentified Scorpionfish|Scorpaenidae sp.|Scorpaenidae|Scorpionfish
+0866|Unidentified Sea Catfish|Ariidae|Ariidae|Sea Catfishes
+1133|Unidentified Seahorse|Hippocampus sp.|Syngnathidae|Pipefish and Seahorse
+1113|Unidentified Searobin|Prionotus sp.|Triglidae|Searobin
+0518|Unidentified Shy Blenny Starksia|Starksia sp.|Labrisomidae|Blenny - Labrisomids
+0232|Unidentified Silvery Fish (Silversides / Anchovies / Herrings)|Atheriniformes sp./ Clupeiformes sp.|Atherinidae, Clupeidae, and Engraulidae|Silvery Fishes - Silversides, Herrings, and Anchovies
+1077|Unidentified Snake Eel|Ophichthidae sp.|Ophichthidae|Snake Eel
+1011|Unidentified Sole sp. (Achiridae sp.)|Achiridae sp.|Achiridae|Sole (American)
+1132|Unidentified Toadfish|Batrachoididae sp.|Batrachoididae|Toadfish
+1150|Unidentified Tonguefish|Symphurus sp.|Cynoglossidae|Tonguefishes
+0622|Unidentified Triplefin species|Enneanectes sp.|Tripterygiidae|Triplefin (Blenny)
+1124|Unidentified Tuna|Thunnus sp.|Scombridae|Mackerel
+0908|Veracruz Hamlet|Hypoplectrus castroaguirrei|Serranidae|Seabass
+0563|Vermillion Snapper|Rhomboplites aurorubens|Lutjanidae|Snapper
+0544|Vieja|Serranus dewegeri|Serranidae|Seabass
+0067|Viper Moray|Enchelycore nigricans|Muraenidae|Moray
+0474|Wahoo|Acanthocybium solandri|Scombridae|Mackerel
+0613|Wall Goby (aka Semiscaled Goby)|Tigrigobius pallens|Gobiidae|Goby
+0441|Warsaw Grouper|Epinephelus nigritus|Serranidae|Seabass
+0988|Warteye Stargazer|Gillellus uranidea|Dactyloscopidae|Sand Stargazers
+0168|Web Burrfish|Chilomycterus antillarum|Diodontidae|Porcupinefish
+0092|Western Comb Grouper|Mycteroperca acutirostris|Serranidae|Seabass
+0781|Western Smoothhead Glass Blenny (pka Seafan Blenny)|Emblemariopsis pricei|Chaenopsidae|Blenny - Pike, tube, and flag
+0546|Whale Shark|Rhincodon typus|Rhincodontidae|Carpet Shark
+0671|White Grouper|Mycteroperca cidi|Serranidae|Seabass
+0117|White Grunt|Haemulon plumierii|Haemulidae|Grunt
+0709|White Hake|Urophycis tenuis|Gadidae|Cod
+0110|White Margate|Haemulon album|Haemulidae|Grunt
+0482|White Mullet|Mugil curema|Mugilidae|Mullet
+0743|White Perch|Morone americana|Percichthyidae|Temperate Basses
+0643|White Trevally|Pseudocaranx dentex|Carangidae|Jack
+0436|White-eye Goby|Bollmannia boqueronensis|Gobiidae|Goby
+1001|White-tailed Hamelt (undescribed spF Cuba2017)|Hypoplectrus sp D|Serranidae|Seabass
+1000|Whitebar Goby (undescribed spG Cuba2016)|Tigrigobius sp A|Gobiidae|Goby
+0503|Whitebone Porgy|Calamus leucosteus|Sparidae|Porgy
+0523|Whitefin Sharksucker|Echeneis neucratoides|Echeneidae|Remora
+0998|Whitelined Grunt (undescribed spC Cuba2016)|Haemulon sp A|Haemulidae|Grunt
+0583|Whitelined Toadfish|Sanopus greenfieldorum|Batrachoididae|Toadfish
+0827|Whitemouth Croaker|Micropogonias furnieri|Sciaenidae|Drum
+0496|Whitenose Pipefish|Cosmocampus albirostris|Syngnathidae|Pipefish and Seahorse
+0816|Whitespotted (aka Blackear) Moray|Muraena pavonina|Muraenidae|Moray
+0072|Whitespotted Filefish|Cantherhines macrocerus|Monacanthidae|Filefish
+0566|Whitespotted Soapfish|Rypticus maculatus|Grammistidae|Soapfishes
+0790|Whitespotted Surgeonfish (Exotic)|Acanthurus guttatus|Acanthuridae|Surgeonfish
+0584|Whitespotted Toadfish|Sanopus astrifer|Batrachoididae|Toadfish
+0041|Whitestar Cardinalfish|Apogon lachneri|Apogonidae|Cardinalfish
+0831|Whitestriped Squirrelfish (St. Vincent)|unID|Holocentridae|Squirrelfish
+1024|Williams Blenny (Blackcheek Shy Blenny complex species)|Starksia williamsi|Labrisomidae|Blenny - Labrisomids
+0727|Windowpane Flounder|Scophthalmus aquosus|Bothidae|Flounder
+0932|Windward Triplefin|Enneanectes wilki|Tripterygiidae|Triplefin (Blenny)
+0728|Winter Flounder|Pseudopleuronectes americanus|Pleuronectidae|Flounder (Right-Eye)
+0758|Winter Skate|Leucoraja ocellata|Rajidae|Skate
+0729|Witch Flounder|Glyptocephalus cynoglossus|Pleuronectidae|Flounder (Right-Eye)
+0543|Wrasse Basslet|Liopropoma eukrines|Liopropomatinae|Basslet / Seabass
+0339|Wrasse Blenny|Hemiemblemaria simulus|Chaenopsidae|Blenny - Pike, tube, and flag
+0609|Yellow Garden Eel|Heteroconger luteolus|Congridae|Conger
+0077|Yellow Goatfish|Mulloidichthys martinicus|Mullidae|Goatfish
+0141|Yellow Jack|Caranx bartholomaei|Carangidae|Jack
+0468|Yellow Jawfish|Opistognathus gilberti|Opistognathidae|Jawfish
+0648|Yellow Sailfin Tang (exotic)|Zebrasoma flavescens|Acanthuridae|Surgeonfish
+0172|Yellow Stingray|Urobatis jamaicensis|Urolophidae|Round Stingrays
+1131|Yellow Triplefin|Enneanectes flavus|Tripterygiidae|Triplefin (Blenny)
+0127|Yellowbelly Hamlet|Hypoplectrus aberrans|Serranidae|Seabass
+0305|Yellowcheek Basslet|Gramma linki|Grammatidae|Basslet
+0219|Yellowcheek Wrasse|Halichoeres cyanocephalus|Labridae|Wrasse
+0830|Yellowedge Grouper|Epinephelus flavolimbatus|Serranidae|Seabass
+0341|Yellowface Pikeblenny|Chaenopsis limbaughi|Chaenopsidae|Blenny - Pike, tube, and flag
+0793|Yellowfin Chromis|Chromis flavicauda|Pomacentridae|Damselfish
+0103|Yellowfin Grouper|Mycteroperca venenosa|Serranidae|Seabass
+0229|Yellowfin Mojarra|Gerres cinereus|Gerreidae|Mojarra
+0625|Yellowfin Tuna|Thunnus albacares|Scombridae|Mackerel
+0228|Yellowhead Jawfish|Opistognathus aurifrons|Opistognathidae|Jawfish
+0220|Yellowhead Wrasse|Halichoeres garnoti|Labridae|Wrasse
+0090|Yellowline Goby|Elacatinus horsti|Gobiidae|Goby
+0104|Yellowmouth Grouper|Mycteroperca interstitialis|Serranidae|Seabass
+0437|Yellownose Goby|Elacatinus randalli|Gobiidae|Goby
+0438|Yellowprow Goby|Elacatinus xanthiprora|Gobiidae|Goby
+0973|Yellowstriped Grunt|Haemulon squamipinna|Haemulidae|Grunt
+0153|Yellowtail (Redfin) Parrotfish|Sparisoma rubripinne|Scaridae|Parrotfish
+1102|Yellowtail Amberjack|Seriola lalandi|Carangidae|Jack
+0054|Yellowtail Damselfish|Microspathodon chrysurus|Pomacentridae|Damselfish
+0730|Yellowtail Flounder|Limanda ferruginea|Pleuronectidae|Flounder (Right-Eye)
+0128|Yellowtail Hamlet|Hypoplectrus chlorurus|Serranidae|Seabass
+0046|Yellowtail Reeffish|Chromis enchrysura|Pomacentridae|Damselfish
+0649|Yellowtail Sailfin Tang (exotic)|Zebrasoma xanthurum|Acanthuridae|Surgeonfish
+0197|Yellowtail Snapper|Ocyurus chrysurus|Lutjanidae|Snapper
+0651|Yellowtip Damselfish|Stegastes pictus|Pomacentridae|Damselfish
+0315|Zebratail Blenny|Hypleurochilus caudovittatus|Blenniidae|Blenny - Combtooth

@@ -174,7 +174,7 @@
 0243|Great Hammerhead|Sphyrna mokarran|Sphyrnidae|Hammerhead
 0072|Great Sculpin|Myoxocephalus polyacanthocephalus|Psychrolutidae|Marine Sculpins
 0429|Green Abalone|Haliotis fulgens|Mollusca|Mollusks
-0154|Green Crab (Invasive)|Carcinus maenas|Arthropoda|Arthropods
+0154|Green Crab (Invasive)|Carcinus maenas|Arthropoda|Invasive Crabs
 0244|Green Jack|Caranx caballus|Carangidae|Jack
 0461|Green Sea Turtle|Chelonia mydas|Cheloniidae|Sea Turtles
 0175|Green Sea Urchin|Strongylocentrotus droebachiensis|Echinodermata|Echinoderms
