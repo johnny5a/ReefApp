@@ -1,13 +1,17 @@
 // Offline cache for REEF Dive Survey. Bump VERSION when you change any file.
-const VERSION = "reef-survey-data-202611090112";
+const VERSION = "reef-survey-v15";
 const CORE = ["./", "index.html", "manifest.json", "icon-180.png", "icon-192.png", "icon-512.png"];
-const DATA = ["data/PAC.json", "data/TWA.json",   // region data; a missing file is skipped
-              "vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css"];
+const EXTRA = ["vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css"];
+// Region data files to keep from the start come from data/regions.json (written by build.py from regions.json);
+// any other region is cached the first time it's opened.
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(async c => {
     await c.addAll(CORE);
-    await Promise.all(DATA.map(u => c.add(u).catch(() => {})));
+    let regions = [];
+    try { regions = await (await fetch("data/regions.json", {cache: "no-store"})).json(); } catch (_) {}
+    const files = [...EXTRA, ...regions.filter(r => r.precache).map(r => r.file)];
+    await Promise.all(files.map(u => c.add(u).catch(() => {})));
   }).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {

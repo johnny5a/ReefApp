@@ -173,14 +173,14 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 <script>
 "use strict";
 /* ---------- Region data: data/<REGION>.json, built from REEF reports by build.py and loaded on demand ---------- */
-const REGIONS = [{"code": "PAC", "name": "California", "long": "California (Pacific Coast)"}, {"code": "TWA", "name": "Caribbean", "long": "Caribbean, Florida & Bahamas (TWA)"}];
+const REGIONS = [{"code": "PAC", "name": "California", "long": "California (Pacific Coast)", "surveyTypes": ["Fish and Invertebrates", "Fish Only", "Invertebrates Only"]}, {"code": "TWA", "name": "Caribbean", "long": "Caribbean, Florida & Bahamas (TWA)", "surveyTypes": ["Species and Abundance", "Species Only"]}];
 const REGION_NAMES = {PAC:"California",TWA:"Caribbean",HAW:"Hawaii",TEP:"Trop. E. Pacific",SOP:"South Pacific",NE:"NE US/Canada",SAS:"SE US",CIP:"Indo-Pacific",EAM:"E. Atlantic/Med",IORS:"Indian Ocean/Red Sea"};
 const INVERT_PHYLA = new Set(["Echinodermata","Cnidaria","Arthropoda","Mollusca","Porifera","Urochordata","Annelida","Bryozoa","Ctenophora","Platyhelminthes"]);
 const TURTLES = new Set(["Cheloniidae","Dermochelyidae"]);
 const PRESENCE_ONLY = new Set(["Strawberry Anemone","Cobalt Sponge"]);
 const FREQ_MIN_SURVEYS = 5;
 /* REEF's survey types, as on its data-entry page */
-const SURVEY_TYPES = {PAC:["Fish and Invertebrates","Fish Only","Invertebrates Only"], TWA:["Species and Abundance","Species Only"]};
+const SURVEY_TYPES = Object.fromEntries(REGIONS.map(r=>[r.code, r.surveyTypes||[]]));   // from regions.json
 const reefType = sv => sv?.info?.reefType || (SURVEY_TYPES[regionOf(sv)]||[""])[0];
 const speciesOnly = sv => reefType(sv)==="Species Only";
 const SITE_MIN_PCT = 25;   // "At this site" shows species seen on at least this % of REEF surveys there
@@ -209,7 +209,7 @@ function parseRegion(d){
   const fg = d.formGroups; const formNames = fg?.names||[];
   if(fg) for(const sp of species){ const g=fg.codes[sp.code]; if(g){ sp.gi=g[0]; sp.gp=g[1]; } }
   const coords = new Map((d.coords||"").split("\n").filter(Boolean).map(l=>{ const [c,la,lo]=l.split("|"); return [c,[+la,+lo]]; }));
-  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder,formNames}, species, coords, unl, zones, freq, quick:new Set(d.quick||[])};
+  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder,formNames,example:d.example||"Site name, area, or zone code"}, species, coords, unl, zones, freq, quick:new Set(d.quick||[])};
 }
 function useRegion(x){
   R=x.meta; COORDS=x.coords; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick;
@@ -472,7 +472,7 @@ function renderLog(main){
       <div class="m">${s.info.nickname&&s.info.siteName?esc(s.info.siteName)+" · ":""}${fmtDate(s.info.date)}${s.info.startTime?" · "+roundHour(s.info.startTime):""} · ${seenCount(s)} species${s.info.zone?" · zone "+esc(s.info.zone):""}</div>
     </div>
     <div class="row" style="justify-content:flex-end">
-      ${s.example?`<span class="badge ex">Example</span>`:""}${REGIONS.length>1&&regionOf(s)!=="PAC"?`<span class="badge draft">${esc(REGION_NAMES[regionOf(s)]||regionOf(s))}</span>`:""}
+      ${s.example?`<span class="badge ex">Example</span>`:""}${REGIONS.length>1&&regionOf(s)!==REGIONS[0].code?`<span class="badge draft">${esc(REGION_NAMES[regionOf(s)]||regionOf(s))}</span>`:""}
       <span class="badge ${s.status}">${s.status==="draft"?"In progress":s.status==="ready"?"Ready":"Entered"}</span>
       <button type="button" class="iconbtn" data-del="${s.id}" aria-label="Delete survey ${esc(s.info.nickname||s.info.siteName||"")}" title="Delete survey">Delete</button>
     </div>
@@ -552,7 +552,7 @@ function renderSitePicker(main, sv){
   const q=(ui.siteQ||"").trim().toLowerCase().replace(/['’.]/g,""), area=ui.siteArea||"";
   const view = ui.siteView || state.settings.siteView || "list";
   const viewToggle = `<div class="sortseg" role="radiogroup" aria-label="Site view">${[["list","List"],["map","Map"]].map(([k,t])=>`<button type="button" role="radio" data-siteview="${k}" aria-checked="${view===k}">${t}</button>`).join("")}</div>`;
-  const searchBox = `<input type="search" id="siteQ" placeholder="${R.region==="TWA"?"Site name, area, or code (e.g. Molasses, Bonaire, 34)":"Site name, area, or code (e.g. Casino, Whaler, 4203)"}" value="${esc(ui.siteQ||"")}" aria-label="Search dive sites" autocomplete="off">`;
+  const searchBox = `<input type="search" id="siteQ" placeholder="${esc(R.example)}" value="${esc(ui.siteQ||"")}" aria-label="Search dive sites" autocomplete="off">`;
   if(view==="map"){
     main.innerHTML=`
     <div class="sbar">
@@ -874,7 +874,7 @@ document.addEventListener("click", async e=>{
   }
   if(t.dataset.siteview){ ui.siteView=t.dataset.siteview; state.settings.siteView=ui.siteView; persist(); render(); return; }
   if(t.dataset.del){ deleteSurvey(t.dataset.del); return; }
-  if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
+  if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; loadRegion(t.dataset.region); state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
   if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
   if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; if(t.dataset.filter==="site"||t.dataset.filter==="quick"){ state.settings.spList=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }

@@ -30,6 +30,25 @@ Monthly runs only re-download sites whose REEF survey count changed (typically 1
 
 `build.py` turns these into `data/<REGION>.json`, which the app loads for the region you pick; the service worker keeps every region offline. The job commits only if something changed.
 
+## Adding a REEF region
+Everything about a region lives in `regions.json`. Every REEF region is already listed there, switched off, with the details
+from REEF's data-entry page filled in (survey types and the survey id used for site locations).
+
+1. In `regions.json`, set `"enabled": true` on the region (for example `"HAW"`). Set `"precache": true` only if it should be stored
+   on every phone from the start; otherwise a phone keeps it once that region is opened.
+2. Optional: add an `"example"` search hint, or `"habitats"` as a fallback if REEF's metadata page can't be read.
+3. Commit and push. The **Update REEF data** workflow starts by itself. The first download for a new region fetches all of its sites
+   (big regions like the Caribbean took about 2 hours), then monthly runs only fetch changes.
+
+The updater works out the rest from REEF:
+- top-level areas from the zone list
+- habitats from REEF's survey metadata page
+- form groups from `data.reef.org/data/data/<region>/fishsp.htm` (if the page exists)
+- site locations from the data-entry site search
+- the "Common in …" list from the most-recorded species
+
+A region that is only part of a REEF region (like California, which is zones starting with 4 of REEF's PAC region) uses `"prefixes"`.
+
 ## Updating
 - App code: `src/index.src.html`. Region data: `src/<REGION>/` (written by the updater; `src/PAC/quick.txt` is the hand-picked "Common in California" list).
 - Run `python3 build.py` to rebuild `index.html` and `data/`, bump `VERSION` in `sw.js`, then commit and push. Phones pick up the new version the next time the app opens with signal.

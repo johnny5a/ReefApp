@@ -1,7 +1,8 @@
 """Build the app: python3 build.py
 
 - index.html  ← src/index.src.html
-- data/<REGION>.json  ← src/<REGION>/{sites,species,unlisted,freq}.txt (+ quick.txt, family_order.txt)
+- data/<REGION>.json  ← src/<REGION>/*.txt for every enabled region in regions.json
+- data/regions.json   ← which region files the service worker keeps offline from the start
   The app loads one region's file at a time; the service worker keeps them all offline.
 After building, bump VERSION in sw.js so phones pick up the change."""
 import json
@@ -10,15 +11,19 @@ from pathlib import Path
 
 root = Path(__file__).parent
 src = root / "src"
-REGION_INFO = {
-    # root: zone code the site browser starts from; near: regions whose species are likeliest strays
-    "PAC": {"name": "California", "long": "California (Pacific Coast)", "root": "4", "near": ["TEP"],
-            "habitats": ["Kelp Forest", "Rock Boulder/Shale Reef", "Artificial", "Open Ocean", "Eel Grass Bed", "Surf Grass Bed",
-                         "Pinnacle", "Bull Kelp", "Sandy Bottom/Mud/Silt", "Cobblestone/Boulder Field", "Wall"]},
-    "TWA": {"name": "Caribbean", "long": "Caribbean, Florida & Bahamas (TWA)", "root": "", "near": ["SAS", "NE"],
-            "habitats": ["High Profile Reef", "Low Profile Reef", "Sloping Dropoff", "Wall", "Ledge", "Grass",
-                         "Sandy Bottom/Mud/Silt/Mangrove", "Rubble", "Artificial", "Open Ocean", "Cobblestone/Boulder Fields/Escarpment"]},
-}
+CONFIG = json.loads((root / "regions.json").read_text())["regions"]
+
+
+def region_info(r):
+    """App-facing settings for one regions.json entry. `root` is where the site browser starts
+    (California starts inside zone 4; whole REEF regions start at their top-level areas)."""
+    prefixes = r.get("prefixes", [])
+    habitats = [l.strip() for l in read(src / r["id"] / "habitats.txt").splitlines() if l.strip()] or r.get("habitats", [])
+    return {"name": r["name"], "long": r.get("long", r["name"]), "root": prefixes[0] if len(prefixes) == 1 else "",
+            "near": r.get("near", []), "habitats": habitats, "surveyTypes": r.get("survey_types", []),
+            "example": r.get("example", "Site name, area, or zone code")}
+
+
 QUICK_SIZE = 70
 # "At this site" lists: species seen on at least FREQ_MIN_PCT% of a site's surveys, up to FREQ_TOP per site.
 # Rarer species are still in search and "All". Keeps the Caribbean file small enough for phones.
@@ -48,7 +53,7 @@ def quick_codes(region, species, freq):
     total, score = 0, {}
     for line in freq.splitlines():
         zone, n, lst = line.split("|")
-        if len(zone) != (len(REGION_INFO[region]["root"]) + 1):
+        if len(zone) != (len(root_of[region]) + 1):
             continue  # only the region's top-level areas
         n = int(n); total += n
         for item in lst.split(","):
@@ -87,8 +92,13 @@ def form_order(region, species):
 
 (root / "data").mkdir(exist_ok=True)
 date = read(src / "data_date.txt")
-built = []
-for region, info in REGION_INFO.items():
+built, manifest, root_of = [], [], {}
+for r in CONFIG:
+    region = r["id"]
+    if not r.get("enabled"):
+        continue
+    info = region_info(r)
+    root_of[region] = info["root"]
     d = src / region
     sites, species = read(d / "sites.txt"), read(d / "species.txt")
     if not (sites and species):
@@ -102,9 +112,13 @@ for region, info in REGION_INFO.items():
             "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq), "famOrder": fam_order,
             "coords": coords, "formGroups": form_order(region, species)}
     (root / "data" / f"{region}.json").write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
-    built.append(region)
+    built.append({"code": region, "name": info["name"], "long": info["long"], "surveyTypes": info["surveyTypes"]})
+    manifest.append({"file": f"data/{region}.json", "precache": bool(r.get("precache"))})
 
-regions = [{"code": r, "name": REGION_INFO[r]["name"], "long": REGION_INFO[r]["long"]} for r in built]
+# The service worker reads this to know which region files to keep offline from the start;
+# other regions are kept once you open them.
+(root / "data" / "regions.json").write_text(json.dumps(manifest))
+regions = built
 page = (src / "index.src.html").read_text().replace("/*REGIONS*/", json.dumps(regions))
 (root / "index.html").write_text(page)
-print("index.html built; data for", ", ".join(built) or "no regions")
+print("index.html built; data for", ", ".join(r["code"] for r in built) or "no regions")

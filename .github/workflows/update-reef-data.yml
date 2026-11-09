@@ -1,6 +1,7 @@
 name: Update REEF data
 
-# Refreshes California sites, species lists and per-site species frequencies from reef.org,
+# Refreshes REEF sites, species lists, per-site species frequencies, site locations and form groups
+# from reef.org for every region enabled in regions.json,
 # rebuilds the app and publishes it. Runs on the 1st of each month, and on demand
 # (Actions tab → "Update REEF data" → Run workflow; tick "full" to re-download every site).
 on:
@@ -14,7 +15,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: [scripts/update_reef_data.py, .github/workflows/update-reef-data.yml]
+    paths: [regions.json, scripts/update_reef_data.py, .github/workflows/update-reef-data.yml]
 
 permissions:
   contents: write
