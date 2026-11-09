@@ -1,0 +1,11 @@
+High Profile Reef
+Low Profile Reef
+Sloping Dropoff
+Wall
+Ledge
+Grass
+Sandy Bottom/Mud/Silt/Mangrove
+Rubble
+Artificial
+Open Ocean
+Cobblestone/Boulder Fields/Escarpment

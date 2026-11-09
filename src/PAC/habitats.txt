@@ -1,0 +1,11 @@
+Kelp Forest
+Rock Boulder/Shale Reef
+Artificial
+Open Ocean
+Eel Grass Bed
+Surf Grass Bed
+Pinnacle
+Bull Kelp
+Sandy Bottom/Mud/Silt
+Cobblestone/Boulder Field
+Wall
