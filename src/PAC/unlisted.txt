@@ -283,14 +283,12 @@ Barred Knifejaw|Oplegnathus fasciatus|Oplegnathidae|HAW
 Barred Moray|Echidna polyzona|Muraenidae|HAW,SOP,CIP,IORS
 Barred Pargo|Hoplopagrus guentherii|Lutjanidae|TEP
 Barred Perchlet|Plectranthias fourmanoiri|Anthiadidae|SOP,CIP
-Barred Pipefish|Choeroichthys cinctus|Syngnathidae|SOP,CIP
 Barred Rabbitfish|Siganus doliatus|Siganidae|SOP,CIP
 Barred Searobin|Prionotus martis|Triglidae|TWA,NE
 Barred Serrano|Serranus psittacinus|Serranidae|TEP
 Barred Shrimpgoby|Cryptocentrus fasciatus|Gobiidae|SOP,CIP,IORS
 Barred Sicklefish|Drepane longimana|Drepaneidae|IORS
 Barred Snakemoray|Uropterygius fasciolatus|Muraenidae|SOP,CIP
-Barred Surfperch|Amphistichus argentus|Embiotocidae|TEP
 Barred Sweetlips|Plectorhinchus plagiodesmus|Haemulidae|IORS
 Barred Thicklip|Hemigymnus fasciatus|Labridae|SOP,CIP,IORS
 Barred Unicornfish|Naso thynnoides|Acanthuridae|SOP,CIP,IORS
@@ -424,7 +422,6 @@ Black Coral Pygmygoby|Trimma RK sp. 12|Gobiidae|CIP
 Black Coralblenny|Ecsenius namiyei|Blenniidae|CIP
 Black Coralgoby|Bryaninops tigris|Gobiidae|SOP,CIP,IORS
 Black Coralgoby|Paragobiodon melanosomus|Gobiidae|CIP
-Black Croaker|Plagioscion auratus|Sciaenidae|TEP
 Black Damsel|Neoglyphidodon melas|Pomacentridae|SOP,CIP,IORS
 Black Drum|Pogonias cromis|Sciaenidae|TWA,NE,SAS
 Black Durgon|Melichthys niger|Balistidae|TWA,HAW,TEP,SOP,NE,SAS,CIP,IORS
@@ -967,7 +964,6 @@ Caesar Grunt|Haemulon carbonarium|Haemulidae|TWA,NE
 Caesiura Pygmygoby|Trimma caesiura|Gobiidae|SOP,CIP
 Caledonian Devilfish|Inimicus caledonicus|Synanceiidae|SOP,CIP
 Caledonian Pipefish|Festucalex kulbickii|Syngnathidae|CIP
-California Flyingfish|Cheilopogon pinnabarbatus|Exocoetidae|TEP
 California Needlefish|Strongylura exilis|Belonidae|TEP
 Camotillo|Paralabrax albomaculatus|Serranidae|TEP
 Camouflage Grouper|Epinephelus polyphekadion|Serranidae|SOP,CIP,IORS
@@ -1093,7 +1089,6 @@ Chocolate Grouper|Cephalopholis boenak|Serranidae|SOP,CIP,IORS
 Chocolate Shrimpgoby|Cryptocentrus malindiensis|Gobiidae|IORS
 Chocolate-dip Shrimpgoby|Stonogobiops JE sp 60|Gobiidae|CIP
 Christmas Longfin|Steeneichthys nativitatus|Plesiopidae|CIP
-Christmas Tree Worm|Spirobranchus giganteus|Annelida|SAS
 Christmas Wrasse|Thalassoma trilobatum|Labridae|HAW,SOP,CIP,IORS
 Chub Sp. - Unidentified|Kyphosus sp.|Kyphosidae|HAW
 Cigar Wrasse|Cheilio inermis|Labridae|HAW,SOP,CIP,IORS
@@ -1171,7 +1166,7 @@ Comet Dwarfgoby|Eviota cometa|Gobiidae|SOP,CIP
 Comical Coralblenny|Ecsenius opsifrontalis|Blenniidae|CIP
 Commerson's Frogfish|Antennarius commerson|Antennariidae|HAW,SOP,CIP,IORS
 Commerson's Frogfish|Antennarius commersoni|Antennariidae|TEP
-Common Bigeye (aka Pacific Glasseye)|Heteropriacanthus carolinus|Priacanthidae|HAW,TEP,SOP,CIP,IORS
+Common Bigeye (aka Pacific Glasseye)|Heteropriacanthus carolinus|Priacanthidae|HAW,TEP
 Common Dentex|Dentex dentex|Sparidae|EAM
 Common Eagle Ray|Myliobatis aquila|Myliobatidae|EAM
 Common Ghostgoby|Pleurosicya mossambica|Gobiidae|SOP,CIP,IORS
@@ -1820,7 +1815,6 @@ German Seabream|Polyamblyodon germanum|Sparidae|IORS
 Ghost Cardinalfish|Nectamia fusca|Apogonidae|SOP,CIP,IORS
 Ghost Velvetfish|Cocotropus larvatus|Aploactinidae|CIP
 Giant Anemone|Condylactis gigantea|Cnidaria|SAS
-Giant Barnacle|Megabalanus azoricus|Balanidae|EAM
 Giant clam spp.|Tridachna spp.|Tridacninae|SOP,CIP,IORS
 Giant Damselfish adult|Microspathodon dorsalis|Pomacentridae|TEP
 Giant Electric Ray|Narcine entemedor|Narcinidae|TEP
@@ -2365,7 +2359,6 @@ Keeltail Needlefish|Platybelone argalus argalus|Belonidae|TWA,NE,SAS,IORS
 Keeltail Needlefish|Platybelone argalus|Belonidae|HAW,SOP,CIP
 Kei Grallenia|Grallenia JE sp 36|Gobiidae|CIP
 Kellogg's Scorpionfish|Scorpaenodes kelloggi|Scorpaenidae|HAW,SOP,CIP
-Kelp clingfish|Remicola muscarum|Gobiesocidae|TEP
 Kemp's Ridley Sea Turtle|Lepidochelys kempii|Cheloniidae|TWA,HAW,NE
 Kemp's Ridley Sea Turtle|Lepidochelys kempi|Cheloniidae|TEP
 Kenn Reef Chromis|Chromis kennensis|Pomacentridae|CIP
@@ -2481,7 +2474,6 @@ Leopard Eel|Myrichthys pardalis|Ophichthidae|EAM
 Leopard Frogfish|Antennarius pardalis|Antennariidae|EAM
 Leopard Goby|Tigrigobius saucras|Gobiidae|TWA
 Leopard Goby|Garmannia saucra|Gobiidae|NE
-Leopard Grouper|Cephalopholis leopardus|Serranidae|SOP,CIP,IORS
 Leopard Roundray|Urobatis pardalis|Urolophidae|TEP
 Leopard Searobin|Prionotus scitulus|Triglidae|TWA,NE,SAS
 Leopard Spotted Goby|Thorogobius ephippiatus|Gobiidae|EAM
@@ -2867,7 +2859,6 @@ Monrovia Doctorfish|Acanthurus monroviae|Acanthuridae|EAM
 Monster Shrimpgoby|Tomiyamichthys oni|Gobiidae|CIP
 Montagu's Blenny|Coryphoblennius galerita|Blenniidae|EAM
 Mooi’s Dottyback|Pseudochromis mooii|Pseudochromidae|CIP
-Moon Jelly|Aurelia aurita|Cnidaria|NE,SAS,EAM
 Moon Snail|Euspira heros|Mollusca|NE
 Moon Snakemoray|Uropterygius kamar|Muraenidae|SOP,CIP
 Moon-spotted Shrimpgoby|Vanderhorstia nannai|Gobiidae|CIP
@@ -3204,7 +3195,6 @@ Pacific Flagfin Mojarra|Eucinostomus currani|Gerreidae|TEP
 Pacific Golden-eyed Tilefish|Caulolatilus affinis|Malacanthidae|TEP
 Pacific Guitarfish|Rhinobatos planiceps|Rhinobatidae|TEP
 Pacific Half-and-half Chromis|Pycnochromis iomelas|Pomacentridae|SOP,CIP
-Pacific Halibut|Psettodes erumei|Psettodidae|CIP
 Pacific Highhat|Pareques sp.|Sciaenidae|TEP
 Pacific Leopard Flounder|Bothus leopardinus|Bothidae|TEP
 Pacific Lined Sole|Achirus mazatlanus|Pleuronectidae|TEP
@@ -3830,7 +3820,6 @@ Rock Sea Bass|Centropristis philadelphica|Serranidae|TWA,NE,SAS
 Rock Sea Urchin|Paracentrotus lividus|Parechinidae|EAM
 Rockcut Goby|Gobiosoma grosvenori|Gobiidae|TWA,NE
 Rockmover Wrasse|Novaculichthys taeniourus|Labridae|HAW,TEP,SOP,CIP,IORS
-Rockpool Blenny|Entomacrodus vomerinus|Blenniidae|TWA
 Rockwall Clingfish|Arcos erythrops|Gobiesocidae|TEP
 Rofen's Rockskipper|Entomacrodus rofeni|Blenniidae|SOP,CIP
 Rolland's Damsel|Chrysiptera rollandi|Pomacentridae|SOP,CIP
@@ -3861,8 +3850,6 @@ Roughtongued Bass|Pronotogrammus martinicensis|Serranidae|TWA,NE
 Roule's Goby|Gobius roulei|Gobiidae|EAM
 Round Goby|Neogobius melanostomus|Gobiidae|EAM
 Round Scad|Decapterus punctatus|Carangidae|TWA,TEP,NE,SAS
-Round Stingray|Urobatis halleri|Urolophidae|TEP
-Round Stingray|Taeniura grabata|Dasyatidae|EAM
 Roundel Skate|Raja texana|Rajidae|TWA,NE
 Roundfin Flasher|Paracheilinus togeanensis|Labridae|CIP
 Roundfin Goby|Bathygobius cyclopterus|Gobiidae|SOP,CIP
@@ -3951,7 +3938,6 @@ Sand Perch|Diplectrum formosum|Serranidae|TWA,NE,SAS
 Sand Shrimpgoby|Ctenogobiops feroculus|Gobiidae|SOP,CIP,IORS
 Sand Sillago|Sillago ciliata|Sillaginidae|SOP,CIP
 Sand Smelt|Atherina presbyter|Atherinidae|EAM
-Sand Sole|Pegusa lascaris|Scophthalmidae|EAM
 Sand Stargazer|Dactyloscopus tridigitatus|Dactyloscopidae|TWA,NE
 Sand Steenbras|Lithognathus mormyrus|Sparidae|EAM,IORS
 Sand Tiger|Carcharias taurus|Odontaspididae|TWA,NE,SAS,IORS
@@ -3978,7 +3964,6 @@ Sargassum spp.|Sargassum spp.|Algae|SAS
 Sargassum Triggerfish|Xanthichthys ringens|Balistidae|TWA,NE
 Sargassum Weed|Sargassum filipendula|Marine Plants and Algae|NE
 Sargassumfish|Histrio histrio|Antennariidae|TWA,HAW,SOP,NE,CIP,IORS
-Sargo|Anisotremus davidsonii|Haemulidae|TEP
 Sato's Large-eye Bream|Gymnocranius satoi|Lethrinidae|CIP
 Satomi's Pygmy Seahorse|Hippocampus satomiae|Syngnathidae|CIP
 Saucereye Porgy|Calamus calamus|Sparidae|TWA,NE,SAS
@@ -4023,7 +4008,6 @@ Scribbled Rabbitfish|Siganus spinus|Siganidae|SOP,CIP
 Sculpin Scorpionfish|Scorpaenopsis cotticeps|Scorpaenidae|CIP
 Sculptured Pipefish|Choeroichthys sculptus|Syngnathidae|SOP,CIP
 Scup|Stenotomus chrysops|Sparidae|TWA,NE,SAS
-Scythe Butterflyfish|Prognathodes falcifer|Chaetodontidae|TEP
 Sea Bream|Archosargus rhomboidalis|Sparidae|TWA,NE,SAS
 Sea Fingers|Titanideum frauenfeldii|Cnidaria|SAS
 Sea Lace|Membranipora membranacea|Bryozoa|NE
@@ -4146,7 +4130,6 @@ Shorttail Snake Eel|Callechelys guineensis|Ophichthidae|TWA,NE
 Shoulderspot Goby|Gnatholepis cauerensis|Gobiidae|HAW,SOP,CIP,IORS
 Shoulderspot Sandgoby|Fusigobius humeralis|Gobiidae|SOP,CIP,IORS
 Shoulderspot Wrasse|Leptojulis cyanopleura|Labridae|CIP,IORS
-Shovelnose Guitarfish|Rhinobatos productos|Rhinobatidae|TEP
 Shrimp Flounder|Gastropsetta frontalis|Bothidae|TWA,NE
 Shrimp Scad|Alepes djedaba|Carangidae|IORS
 Shy Filefish|Cantherhines verecundus|Monacanthidae|HAW
@@ -4411,7 +4394,6 @@ Spiny Butterfly Ray|Gymnura altavela|Gymnuridae|EAM
 Spiny Chromis|Acanthochromis polyacanthus|Pomacentridae|SOP,CIP
 Spiny Cowfish|Lactoria Diaphana|Ostraciidae|HAW,SOP,CIP,IORS
 Spiny Devilfish (aka Demon Stinger)|Inimicus didactylus|Synanceiidae|SOP,CIP
-Spiny Dogfish|Squalus acanthias|Squalidae|TWA,NE,SAS
 Spiny Flathead|Onigocia spinosa|Platycephalidae|CIP
 Spiny Flounder|Engyophrys senta|Bothidae|TWA
 Spiny flounder|Engyophrys|Bothidae|NE
@@ -4569,7 +4551,6 @@ Staghorn Damsel|Amblyglyphidodon curacao|Pomacentridae|SOP,CIP
 Staghorn Ghostgoby|Pleurosicya fringilla|Gobiidae|SOP,CIP
 Stalk Blenny / False Papillose Blenny|Acanthemblemaria greenfieldi|Chaenopsidae|TWA
 Stalked Jelly|Haliclystus sp. / Lucernaria quadricornis|Cnidaria|NE
-Stalked Tunicate|Boltenia ovifera|Urochordata|NE
 Star Puffer|Arothron stellatus|Tetraodontidae|SOP,CIP,IORS
 Starburst Eye Dwarfgoby|Eviota JE sp 18|Gobiidae|CIP
 Starck's Damsel|Chrysiptera starcki|Pomacentridae|SOP,CIP
@@ -4647,7 +4628,6 @@ Striped Hamlet (restricted to Fort Liberte Haiti)|Hypoplectrus liberte|Serranida
 Striped Killifish|Fundulus majalis|Cyprinodontidae|TWA,NE
 Striped Large-eye Bream|Gnathodentex aureolineatus|Lethrinidae|SOP,CIP,IORS
 Striped Mangrove Goby|Amblygobius linki|Gobiidae|CIP
-Striped Marlin|Kajikia audax|Istiophoridae|CIP
 Striped Mojarra|Eugerres plumieri|Gerreidae|TWA
 Striped Monocle Bream|Scolopsis lineata|Nemipteridae|SOP,CIP
 Striped Parrotfish|Scarus iseri|Scaridae|TWA,NE,SAS
@@ -4875,7 +4855,6 @@ Toothy Coralgoby|Gobiodon brochus|Gobiidae|SOP,CIP
 Toothy Snakemoray|Uropterygius supraforatus|Muraenidae|SOP,CIP
 Topknot|Zeugopterus punctatus|Scophthalmidae|EAM
 Topsail Chub|Kyphosus cinerascens|Kyphosidae|TWA,HAW,SOP,SAS,CIP,IORS
-Topsmelt|Antherinops affinis|Atherinidae|TEP
 Torotai Wrasse|Pseudolabrus torotai|Labridae|SOP,CIP
 Torpedo Scad|Megalaspis cordyla|Carangidae|SOP,CIP,IORS
 Torpedo Wrasse|Pseudocoris heteroptera|Labridae|CIP,IORS
@@ -5035,7 +5014,6 @@ Unidentified Festucalex Pipefish|Festucalex sp|Syngnathidae|SOP,CIP
 Unidentified Filefish|Monacanthidae|Balistidae|NE
 Unidentified Flagtail (Hawaiian/Zebra)|Kuhlia sp.|Kuhliidae|HAW
 Unidentified Flasher Wrasse (Paracheilinus sp)|Paracheilinus sp.|Labridae|SOP,CIP,IORS
-Unidentified Flatfish|Unidentified Flatfish sp.|Bothidae|NE
 Unidentified Flathead spp.|Unidentified Flathead spp.|Platycephalidae|SOP,CIP
 Unidentified Flyingfish|Exocoetidae sp|Exocoetidae|TWA
 Unidentified Flyingfish|Exocoetidae sp.|Exocoetidae|HAW
@@ -5099,7 +5077,6 @@ Unidentified Scorpaenopsis Scorpionfish (Scorpaenopsis spp)|Scorpaenopsis spp.|S
 Unidentified Scorpionfish|Scorpaenidae sp.|Scorpaenidae|TWA,HAW
 Unidentified Scorpionfish|unknown genus of SCORPAENIDAE|Scorpaenidae|CIP
 Unidentified Scorpionfish (Genus unknown)|Unidentified Scorpionfish sp.|Scorpaenidae|SOP
-Unidentified Sculpin|Cottidae spp.|Cottidae|TEP
 Unidentified Sea Catfish|Ariidae|Ariidae|TWA,NE
 Unidentified Sea Catfish|Arius sp.|Ariidae|IORS
 Unidentified sea turtle|Chelonioidea|Cheloniidae|SOP,CIP,EAM,IORS
