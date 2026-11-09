@@ -92,6 +92,7 @@ textarea{min-height:70px}
 .sp.on{box-shadow:inset 4px 0 0 var(--accent)}
 .sp .nm{font-weight:700;line-height:1.2}
 .sp .sci{font-size:13px;color:var(--muted);font-style:italic}
+.sp .famtag{font:600 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:4px;white-space:nowrap}
 .sp .sci .pct{font-style:normal;font-weight:700;color:var(--accent)}
 .sp .sci b{font-style:normal;font-weight:400;font-variant-numeric:tabular-nums}
 .ab{display:flex;gap:4px}
@@ -717,7 +718,7 @@ function filteredAll(sv){
   if(ui.filter==="site" && !ui.q.trim()){ const f=siteFreq(sv.info.zone); if(f) return SPECIES.filter(s=>(f.pct.get(s.code)||0)>=SITE_MIN_PCT||!!sv.counts[s.key]); }
   const q=ui.q.trim().toLowerCase();
   return SPECIES.filter(s=>{
-    if(q) return s.name.toLowerCase().includes(q)||(s.sci||"").toLowerCase().includes(q)||s.fam.toLowerCase().includes(q)||s.code===q;
+    if(q){ if(s.code===q) return true; const hay=spHay(s); return q.replace(/['’]/g,"").split(/\s+/).filter(Boolean).every(w=>hay.includes(w)); }
     switch(ui.filter){
       case "quick": return QUICKSET.has(s.code)||!!sv.counts[s.key];
       case "seen": return !!sv.counts[s.key];
@@ -728,11 +729,13 @@ function filteredAll(sv){
     }
   });
 }
-function spRow(s, sv, pct){
+function spHay(s){ return s._hay || (s._hay=[s.name,s.sci,s.fam,s.famc,s.gi!=null?R.formNames[s.gi]:""].join(" ").toLowerCase().replace(/['’]/g,"")); }
+function famName(s){ return s.famc || s.fam; }   // REEF's common family name, e.g. "Wrasse"
+function spRow(s, sv, pct, showFam=true){
   const v=sv.counts[s.key];
   const btns = speciesOnly(sv) ? `<button type="button" data-sp="${s.key}" data-v="S" aria-pressed="${!!v}" aria-label="${esc(s.name)} seen" style="width:auto;padding:0 12px;font-size:15px">Seen</button>` : s.pa ? `<button type="button" data-sp="${s.key}" data-v="P" aria-pressed="${v==="P"}" aria-label="${esc(s.name)} present">Present</button>`
     : ["S","F","M","A"].map(a=>`<button type="button" data-sp="${s.key}" data-v="${a}" aria-pressed="${v===a}" aria-label="${esc(s.name)} ${ABUND[a]}">${a}</button>`).join("");
-  return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(s.name)}</div><div class="sci">${pct!=null?`<span class="pct">${pct<1?"<1":pct}% of surveys here</span> · `:""}${esc(s.sci)}${s.code?` · <b>${s.code}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
+  return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(s.name)}${showFam?` <span class="famtag">${esc(famName(s))}</span>`:""}</div><div class="sci">${pct!=null?`<span class="pct">${pct<1?"<1":pct}% of surveys here</span> · `:""}${esc(s.sci)}${s.code?` · <b>${s.code}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
 }
 function unlRow(u, sv){
   const cur=(sv.unlisted||[]).find(x=>x.sci===u.sci); const v=cur?.v;
@@ -756,7 +759,7 @@ function renderSpecies(main, sv, keepFocus){
   else if(!list.length) body="";
   else if(sortBy==="fam"){
     const sorted=[...list].sort((a,b)=>groupCompare(a,b) || inGroupCompare(a,b,freq?pctOf:null));
-    let cur=null; body=sorted.map(s=>{ const k=groupKey(s); const h=k!==cur?(cur=k,`<div class="fam">${esc(groupLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined); }).join("");
+    let cur=null; body=sorted.map(s=>{ const k=groupKey(s); const h=k!==cur?(cur=k,`<div class="fam">${esc(groupLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined,false); }).join("");
   } else if(sortBy==="freq") body=[...list].sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
   else body=[...list].sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
   if(unlHits.length) body+=`<div class="fam">Other REEF species · enter as Unlisted on REEF</div>`+unlHits.map(u=>unlRow(u,sv)).join("");
