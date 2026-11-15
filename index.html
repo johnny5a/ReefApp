@@ -92,6 +92,7 @@ textarea{min-height:70px}
 .sp.on{box-shadow:inset 4px 0 0 var(--accent)}
 .sp .nm{font-weight:700;line-height:1.2}
 .sp .sci{font-size:13px;color:var(--muted);font-style:italic}
+.sp .info{display:inline-block;padding:2px 6px;margin-left:2px;color:var(--accent);text-decoration:none;font-weight:400}
 .sp .famtag{font:600 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:4px;white-space:nowrap}
 .sp .sci .pct{font-style:normal;font-weight:700;color:var(--accent)}
 .sp .sci b{font-style:normal;font-weight:400;font-variant-numeric:tabular-nums}
@@ -688,6 +689,7 @@ function drawSiteDots(fit){
     if(note) note.textContent = sites.length?`${sites.length.toLocaleString()} site${sites.length===1?"":"s"} within ${nearRadius()} ${distUnit()}`:`No sites within ${nearRadius()} ${distUnit()}`;
   } else if(fit && sites.length){ const b=L.latLngBounds(sites.map(s=>COORDS.get(s.code).slice(0,2))); siteMap.fitBounds(b.pad(0.15),{maxZoom:13}); }
 }
+function chooseSite(code){ const sv=cur(); if(!sv) return; const s=SITE_BY_CODE[code]||{code:code,name:(state.settings.sites||[]).find(x=>x.zone===code)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); }
 async function showSiteMap(sv){
   const el=document.getElementById("sitemap"); if(!el) return;
   try{ await loadLeaflet(); }catch(_){ el.innerHTML=`<div class="empty">The map needs signal the first time it opens. Switch to List to pick a site offline.</div>`; return; }
@@ -697,6 +699,8 @@ async function showSiteMap(sv){
   siteMap._dotRenderer=L.canvas({padding:0.5});
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18, attribution:"© OpenStreetMap contributors"}).addTo(siteMap);
   siteLayer=L.layerGroup().addTo(siteMap);
+  // Leaflet stops clicks inside a popup from reaching the document handler, so wire "Use this site" here.
+  siteMap.on("popupopen", ev=>{ const b=ev.popup.getElement()?.querySelector("[data-site]"); if(b) b.addEventListener("click", ()=>{ siteMap.closePopup(); chooseSite(b.dataset.site); }); });
   const here=sv?.info?.zone && COORDS.get(sv.info.zone)?.slice(0,2);
   if(here && !ui.siteQ && !ui.near){ drawSiteDots(false); siteMap.setView(here,13); }
   else drawSiteDots(true);
@@ -730,18 +734,24 @@ function filteredAll(sv){
   });
 }
 function spHay(s){ return s._hay || (s._hay=[s.name,s.sci,s.fam,s.famc,s.gi!=null?R.formNames[s.gi]:""].join(" ").toLowerCase().replace(/['’]/g,"")); }
+function infoUrl(sci, kind){   // fish → FishBase species page; everything else (and odd names) → iNaturalist
+  sci=(sci||"").split("/")[0].trim(); const n=sci.replace(/\s*\(.*?\)\s*/g," ").split(/\s+/);
+  if((kind==="fish") && n.length>=2 && /^[A-Z][a-z]+$/.test(n[0]) && /^[a-z-]+$/.test(n[1]) && !/^spp?\.?$/.test(n[1])) return `https://www.fishbase.se/summary/${n[0]}-${n[1]}.html`;
+  return `https://www.inaturalist.org/taxa/search?q=${encodeURIComponent(sci||"")}`;
+}
+function infoLink(name, sci, kind){ return sci ? ` <a class="info" href="${esc(infoUrl(sci,kind))}" target="_blank" rel="noopener" aria-label="About ${esc(name)} (opens ${kind==="fish"?"FishBase":"iNaturalist"})" title="Species info">ⓘ</a>` : ""; }
 function famName(s){ return s.famc || s.fam; }   // REEF's common family name, e.g. "Wrasse"
 function spRow(s, sv, pct, showFam=true){
   const v=sv.counts[s.key];
   const btns = speciesOnly(sv) ? `<button type="button" data-sp="${s.key}" data-v="S" aria-pressed="${!!v}" aria-label="${esc(s.name)} seen" style="width:auto;padding:0 12px;font-size:15px">Seen</button>` : s.pa ? `<button type="button" data-sp="${s.key}" data-v="P" aria-pressed="${v==="P"}" aria-label="${esc(s.name)} present">Present</button>`
     : ["S","F","M","A"].map(a=>`<button type="button" data-sp="${s.key}" data-v="${a}" aria-pressed="${v===a}" aria-label="${esc(s.name)} ${ABUND[a]}">${a}</button>`).join("");
-  return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(s.name)}${showFam?` <span class="famtag">${esc(famName(s))}</span>`:""}</div><div class="sci">${pct!=null?`<span class="pct">${pct<1?"<1":pct}% of surveys here</span> · `:""}${esc(s.sci)}${s.code?` · <b>${s.code}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
+  return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(s.name)}${infoLink(s.name,s.sci,s.kind)}${showFam?` <span class="famtag">${esc(famName(s))}</span>`:""}</div><div class="sci">${pct!=null?`<span class="pct">${pct<1?"<1":pct}% of surveys here</span> · `:""}${esc(s.sci)}${s.code?` · <b>${s.code}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
 }
 function unlRow(u, sv){
   const cur=(sv.unlisted||[]).find(x=>x.sci===u.sci); const v=cur?.v;
   const btns=["S","F","M","A"].map(a=>`<button type="button" data-unl="${esc(u.sci)}" data-v="${a}" aria-pressed="${v===a}" aria-label="${esc(u.name)} ${ABUND[a]}">${a}</button>`).join("");
   const where=u.regs.length?u.regs.slice(0,3).map(r=>REGION_NAMES[r]||r).join(", ")+(u.regs.length>3?"…":""):"";
-  return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(u.name)}</div><div class="sci">${esc(u.sci)}${where?` · <b>${esc(where)}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
+  return `<div class="sp ${v?"on":""}"><div><div class="nm">${esc(u.name)}${infoLink(u.name,u.sci,"")}</div><div class="sci">${esc(u.sci)}${where?` · <b>${esc(where)}</b>`:""}</div></div><div class="ab">${btns}</div></div>`;
 }
 function renderSpecies(main, sv, keepFocus){
   const freq=siteFreq(sv.info.zone);
@@ -927,7 +937,7 @@ document.addEventListener("click", async e=>{
   if(t.dataset.siteview){ ui.siteView=t.dataset.siteview; state.settings.siteView=ui.siteView; persist(); render(); return; }
   if(t.dataset.del){ deleteSurvey(t.dataset.del); return; }
   if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; loadRegion(t.dataset.region); state.settings.updatedAt=Date.now(); persist("__settings"); ui.filter=null; render(); return; }
-  if(t.dataset.site){ const s=SITE_BY_CODE[t.dataset.site]||{code:t.dataset.site,name:(state.settings.sites||[]).find(x=>x.zone===t.dataset.site)?.name||""}; sv.info.zone=s.code; sv.info.siteName=s.name; delete sv.prefill; carryOver(sv, lastSurveyAt(s.code, sv.id)); rememberSite(sv); touch(sv); ui.filter=null; ui.tab="dive"; ui.siteQ=""; ui.siteArea=""; render(); $("#main").scrollTop=0; toast(s.name+" · "+s.code); return; }
+  if(t.dataset.site){ chooseSite(t.dataset.site); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
   if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; if(t.dataset.filter==="site"||t.dataset.filter==="quick"){ state.settings.spList=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
   if(t.dataset.sortby){ ui.sort=t.dataset.sortby; state.settings.spSort=ui.sort; persist(); renderSpecies($("#main"),sv); return; }
