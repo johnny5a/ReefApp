@@ -1,5 +1,5 @@
 // Offline cache for REEF Dive Survey. Bump VERSION when you change any file.
-const VERSION = "reef-survey-v20";
+const VERSION = "reef-survey-v21";
 // Map tiles and fonts live in their own cache so an app or data update does not wipe the offline map.
 const KEEP = "reef-keep-v1", KEEP_MAX = 1500;
 const CORE = ["./", "index.html", "manifest.json", "icon-180.png", "icon-192.png", "icon-512.png"];
