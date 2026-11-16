@@ -12,6 +12,14 @@ A phone app for logging [REEF](https://www.reef.org) Volunteer Fish Survey dives
 ## Data
 - Surveys are stored only on the phone (in the app's own storage). Use **Back up** on the Log tab now and then and save the file to iCloud Drive; **Restore** reads it back on any device.
 - **Copy data (JSON)** or **Copy all ready surveys for Claude** puts survey data on the clipboard to paste into Claude, which can fill in REEF's web form for you.
+- After entering them on REEF, **Mark all ready as entered** on the Log tab updates every ready survey in one tap.
+- The Log tab reminds you to back up once a few surveys have changed since the last backup.
+
+## Built for fast entry
+- **Dive tab:** each REEF step folds to a one-line summary once it is complete (Edit reopens it). A new survey offers the REEF sites nearest to you, your own sites first.
+- **Species tab:** *Seen here before* lists what you logged on earlier dives at the same site, with your last abundance as a hint; nothing is filled in for you. After you tap an abundance on a search result, the search text is selected so the next thing you type replaces it. The chosen list and sort are remembered per region.
+- **Submit tab:** tap any item under *Still needed* to jump straight to that field.
+- Map tiles you have viewed are kept in their own cache, so app and data updates no longer clear the offline map.
 
 ## Sources
 - Survey fields: [REEF VFSP metadata descriptions](https://www.reef.org/vfsp-metadata-descriptions)

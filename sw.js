@@ -1,5 +1,7 @@
 // Offline cache for REEF Dive Survey. Bump VERSION when you change any file.
-const VERSION = "reef-survey-v19";
+const VERSION = "reef-survey-v20";
+// Map tiles and fonts live in their own cache so an app or data update does not wipe the offline map.
+const KEEP = "reef-keep-v1", KEEP_MAX = 1500;
 const CORE = ["./", "index.html", "manifest.json", "icon-180.png", "icon-192.png", "icon-512.png"];
 const EXTRA = ["vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css"];
 // Region data files to keep from the start come from data/regions.json (written by build.py from regions.json);
@@ -15,7 +17,7 @@ self.addEventListener("install", e => {
   }).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {
-  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== VERSION && k !== KEEP).map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
 self.addEventListener("fetch", e => {
   const req = e.request;
@@ -27,9 +29,22 @@ self.addEventListener("fetch", e => {
       .catch(() => caches.match("index.html")));
     return;
   }
-  // Data, icons, Google Fonts and map tiles you've viewed: cache first, then network (and keep a copy).
-  if (url.origin === location.origin || /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)
-      || url.hostname === "tile.openstreetmap.org") {
+  // Map tiles you've viewed and Google Fonts: cache first, kept across updates (oldest dropped past KEEP_MAX).
+  if (url.hostname === "tile.openstreetmap.org" || /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)) {
+    e.respondWith(caches.match(req).then(hit => hit || fetch(req).then(r => {
+      if (r.ok) {
+        const copy = r.clone();
+        e.waitUntil(caches.open(KEEP).then(async c => {
+          await c.put(req, copy);
+          if (Math.random() < 0.05) { const keys = await c.keys(); if (keys.length > KEEP_MAX) await Promise.all(keys.slice(0, keys.length - KEEP_MAX + 200).map(k => c.delete(k))); }
+        }));
+      }
+      return r;
+    })));
+    return;
+  }
+  // The app's own files and data: cache first, then network (and keep a copy).
+  if (url.origin === location.origin) {
     e.respondWith(caches.match(req, {ignoreSearch: true}).then(hit => hit || fetch(req).then(r => {
       if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(req, copy)); }
       return r;
