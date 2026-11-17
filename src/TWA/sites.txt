@@ -846,6 +846,7 @@
 21010512|MB-319 McDougald Family Memorial
 21010513|Tom and Peggy Wood Memorial Reef
 21010514|Robert and Jean Bigger Memorial Reef
+21010515|SS United States Wreck
 2102|Dauphin Island/Mobile Bay
 21020001|Atlantis
 21020002|Army Tank
@@ -10454,6 +10455,8 @@
 73070065|BBC Beach
 73070066|Coral Garden (Grenada)
 73070067|Royalton Grenada Beach
+73070068|Escape Reef
+73070069|Special Request (Grenada)
 7308|Mustique and Baliceaux Island
 73080001|Outer Endeavour Reef - North West
 73080002|Deep Bay - South side

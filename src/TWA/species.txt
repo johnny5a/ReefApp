@@ -41,7 +41,7 @@
 0841|Atlantic Stingray|Dasyatis sabina|Dasyatidae|Stingray
 0633|Atlantic Thread Herring|Opisthonema oglinum|Clupeidae|Herring
 0878|Atlantic Tomcod|Microgadus tomcod|Gadidae|Cod
-0510|Atlantic Torpedo Ray|Torpedo nobiliana|Torpedinidae|Electric Ray
+0510|Atlantic Torpedo Ray|Tetronarce nobiliana|Torpedinidae|Electric Ray
 0713|Atlantic Wolffish|Anarhichas lupus|Anarhichadidae|Wolffish
 0847|Bahamas (Red Banner) Blenny (pka Redspine Glass Blenny)|Emblemariopsis occidentalis|Chaenopsidae|Blenny - Pike, tube, and flag
 0403|Balao|Hemiramphus balao|Hemiramphidae|Halfbeak

@@ -115,6 +115,7 @@ Atlantic Saury|Scomberesox saurus|Scomberesocidae|EAM
 Atlantic Spiny Spider Crab|Maja brachydactyla|Majidae|EAM
 Atlantic Stargazer|Uranoscopus scaber|Uranoscopidae|EAM
 Atlantic Sturgeon|Acipenser oxyrinchus|Acipenseridae|NE
+Atlantic Torpedo|Torpedo nobiliana|Torpedinidae|EAM
 Atlantic Wrasse (Madeira and Canaries only)|Centrolabrus trutta|Labridae|EAM
 Atlantic Wreckfish|Polyprion americanus|Polyprionidae|EAM
 Atoll (pka Yellowback) Butterflyfish|Chaetodon mertensii|Chaetodontidae|SOP,CIP
@@ -3181,7 +3182,7 @@ Rapa Sweeper|Pempheris rapa|Pempheridae|SOP,CIP
 Rapa Toby|Canthigaster rapaensis|Tetraodontidae|SOP,CIP
 Rapa Triplefin|Enneapterygius randalli|Tripterygiidae|SOP,CIP
 Rayed Shrimpgoby|Tomiyamichthys nudus|Gobiidae|CIP
-Razor Surgeonfish|Prionurus laticlavius|Acanthuridae|TEP
+Razor Surgeonfish|Prionurus laticlavius|Surgeonfish|PAC,TEP
 Reader's Pygmygoby|Trimma readerae|Gobiidae|CIP
 Rearbar Cardinalfish|Apogon posterofasciatus|Apogonidae|SOP,CIP
 Red & Whitespotted Dwarfgoby|Eviota prasites|Gobiidae|SOP,CIP
@@ -4068,6 +4069,7 @@ Starburst Eye Dwarfgoby|Eviota JE sp 18|Gobiidae|CIP
 Starck's Damsel|Chrysiptera starcki|Pomacentridae|SOP,CIP
 Stareye Parrotfish|Calotomus carolinus|Scaridae|HAW,TEP,SOP,CIP,IORS
 Stargazer Snake Eel|Brachysomophis cirrocheilos|Ophichthidae|CIP,IORS
+Starnes' Bigeye|Priacanthus starnesi|Priacanthidae|CIP
 Starry Blenny|Salarias ramosus|Blenniidae|CIP
 Starry Dragonet|Synchiropus stellatus|Callionymidae|CIP,IORS
 Starry Flounder|Platichthys stellatus|Pleuronectidae|PAC

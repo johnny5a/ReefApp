@@ -330,6 +330,7 @@
 0286|Quillfish|Ptilichthys goodei|Ptilichthyidae|Quillfish
 0287|Rainbow Scorpionfish|Scorpaenodes xyris|Scorpaenidae|Scorpionfish
 0118|Rainbow Seaperch|Hypsurus caryi|Embiotocidae|Surfperch
+0587|Razor Surgeonfish|Prionurus laticlavius|Surgeonfish|Acanthuridae
 0431|Red Abalone|Haliotis rufescens|Mollusca|Mollusks
 0288|Red Brotula|Brosmophycis marginata|Bythitidae|Viviparous Brotula
 0410|Red Gorgonian|Leptogorgia chilensis|Cnidaria|Cnidarians

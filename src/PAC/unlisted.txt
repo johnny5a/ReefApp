@@ -151,7 +151,8 @@ Atlantic Stingray|Dasyatis sabina|Dasyatidae|TWA,NE,SAS
 Atlantic Sturgeon|Acipenser oxyrinchus|Acipenseridae|NE
 Atlantic Thread Herring|Opisthonema oglinum|Clupeidae|TWA,NE
 Atlantic Tomcod|Microgadus tomcod|Gadidae|TWA,NE
-Atlantic Torpedo Ray|Torpedo nobiliana|Torpedinidae|TWA,NE,EAM
+Atlantic Torpedo|Torpedo nobiliana|Torpedinidae|EAM
+Atlantic Torpedo Ray|Tetronarce nobiliana|Torpedinidae|TWA,NE
 Atlantic Wolffish|Anarhichas lupus|Anarhichadidae|TWA,NE
 Atlantic Wrasse (Madeira and Canaries only)|Centrolabrus trutta|Labridae|EAM
 Atlantic Wreckfish|Polyprion americanus|Polyprionidae|EAM
@@ -3552,7 +3553,6 @@ Rapa Sweeper|Pempheris rapa|Pempheridae|SOP,CIP
 Rapa Toby|Canthigaster rapaensis|Tetraodontidae|SOP,CIP
 Rapa Triplefin|Enneapterygius randalli|Tripterygiidae|SOP,CIP
 Rayed Shrimpgoby|Tomiyamichthys nudus|Gobiidae|CIP
-Razor Surgeonfish|Prionurus laticlavius|Acanthuridae|TEP
 Reader's Pygmygoby|Trimma readerae|Gobiidae|CIP
 Rearbar Cardinalfish|Apogon posterofasciatus|Apogonidae|SOP,CIP
 Red & Whitespotted Dwarfgoby|Eviota prasites|Gobiidae|SOP,CIP
@@ -4556,6 +4556,7 @@ Starburst Eye Dwarfgoby|Eviota JE sp 18|Gobiidae|CIP
 Starck's Damsel|Chrysiptera starcki|Pomacentridae|SOP,CIP
 Stareye Parrotfish|Calotomus carolinus|Scaridae|HAW,TEP,SOP,CIP,IORS
 Stargazer Snake Eel|Brachysomophis cirrocheilos|Ophichthidae|CIP,IORS
+Starnes' Bigeye|Priacanthus starnesi|Priacanthidae|CIP
 Starry Blenny|Salarias ramosus|Blenniidae|CIP
 Starry Dragonet|Synchiropus stellatus|Callionymidae|CIP,IORS
 Starry Goby|Asterropteryx semipunctata|Gobiidae|SOP,CIP,IORS
