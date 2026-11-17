@@ -30,6 +30,7 @@ UA = "ReefApp data updater (https://github.com/johnny5a/ReefApp)"
 PAUSE = 0.4            # seconds between requests
 MIN_SURVEYS = 5        # the app falls back to the parent area below this
 MAX_SPECIES = 150      # per zone, most-seen first
+TOP_TIMEOUT = 900      # seconds to wait for a whole-area report (Florida alone is 50,000+ surveys)
 ALL_REGIONS = ["TWA", "PAC", "HAW", "TEP", "SOP", "NE", "SAS", "CIP", "EAM", "IORS"]
 
 DATA = "https://data.reef.org"
@@ -94,9 +95,9 @@ def get(path, tries=3, timeout=240):
             time.sleep(10 * (attempt + 1))
 
 
-def tables(path):
+def tables(path, timeout=240):
     p = Tables()
-    p.feed(get(path))
+    p.feed(get(path, timeout=timeout))
     return p.tables
 
 
@@ -125,11 +126,11 @@ def species(region):
             if len(r) >= 6 and r[1].isdigit() and 3 <= len(r[1]) <= 5]
 
 
-def geo_report(region, zone, today):
+def geo_report(region, zone, today, timeout=240):
     """Returns ({zone: surveys} for every zone listed, [(species code, SF%)] for `zone`)."""
     q = urllib.parse.urlencode({"end_date": today, "format_type": "table", "group_type": "species",
                                 "language": "common", "region_code": region, "start_date": "1993-01-01", "zones": zone})
-    ts = tables("/db/reports/geo?" + q)
+    ts = tables("/db/reports/geo?" + q, timeout=timeout)
     if len(ts) < 2:
         return {}, []
     counts = {}
@@ -290,15 +291,29 @@ def update_region(region, cfg, all_species, today, full=False, habitats=None):
     # Top-level areas: the configured prefixes, or the region's one-digit zones.
     tops = cfg["prefixes"] or [z for z, _ in zones if len(z) == 1]
     counts, lines, seen = {}, {}, {}
+    old_all = read_old_freq(out / "freq.txt")
+    failed_tops = []
     for top in tops:
         print(f"  area {top} ({names.get(top, '')})…", flush=True)
-        c, top_sp = geo_report(reef, top, today)
+        try:
+            c, top_sp = geo_report(reef, top, today, timeout=TOP_TIMEOUT)   # big areas are slow reports
+        except Exception as e:
+            # REEF's site is sometimes too slow for a whole-area report. Keep last run's data for this area
+            # (and every site in it) rather than losing the whole update.
+            failed_tops.append(top)
+            print(f"::warning::{region} area {top} report failed ({e}); keeping its previous data", flush=True)
+            for z, (n, line) in old_all.items():
+                if z.startswith(top):
+                    counts[z], lines[z] = n, line
+            continue
         counts.update(c)
         if top in c and top_sp:
             lines[top] = freq_line(top, c[top], top_sp)
             # The complete list for the area (no cut-off, rare species included) feeds the app's "Seen in <region>" list
             seen[top] = f"{top}|{c[top]}|" + ",".join(f"{code}:{pct}" for code, pct in top_sp)
-    old = {} if full else read_old_freq(out / "freq.txt")
+    if len(failed_tops) == len(tops):
+        sys.exit(f"{region}: no area report could be downloaded; not updating.")
+    old = {} if full else old_all
     eligible = [z for z, _ in zones if counts.get(z, 0) >= MIN_SURVEYS and z not in lines]
     wanted, kept = [], 0
     for z in eligible:
@@ -348,7 +363,10 @@ def update_region(region, cfg, all_species, today, full=False, habitats=None):
     (out / "species.txt").write_text("\n".join("|".join(x) for x in sp) + "\n")
     rows = sorted(unl.values(), key=lambda x: x[0].lower())
     (out / "unlisted.txt").write_text("\n".join(f"{a}|{b}|{c}|{','.join(d)}" for a, b, c, d in rows) + "\n")
-    if len(seen) == len(tops):       # only replace the complete list when every area's report came back
+    # Areas whose report failed this time keep their previous line; the list is only written once every area has one.
+    old_seen = {l.split("|")[0]: l for l in (out / "seen.txt").read_text().splitlines()} if (out / "seen.txt").exists() else {}
+    seen = {**old_seen, **seen}
+    if all(t in seen for t in tops):
         (out / "seen.txt").write_text("\n".join(seen[t] for t in tops) + "\n")
     order = {z: i for i, (z, _) in enumerate(zones)}
     (out / "freq.txt").write_text("\n".join(lines[z] for z in sorted(lines, key=lambda z: order.get(z, 0)) if lines[z]) + "\n")
@@ -370,8 +388,15 @@ def main():
     except Exception as e:
         habitats = {}
         print(f"Habitat lists failed: {e}", file=sys.stderr, flush=True)
-    for region in wanted:
-        update_region(region, regions[region], all_species, today, full=full, habitats=habitats)
+    failed = []
+    for region in wanted:   # one region failing (REEF's site slow or a page changed) must not lose the others
+        try:
+            update_region(region, regions[region], all_species, today, full=full, habitats=habitats)
+        except (Exception, SystemExit) as e:
+            failed.append(region)
+            print(f"::warning::{region} was not updated: {e}", flush=True)
+    if len(failed) == len(wanted):
+        sys.exit("No region could be updated.")
     (SRC / "data_date.txt").write_text(today + "\n")
     print("Done.", flush=True)
 
