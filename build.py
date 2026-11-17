@@ -40,6 +40,23 @@ def trim_freq(freq):
     return "\n".join(out)
 
 
+def seen_in_region(region, species):
+    """Every listed species REEF divers have ever reported in the region: "code:pct,..." most-seen first, plus the
+    number of surveys behind it. pct = share of the region's surveys (0 = under 0.5%). From seen.txt (one line per
+    top-level area, no cut-off). Empty until the updater has downloaded it."""
+    listed = {l.split("|")[0] for l in species.splitlines()}
+    total, hits = 0, {}
+    for line in read(src / region / "seen.txt").splitlines():
+        zone, n, lst = line.split("|")
+        n = int(n); total += n
+        for item in filter(None, lst.split(",")):
+            c, p = item.split(":")
+            if c in listed:
+                hits[c] = hits.get(c, 0) + int(p) * n
+    rows = sorted(hits.items(), key=lambda x: (-x[1], x[0]))
+    return ",".join(f"{c}:{round(v / total)}" for c, v in rows) if total else "", total
+
+
 def read(p):
     return p.read_text().strip() if p.exists() else ""
 
@@ -182,9 +199,10 @@ for r in CONFIG:
     coords, issues = clean_coords(region, read(d / "coords.txt"), r.get("bounds"), names)
     all_issues[region] = (info, issues)
     freq = trim_freq(freq)
+    seen, seen_n = seen_in_region(region, species)
     data = {"region": region, **info, "date": date, "sites": sites, "species": species,
             "unlisted": unlisted, "freq": freq, "quick": quick_codes(region, species, freq), "famOrder": fam_order,
-            "coords": coords, "formGroups": form_order(region, species)}
+            "coords": coords, "formGroups": form_order(region, species), "seen": seen, "seenN": seen_n}
     (root / "data" / f"{region}.json").write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
     built.append({"code": region, "name": info["name"], "long": info["long"], "surveyTypes": info["surveyTypes"]})
     manifest.append({"file": f"data/{region}.json", "precache": bool(r.get("precache"))})

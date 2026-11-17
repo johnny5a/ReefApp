@@ -5,6 +5,7 @@ For each region in REGIONS it writes src/<REGION>/:
   species.txt    the region's species list (REEF codes)   code|common|scientific|family|family common name
   unlisted.txt   species from REEF's other regions        common|scientific|family|regions
   freq.txt       how often each species is seen per site  zone|surveys|code:pct,code:pct,...
+  seen.txt       every species ever reported in the region's top-level areas, no cut-off (same format)
                  or area (Geographic Zone Report, total SF%), for zones with enough surveys
   coords.txt     site locations from REEF's data-entry site search   code|lat|lon
   form_groups.txt  REEF's survey-form groups, in form order  group|common|scientific
@@ -288,13 +289,15 @@ def update_region(region, cfg, all_species, today, full=False, habitats=None):
     # Survey counts for every zone, from the big-area reports
     # Top-level areas: the configured prefixes, or the region's one-digit zones.
     tops = cfg["prefixes"] or [z for z, _ in zones if len(z) == 1]
-    counts, lines = {}, {}
+    counts, lines, seen = {}, {}, {}
     for top in tops:
         print(f"  area {top} ({names.get(top, '')})…", flush=True)
         c, top_sp = geo_report(reef, top, today)
         counts.update(c)
         if top in c and top_sp:
             lines[top] = freq_line(top, c[top], top_sp)
+            # The complete list for the area (no cut-off, rare species included) feeds the app's "Seen in <region>" list
+            seen[top] = f"{top}|{c[top]}|" + ",".join(f"{code}:{pct}" for code, pct in top_sp)
     old = {} if full else read_old_freq(out / "freq.txt")
     eligible = [z for z, _ in zones if counts.get(z, 0) >= MIN_SURVEYS and z not in lines]
     wanted, kept = [], 0
@@ -345,6 +348,8 @@ def update_region(region, cfg, all_species, today, full=False, habitats=None):
     (out / "species.txt").write_text("\n".join("|".join(x) for x in sp) + "\n")
     rows = sorted(unl.values(), key=lambda x: x[0].lower())
     (out / "unlisted.txt").write_text("\n".join(f"{a}|{b}|{c}|{','.join(d)}" for a, b, c, d in rows) + "\n")
+    if len(seen) == len(tops):       # only replace the complete list when every area's report came back
+        (out / "seen.txt").write_text("\n".join(seen[t] for t in tops) + "\n")
     order = {z: i for i, (z, _) in enumerate(zones)}
     (out / "freq.txt").write_text("\n".join(lines[z] for z in sorted(lines, key=lambda z: order.get(z, 0)) if lines[z]) + "\n")
     print(f"  {len(zones)} zones, {len(sp)} species, {len(rows)} other-region species, "

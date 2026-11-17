@@ -31,6 +31,7 @@ A phone app for logging [REEF](https://www.reef.org) Volunteer Fish Survey dives
 - the region's species list with REEF codes (`species.txt`)
 - species from REEF's other regions, offered as Unlisted species (`unlisted.txt`)
 - how often each species is seen at each site and area with 5+ surveys (`freq.txt`), from REEF's Geographic Zone Reports
+- every species ever reported in the region, with no cut-off (`seen.txt`), which is the app's "Seen in <region>" list
 - site locations (`coords.txt`) from REEF's public data-entry site search, for the site map
 - REEF's survey-form groups (`form_groups.txt`, e.g. Bass, Rockfish, Surf Perch) from REEF's species reference pages, for the Family sort
 

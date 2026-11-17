@@ -200,7 +200,7 @@ const tidy = n => n.replace(/\s+/g," ").trim();
 
 // Filled by useRegion(); every list below belongs to the region currently loaded.
 let R = null;                                   // {region,name,long,root,near,habitats,date}
-let COORDS=new Map(), SPECIES=[], BYKEY={}, QUICKSET=new Set(), FREQ=new Map(), UNL=[], UNL_BY={}, ZONES=new Map(), SITE_LIST=[], SITE_BY_CODE={}, HABITATS=[], DATA_DATE="";
+let SEEN_N=0, COORDS=new Map(), SPECIES=[], BYKEY={}, QUICKSET=new Set(), SEEN=new Map(), FREQ=new Map(), UNL=[], UNL_BY={}, ZONES=new Map(), SITE_LIST=[], SITE_BY_CODE={}, HABITATS=[], DATA_DATE="";
 const regionCache = {};
 
 function zoneParents(code){ const out=[]; for(let k=code.length-1;k>=1;k--){ const p=code.slice(0,k); if(ZONES.has(p)) out.unshift(p); } return out; }
@@ -221,10 +221,10 @@ function parseRegion(d){
   const fg = d.formGroups; const formNames = fg?.names||[];
   if(fg) for(const sp of species){ const g=fg.codes[sp.code]; if(g){ sp.gi=g[0]; sp.gp=g[1]; } }
   const coords = new Map((d.coords||"").split("\n").filter(Boolean).map(l=>{ const [c,la,lo,fl]=l.split("|"); return [c,[+la,+lo,fl==="a"]]; }));
-  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder,formNames,example:d.example||"Site name, area, or zone code"}, species, coords, unl, zones, freq, quick:new Set(d.quick||[])};
+  return {meta:{region:d.region,name:d.name,long:d.long,root:d.root,near:d.near||[],habitats:d.habitats||[],date:d.date||"",famOrder,formNames,example:d.example||"Site name, area, or zone code"}, species, coords, unl, zones, freq, quick:new Set(d.quick||[]), seen:new Map((d.seen||"").split(",").filter(Boolean).map(x=>{const [c,p]=x.split(":"); return [c,+p];})), seenN:d.seenN||0};
 }
 function useRegion(x){
-  R=x.meta; COORDS=x.coords; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick;
+  R=x.meta; COORDS=x.coords; SPECIES=x.species; BYKEY=Object.fromEntries(SPECIES.map(s=>[s.key,s])); QUICKSET=x.quick; SEEN=x.seen; SEEN_N=x.seenN;
   UNL=x.unl; UNL_BY=Object.fromEntries(UNL.map(u=>[u.sci,u])); FREQ=x.freq; ZONES=x.zones; HABITATS=R.habitats; DATA_DATE=R.date;
   SITE_LIST=[...ZONES.entries()].filter(([c,n])=>c.length===8 && !/^Please use/i.test(n)).map(([code,name])=>({code,name:tidy(name),area:areaLabel(code),hay:(name+" "+zoneParents(code).map(p=>ZONES.get(p)).join(" ")).toLowerCase().replace(/['’.]/g,"")}));
   SITE_BY_CODE=Object.fromEntries(SITE_LIST.map(s=>[s.code,s]));
@@ -780,6 +780,7 @@ function filteredAll(sv){
     if(q){ if(s.code===q) return true; const hay=spHay(s); return q.replace(/['’]/g,"").split(/\s+/).filter(Boolean).every(w=>hay.includes(w)); }
     switch(ui.filter){
       case "quick": return QUICKSET.has(s.code)||!!sv.counts[s.key];
+      case "region": return SEEN.has(s.code)||!!sv.counts[s.key];
       case "mine": return HIST.has(s.key)||!!sv.counts[s.key];
       case "seen": return !!sv.counts[s.key];
       case "fish": return s.kind==="fish"||s.kind==="turtle";
@@ -815,7 +816,8 @@ function renderSpecies(main, sv, keepFocus){
   const mineUnl=[...HIST.entries()].filter(([k])=>k.startsWith("u:")).map(([,e])=>e.u);
   const mineN=HIST.size;
   // Default list: the diver's last choice in this region; fall back when the site has no history.
-  if(!ui.filter){ const want=spPref(sv,"spList","site"); ui.filter = ["site","quick","mine"].includes(want) ? want : "site"; }
+  if(!ui.filter){ const want=spPref(sv,"spList","site"); ui.filter = ["site","quick","mine","region"].includes(want) ? want : "site"; }
+  if(ui.filter==="region" && !SEEN.size) ui.filter="site";
   if(ui.filter==="mine" && !mineN) ui.filter="site";
   if(ui.filter==="site" && !freq) ui.filter="quick";
   const list=filtered(sv);
@@ -831,12 +833,12 @@ function renderSpecies(main, sv, keepFocus){
   else if(sortBy==="fam"){
     const sorted=[...list].sort((a,b)=>groupCompare(a,b) || inGroupCompare(a,b,freq?pctOf:null));
     let cur=null; body=sorted.map(s=>{ const k=groupKey(s); const h=k!==cur?(cur=k,`<div class="fam">${esc(groupLabel(s))}</div>`):""; return h+spRow(s,sv,freq?pctOf(s):undefined,false); }).join("");
-  } else if(sortBy==="freq") body=[...list].sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
+  } else if(sortBy==="freq") body=[...list].sort((a,b)=>(pctOf(b)??-1)-(pctOf(a)??-1)||(SEEN.get(b.code)??-1)-(SEEN.get(a.code)??-1)||a.name.localeCompare(b.name)).map(s=>spRow(s,sv,pctOf(s))).join("");
   else body=[...list].sort((a,b)=>a.name.localeCompare(b.name)).map(s=>spRow(s,sv,freq?pctOf(s):undefined)).join("");
   if(unlHits.length) body+=`<div class="fam">Other REEF species · enter as Unlisted on REEF</div>`+unlHits.map(u=>unlRow(u,sv)).join("");
   if(ui.filter==="mine" && !ui.q.trim() && mineUnl.length) body+=`<div class="fam">Unlisted species you logged here</div>`+mineUnl.map(u=>unlRow(UNL_BY[u.sci]||{name:u.name,sci:u.sci,fam:u.fam||"",regs:[]},sv)).join("");
   const siteName=freq?(freq.own?(sv.info.siteName||"this site"):tidy(ZONES.get(freq.code)||"this area")):"";
-  const chips=[...(freq?[["site","At this site"]]:[]),...(mineN?[["mine",`Seen here before (${mineN})`]]:[]),["quick",`Common in ${R.name}`],["seen",`Seen (${Object.keys(sv.counts).length})`],["fish","Fish"],["invert","Inverts"],["algae","Algae"],["unlisted",`Unlisted (${(sv.unlisted||[]).length})`],["all",`All ${esc(R.name)}`]];
+  const chips=[...(freq?[["site","At this site"]]:[]),...(mineN?[["mine",`Seen here before (${mineN})`]]:[]),["quick",`Common in ${R.name}`],...(SEEN.size?[["region",`Seen in ${esc(R.name)} (${SEEN.size})`]]:[]),["seen",`Seen (${Object.keys(sv.counts).length})`],["fish","Fish"],["invert","Inverts"],["algae","Algae"],["unlisted",`Unlisted (${(sv.unlisted||[]).length})`],["all",`All ${esc(R.name)}`]];
   const sorts=[...(freq?[["freq","Most seen here"]]:[]),["az","A–Z"],["fam","Family"]];
   const html=`
   <div class="sbar">
@@ -844,6 +846,7 @@ function renderSpecies(main, sv, keepFocus){
     <div class="ctl"><span class="ctl-l">Show</span><div class="chips" role="group" aria-label="Which species to show">${chips.map(([k,t])=>`<button type="button" data-filter="${k}" aria-pressed="${!ui.q&&ui.filter===k}">${t}</button>`).join("")}</div></div>
     <div class="ctl"><span class="ctl-l">Sort</span><div class="sortseg" role="radiogroup" aria-label="Sort order">${sorts.map(([k,t])=>`<button type="button" role="radio" data-sortby="${k}" aria-checked="${sortBy===k}">${t}</button>`).join("")}</div></div>
     ${ui.filter==="site"&&!ui.q.trim()&&freq?`<p class="hint">Species seen on at least ${SITE_MIN_PCT}% of REEF surveys at <b>${esc(siteName)}</b> (${freq.n.toLocaleString()} surveys)${freq.own?"":`; ${esc(sv.info.siteName||"this site")} has fewer than ${FREQ_MIN_SURVEYS} surveys, so this uses the wider area`}.</p>`:""}
+    ${ui.filter==="region"&&!ui.q.trim()?`<p class="hint">Every species REEF divers have reported in <b>${esc(R.name)}</b> (${SEEN_N.toLocaleString()} surveys), with no cut-off, rare ones included.</p>`:""}
     ${ui.filter==="mine"&&!ui.q.trim()?`<p class="hint">Species you logged on your ${HIST.dives} earlier dive${HIST.dives===1?"":"s"} at <b>${esc(sv.info.siteName||"this site")}</b>. Nothing is filled in: tap what you saw this time.</p>`:""}
     ${!freq&&sv.info.zone&&FREQ.size?`<p class="hint">No REEF survey history for this site yet, so showing the standard list.</p>`:""}
     ${!sv.info.zone&&FREQ.size?`<p class="hint">Choose your dive site on the Dive tab to see the species usually found there.</p>`:""}
@@ -1013,7 +1016,7 @@ document.addEventListener("click", async e=>{
   if(t.dataset.region){ state.settings.region=t.dataset.region; state.currentId=null; loadRegion(t.dataset.region); state.settings.updatedAt=Date.now(); persist(); ui.filter=null; render(); return; }
   if(t.dataset.site){ chooseSite(t.dataset.site); return; }
   if("area" in t.dataset){ ui.siteArea=t.dataset.area; ui.siteQ=""; renderSitePicker($("#main"),sv); $("#main").scrollTop=0; return; }
-  if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; ui.qStale=false; if(["site","quick","mine"].includes(t.dataset.filter)){ state.settings["spList_"+regionOf(sv)]=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
+  if(t.dataset.filter){ ui.filter=t.dataset.filter; ui.q=""; ui.qStale=false; if(["site","quick","mine","region"].includes(t.dataset.filter)){ state.settings["spList_"+regionOf(sv)]=t.dataset.filter; persist(); } renderSpecies($("#main"),sv); return; }
   if(t.dataset.sortby){ state.settings["spSort_"+regionOf(sv)]=t.dataset.sortby; persist(); renderSpecies($("#main"),sv); return; }
   if(t.dataset.unl){
     const sci=t.dataset.unl, v=t.dataset.v, u=UNL_BY[sci]||{name:sci,sci,fam:""};
